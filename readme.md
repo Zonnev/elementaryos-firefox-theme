@@ -2,10 +2,10 @@
 
 ![Screenshot](screenshot_1.png)
 
-# Usage
+## Usage
 Use this theme with the titlebar option on.
 
-# Credits
+## Credits
 Credits to the elementary team for the UI design and icons.
 
 ## Install
