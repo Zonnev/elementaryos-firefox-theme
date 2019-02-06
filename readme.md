@@ -1,6 +1,6 @@
 # An elementary os theme for Firefox 65+
 
-![Screenshot](screenshot_1.png)
+![Screenshot](screenshot_2.png)
 
 ## Usage
 Use this theme with the titlebar option on.
