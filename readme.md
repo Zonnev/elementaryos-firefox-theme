@@ -6,7 +6,7 @@
 Use this theme with the titlebar option on.
 
 ## Credits
-Credits to the elementary team for the UI design and icons.
+Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) and the elementary team for the UI design and icons.
 
 ## Install
 1. Go to [about:support](about:support) in Firefox
