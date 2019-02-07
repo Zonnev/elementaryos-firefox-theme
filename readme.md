@@ -1,6 +1,6 @@
 # An elementary os theme for Firefox 65+
 
-![Screenshot](screenshot_3.png)
+![Screenshot](screenshot_4.png)
 
 ## Issues
 There is an issue with this theme:
