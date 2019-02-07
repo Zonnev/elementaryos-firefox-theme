@@ -3,7 +3,7 @@
 ![Screenshot](screenshot_4.png)
 
 ## Issues
-There is an issue with this theme: 
+There are issues with this theme: 
 1. If you use the bookmark bar, the window controls will go down as well.
 2. The add tab button is gone in full screen size mode. (This is not the case in Firefox Nightly build).
 
