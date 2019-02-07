@@ -183,7 +183,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 #new-tab-button {
-  margin-left: -40px !important;
+  margin-left: -33px !important;
 }
 
 .private-browsing-indicator {
@@ -303,6 +303,26 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 .tab-line {
   display: none !important; /* strip of color at the top of tab */
+}
+
+/* remove 'dragging tab' margin/padding nonsense */
+#TabsToolbar[movingtab] {
+  padding-bottom: unset !important;
+}
+#TabsToolbar[movingtab] > .tabbrowser-tabs {
+  padding-bottom: unset !important;
+  margin-bottom: unset !important;
+}
+#TabsToolbar[movingtab] + #nav-bar {
+  margin-top: unset !important;
+}
+
+#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+  position: unset !important;
+  margin-inline-start: unset !important;
+}
+#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] > .tab-stack {
+  border-inline-end: none !important;
 }
 
 /*
