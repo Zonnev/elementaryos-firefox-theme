@@ -2,7 +2,7 @@
 
 ![Screenshot](screenshot_3.png)
 
-##Issues
+## Issues
 There is an issue with this theme:
 If you use the bookmark bar, the window controls will go down as well.
 
