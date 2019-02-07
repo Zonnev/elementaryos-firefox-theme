@@ -5,6 +5,34 @@
 /*This style will make your browser similar to Safari.  Currently tested on MacOS Sierra and Linux on Nightly*/
 
 /*
+ * Titlebar
+ */
+#titlebar {
+  pointer-events: none;
+}
+.titlebar-buttonbox {
+  direction: rtl;
+  margin-left: 6px !important;
+  top: calc(4px - 40px) !important; 
+  position: absolute !important;
+  display: flex !important;
+  width: calc(100vw - 12px) !important;
+  height: 25px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.titlebar-buttonbox-container {
+  display: flex !important;
+}
+.titlebar-close,
+.titlebar-max,
+#new-tab-button,
+#tabbrowser-tabs,
+.tab-close-button {
+  pointer-events: auto !important; /* clickable */
+}
+
+/*
  * Navbar
  */
 #navigator-toolbox {
@@ -16,13 +44,13 @@
 }
 #nav-bar{
   height: 47px !important;
-  padding: 0px 6px 0px 6px !important;
-  background: linear-gradient(to bottom, #d2d2d2, #c7c7c7) !important;
+  padding: 0px 40px 0px 40px !important;
+    background: linear-gradient(#e6e6e6, #d0d0d0) !important;
   border-bottom: 1px solid #979797 !important;
-
 }
 #urlbar-container,
 #searchbar {
+
   margin: 0 !important;
 }
 #urlbar,
@@ -137,22 +165,28 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 #TabsToolbar {
+  align-items: left !important;
+  padding: 0 !important;
   position: absolute !important;
   bottom: 0px !important;
   width: 100vw !important;
   height: var(--tab-min-height) !important;
   border-bottom: 1px solid #898989 !important;
-  background: linear-gradient(#b9b9b9, #d4d4d4) !important;
+  background: linear-gradient(#cacaca, #d5d5d5) !important;
   box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
 
   direction: ltr;
 }
 
 #tabbrowser-tabs {
-    width: 90vw !important;
+  width: 90vw !important;
 }
 
-#TabsToolbar:not([inFullscreen="true"]) > .private-browsing-indicator {
+#new-tab-button {
+  margin-left: -40px !important;
+}
+
+.private-browsing-indicator {
   position: absolute !important;
   right: 6px !important;
   bottom: 2px !important;
@@ -217,7 +251,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 .tab-background[selected="true"] {
   background-attachment: none !important;
-  background: linear-gradient(to bottom, #cfcfcf, #c8c8c8) !important;
+  background: linear-gradient(to bottom, #d1d1d1, #c7c7c7) !important;
   border-top-left-radius: 4px !important;
   border-top-right-radius: 4px !important;
 
@@ -235,7 +269,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 /*Hide and show close tab button*/
 #TabsToolbar .tab-close-button {
-  -moz-box-ordinal-group: 1 !important;
   margin-left: -5.5px !important;
   border-radius: 2px !important;
   list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='%235b5b5b' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
@@ -272,31 +305,10 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   display: none !important; /* strip of color at the top of tab */
 }
 
-/* remove 'dragging tab' margin/padding nonsense */
-#TabsToolbar[movingtab] {
-  padding-bottom: unset !important;
-}
-#TabsToolbar[movingtab] > .tabbrowser-tabs {
-  padding-bottom: unset !important;
-  margin-bottom: unset !important;
-}
-#TabsToolbar[movingtab] + #nav-bar {
-  margin-top: unset !important;
-}
-
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
-  position: unset !important;
-  margin-inline-start: unset !important;
-}
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] > .tab-stack {
-  border-inline-end: none !important;
-}
-
 /*
  * Menubar
  */
 #toolbar-menubar {
-  -moz-box-ordinal-group: 2;
   margin: 0 !important;
   padding: 0 !important;
 
@@ -318,7 +330,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
  * Personalbar/Bookmarks
  */
 #PersonalToolbar {
-  -moz-box-ordinal-group: 3;
   padding: 6px !important;
 
   background: #d1d1d1 !important;
