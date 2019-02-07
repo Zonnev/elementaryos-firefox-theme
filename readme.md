@@ -1,9 +1,6 @@
 # An elementary os theme for Firefox 65+
 
-![Screenshot](screenshot_2.png)
-
-## Usage
-Use this theme with the titlebar option on.
+![Screenshot](screenshot_3.png)
 
 ## Credits
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) and the elementary team for the UI design and icons.
