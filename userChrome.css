@@ -28,7 +28,8 @@
 .titlebar-max,
 .PanelUI-menu-button,
 .toolbarbutton-1,
-.tabbrowser-tab {
+.tabbrowser-tab,
+.tabbrowser-arrowscrollbox {
   pointer-events: auto !important; /* clickable */
 }
 
