@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/*This style will make your browser similar to Safari.  Currently tested on MacOS Sierra and Linux on Nightly*/
+/*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
 /*
  * Titlebar
@@ -12,8 +12,8 @@
 }
 .titlebar-buttonbox {
   direction: rtl;
-  top: calc(4px - 40px) !important; 
-  position: absolute !important;
+  top: calc(50px - 40px) !important; 
+  position: fixed !important;
   display: flex !important;
   width: calc(100vw - 6px) !important;
   height: 25px !important;
