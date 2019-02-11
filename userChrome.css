@@ -50,9 +50,12 @@
   border-bottom: 1px solid #979797 !important;
 }
 .urlbar-icon {
-  width: 25px !important;
-  height: 25px !important;
+  width: 22px !important;
+  height: 22px !important;
+  padding: 4.5px !important;
+  margin-right: 5px !important;
 }
+
 #urlbar-container,
 #searchbar {
   margin: 0 !important;
