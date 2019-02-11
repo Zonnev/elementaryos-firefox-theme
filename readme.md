@@ -2,9 +2,6 @@
 
 ![Screenshot](screenshot_4.png)
 
-## Issues
-There is an issue with this theme: If you use the bookmark bar, the window controls will go down as well.
-
 ## Credits
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) and the elementary team for the UI design and icons.
 
