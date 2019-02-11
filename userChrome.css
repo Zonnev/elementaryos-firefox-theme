@@ -12,11 +12,10 @@
 }
 .titlebar-buttonbox {
   direction: rtl;
-  margin-left: 6px !important;
   top: calc(4px - 40px) !important; 
   position: absolute !important;
   display: flex !important;
-  width: calc(100vw - 12px) !important;
+  width: calc(100vw - 6px) !important;
   height: 25px !important;
   align-items: center !important;
   justify-content: space-between !important;
