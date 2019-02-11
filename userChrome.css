@@ -180,9 +180,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 #tabbrowser-tabs {
   width: 90vw !important;
 }
-#new-tab-button {
-  margin-left: -33px !important;
-}
 
 .private-browsing-indicator {
   position: absolute !important;
@@ -200,7 +197,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 /* drag space */
 .titlebar-spacer[type="pre-tabs"],
 .titlebar-spacer[type="post-tabs"] {
-  width: 40px;
+  width: 0 !important;
 }
 
 /* Override vertical shifts when moving a tab */
