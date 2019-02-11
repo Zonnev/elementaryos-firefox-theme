@@ -49,6 +49,10 @@
   background: linear-gradient(#e6e6e6, #d0d0d0) !important;
   border-bottom: 1px solid #979797 !important;
 }
+.urlbar-icon {
+  width: 25px !important;
+  height: 25px !important;
+}
 #urlbar-container,
 #searchbar {
   margin: 0 !important;
