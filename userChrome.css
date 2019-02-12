@@ -180,8 +180,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   border-bottom: 1px solid #898989 !important;
   background: linear-gradient(#cacaca, #d5d5d5) !important;
   box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
-
-  direction: ltr;
 }
 
 #tabbrowser-tabs {
@@ -218,26 +216,21 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 #navigator-toolbox[movingtab] > #nav-bar {
   margin-top: unset !important;
 }
-
 .tabbrowser-tab {
+  direction: rtl !important;
+}
+.tabbrowser-tab[pinned] {
   max-height: 30px !important; /* so tabbar border shows */
-  direction: rtl;
-  margin-left: -1px !important;
+  border-bottom: 1px solid #898989 !important;
+  direction: ltr !important;
 }
-.tabbrowser-tab:first-child {
-  margin-left: 0 !important;
-}
-.tabbrowser-tab:not([pinned]) {
-  min-width: 76px !important;
-  width: 180px !important;
+.tabbrowser-tab:after {
+  display: none !important; /* don't show border between tabs  */
 }
 .tabbrowser-tab:not([visuallyselected="true"]) {
   border-left: 1px solid transparent !important;
   border-right: 1px solid transparent !important;
   border-image: linear-gradient(to bottom, transparent, rgba(0,0,0, 0.1)) 1 !important;
-}
-.tabbrowser-tab:after {
-  display: none !important; /* don't show border between tabs  */
 }
 .tabbrowser-tab[selected="true"] {
   border-top: 1px solid none !important;
@@ -304,26 +297,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 .tab-line {
   display: none !important; /* strip of color at the top of tab */
-}
-
-/* remove 'dragging tab' margin/padding nonsense */
-#TabsToolbar[movingtab] {
-  padding-bottom: unset !important;
-}
-#TabsToolbar[movingtab] > .tabbrowser-tabs {
-  padding-bottom: unset !important;
-  margin-bottom: unset !important;
-}
-#TabsToolbar[movingtab] + #nav-bar {
-  margin-top: unset !important;
-}
-
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
-  position: unset !important;
-  margin-inline-start: unset !important;
-}
-#tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] > .tab-stack {
-  border-inline-end: none !important;
 }
 
 /*
