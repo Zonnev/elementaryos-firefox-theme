@@ -12,10 +12,11 @@
 }
 .titlebar-buttonbox {
   direction: rtl;
+  margin-left: -1px !important;
   top: calc(50px - 40px) !important; 
   position: fixed !important;
   display: flex !important;
-  width: calc(100vw - 6px) !important;
+  width: calc(100vw - 5px) !important;
   height: 25px !important;
   align-items: center !important;
   justify-content: space-between !important;
@@ -200,8 +201,8 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 /* drag space */
-.titlebar-spacer[type="pre-tabs"],
-.titlebar-spacer[type="post-tabs"] {
+.titlebar-spacer {
+  margin-left: -1px !important;
   width: 0 !important;
 }
 
