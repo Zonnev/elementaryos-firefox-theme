@@ -4,6 +4,12 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
+/* Sort of fix for rounded window corners */
+#main-window[chromemargin] {
+    -moz-appearance: none !important;
+    background: rgba(59.2, 59.2, 59.2, 1) !important;
+}
+
 /*
  * Titlebar
  */
@@ -38,13 +44,15 @@
  * Navbar
  */
 #navigator-toolbox {
-  padding-bottom: 30px !important;
+  padding-bottom: 30px !important; /* makes room for the tab bar */
   --tabs-border-color: transparent !important;
 }
 #navigator-toolbox:after {
   display: none !important; /* remove this weird extra separator mozilla tacks on before the page content */
 }
 #nav-bar{
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
   height: 47px !important;
   padding: 0px 40px 0px 40px !important;
   background: linear-gradient(#e6e6e6, #d0d0d0) !important;
@@ -174,7 +182,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 
 #TabsToolbar {
   padding: 0 !important;
-  position: absolute !important;
+  position: absolute !important; /* makes tab bar go to bottom */
   bottom: 0px !important;
   width: 100vw !important;
   height: var(--tab-min-height) !important;
@@ -184,7 +192,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 #tabbrowser-tabs {
-  width: 90vw !important;
+  width: 90vw !important; /* keeps room to the right for private browsing icon */
 }
 
 .private-browsing-indicator {
