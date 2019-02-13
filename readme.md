@@ -12,4 +12,4 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 3. Create a folder named `chrome`
 4. Paste the userChrome.css in this folder
 5. Disable Title bar and Drag space in the customization panel in Firefox.
-5. In the customization panel in Firefox you can move the new tab button to the left if you wish.
+5. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well.
