@@ -8,6 +8,7 @@
 #main-window[chromemargin] {
     -moz-appearance: none !important;
     background: rgba(59.2, 59.2, 59.2, 1) !important;
+    margin-top: -1px !important;
 }
 
 /*
@@ -51,8 +52,8 @@
   display: none !important; /* remove this weird extra separator mozilla tacks on before the page content */
 }
 #nav-bar{
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
   height: 47px !important;
   padding: 0px 40px 0px 40px !important;
   background: linear-gradient(#e6e6e6, #d0d0d0) !important;
