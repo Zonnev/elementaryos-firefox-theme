@@ -1,6 +1,6 @@
 # An elementary os theme for Firefox 65+
 
-![Screenshot](screenshot_8.png)
+![Screenshot](screenshot_9.png)
 ![Screenshot](screenshot_9_darkmode.png)
 
 ## Credits
