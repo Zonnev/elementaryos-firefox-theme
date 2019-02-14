@@ -374,21 +374,21 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 /* DARK MODE */
 
 #nav-bar:-moz-lwtheme-brighttext {
-	background: linear-gradient(rgb(57,62,67), rgb(52,56,60)) !important;
+	background: linear-gradient(#393D43, #35383D) !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #urlbar:-moz-lwtheme-brighttext {
-	background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0) 3px), linear-gradient(rgb(57,61,67),rgb(61,66,72)) !important;
+	background: linear-gradient(#383D41, #3D4248) !important;
     border: 1px solid rgb(38, 40, 42) !important;
 	box-shadow: inset 0 0 0 1px rgb(54, 58, 64), 0 1px 0 0 rgb(59, 65, 72) !important;
 }
 .searchbar-textbox:-moz-lwtheme-brighttext {
-	background: linear-gradient(rgba(0,0,0,0.02), rgba(0,0,0,0) 3px), linear-gradient(rgb(57,61,67),rgb(61,66,72)) !important;
+	background: linear-gradient(#383D41, #35393D) !important;
     border: 1px solid rgb(38, 40, 42) !important;
 	box-shadow: inset 0 0 0 1px rgb(54, 58, 64), 0 1px 0 0 rgb(59, 65, 72) !important;
 }
 #TabsToolbar:-moz-lwtheme-brighttext {
-	background: linear-gradient(#303337, #35393D) !important;
+	background: linear-gradient(#33373B, #35393D) !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
 	box-shadow: inset 0 1px 2px 1px rgb(46, 49, 52) !important;
 }
@@ -424,7 +424,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 #home-button:-moz-lwtheme-brighttext {
-	list-style-image: url("data:image/svg+xml,%3Csvg height='24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate%28-353 255%29'%3E%3Cpath color='%23bebebe' d='M365-251l-8.844 8.844 1.688 1.719 1.156-1.157V-235h5v-4c0-.554.446-1 1-1s1 .446 1 1v4h5v-6.594l1.156 1.156 1.688-1.718zm4 1v1.531l2 2.094V-250z' fill='%235e5e5e' overflow='visible' style='isolation:auto;mix-blend-mode:normal;marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+	list-style-image: url("data:image/svg+xml,%3Csvg height='24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='translate%28-353 255%29'%3E%3Cpath color='%23bebebe' d='M365-251l-8.844 8.844 1.688 1.719 1.156-1.157V-235h5v-4c0-.554.446-1 1-1s1 .446 1 1v4h5v-6.594l1.156 1.156 1.688-1.718zm4 1v1.531l2 2.094V-250z' fill='rgb(255, 255, 255)' overflow='visible' style='isolation:auto;mix-blend-mode:normal;marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
 	filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.4));
 }
 
