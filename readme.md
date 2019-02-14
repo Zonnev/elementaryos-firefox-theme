@@ -4,7 +4,7 @@
 ![Screenshot](screenshot_8darkmode.png)
 
 ## Credits
-Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) and the elementary team for the UI design and icons.
+Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [h1royuki](https://github.com/h1royuki/firefox-elementary-theme) for the dark mode and the elementary team for the UI design and icons.
 
 ## Install
 1. Go to [about:support](about:support) in Firefox
