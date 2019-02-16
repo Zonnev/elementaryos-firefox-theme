@@ -206,7 +206,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 #tabbrowser-tabs {
-  width: 90vw !important; /* keeps room to the right for private browsing icon */
+  width: calc(100vw - 100px) !important;
 }
 
 .private-browsing-indicator {
@@ -223,9 +223,8 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 /* drag space */
-.titlebar-spacer {
-  margin-left: -1px !important;
-  width: 0 !important;
+.titlebar-spacer[type="pre-tabs"] {
+  margin-left: -40px !important;
 }
 
 /* Override vertical shifts when moving a tab */
@@ -241,6 +240,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 .tabbrowser-tab {
   direction: rtl !important;
+  width: 185px !important;
 }
 .tabbrowser-tab[pinned] {
   max-height: 30px !important; /* so tabbar border shows */
