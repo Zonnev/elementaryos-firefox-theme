@@ -4,7 +4,7 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
-/* fix for selected urlbar text*/
+/* fix colour for selected urlbar text*/
 ::-moz-selection {
   color: #FFFFFF !important;
   background-color: #1E90FF !important;
@@ -17,8 +17,12 @@
 	margin-top: -1px !important;
 }
 
+/* fullscreen fixes */
 #fullscr-toggler {
   height: 3px !important;
+}
+#minimize-button, #restore-button, #close-button {
+  color: #979797 !important
 }
 
 /*
@@ -39,7 +43,7 @@
   justify-content: space-between !important;
 }
 :root[sizemode="fullscreen"] .titlebar-buttonbox {
-  display: none !important;
+  display: none !important; /* fullscreen no window control buttons */
 }
 .titlebar-close,
 .titlebar-max,
@@ -71,7 +75,7 @@
   border-bottom: 1px solid #979797 !important;
 }
 :root[sizemode="fullscreen"] #nav-bar {
-  padding: 0px 6px 0px 6px !important;
+  padding: 0px 6px 0px 6px !important; /* fullscreen fixes for the nav bar */
 }
 .urlbar-icon {
   width: 22px !important;
