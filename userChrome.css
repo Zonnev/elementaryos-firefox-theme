@@ -77,6 +77,10 @@
 :root[sizemode="fullscreen"] #nav-bar {
   padding: 0px 6px 0px 6px !important; /* fullscreen fixes for the nav bar */
 }
+
+#urlbar[focused="true"], .searchbar-textbox[focused="true"]{
+  border: 1px solid #1E90FF !important;
+}
 .urlbar-icon {
   width: 22px !important;
   height: 22px !important;
@@ -420,8 +424,11 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
     background: #35383D !important;
     border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
-menubar:-moz-lwtheme > menu[open="true"] {
+menubar:-moz-lwtheme-brighttext > menu[open="true"] {
 	color: #d1d1d1 !important;
+}
+#urlbar[focused="true"]:-moz-lwtheme-brighttext, .searchbar-textbox[focused="true"]:-moz-lwtheme-brighttext{
+  border: 1px solid #1E90FF !important;
 }
 
 /* buttons in dark mode */
