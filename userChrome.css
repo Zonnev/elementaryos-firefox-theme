@@ -17,26 +17,30 @@
 	margin-top: -1px !important;
 }
 
+#fullscr-toggler {
+  height: 3px !important;
+}
+
 /*
  * Titlebar
  */
 .titlebar-buttonbox-container {
+  display: flex !important;
   pointer-events: none;
 }
 .titlebar-buttonbox {
   direction: rtl;
   margin-left: -1px !important;
-  top: calc(50px - 40px) !important; 
+  top: 10px !important; 
   position: fixed !important;
   display: flex !important;
   width: calc(100vw - 5px) !important;
   height: 25px !important;
   justify-content: space-between !important;
 }
-.titlebar-buttonbox-container {
-  display: flex !important;
+:root[sizemode="fullscreen"] .titlebar-buttonbox {
+  display: none !important;
 }
-
 .titlebar-close,
 .titlebar-max,
 .PanelUI-menu-button,
@@ -65,6 +69,9 @@
   padding: 0px 40px 0px 40px !important;
   background: linear-gradient(#e6e6e6, #d0d0d0) !important;
   border-bottom: 1px solid #979797 !important;
+}
+:root[sizemode="fullscreen"] #nav-bar {
+  padding: 0px 6px 0px 6px !important;
 }
 .urlbar-icon {
   width: 22px !important;
@@ -474,4 +481,11 @@ menubar:-moz-lwtheme > menu[open="true"] {
 .tab-label:-moz-lwtheme-brighttext {
 	color: #A9A9A9 !important;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) !important;
+}
+#customization-lwtheme-button:-moz-lwtheme-brighttext,
+#customization-toolbar-visibility-button:-moz-lwtheme-brighttext,
+#customization-uidensity-button:-moz-lwtheme-brighttext,
+#customization-reset-button:-moz-lwtheme-brighttext,
+#customization-done-button:-moz-lwtheme-brighttext {
+	color: #FFFFFF !important;
 }
