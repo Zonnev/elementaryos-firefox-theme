@@ -227,7 +227,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   margin-left: -40px !important;
 }
 :root[sizemode="normal"][chromehidden~="menubar"] #TabsToolbar > .toolbar-items, :root[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar > .toolbar-items {
-    padding-top: 0px !important;
+    padding-top: unset !important;
 }
 
 /* Override vertical shifts when moving a tab */
