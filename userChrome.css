@@ -14,7 +14,7 @@
 #main-window[chromemargin] {
     -moz-appearance: none !important;
     background: rgba(59.2, 59.2, 59.2, 1) !important;
-    margin-top: -1px !important;
+	margin-top: -1px !important;
 }
 
 /*
@@ -31,7 +31,6 @@
   display: flex !important;
   width: calc(100vw - 5px) !important;
   height: 25px !important;
-  align-items: center !important;
   justify-content: space-between !important;
 }
 .titlebar-buttonbox-container {
@@ -226,6 +225,9 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 /* drag space */
 .titlebar-spacer[type="pre-tabs"] {
   margin-left: -40px !important;
+}
+:root[sizemode="normal"][chromehidden~="menubar"] #TabsToolbar > .toolbar-items, :root[sizemode="normal"] #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar > .toolbar-items {
+    padding-top: 0px !important;
 }
 
 /* Override vertical shifts when moving a tab */
