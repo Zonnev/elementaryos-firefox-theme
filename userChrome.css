@@ -10,11 +10,14 @@
   background-color: #1E90FF !important;
 }
 
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url("http://www.w3.org/1999/xhtml");
+
 /* Sort of fix for rounded window corners */
-#main-window[chromemargin] {
+#main-window {
     -moz-appearance: none !important;
     background: rgba(59.2, 59.2, 59.2, 1) !important;
-	margin-top: -1px !important;
+    margin-top: -1px !important;
 }
 
 /* fullscreen fixes */
@@ -24,7 +27,9 @@
 #minimize-button, #restore-button, #close-button {
   color: #979797 !important;
 }
-
+#fullscreen-exit-button {
+    color: #ffffff !important;
+}
 /*
  * Titlebar
  */
@@ -33,12 +38,12 @@
   pointer-events: none;
 }
 .titlebar-buttonbox {
-  direction: rtl;
-  margin-left: -1px !important;
+  flex-direction: row-reverse !important;
+  margin: 0px !important;
   top: 10px !important; 
   position: fixed !important;
   display: flex !important;
-  width: calc(100vw - 5px) !important;
+  width: 100vw !important;
   height: 25px !important;
   justify-content: space-between !important;
 }
@@ -147,6 +152,7 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-icon {
 toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   background: rgba(51,51,51, 0.15) !important;
 }
+
 /* keep default icons small
    while below icons are bigger */
 #back-button > .toolbarbutton-icon,
@@ -196,7 +202,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 #PanelUI-button {
   border: none !important;
 }
-
 /*
  * Tabs
  */
