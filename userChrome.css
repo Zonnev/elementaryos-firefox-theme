@@ -4,8 +4,14 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
+/* fix colour of pageinfo */
+@-moz-document url-prefix(chrome://browser/content/pageinfo/pageInfo.xul) {
+* {
+  background: rgba(200, 200, 200, 1) !important;
+}}
+
 /* fix colour for selected urlbar text */
-::-moz-selection {
+::selection {
   color: #FFFFFF !important;
   background-color: #1E90FF !important;
 }
@@ -16,7 +22,7 @@
 /* sort of fix for rounded window corners */
 #main-window {
     -moz-appearance: none !important;
-    background: rgba(59.2, 59.2, 59.2, 1) !important;
+    background: rgba(59, 59, 59, 1) !important;
     margin-top: -1px !important;
 }
 
