@@ -1,7 +1,7 @@
 # An elementary os theme for Firefox 65+
 
-![Screenshot](screenshot11.png)
-![Screenshot](screenshot11_darkmode.png)
+![Screenshot](screenshot12.png)
+![Screenshot](screenshot12_darkmode.png)
 
 ## Credits
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [h1royuki](https://github.com/h1royuki/firefox-elementary-theme) for the dark mode and the elementary team for the UI design and icons.
