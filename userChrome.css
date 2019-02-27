@@ -4,10 +4,12 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
-/* fix colour of pageinfo */
-@-moz-document url-prefix(chrome://browser/content/pageinfo/pageInfo.xul) {
-* {
-  background: rgba(200, 200, 200, 1) !important;
+/* sort of fix for rounded window corners and fix colour of pageinfo */
+@-moz-document url-prefix(chrome://browser/content/browser.xul) {
+#main-window {
+    -moz-appearance: none !important;
+    background: rgba(59, 59, 59, 1) !important;
+    margin-top: -1px !important;
 }}
 
 /* fix colour for selected urlbar text */
@@ -18,13 +20,6 @@
 
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 @namespace html url("http://www.w3.org/1999/xhtml");
-
-/* sort of fix for rounded window corners */
-#main-window {
-    -moz-appearance: none !important;
-    background: rgba(59, 59, 59, 1) !important;
-    margin-top: -1px !important;
-}
 
 /* focus window fix */
 #nav-bar:-moz-window-inactive {
@@ -280,6 +275,10 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 #tabbrowser-tabs {
   width: calc(100vw - 100px) !important;
+}
+/* tabs width */
+.tabbrowser-tab:not([pinned]) {
+    max-width: 145px !important;
 }
 .private-browsing-indicator {
   position: absolute !important;
