@@ -293,6 +293,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 .tab-content:not([pinned]) {
   -moz-box-direction: reverse !important;
+  padding: 0px 0px 0px 9px !important;
 }
 .tabbrowser-tab[pinned] {
   max-height: 30px !important; /* so tabbar border shows */
@@ -366,7 +367,8 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 .tab-label {
   -moz-box-flex: 1 !important;  
   color: #4b4b4b !important;
-  margin: 4px !important;
+  margin-left: 6px !important;
+  margin-right: 6px !important;
   text-align: center !important;
   text-shadow: 0 1px 0 rgba(255,255,255, 0.4) !important;
 }
