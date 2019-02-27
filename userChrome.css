@@ -18,9 +18,6 @@
   background-color: #1E90FF !important;
 }
 
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-@namespace html url("http://www.w3.org/1999/xhtml");
-
 /* focus window fix */
 #nav-bar:-moz-window-inactive {
   background: #e6e6e6 !important;
@@ -275,10 +272,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 #tabbrowser-tabs {
   width: calc(100vw - 100px) !important;
-}
-/* tabs width */
-.tabbrowser-tab:not([pinned]) {
-    max-width: 145px !important;
 }
 .private-browsing-indicator {
   position: absolute !important;
