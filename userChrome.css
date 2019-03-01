@@ -4,14 +4,6 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
-/* sort of fix for rounded window corners and fix colour of pageinfo */
-@-moz-document url-prefix(chrome://browser/content/browser.xul) {
-#main-window {
-    -moz-appearance: none !important;
-    background: rgba(59, 59, 59, 1) !important;
-    margin-top: -1px !important;
-}}
-
 /* fix colour for selected urlbar text */
 ::selection {
   color: #FFFFFF !important;
@@ -28,6 +20,7 @@
 }
 #TabsToolbar:-moz-window-inactive {
   background: #e6e6e6 !important;
+  border-top: 1px solid #b6b6b6 !important;
   border-bottom: 1px solid #b6b6b6 !important;
 }
 .tab-background[selected="true"]:-moz-window-inactive {
@@ -115,17 +108,16 @@
 /* navbar */
 #navigator-toolbox {
   padding-bottom: 30px !important; /* makes room for the tab bar */
-  --tabs-border-color: transparent !important;
+  --tabs-border-color: none !important;
 }
 #navigator-toolbox:after {
   display: none !important; /* remove this weird extra separator mozilla tacks on before the page content */
 }
-#nav-bar{
+#nav-bar {
   -moz-box-ordinal-group: 0;
-  border-top-left-radius: 5px !important;
-  border-top-right-radius: 5px !important;
-  height: 49px !important;
-  padding: 1px 40px 1px 40px !important;
+  -moz-appearance: -moz-window-titlebar !important; /* makes rounded corners for main window */
+  height: 48px !important;
+  padding: 0px 40px 0px 40px !important;
   background: linear-gradient(#e6e6e6, #d0d0d0) !important;
   border-bottom: 1px solid #979797 !important;
 }
@@ -265,7 +257,8 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   position: absolute !important; /* makes tab bar go to bottom */
   bottom: 0px !important;
   width: 100vw !important;
-  height: var(--tab-min-height) !important;
+  height: 31px !important; /* tabs actual height */
+  border-top: 1px solid #898989 !important;
   border-bottom: 1px solid #898989 !important;
   background: linear-gradient(#cacaca, #d5d5d5) !important;
   box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
@@ -435,6 +428,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 
 /* DARK MODE */
 #nav-bar:-moz-lwtheme-brighttext {
+    -moz-appearance: none !important;
 	background: linear-gradient(#393D43, #35383D) !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
@@ -450,6 +444,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 #TabsToolbar:-moz-lwtheme-brighttext {
 	background: linear-gradient(#33373B, #35393D) !important;
+    border-top: 1px solid rgb(36, 38, 39) !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
 	box-shadow: inset 0 1px 2px 1px rgb(46, 49, 52) !important;
 }
