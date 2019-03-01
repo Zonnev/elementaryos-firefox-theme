@@ -4,6 +4,10 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
+#main-window {
+  -moz-appearance: -moz-window-titlebar !important; 
+}
+
 /* fix colour for selected urlbar text */
 ::selection {
   color: #FFFFFF !important;
