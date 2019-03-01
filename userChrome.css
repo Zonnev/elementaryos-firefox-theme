@@ -4,6 +4,7 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
+/* fix for rounded corners */
 #main-window {
   -moz-appearance: -moz-window-titlebar !important; 
 }
