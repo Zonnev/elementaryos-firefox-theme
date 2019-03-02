@@ -433,6 +433,9 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 /* DARK MODE */
+:root[sizemode="fullscreen"] #TabsToolbar:-moz-lwtheme-brighttext {
+  height: 31px !important; /* fix tab align in fullscreen for dark mode */
+}
 #nav-bar:-moz-lwtheme-brighttext {
     -moz-appearance: none !important;
 	background: linear-gradient(#393D43, #35383D) !important;
