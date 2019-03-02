@@ -16,20 +16,20 @@
 }
 
 /* focus window fix */
-#nav-bar:-moz-window-inactive {
-  background: #e6e6e6 !important;
-  border-bottom: 1px solid #b6b6b6 !important;
-}
 .titlebar-buttonbox:-moz-window-inactive {
   opacity: 0.7 !important;
 }
 #TabsToolbar:-moz-window-inactive {
-  background: #e6e6e6 !important;
+  background: #e2e2e2 !important;
   border-top: 1px solid #b6b6b6 !important;
   border-bottom: 1px solid #b6b6b6 !important;
 }
+#toolbar-menubar:-moz-window-inactive,
+#PersonalToolbar:-moz-window-inactive {
+  opacity: 0.3 !important;
+}
 .tab-background[selected="true"]:-moz-window-inactive {
-  background: #e6e6e6 !important;
+  background: #e3e3e3 !important;
 }
 .tabbrowser-tab[selected="true"]:-moz-window-inactive {
   border-left: 1px solid #b6b6b6 !important;
@@ -123,8 +123,6 @@
   -moz-appearance: -moz-window-titlebar !important; /* makes rounded corners for main window */
   height: 48px !important;
   padding: 0px 40px 0px 40px !important;
-  background: linear-gradient(#e6e6e6, #d0d0d0) !important;
-  border-bottom: 1px solid #979797 !important;
 }
 :root[sizemode="fullscreen"] #nav-bar {
   padding: 0px 6px 0px 6px !important; /* fullscreen fixes for the nav bar */
@@ -268,6 +266,9 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   background: linear-gradient(#cacaca, #d5d5d5) !important;
   box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
 }
+:root[sizemode="fullscreen"] #TabsToolbar {
+  height: 30px !important; /* fix tab align in fullscreen */
+}
 #tabbrowser-tabs {
   display: block !important;
   width: calc(100vw - 100px) !important;
@@ -404,7 +405,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   margin: 0 !important;
   padding: 0 !important;
   background: #d1d1d1 !important;
-  border-bottom: 1px solid #898989 !important;
+  border-top: 1px solid #898989 !important;
   text-shadow: 0 1px 0 rgba(255,255,255, 0.4) !important;
 }
 #titlebar-content {
@@ -416,7 +417,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   padding: 6px !important;
 
   background: #d1d1d1 !important;
-  border-bottom: 1px solid #898989 !important;
+  border-top: 1px solid #898989 !important;
 }
 .bookmark-item {
   padding: 3px 5px !important;
@@ -435,7 +436,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 #nav-bar:-moz-lwtheme-brighttext {
     -moz-appearance: none !important;
 	background: linear-gradient(#393D43, #35383D) !important;
-	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #urlbar:-moz-lwtheme-brighttext {
 	background: linear-gradient(#383D41, #3D4248) !important;
