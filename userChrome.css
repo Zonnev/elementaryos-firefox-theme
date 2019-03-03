@@ -29,7 +29,14 @@
 }
 #toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
 #PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-  opacity: 0.3 !important;
+  background: #e2e2e2 !important;
+  border-top: 1px solid #b6b6b6 !important;
+}
+.bookmark-item:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
+  color: #6C6B6B !important;
+}
+#menubar-items:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
+  opacity: 0.7 !important;
 }
 .tab-background[selected="true"]:-moz-window-inactive {
   background: #e3e3e3 !important;
@@ -411,7 +418,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   margin: 0 !important;
   padding: 0 !important;
   background: #d1d1d1 !important;
-  border-top: 1px solid #898989 !important;
+  border-top: 1px solid #979797 !important;
   text-shadow: 0 1px 0 rgba(255,255,255, 0.4) !important;
 }
 #titlebar-content {
@@ -421,9 +428,8 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 /* bookmarks bar */
 #PersonalToolbar {
   padding: 6px !important;
-
   background: #d1d1d1 !important;
-  border-top: 1px solid #898989 !important;
+  border-top: 1px solid #979797 !important;
 }
 .bookmark-item {
   padding: 3px 5px !important;
