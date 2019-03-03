@@ -136,16 +136,17 @@
   padding: 0px 6px 0px 6px !important; 
 }
 
+/* blue border around focused urlbar */
 #urlbar[focused="true"], .searchbar-textbox[focused="true"]{
   border: 1px solid #1E90FF !important;
 }
+
 .urlbar-icon {
   width: 22px !important;
   height: 22px !important;
   padding: 4.5px !important;
   margin-right: 5px !important;
 }
-
 #urlbar-container,
 #searchbar {
   margin: 0 !important;
@@ -260,9 +261,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 :root {
   --tab-min-height: 30px !important; /* adjust to suit your needs */
 }
-:root #tabbrowser-tabs {
-  --tab-min-height: 30px !important; /* needs to be the same as above under :root */
-}
+
 #TabsToolbar {
   padding: 0 !important;
   position: absolute !important; /* makes tab bar go to bottom */
@@ -278,13 +277,12 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   height: 30px !important; /* tab fix for fullscreen */
 }
 #tabbrowser-tabs {
-  display: block !important;
   width: calc(100vw - 100px) !important;
 }
 
 /* tabs width */
-.tabbrowser-tab:not([pinned]){
-  width: 180px !important;
+.tabbrowser-tab[fadein]:not([pinned]) {
+  max-width: 180px !important;
 }
 
 .private-browsing-indicator {
