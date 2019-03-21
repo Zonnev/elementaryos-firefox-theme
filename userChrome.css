@@ -103,7 +103,7 @@
   top: 12px !important; 
   position: fixed !important;
   display: flex !important;
-  width: 100vw !important;
+  width: calc(100vw - 6px) !important;
   height: 25px !important;
   justify-content: space-between !important;
 }
