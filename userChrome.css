@@ -132,7 +132,7 @@
   -moz-box-ordinal-group: 0;
   -moz-appearance: -moz-window-titlebar !important; /* makes rounded corners for main window */
   height: 48px !important;
-  padding: 8px 42px 8px 42px !important;
+  padding: 0px 42px 0px 42px !important;
 }
 
 /* fullscreen fixes for the nav bar */
@@ -140,7 +140,7 @@
   -moz-appearance: none !important; 
   background: linear-gradient(#e5e5e5, #d3d3d3) !important;
   border-bottom: 1px solid #979797 !important;
-  padding: 8px 6px 8px 6px !important; 
+  padding: 0px 6px 0px 6px !important;
 }
 
 /* blue border around focused urlbar */
@@ -156,7 +156,8 @@
 }
 #urlbar-container,
 #searchbar {
-  margin: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
 }
 #urlbar {
   max-height: 25px !important;
