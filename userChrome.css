@@ -4,6 +4,16 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
+/* hide context menuitem "Exit Full Screen Mode" */
+#autohide-context {
+  display: none!important;
+}
+
+/* hide window controls in full screen mode */
+#window-controls {
+  display: none!important;
+}
+
 /* fix for rounded corners */
 #main-window {
   -moz-appearance: -moz-window-titlebar !important; 
