@@ -4,6 +4,11 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
+/* hides window controls in full screen mode */
+#window-controls {
+  display: none !important;
+}
+
 /* fix for rounded corners */
 #main-window {
   -moz-appearance: -moz-window-titlebar !important; 
