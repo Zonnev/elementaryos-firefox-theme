@@ -8,9 +8,6 @@
 #main-window {
   -moz-appearance: -moz-window-titlebar !important; 
 }
-:root[sizemode="fullscreen"] #main-window {
-  -moz-appearance: none !important; 
-}
 
 /* fix colour for selected urlbar text */
 ::selection {
@@ -122,7 +119,7 @@
 /* navbar */
 #navigator-toolbox {
   padding-bottom: 30px !important; /* makes room for the tab bar */
-  --tabs-border-color: none !important;
+  border: none !important;
 }
 #navigator-toolbox:after {
   display: none !important; /* remove this weird extra separator mozilla tacks on before the page content */
@@ -130,15 +127,12 @@
 #nav-bar {
   -moz-box-ordinal-group: 0;
   -moz-appearance: -moz-window-titlebar !important; /* makes rounded corners for main window */
-  height: 48px !important;
+  height: 47px !important;
   padding: 0px 42px 0px 42px !important;
 }
 
 /* fullscreen fixes for the nav bar */
 :root[sizemode="fullscreen"] #nav-bar {
-  -moz-appearance: none !important; 
-  background: linear-gradient(#e5e5e5, #d3d3d3) !important;
-  border-bottom: 1px solid #979797 !important;
   padding: 0px 6px 0px 6px !important;
 }
 
@@ -267,6 +261,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 }
 
 #TabsToolbar {
+  -moz-appearance: none !important;
   padding: 0 !important;
   position: absolute !important; /* makes tab bar go to bottom */
   bottom: 0px !important; /* keeps tabs to bottom */
@@ -276,9 +271,6 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   border-bottom: 1px solid #979797 !important;
   background: linear-gradient(#cacaca, #d5d5d5) !important;
   box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
-}
-:root[sizemode="fullscreen"] #TabsToolbar {
-  height: 30px !important; /* tab fix for fullscreen */
 }
 #tabbrowser-tabs {
   width: 100vw !important;
@@ -448,7 +440,7 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
 	background: linear-gradient(#393D43, #35383D) !important;
 }
 :root[sizemode="fullscreen"] #nav-bar:-moz-lwtheme-brighttext {
-	-moz-appearance: none !important; 
+	-moz-appearance: none !important;
 	background: linear-gradient(#393D43, #35383D) !important;
 	border-bottom: 1px solid #252729 !important;
 }
@@ -566,18 +558,17 @@ menubar:-moz-lwtheme-brighttext > menu[open="true"] {
   background: linear-gradient(to right, #25003e, #a24c8d) !important;
 }
 #main-window[privatebrowsingmode="temporary"]:root[sizemode="fullscreen"] #nav-bar {
-  -moz-appearance: none !important; 
+  -moz-appearance: none !important;
   background: linear-gradient(to right, #25003e, #a24c8d) !important;
-  border-bottom: 1px solid #1e0032 !important;
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar {
-  -moz-appearance: none !important; 
   background: linear-gradient(to right, #25003e, #a24c8d) !important;
   border-top: 1px solid #1e0032 !important;
   border-bottom: 1px solid #1e0032 !important;
 }
 #main-window[privatebrowsingmode="temporary"]:root[sizemode="fullscreen"] #TabsToolbar {
-  border-top: none !important;
+  border-top: 1px solid #1e0032 !important;
+  border-bottom: 1px solid #1e0032 !important;
 }
 #main-window[privatebrowsingmode="temporary"] .tabbrowser-tab[visuallyselected="true"] {
 	border-left: 1px solid #1e0032 !important;
