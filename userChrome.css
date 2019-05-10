@@ -115,6 +115,9 @@
 .tabbrowser-arrowscrollbox {
   pointer-events: auto !important; /* clickable */
 }
+.titlebar-min {
+  display: none !important;
+}
 
 /* navbar */
 #navigator-toolbox {
