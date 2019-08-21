@@ -174,6 +174,7 @@
 
 /* urlbar suggestions popup */
 #PopupAutoCompleteRichResult {
+  -moz-box-ordinal-group: 2;
   background-clip: padding-box !important;
   border-top: none !important;
   border-left: none !important;
@@ -310,6 +311,9 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   border-left: 1px solid transparent !important;
   border-right: 1px solid transparent !important;
   border-image: linear-gradient(to bottom, transparent, rgba(0,0,0, 0.1)) 1 !important;
+}
+.tabbrowser-tab[visuallyselected="true"] {
+  z-index: 0 !important;
 }
 .tabbrowser-tab[selected="true"] {
   border-top: 1px solid none !important;
