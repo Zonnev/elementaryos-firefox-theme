@@ -11,5 +11,5 @@ fi
 URLPATH=https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/userChrome.css
 THEMEPATH="/home/$USER/.mozilla/firefox/$PROFPATH/chrome/userChrome.css"
 
-mkdir -p "$(dirname "$THEMEPATH")"
+mkdir -p "$(dirname "$THEMEPATH")" && touch "$FILE"
 curl -K -O $URLPATH >> $THEMEPATH
