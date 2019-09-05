@@ -8,13 +8,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 ## Install
 
-Run bash script:
-
-```bash
-bash <(curl -s https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/install.sh)
-```
-
-Or follow the steps yourself:
+Follow these steps:
 1. Go to [about:support](about:support) in Firefox
 2. Application Basics > Profile Directory > Open Directory
 3. Create a folder named `chrome`
