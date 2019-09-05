@@ -1,4 +1,4 @@
-# An elementary os theme for Firefox 68
+# An elementary os theme for Firefox 69
 
 ![Screenshot](screenshot13.png)
 ![Screenshot](screenshot12_darkmode.png)
