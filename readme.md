@@ -2,6 +2,7 @@
 
 ![Screenshot](Screenshot.png)
 ![Screenshot](Screenshot_darkmode.png)
+![Screenshot](Screenshot_nightly.png)
 
 ## Credits
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [h1royuki](https://github.com/h1royuki/firefox-elementary-theme) for the dark mode and the elementary team for the UI design and icons.
