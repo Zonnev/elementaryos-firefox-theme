@@ -22,8 +22,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 5. Disable Title bar in the customization panel in Firefox.
 5. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well.
 
-## Notes
-For **Firefox Nightly** and **Firefox Developer Edition** use ``userChrome.css`` in nightly folder.
+**Note:** For **Firefox Nightly** and **Firefox Developer Edition** use ``userChrome.css`` in nightly folder.
 See this post ![Here](https://github.com/Zonnev/elementaryos-firefox-theme/issues/37)
 
 ## Megabar activation
