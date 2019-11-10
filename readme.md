@@ -25,8 +25,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 **Note:** For **Firefox Nightly** and **Firefox Developer Edition** use ``userChrome.css`` in nightly folder.
 See this post ![Here](https://github.com/Zonnev/elementaryos-firefox-theme/issues/37)
 
-## Megabar activation
-If you would like to use the new Megabar, take the following steps:
+**If you would like to use the new Megabar, take the following steps:**
 1. Load **about:config** in the Firefox address bar.
 2. Confirm that you will be careful.
 3. Search for `browser.urlbar.megabar` using the search at the top.
