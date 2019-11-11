@@ -45,7 +45,7 @@ else
 	echo "${#PROFILES_PATHS[@]} profiles found"
 	ITEM=0
 	for PROFILE_PATH in "${PROFILES_PATHS[@]}"; do
-	    saveProfile "${ITEM}" "${PROFILES_PATHS[0]}"
+	    saveProfile "${ITEM}" "${PROFILE_PATH}"
 	    ITEM="$((${ITEM}+1))"
 	done
 fi
