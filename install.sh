@@ -6,24 +6,23 @@ function saveProfile() {
 	PROFILE_PATH="${2}"
 	PROFILE_CHROME_DIR="${FIREFOX_DIR}/${PROFILE_PATH}/chrome"
     PROFILE_USER_CHROME_CSS_FILE="${PROFILE_CHROME_DIR}/userChrome.css"
-    MARKER=" $((${ITEM}+3))."
-    echo    "${MARKER} Install theme at profile path ${FIREFOX_DIR}/${PROFILE_PATH}:"
-    echo -n "    ensure directory 'chrome' ... "
+    echo "  $((${ITEM}+3)). Install theme at profile path ${FIREFOX_DIR}/${PROFILE_PATH}:"
+    echo -n "     - Ensure directory 'chrome' ... "
     mkdir -p "${PROFILE_CHROME_DIR}"
     echo "done"
-    echo -n "    create file 'chrome/userChrome.css' ... "
+    echo -n "     - Create file 'chrome/userChrome.css' ... "
     curl -s -o "${PROFILE_USER_CHROME_CSS_FILE}" "${USER_CHROME_CSS_URL}"
     echo "done"
 }
 
-echo "Install Elementaryos Firefox Theme (https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme)"
+echo "Install ElementaryOS Firefox Theme (https://github.com/Zonnev/elementaryos-firefox-theme)"
 echo ""
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
 USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/userChrome.css"
 
-echo -n " 1. Check Firefox installation ... "
+echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
 	>&2 echo "failed, please check Firefox installation, unable to find ${FIREFOX_DIR}"
 	exit 1
@@ -34,7 +33,7 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 fi
 echo " done"
 
-echo -n " 2. Search for firefox profiles ... "
+echo -n "  2. Search for firefox profiles ... "
 PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | cut -d "=" -f2-))
 if [ ${#PROFILES_PATHS[@]} -eq 0 ]; then
 	>&2 echo "failed, no profiles found at ${PROFILES_FILE}"
@@ -52,4 +51,4 @@ else
 fi
 
 echo ""
-echo "Done, restart firefox, please"
+echo "Done, restart Firefox, please."
