@@ -22,7 +22,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 Use one line install script
 
 ```bash
-curl -s -o- https://raw.githubusercontent.com/sempasha/elementaryos-firefox-theme/master/install.sh | bash
+curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/install.sh | bash
 ```
 
 Or
