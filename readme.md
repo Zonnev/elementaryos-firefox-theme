@@ -16,14 +16,6 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 **Follow these steps to install userChrome.css:**
 
-Use one line install script
-
-```bash
-curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/install.sh | bash
-```
-
-Or
-
   1. Go to **about:support** in Firefox
   2. Application Basics > Profile Directory > Open Directory
   3. Create a folder named `chrome`
