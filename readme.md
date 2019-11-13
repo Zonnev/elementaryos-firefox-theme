@@ -1,8 +1,5 @@
 # An elementary os theme for Firefox
-
-![Screenshot](Screenshot.png)
-![Screenshot](Screenshot_darkmode.png)
-![Screenshot](Screenshot_nightly.png)
+In this version, all buttons are moved to the right (windows layout)
 
 ## Credits
 
