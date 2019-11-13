@@ -1,6 +1,8 @@
 # An elementary os theme for Firefox
 In this version, all buttons are moved to the right (windows layout)
 
+<img src="firefox layout windows.png"/>
+
 ## Credits
 
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [h1royuki](https://github.com/h1royuki/firefox-elementary-theme) for the dark mode and the elementary team for the UI design and icons.
