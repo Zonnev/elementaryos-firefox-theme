@@ -1,8 +1,7 @@
 # An elementary os theme for Firefox
-
-![Screenshot](Screenshot.png)
-![Screenshot](Screenshot_darkmode.png)
-![Screenshot](Screenshot_nightly.png)
+In this version, all buttons are moved to the right (windows layout or ubuntu layout)
+tested in dark mode too. 
+<img src="firefox layout windows.png"/>
 
 ## Credits
 
@@ -18,14 +17,6 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
   4. Toggle the preference by double clicking. True means Firefox supports the CSS files, False that it ignores them.
 
 **Follow these steps to install userChrome.css:**
-
-Use one line install script
-
-```bash
-curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/install.sh | bash
-```
-
-Or
 
   1. Go to **about:support** in Firefox
   2. Application Basics > Profile Directory > Open Directory
