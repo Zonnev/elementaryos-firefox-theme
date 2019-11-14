@@ -1,6 +1,6 @@
 # An elementary os theme for Firefox
-In this version, all buttons are moved to the right (windows layout)
-
+In this version, all buttons are moved to the right (windows layout or ubuntu layout)
+tested in dark mode too. 
 <img src="firefox layout windows.png"/>
 
 ## Credits
