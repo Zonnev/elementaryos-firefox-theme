@@ -139,7 +139,8 @@
 
 /* urlbar-megabar */
 #urlbar-container, #search-container {
-    padding-block: 10.5px !important;
+  -moz-window-dragging: drag !important;
+  padding-block: 10.5px !important;
 }
 #urlbar[breakout] {
   top: 10.5px !important; 
@@ -151,6 +152,7 @@
   margin-right: 5px !important;
 }
 #urlbar, #searchbar {
+  -moz-window-dragging: no-drag !important;
   min-height: 25px !important;
   border-radius: 2.5px !important;
 }
