@@ -300,7 +300,9 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   border-right: 1px solid transparent !important;
   border-image: linear-gradient(to bottom, transparent, rgba(0,0,0, 0.1)) 1 !important;
 }
-.tabbrowser-tab[visuallyselected="true"] {
+.tabbrowser-tab[visuallyselected="true"],
+.arrowscrollbox-overflow-start-indicator:not([collapsed]),
+.arrowscrollbox-overflow-end-indicator:not([collapsed]) {
   z-index: 0 !important;
 }
 .tabbrowser-tab[selected="true"] {
