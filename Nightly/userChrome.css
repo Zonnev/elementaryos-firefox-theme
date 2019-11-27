@@ -293,6 +293,10 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 .tabbrowser-tab[visuallyselected="true"] {
   z-index: 0 !important;
 }
+.tabbrowser-arrowscrollbox:not([scrolledtostart])::part(arrowscrollbox-overflow-start-indicator),
+.tabbrowser-arrowscrollbox:not([scrolledtoend])::part(arrowscrollbox-overflow-end-indicator) {
+  z-index: 0 !important;
+}
 .tabbrowser-tab[selected="true"] {
   border-top: 1px solid none !important;
   border-left: 1px solid #898989 !important;
