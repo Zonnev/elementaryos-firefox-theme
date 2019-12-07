@@ -27,7 +27,7 @@ curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/
 
 Or
 
-  1. Go to **about:support** in Firefox
+  1. Load **about:support** in the Firefox address bar.
   2. Application Basics > Profile Directory > Open Directory
   3. Create a folder named `chrome`
   4. Paste the userChrome.css in this folder
