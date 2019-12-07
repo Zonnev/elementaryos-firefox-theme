@@ -31,11 +31,11 @@ Or
   2. Application Basics > Profile Directory > Open Directory
   3. Create a folder named `chrome`
   4. Paste the userChrome.css in this folder
-  5. Disable Title bar in the customization panel in Firefox.
-  5. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well.
+  
+**Note:** Disable Title bar in the customization panel in Firefox. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well.
 
-**Note:** For **Firefox Nightly** and **Firefox Developer Edition** use ``userChrome.css`` in nightly folder.
-See this post ![Here](https://github.com/Zonnev/elementaryos-firefox-theme/issues/37)
+For **Firefox Nightly** and **Firefox Developer Edition** use ``userChrome.css`` in nightly folder.
+See this post ![here](https://github.com/Zonnev/elementaryos-firefox-theme/issues/37)
 
 **If you would like to use the new Megabar, take the following steps:**
 
