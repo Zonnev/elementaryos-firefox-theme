@@ -226,13 +226,12 @@ toolbar .toolbarbutton-1:active > .toolbarbutton-icon {
   padding: 2px !important;
 }
 toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
-  padding: 2px !important;
+  padding: 1px !important;
+  border-radius: 50% !important;
 }
-.toolbarbutton-badge-stack {
+toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
   background: none !important;
-}
-#PanelUI-menu-button:active .toolbarbutton-badge-stack {
-  background: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
 }
 #PanelUI-button {
   border: none !important;
