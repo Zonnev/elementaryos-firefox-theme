@@ -431,8 +431,8 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 #nav-bar:-moz-lwtheme-brighttext {
     -moz-appearance: none !important;
     border-top: 1px solid #4A4A4A !important;
+    border-bottom: 1px solid #3B3B3B !important;
 	background: linear-gradient(#3C3C3C, #363636) !important;
-	box-shadow: inset 0 0 0 1px rgb(58, 58, 58), 0 1px 0 0 rgb(64, 64, 64) !important;
 }
 :root[sizemode="fullscreen"] #nav-bar:-moz-lwtheme-brighttext {
 	-moz-appearance: none !important;
