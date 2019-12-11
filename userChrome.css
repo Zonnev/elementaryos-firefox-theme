@@ -430,39 +430,44 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 }
 #nav-bar:-moz-lwtheme-brighttext {
     -moz-appearance: none !important;
+    border-top: 1px solid #4A4A4A !important;
 	background: linear-gradient(#3C3C3C, #363636) !important;
+	box-shadow: inset 0 0 0 1px rgb(58, 58, 58), 0 1px 0 0 rgb(64, 64, 64) !important;
 }
 :root[sizemode="fullscreen"] #nav-bar:-moz-lwtheme-brighttext {
 	-moz-appearance: none !important;
+    border-top: 1px solid #4A4A4A !important;
 	background: linear-gradient(#3C3C3C, #363636) !important;
-	border-bottom: 1px solid #2A2A2A !important;
+	border-bottom: 1px solid #272727 !important;
 }
 #urlbar:not(.megabar):-moz-lwtheme, #urlbar.megabar:-moz-lwtheme > #urlbar-background, #navigator-toolbox #searchbar:-moz-lwtheme {
-    border: 1px solid #2A2A2A !important;
+    border: 1px solid #272727 !important;
 	background: linear-gradient(#3C3C3C, #404040) !important;
 	box-shadow: inset 0 0 0 1px rgb(58, 58, 58), 0 1px 0 0 rgb(64, 64, 64) !important;
 }
 #TabsToolbar:-moz-lwtheme-brighttext {
 	background: linear-gradient(#353535, #373737) !important;
-    border-top: 1px solid #2A2A2A !important;
+    border-top: 1px solid #272727 !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 .tabbrowser-tab[visuallyselected="true"]:-moz-lwtheme-brighttext {
-	border-left: 1px solid #2A2A2A !important;
-	border-right: 1px solid #2A2A2A !important;
-	border-bottom: 1px solid #2A2A2A !important;
-    box-shadow: 0 0 1px 0 rgb(38, 38, 38) !important;
+	border-left: 1px solid #272727 !important;
+	border-right: 1px solid #272727 !important;
+	border-bottom: 1px solid #272727 !important;
+    border-top: 1px solid #1E90FF !important;
+    box-shadow: 0 0 1px 0 #272727 !important;
 }
 .tab-background[selected="true"]:-moz-lwtheme-brighttext {
-	background: #363636 !important;
+	background: linear-gradient(#363636, #343434) !important;
+    border: 1px solid #3B3B3B !important;
 }
 #PersonalToolbar:-moz-lwtheme-brighttext {
     background: #363636 !important;
-    border-top: 1px solid #2A2A2A !important;
+    border-top: 1px solid #272727 !important;
 }
 #toolbar-menubar:-moz-lwtheme-brighttext {
     background: #363636 !important;
-    border-top: 1px solid #2A2A2A !important;
+    border-top: 1px solid #272727 !important;
 }
 menubar:-moz-lwtheme-brighttext > menu[open="true"] {
 	color: #d1d1d1 !important;
