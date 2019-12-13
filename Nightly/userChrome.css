@@ -456,6 +456,7 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 	border-bottom: 1px solid #272727 !important;
     border-top: 1px solid #1E90FF !important;
     box-shadow: 0 0 1px 0 #272727 !important;
+	padding-bottom: 1px !important;
 }
 .tab-background[selected="true"]:-moz-lwtheme-brighttext {
 	background: linear-gradient(#363636, #343434) !important;
