@@ -1,7 +1,7 @@
 # An elementary os theme for Firefox
 
 ![Screenshot](Screenshot_hera.png)
-![Screenshot](Screenshot_darkmode_hera.png)
+![Screenshot](Screenshot_darkmode_hera3.png)
 ![Screenshot](Screenshot_nightly_hera.png)
 
 ## Credits
