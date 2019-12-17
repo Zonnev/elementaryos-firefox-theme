@@ -32,9 +32,6 @@ Or
   3. Create a folder named `chrome`
   4. Paste the userChrome.css in this folder
   
-**Note:** For **Firefox Nightly** and **Firefox Developer Edition** use ``userChrome.css`` in ![Nightly folder](https://github.com/Zonnev/elementaryos-firefox-theme/tree/master/Nightly).
-See this post ![here](https://github.com/Zonnev/elementaryos-firefox-theme/issues/37).
-  
 **If you would like to use the new Megabar, take the following steps:**
 
   1. Load **about:config** in the Firefox address bar.
