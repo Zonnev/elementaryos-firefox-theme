@@ -263,7 +263,7 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 
 /* tabs width */
 .tabbrowser-tab[fadein]:not([pinned]) {
-  max-width: 180px !important;
+  max-width: 230px !important;
 }
 
 .private-browsing-indicator {
