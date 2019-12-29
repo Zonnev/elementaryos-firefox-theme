@@ -395,6 +395,10 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 }
 
 /* menubar */
+#menubar-items {
+  padding-top: 2px !important;
+  height: 29px !important;
+}
 #toolbar-menubar {
   -moz-box-ordinal-group: 0;
   margin: 0 !important;
