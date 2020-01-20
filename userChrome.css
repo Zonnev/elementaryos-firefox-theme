@@ -422,6 +422,13 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
   padding: 3px 5px !important;
   text-shadow: 0 1px 0 rgba(255,255,255, 0.4) !important;
 }
+#PersonalToolbar .toolbarbutton-1 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+#PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  margin-right: 0px !important;
+}
 
 /* misc */
 .panel-arrowcontent {
