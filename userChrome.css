@@ -564,36 +564,36 @@ menubar:-moz-lwtheme-brighttext > menu[open="true"] {
 /* private browsing */
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
   -moz-appearance: none !important;
-  background: linear-gradient(to right, #25003e, #a24c8d) !important;
+  background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
 }
 #main-window[privatebrowsingmode="temporary"]:root[sizemode="fullscreen"] #nav-bar {
   -moz-appearance: none !important;
-  background: linear-gradient(to right, #25003e, #a24c8d) !important;
+  background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar {
-  background: linear-gradient(to right, #25003e, #a24c8d) !important;
-  border-top: 1px solid #1e0032 !important;
-  border-bottom: 1px solid #1e0032 !important;
+  background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
+  border-top: 1px solid #4e0082 !important;
+  border-bottom: 1px solid #4e0082 !important;
 }
 #main-window[privatebrowsingmode="temporary"]:root[sizemode="fullscreen"] #TabsToolbar {
-  border-top: 1px solid #1e0032 !important;
-  border-bottom: 1px solid #1e0032 !important;
+  border-top: 1px solid #4e0082 !important;
+  border-bottom: 1px solid #4e0082 !important;
 }
 #main-window[privatebrowsingmode="temporary"] .tabbrowser-tab[visuallyselected="true"] {
-	border-left: 1px solid #1e0032 !important;
-	border-right: 1px solid #1e0032 !important;
-	border-bottom: 1px solid #1e0032 !important;
+	border-left: 1px solid #4e0082 !important;
+	border-right: 1px solid #4e0082 !important;
+	border-bottom: 1px solid #4e0082 !important;
 }
 #main-window[privatebrowsingmode="temporary"] .tab-background[selected="true"] {
-	background: #622565 !important;
+	background: #7F57EE !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
-    background: linear-gradient(to right, #25003e, #a24c8d) !important;
-    border-top: 1px solid #1e0032 !important;
+    background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
+    border-top: 1px solid #4e0082 !important;
 }
 #main-window[privatebrowsingmode="temporary"] #toolbar-menubar {
-    background: linear-gradient(to right, #25003e, #a24c8d) !important;
-    border-top: 1px solid #1e0032 !important;
+    background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
+    border-top: 1px solid #4e0082 !important;
 }
 
 /* private browsing buttons */
