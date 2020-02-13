@@ -564,10 +564,14 @@ menubar:-moz-lwtheme-brighttext > menu[open="true"] {
 /* private browsing */
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
   -moz-appearance: none !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
   background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
 }
 #main-window[privatebrowsingmode="temporary"]:root[sizemode="fullscreen"] #nav-bar {
   -moz-appearance: none !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
   background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar {
@@ -580,12 +584,16 @@ menubar:-moz-lwtheme-brighttext > menu[open="true"] {
   border-bottom: 1px solid #4e0082 !important;
 }
 #main-window[privatebrowsingmode="temporary"] .tabbrowser-tab[visuallyselected="true"] {
-	border-left: 1px solid #4e0082 !important;
-	border-right: 1px solid #4e0082 !important;
-	border-bottom: 1px solid #4e0082 !important;
+  border-left: 1px solid #4e0082!important;
+  border-right: 1px solid #4e0082 !important;
+  border-bottom: 1px solid #4e0082 !important;
+  border-top: 0px !important;
+  box-shadow: 0px !important;
+  padding-bottom: 0px !important;
 }
 #main-window[privatebrowsingmode="temporary"] .tab-background[selected="true"] {
 	background: #7F57EE !important;
+    border: 0px !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
     background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
