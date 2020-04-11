@@ -140,10 +140,10 @@
 /* urlbar-megabar */
 #urlbar-container, #search-container {
   -moz-window-dragging: drag !important;
-  padding-block: 10.5px !important;
+  padding-block: 10.5px !important; 
 }
-#urlbar[breakout] {
-  top: 10.5px !important; 
+#urlbar[breakout][breakout-extend][breakout-extend-animate] {
+  top: 2px !important;
 }
 .urlbar-icon {
   width: 22px !important;
