@@ -154,19 +154,12 @@
 #urlbar, #searchbar {
   -moz-window-dragging: no-drag !important;
   min-height: 25px !important;
-  border-radius: 2.5px !important;
 }
-#urlbar:not(.megabar), #urlbar.megabar > #urlbar-background, #searchbar {
-  border-radius: 2.5px !important;
+#urlbar:not([focused="true"]) > #urlbar-background {
+  border: 1px solid #B8B8B8 !important;
+  border-radius: 2.5px !important; 
   background: linear-gradient(to bottom, #eeeeee, #ffffff) !important;
   box-shadow: inset 0 0 0 1px rgba(0,0,0, 0.06), 0 1px 0 0 rgba(255,255,255, 0.3) !important;
-}
-#urlbar.megabar[focused="true"] {
-  border-radius: 2.5px !important;
-  border: 1px solid #1E90FF !important;
-}
-#urlbar:not(.megabar):-moz-lwtheme, #urlbar.megabar:-moz-lwtheme > #urlbar-background:-moz-lwtheme, #searchbar:-moz-lwtheme {
-  background: linear-gradient(to bottom, #eeeeee, #ffffff) !important;
 }
 
 /* toolbar */
@@ -454,8 +447,9 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 	background: linear-gradient(#3C3C3C, #363636) !important;
 	border-bottom: 1px solid #272727 !important;
 }
-#urlbar:not(.megabar):-moz-lwtheme-brighttext, #urlbar.megabar:-moz-lwtheme-brighttext > #urlbar-background:-moz-lwtheme-brighttext, #navigator-toolbox #searchbar:-moz-lwtheme-brighttext {
+#urlbar:not([focused="true"]):-moz-lwtheme-brighttext > #urlbar-background:-moz-lwtheme-brighttext {
     border: 1px solid #272727 !important;
+    border-radius: 2.5px !important; 
 	background: linear-gradient(#3C3C3C, #404040) !important;
 	box-shadow: inset 0 0 0 1px rgb(58, 58, 58), 0 1px 0 0 rgb(64, 64, 64) !important;
 }
@@ -468,7 +462,7 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 	border-left: 1px solid #272727 !important;
 	border-right: 1px solid #272727 !important;
 	border-bottom: 1px solid #272727 !important;
-    border-top: 1px solid #1E90FF !important;
+    border-top: 1px solid #3D95DC !important;
     box-shadow: 0 0 1px 0 #272727 !important;
     padding-bottom: 1px !important;
 }
@@ -486,9 +480,6 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 }
 menubar:-moz-lwtheme-brighttext > menu[open="true"] {
 	color: #d1d1d1 !important;
-}
-#urlbar[focused="true"]:-moz-lwtheme-brighttext, .searchbar-textbox[focused="true"]:-moz-lwtheme-brighttext {
-  border: 1px solid #1E90FF !important;
 }
 
 /* buttons in DARK MODE */
