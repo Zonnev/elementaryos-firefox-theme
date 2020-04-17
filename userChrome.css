@@ -366,6 +366,13 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 #TabsToolbar tab .close-icon:hover:active {
   background-color: rgba(0,0,0,0.15) !important;
 }
+
+/* touch density adjustment */
+:root[uidensity="touch"] .tab-close-button {
+  padding: 0px !important;
+}
+
+/* tab label */
 .tab-label {
   -moz-box-flex: 1 !important;  
   color: #4b4b4b !important;
