@@ -17,7 +17,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
   3. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` using the search at the top.
   4. Toggle the preference by double clicking. True means Firefox supports the CSS files, False that it ignores them.
 
-**Follow these steps to install userChrome.css:**
+**Follow these steps to install the userChrome.css with elementary buttons layout:**
 
 Use one line install script
 
@@ -30,7 +30,7 @@ Or
   1. Load **about:support** in the Firefox address bar.
   2. Application Basics > Profile Directory > Open Directory
   3. Create a folder named `chrome`
-  4. Paste the userChrome.css in this folder
+  4. Paste the `userChrome.css` in this folder
   
 ## After installation
 
