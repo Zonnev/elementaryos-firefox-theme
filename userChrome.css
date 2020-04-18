@@ -153,6 +153,10 @@
   height: 39px !important;
   padding: 2px !important;
 }
+.search-one-offs {
+  padding-top: 2px !important;
+  height: 39px !important;
+}
 .urlbar-icon {
   width: 22px !important;
   height: 22px !important;
