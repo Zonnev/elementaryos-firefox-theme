@@ -36,3 +36,9 @@ Or
 
 1. Disable Title bar in the customization panel in Firefox. 
 2. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well.
+
+## Install a window control button layout
+
+1. Download the master zip file.
+2. Unzip `elementaryos-firefox-theme-master.zip` and choose a `userChrome.css` in the folder that shows the button layout you like.
+3. Unzip to the `.mozilla/firefox/{your profile folder}/chrome/` directory. Use `ctrl+h` to see the `.mozilla` folder in your `Personal folder`. If there is no `chrome` folder, create it and unzip your chosen `userChrome.css` to it.
