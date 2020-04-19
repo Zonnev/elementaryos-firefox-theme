@@ -35,7 +35,7 @@ Or
 ## After installation
 
 1. Disable Title bar in the customization panel in Firefox. 
-2. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well.
+2. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well, in combination with [Tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
 
 ## Install a window control button layout
 
