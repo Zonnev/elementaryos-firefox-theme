@@ -1,6 +1,69 @@
 #!/bin/bash
 set -e
 
+function selectLayout() {
+	
+	if [ "${1}" != "" ]; then
+		USER_CHROME_LAYOUT=${1}
+	else
+		echo "Select Available Layouts:"
+		echo ""
+		echo "   1. Default"
+		echo "   2. Close Only Left"
+		echo "   3. Close Only Right"
+		echo "   4. Minimize Left"
+		echo "   5. Minimize Right"
+		echo "   6. OSX"
+		echo "   7. Ubuntu"
+		echo "   8. Windows"
+		echo ""
+		read -p "Please select the preferred layout (press Enter for default) [1-8]:" USER_CHROME_LAYOUT
+		echo ""
+	fi
+	
+	case $USER_CHROME_LAYOUT in
+		2 )
+		    echo "Calling the install script for the 'Close Only Left' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Close%20Only%20Left/install.sh | bash
+			exit 0
+			;;
+		3 )
+		    echo "Calling the install script for the 'Close Only Right' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Close%20Only%20Right/install.sh | bash
+			exit 0
+			;;
+		4 )
+		    echo "Calling the install script for the 'Minimize Left' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Minimize%20Left/install.sh | bash
+			exit 0
+			;;
+		5 )
+		    echo "Calling the install script for the 'Minimize Right' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Minimize%20Right/install.sh | bash
+			exit 0
+			;;
+		6 )
+		    echo "Calling the install script for the 'OSX' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/OSX/install.sh | bash
+			exit 0
+			;;
+		7 )
+		    echo "Calling the install script for the 'Ubuntu' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Ubuntu/install.sh | bash
+			exit 0
+			;;
+		8 )
+		    echo "Calling the install script for the 'Windows' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Windows/install.sh | bash
+			exit 0
+			;;
+		* )
+		    echo "Installing Default layout"
+			;;
+	esac
+	echo ""
+}
+
 function saveProfile() {
 	ITEM="${1}"
 	PROFILE_PATH="${2}"
@@ -18,6 +81,8 @@ function saveProfile() {
 echo "Install ElementaryOS Firefox Theme (https://github.com/Zonnev/elementaryos-firefox-theme)"
 echo ""
 
+selectLayout "$1"
+
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
 USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/userChrome.css"
@@ -32,7 +97,7 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 	exit 1
 fi
 echo " done"
-
+	
 echo -n "  2. Search for firefox profiles ... "
 PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | cut -d "=" -f2-))
 if [ ${#PROFILES_PATHS[@]} -eq 0 ]; then
