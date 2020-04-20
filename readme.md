@@ -19,11 +19,12 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 **Follow these steps to install the userChrome.css:**
 
-Use one line install script which let you select the window buttons layout you like:
+Use this one line install script which let you select the window buttons layout you like:
 
 ```bash
 curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/install.sh | bash
 ```
+Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again.
 
 ## After installation
 
