@@ -2,52 +2,63 @@
 set -e
 
 function selectLayout() {
-	echo "  3. Select Available Layouts:"
-	echo ""
-	echo "     1. Default"
-	echo "     2. Close Only Left"
-	echo "     3. Close Only Right"
-	echo "     4. Minimize Left"
-	echo "     5. Minimize Right"
-	echo "     6. OSX"
-	echo "     7. Ubuntu"
-	echo "     8. Windows"
-	echo ""
-	read -p "  Please select the preferred layout (press Enter for default) [1-8]:" USER_CHROME_LAYOUT
-	echo ""
+	
+	if [ "${1}" != "" ]; then
+		USER_CHROME_LAYOUT=${1}
+	else
+		echo "Select Available Layouts:"
+		echo ""
+		echo "   1. Default"
+		echo "   2. Close Only Left"
+		echo "   3. Close Only Right"
+		echo "   4. Minimize Left"
+		echo "   5. Minimize Right"
+		echo "   6. OSX"
+		echo "   7. Ubuntu"
+		echo "   8. Windows"
+		echo ""
+		read -p "Please select the preferred layout (press Enter for default) [1-8]:" USER_CHROME_LAYOUT
+		echo ""
+	fi
 	
 	case $USER_CHROME_LAYOUT in
 		2 )
-		    echo "  Installing 'Close Only Left' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Close%20Only%20Left/userChrome.css"
+		    echo "Calling the install script for the 'Close Only Left' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Close%20Only%20Left/install.sh | bash
+			exit 0
 			;;
 		3 )
-		    echo "  Installing 'Close Only Right' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Close%20Only%20Right/userChrome.css"
+		    echo "Calling the install script for the 'Close Only Right' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Close%20Only%20Right/install.sh | bash
+			exit 0
 			;;
 		4 )
-		    echo "  Installing 'Minimize Left' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Minimize%20Left/userChrome.css"
+		    echo "Calling the install script for the 'Minimize Left' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Minimize%20Left/install.sh | bash
+			exit 0
 			;;
 		5 )
-		    echo "  Installing 'Minimize Right' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Minimize%20Right/userChrome.css"
+		    echo "Calling the install script for the 'Minimize Right' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Minimize%20Right/install.sh | bash
+			exit 0
 			;;
 		6 )
-		    echo "  Installing 'OSX' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/OSX/userChrome.css"
+		    echo "Calling the install script for the 'OSX' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/OSX/install.sh | bash
+			exit 0
 			;;
 		7 )
-		    echo "  Installing 'Ubuntu' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Ubuntu/userChrome.css"
+		    echo "Calling the install script for the 'Ubuntu' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Ubuntu/install.sh | bash
+			exit 0
 			;;
 		8 )
-		    echo "  Installing 'Windows' layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Windows/userChrome.css"
+		    echo "Calling the install script for the 'Windows' layout"
+			curl -s -o- https://raw.githubusercontent.com/DRHAX34/elementaryos-firefox-theme/master/Windows/install.sh | bash
+			exit 0
 			;;
 		* )
-		    echo "  Installing Default layout"
-			USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/userChrome.css"
+		    echo "Installing Default layout"
 			;;
 	esac
 	echo ""
@@ -58,7 +69,7 @@ function saveProfile() {
 	PROFILE_PATH="${2}"
 	PROFILE_CHROME_DIR="${FIREFOX_DIR}/${PROFILE_PATH}/chrome"
     PROFILE_USER_CHROME_CSS_FILE="${PROFILE_CHROME_DIR}/userChrome.css"
-    echo "  $((${ITEM}+4)). Install theme at profile path ${FIREFOX_DIR}/${PROFILE_PATH}:"
+    echo "  $((${ITEM}+3)). Install theme at profile path ${FIREFOX_DIR}/${PROFILE_PATH}:"
     echo -n "     - Ensure directory 'chrome' ... "
     mkdir -p "${PROFILE_CHROME_DIR}"
     echo "done"
@@ -70,8 +81,11 @@ function saveProfile() {
 echo "Install ElementaryOS Firefox Theme (https://github.com/Zonnev/elementaryos-firefox-theme)"
 echo ""
 
+selectLayout "$1"
+
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
+USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/userChrome.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
@@ -83,7 +97,7 @@ if [ ! -f "${PROFILES_FILE}" ]; then
 	exit 1
 fi
 echo " done"
-
+	
 echo -n "  2. Search for firefox profiles ... "
 PROFILES_PATHS=($(grep -E "^Path=" "${PROFILES_FILE}" | cut -d "=" -f2-))
 if [ ${#PROFILES_PATHS[@]} -eq 0 ]; then
@@ -91,12 +105,10 @@ if [ ${#PROFILES_PATHS[@]} -eq 0 ]; then
 	exit 0
 elif [ ${#PROFILES_PATHS[@]} -eq 1 ]; then
 	echo "one profile found"
-	selectLayout
 	saveProfile "0" "${PROFILES_PATHS[0]}"
 else
 	echo "${#PROFILES_PATHS[@]} profiles found"
 	ITEM=0
-	selectLayout
 	for PROFILE_PATH in "${PROFILES_PATHS[@]}"; do
 	    saveProfile "${ITEM}" "${PROFILE_PATH}"
 	    ITEM="$((${ITEM}+1))"
