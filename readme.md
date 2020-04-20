@@ -17,7 +17,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
   3. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` using the search at the top.
   4. Toggle the preference by double clicking. True means Firefox supports the CSS files, False that it ignores them.
 
-**Follow these steps to install the userChrome.css:**
+**Follow this step to install the userChrome.css:**
 
 Use this one line install script which let you select the window buttons layout you like:
 
