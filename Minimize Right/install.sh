@@ -17,11 +17,11 @@ function saveProfile() {
 
 echo "Install ElementaryOS Firefox Theme (https://github.com/Zonnev/elementaryos-firefox-theme)"
 echo ""
-echo "Installing with the 'OSX' layout"
+echo "Installing with the 'Minimize Right' layout"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
-USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/OSX/userChrome.css"
+USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Minimize%20Right/userChrome.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then

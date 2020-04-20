@@ -21,7 +21,7 @@ echo "Installing with the 'Minimize Left' layout"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
-USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Minimise%20Left/userChrome.css"
+USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Minimize%20Left/userChrome.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
