@@ -1,4 +1,4 @@
-# An elementary os theme for Firefox
+# An elementary OS theme for Firefox
 
 ![Screenshot](Screenshot_normalmode_hera.png)
 ![Screenshot](Screenshot_darkmode_hera.png)
