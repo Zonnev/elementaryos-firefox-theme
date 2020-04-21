@@ -13,11 +13,11 @@
 
 /* fix for tiled and maximized windows */
 #main-window[gtktiledwindow="true"] .titlebar-buttonbox {
-  top: 9px !important; 
+  top: 8px !important; 
 }
 #main-window[gtktiledwindow="true"] #nav-bar {
   -moz-box-ordinal-group: 0;
-  margin: -3.5px !important;
+  height: 39px !important;
   padding: 0px 69px 0px 42px !important;
 }
 #main-window[gtktiledwindow="true"] #urlbar[breakout][breakout-extend][breakout-extend-animate] {
@@ -31,8 +31,12 @@
   height: 34px !important;
 }
 #main-window[gtktiledwindow="true"][sizemode="fullscreen"] #nav-bar {
-  margin: -3.5px !important;
+  height: 39px !important;
   padding: 0px 6px 0px 6px !important;
+}
+#main-window[gtktiledwindow="true"] #urlbar-container, #searchbar-container {
+  margin-bottom: -39px !important;
+  margin-top: -5px !important;
 }
 
 /* fix colour for selected urlbar text */
