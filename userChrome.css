@@ -13,7 +13,7 @@
 
 /* fix for tiled and maximized windows */
 #main-window[gtktiledwindow="true"] .titlebar-buttonbox {
-  top: 8px !important; 
+  top: 8px !important;
 }
 #main-window[gtktiledwindow="true"] #nav-bar {
   -moz-box-ordinal-group: 0;
