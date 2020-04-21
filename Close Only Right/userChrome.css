@@ -167,8 +167,7 @@
 
 /* urlbar-megabar */
 #urlbar-container, #search-container {
-  -moz-window-dragging: drag !important;
-  padding-block: 10.5px !important; 
+  -moz-window-dragging: drag !important; 
 }
 #urlbar[breakout][breakout-extend][breakout-extend-animate] {
   top: 2px !important;
