@@ -17,8 +17,7 @@
 }
 #main-window[gtktiledwindow="true"] #nav-bar {
   -moz-box-ordinal-group: 0;
-  -moz-appearance: -moz-window-titlebar-maximized !important; 
-  margin: -3px !important;
+  margin: -3.5px !important;
   padding: 0px 69px 0px 42px !important;
 }
 #main-window[gtktiledwindow="true"] #urlbar[breakout][breakout-extend][breakout-extend-animate] {
@@ -32,7 +31,7 @@
   height: 34px !important;
 }
 #main-window[gtktiledwindow="true"][sizemode="fullscreen"] #nav-bar {
-  margin: -3px !important;
+  margin: -3.5px !important;
   padding: 0px 6px 0px 6px !important;
 }
 
