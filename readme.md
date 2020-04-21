@@ -2,7 +2,6 @@
 ![Screenshot](Screenshot_normalmode_hera.png)
 ![Screenshot](Screenshot_darkmode_hera.png)
 ![Screenshot](Screenshot_privatemode_hera.png)
-![Screenshot](Screenshot_tiled_windows.png)
 
 ## Credits
 
