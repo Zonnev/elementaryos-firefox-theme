@@ -6,35 +6,34 @@
 
 /* This userChrome is for button layout Close right */
 
-/* fix for rounded corners */
-#main-window {
-  -moz-appearance: -moz-window-titlebar !important; 
-}
-
 /* fix for tiled and maximized windows */
 #main-window[gtktiledwindow="true"] .titlebar-buttonbox {
   top: 8px !important; 
 }
 #main-window[gtktiledwindow="true"] #nav-bar {
   -moz-box-ordinal-group: 0;
-  height: 39px !important;
+  height: 41px !important;
+  margin-top: -2px !important;
 }
 #main-window[gtktiledwindow="true"] #urlbar[breakout][breakout-extend][breakout-extend-animate] {
-  top: 5px !important;
+  top: 6px !important;
 }
-#main-window[gtktiledwindow="true"] #urlbar[breakout][breakout-extend][breakout-extend-animate] #urlbar-input-container {
-  height: 34px !important;
+#main-window[gtktiledwindow="true"] #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container {
+  height: 33px !important;
   padding: 2px !important;
 }
 #main-window[gtktiledwindow="true"] .search-one-offs {
-  height: 34px !important;
+  height: 33px !important;
+  padding-top: 0px !important;
 }
 #main-window[gtktiledwindow="true"][sizemode="fullscreen"] #nav-bar {
-  height: 39px !important;
+  height: 41px !important;
 }
-#main-window[gtktiledwindow="true"] #urlbar-container, #searchbar-container {
-  margin-bottom: -39px !important;
-  margin-top: -5px !important;
+#main-window[gtktiledwindow="true"] #urlbar-container {
+  margin-top: -2px !important;
+}
+#main-window[gtktiledwindow="true"] #search-container {
+  margin-top: -0.5px !important;
 }
 
 /* fix colour for selected urlbar text */
@@ -154,7 +153,7 @@
 }
 #nav-bar {
   -moz-box-ordinal-group: 0;
-  -moz-appearance: -moz-window-titlebar !important; /* makes rounded corners for main window */
+  -moz-appearance: -moz-window-titlebar !important; /* makes color appear */
   height: 46px !important;
   padding: 0px 39px 0px 3px !important;
 }
@@ -170,7 +169,7 @@
 #urlbar[breakout][breakout-extend][breakout-extend-animate] {
   top: 2px !important;
 }
-#urlbar[breakout][breakout-extend][breakout-extend-animate] #urlbar-input-container {
+#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container {
   height: 39px !important;
   padding: 2px !important;
 }
@@ -295,6 +294,9 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 }
 #tabbrowser-tabs {
   width: 100vw !important;
+}
+:root[sizemode="fullscreen"] #TabsToolbar {
+    margin-top: -1px !important;
 }
 
 /* tabs width */
@@ -483,47 +485,9 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
 
-/* focus window fix */
-#TabsToolbar:-moz-window-inactive {
-	background: linear-gradient(#383838, #3A3A3A) !important;
-    border-top: 1px solid #272727 !important;
-	border-bottom: 1px solid rgb(36, 38, 39) !important;
-}
-.tabbrowser-tab[visuallyselected="true"]:-moz-window-inactive {
-	border-left: 1px solid #272727 !important;
-	border-right: 1px solid #272727 !important;
-	border-bottom: 1px solid #272727 !important;
-    border-top: 1px solid #3D95DC !important;
-    box-shadow: 0 0 1px 0 #272727 !important;
-    padding-bottom: 1px !important;
-}
-.tab-background[selected="true"]:-moz-window-inactive {
-	background: linear-gradient(#3C3C3C, #3A3A3A) !important;
-}
-#PersonalToolbar:-moz-window-inactive {
-    background: #3D3D3D !important;
-    border-top: 1px solid #272727 !important;
-}
-#toolbar-menubar:-moz-window-inactive {
-    background: #3D3D3D !important;
-    border-top: 1px solid #272727 !important;
-}
-menubar > menu[open="true"]:-moz-window-inactive {
-	color: #d1d1d1 !important;
-}
-#toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
-#PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-  background: #3D3D3D !important;
-  border-top: 1px solid #272727 !important;
-}
-.tab-label[selected="true"]:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
-.tab-label:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-  color: #C0C0C0 !important;
-}
-
 /* elements DARK MODE */
-:root[sizemode="fullscreen"] #TabsToolbar {
-  height: 31px !important; /* fix tab align in fullscreen for dark mode */
+#search-container {
+    margin-top: 1.5px !important;
 }
 #urlbar[focused="true"], #searchbar[focused="true"] {
     border: 1px solid #3D95DC !important;
@@ -626,18 +590,16 @@ menubar > menu[open="true"] {
 }}
 
 /* DARK MODE standalone */
-:root[sizemode="fullscreen"] #TabsToolbar:-moz-lwtheme-brighttext {
-  height: 31px !important; /* fix tab align in fullscreen for dark mode */
+#search-container:-moz-lwtheme-brighttext {
+    margin-top: 1.5px !important;
 }
 #nav-bar:-moz-lwtheme-brighttext {
     -moz-appearance: none !important;
-    border-top: 1px solid #4A4A4A !important;
     border-bottom: 1px solid #3B3B3B !important;
 	background: linear-gradient(#3C3C3C, #363636) !important;
 }
 :root[sizemode="fullscreen"] #nav-bar:-moz-lwtheme-brighttext {
 	-moz-appearance: none !important;
-    border-top: 1px solid #4A4A4A !important;
 	background: linear-gradient(#3C3C3C, #363636) !important;
 	border-bottom: 1px solid #272727 !important;
 }
