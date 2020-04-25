@@ -489,6 +489,33 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
 
+/* focus fix */
+#TabsToolbar:-moz-window-inactive {
+	background: linear-gradient(#353535, #373737) !important;
+    border-top: 1px solid #272727 !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
+}
+.tabbrowser-tab[visuallyselected="true"]:-moz-window-inactive {
+	border-left: 1px solid #272727 !important;
+	border-right: 1px solid #272727 !important;
+	border-bottom: 1px solid #272727 !important;
+    border-top: 1px solid #3D95DC !important;
+    padding-bottom: 1px !important;
+}
+.tab-background[selected="true"]:-moz-window-inactive {
+	background: linear-gradient(#363636, #343434) !important;
+}
+#toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
+#PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
+  background: #3C3C3C !important;
+  border-top: 1px solid #272727 !important;
+}
+#new-tab-button .toolbarbutton-icon:-moz-window-inactive,
+#tabs-newtab-button .toolbarbutton-icon:-moz-window-inactive,
+#TabsToolbar .tab-close-button:-moz-window-inactive {
+     opacity: 0.7 !important;
+}
+
 /* elements DARK MODE */
 #search-container {
     margin-top: 1.5px !important;
