@@ -6,6 +6,21 @@
 
 /* This userChrome is for button layout OSX */
 
+/* menu popups right mouse click */
+menupopup {
+  -moz-appearance: none !important;
+  background-color: #F2F2F2 !important;
+  border-radius: 5px !important; 
+  border: 1px solid #B8B8B8 !important;
+}
+@media (prefers-color-scheme: dark) {
+menupopup {
+  -moz-appearance: none !important;
+  background-color: #3B3B3B !important;
+  border-radius: 5px !important;
+  border: 1px solid #272727 !important;
+}}
+
 /* fix for tiled and maximized windows */
 #main-window[gtktiledwindow="true"] .titlebar-buttonbox {
   top: 8px !important; 
