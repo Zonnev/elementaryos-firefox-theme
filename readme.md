@@ -19,6 +19,8 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 **Follow this step to install the userChrome.css:**
 
+You can set 8 different window buttons layouts with [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks). Now it's possible to install this theme to match these window button layouts.
+
 Use this one line install script which let you select the window buttons layout you like:
 
 ```bash
