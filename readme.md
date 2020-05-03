@@ -26,7 +26,7 @@ Use this one line install script which let you select the window buttons layout 
 ```bash
 curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/install.sh | bash
 ```
-Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again. If you don't want to install elementary Tweaks, then you choose the default layout (choose option 1 in the installer).
+Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again. If you don't want to install elementary Tweaks, then you select the default layout (option 1 in the installer).
 
 ## After installation
 
