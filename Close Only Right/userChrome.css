@@ -7,14 +7,14 @@
 /* This userChrome is for button layout Close right */
 
 /* menu popups right mouse click */
-menupopup:not(#BMB_bookmarksPopup) {
+#contentAreaContextMenu, #toolbar-context-menu {
   -moz-appearance: none !important;
   background-color: #F2F2F2 !important;
   border-radius: 5px !important; 
   border: 1px solid #B8B8B8 !important;
 }
 @media (prefers-color-scheme: dark) {
-menupopup:not(#BMB_bookmarksPopup) {
+#contentAreaContextMenu, #toolbar-context-menu {
   -moz-appearance: none !important;
   background-color: #3B3B3B !important;
   border-radius: 5px !important;
