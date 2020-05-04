@@ -752,7 +752,7 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
 .titlebar-min:-moz-lwtheme-brighttext,
 .titlebar-max:-moz-lwtheme-brighttext,
 .titlebar-restore:-moz-lwtheme-brighttext {
-    filter: brightness(250%) !important;
+    filter: brightness(250%) drop-shadow(0 1px 0 rgba(0, 0, 0, 1)) !important;
 }}
 
 /* private browsing */
@@ -848,5 +848,5 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
 #main-window[privatebrowsingmode="temporary"] .titlebar-min,
 #main-window[privatebrowsingmode="temporary"] .titlebar-max,
 #main-window[privatebrowsingmode="temporary"] .titlebar-restore {
-    filter: brightness(250%) !important;
+    filter: brightness(250%) drop-shadow(0 0 0 rgba(0, 0, 0, 1)) !important;
 }}
