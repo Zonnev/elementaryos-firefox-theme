@@ -513,6 +513,14 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
 
+#back-button:active > .toolbarbutton-icon,
+#forward-button:active .toolbarbutton-icon,
+#reload-button:active .toolbarbutton-icon,
+#stop-button:active .toolbarbutton-icon,
+#home-button:active .toolbarbutton-icon {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
 /* focus fix */
 #TabsToolbar:-moz-window-inactive {
 	background: linear-gradient(#353535, #373737) !important;
@@ -645,6 +653,22 @@ menubar > menu[open="true"] {
 }}
 
 /* DARK MODE standalone */
+
+#back-button:active > .toolbarbutton-icon:-moz-lwtheme-brighttext,
+#forward-button:active .toolbarbutton-icon:-moz-lwtheme-brighttext,
+#reload-button:active .toolbarbutton-icon:-moz-lwtheme-brighttext,
+#stop-button:active .toolbarbutton-icon:-moz-lwtheme-brighttext,
+#home-button:active .toolbarbutton-icon:-moz-lwtheme-brighttext {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* focus fix */
+#new-tab-button .toolbarbutton-icon:-moz-lwtheme-brighttext:-moz-window-inactive,
+#tabs-newtab-button .toolbarbutton-icon:-moz-lwtheme-brighttext:-moz-window-inactive,
+#TabsToolbar .tab-close-button:-moz-lwtheme-brighttext:-moz-window-inactive {
+     opacity: 0.7 !important;
+}
+
 #search-container:-moz-lwtheme-brighttext {
     margin-top: 1.5px !important;
 }
