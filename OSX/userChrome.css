@@ -141,7 +141,10 @@ hbox > .menupopup-arrowscrollbox, box > .menupopup-arrowscrollbox {
 #bookmarks-menu-button .toolbarbutton-icon:-moz-window-inactive,
 #fxa-toolbar-menu-button:-moz-window-inactive,
 #library-button .toolbarbutton-icon:-moz-window-inactive,
-#nav-bar-overflow-button .toolbarbutton-icon:-moz-window-inactive  {
+#nav-bar-overflow-button .toolbarbutton-icon:-moz-window-inactive,
+#privatebrowsing-button .toolbarbutton-icon:-moz-window-inactive,
+#sync-button .toolbarbutton-icon:-moz-window-inactive,
+#downloads-button:-moz-window-inactive  {
   opacity: 0.7 !important; 
 }
 
