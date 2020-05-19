@@ -9,6 +9,8 @@
 /* menu popups right mouse click */
 menupopup:not([placespopup="true"]) {
   -moz-appearance: none !important;
+  margin-left: -5px !important;
+  margin-right: -5px !important;
 }
 .menupopup-arrowscrollbox {
   margin-bottom: 10px !important;
@@ -120,27 +122,26 @@ hbox > .menupopup-arrowscrollbox, box > .menupopup-arrowscrollbox {
 #reload-button .toolbarbutton-icon:-moz-window-inactive,
 #stop-button .toolbarbutton-icon:-moz-window-inactive,
 #home-button .toolbarbutton-icon:-moz-window-inactive,
-#bookmarks-menu-button .toolbarbutton-icon:-moz-window-inactive,
-#add-ons-button .toolbarbutton-icon:-moz-window-inactive,
-#characterencoding-button .toolbarbutton-icon:-moz-window-inactive,
-#developer-button .toolbarbutton-icon:-moz-window-inactive,
-#email-link-button .toolbarbutton-icon:-moz-window-inactive,
-#find-button .toolbarbutton-icon:-moz-window-inactive,
-#fullscreen-button .toolbarbutton-icon:-moz-window-inactive,
 #history-panelmenu .toolbarbutton-icon:-moz-window-inactive,
-#new-window-button .toolbarbutton-icon:-moz-window-inactive,
-#open-file-button .toolbarbutton-icon:-moz-window-inactive,
-#panic-button .toolbarbutton-icon:-moz-window-inactive,
-#preferences-button .toolbarbutton-icon:-moz-window-inactive,
-#print-button .toolbarbutton-icon:-moz-window-inactive,
 #save-page-button .toolbarbutton-icon:-moz-window-inactive,
+#find-button .toolbarbutton-icon:-moz-window-inactive,
+#open-file-button .toolbarbutton-icon:-moz-window-inactive,
 #sidebar-button .toolbarbutton-icon:-moz-window-inactive,
-#webide-button .toolbarbutton-icon:-moz-window-inactive,
+#add-ons-button .toolbarbutton-icon:-moz-window-inactive,
 #zoom-controls .toolbarbutton-icon:-moz-window-inactive,
 #edit-controls .toolbarbutton-icon:-moz-window-inactive,
+#characterencoding-button .toolbarbutton-icon:-moz-window-inactive,
+#email-link-button .toolbarbutton-icon:-moz-window-inactive,
+#preferences-button .toolbarbutton-icon:-moz-window-inactive, 
+#panic-button .toolbarbutton-icon:-moz-window-inactive,
+#developer-button .toolbarbutton-icon:-moz-window-inactive,
+#print-button .toolbarbutton-icon:-moz-window-inactive,
+#new-window-button .toolbarbutton-icon:-moz-window-inactive,
+#fullscreen-button .toolbarbutton-icon:-moz-window-inactive,
+#bookmarks-menu-button .toolbarbutton-icon:-moz-window-inactive,
+#fxa-toolbar-menu-button:-moz-window-inactive,
 #library-button .toolbarbutton-icon:-moz-window-inactive,
-#privatebrowsing-button .toolbarbutton-icon:-moz-window-inactive,
-#sync-button .toolbarbutton-icon:-moz-window-inactive  {
+#nav-bar-overflow-button .toolbarbutton-icon:-moz-window-inactive  {
   opacity: 0.7 !important; 
 }
 
