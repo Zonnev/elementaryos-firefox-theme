@@ -6,6 +6,11 @@
 
 /* This userChrome is for button layout Elementary */
 
+/* fix for showing black background in corners */
+#main-window {
+  background: #fff !important;
+}
+
 /* menu popups right mouse click */
 menupopup:not([placespopup="true"]) {
   -moz-appearance: none !important;
