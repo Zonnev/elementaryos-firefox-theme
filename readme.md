@@ -28,12 +28,6 @@ curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/
 ```
 Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again. If you don't want to install elementary Tweaks, then you select the default layout (option 1 in the installer).
 
-**Follow these steps for the Firefox flatpak version:**
-
-  1. In Files go to Personal Folder and press `ctrl + h` so you will see hidden folders.
-  2. Make a `chrome` folder in `~/.var/app/org.mozilla.firefox/.mozilla/firefox/<profile folder>/`
-  3. Put the userChrome.css of your choice in the `chrome` folder.
-
 ## After installation
 
 1. Disable Title bar in the customization panel in Firefox. 
