@@ -20,14 +20,19 @@ echo ""
 echo "Installing with the 'Ubuntu' layout"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
-PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
+FIREFOX_DIR_FLATPAK="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
 USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/master/Ubuntu/userChrome.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
-	>&2 echo "failed, please check Firefox installation, unable to find ${FIREFOX_DIR}"
-	exit 1
+	if [ ! -d "${FIREFOX_DIR_FLATPAK}" ]; then
+		>&2 echo "failed, please check Firefox installation, unable to find ${FIREFOX_DIR} or ${FIREFOX_DIR_FLATPAK}"
+		exit 1
+	else
+		FIREFOX_DIR="${FIREFOX_DIR_FLATPAK}"
+	fi
 fi
+PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
 if [ ! -f "${PROFILES_FILE}" ]; then
 	>&2 echo "failed, lease check Firefox installation, unable to find profile.ini at ${FIREFOX_DIR}"
 	exit 1
