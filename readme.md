@@ -1,5 +1,5 @@
 # An elementary OS 6 (Odin) theme for Firefox
-![Screenshot](theme.png)
+![Screenshot](theme-odin.png)
 
 ## Credits
 
