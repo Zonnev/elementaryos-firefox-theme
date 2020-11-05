@@ -327,10 +327,11 @@ Normal mode
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
     flex-direction: row-reverse !important;
-    top: 11px !important; 
+    top: 11px !important;
+    margin-left: 1px !important;
     position: fixed !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: start !important;
 }
@@ -338,10 +339,10 @@ Normal mode
 /* brings max and min button to the right */
 .titlebar-max,
 .titlebar-restore { 
-    margin-left: calc(100vw - 70px) !important;
+    margin-left: calc(100vw - 69px) !important;
 }
 .titlebar-min { 
-    margin-left: calc(45px - 100vw) !important;
+    margin-left: calc(43px - 100vw) !important;
 }
 
 /* dont show window controls in fullscreen */

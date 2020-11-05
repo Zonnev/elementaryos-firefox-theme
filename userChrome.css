@@ -328,11 +328,11 @@ Normal mode
 .titlebar-buttonbox {
     appearance: none !important;
     flex-direction: row-reverse !important;
-    margin-left: 6px !important;
+    margin-left: 4px !important;
     top: 11px !important;
     position: fixed !important;
     display: flex !important;
-    width: calc(100vw - 12px) !important;
+    width: calc(100vw - 11px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
