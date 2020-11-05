@@ -337,13 +337,13 @@ Normal mode
 /* brings max and min button to the right */
 .titlebar-restore,
 .titlebar-max { 
-    margin-left: 3px !important;
+    margin-left: 0px !important;
 }
 .titlebar-min { 
-    margin-left: calc(100vw - 71px) !important;
+    margin-left: calc(100vw - 69px) !important;
 }
 .titlebar-close {
-    margin-left: calc(8px - 100vw) !important;
+    margin-left: calc(9px - 100vw) !important;
 }
 
 /* dont show window controls in fullscreen */
