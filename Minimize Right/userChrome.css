@@ -15,7 +15,7 @@ MENU POPUPS + right mouse click menus
     margin-bottom: 10px !important;
     margin-left: 5px !important;
     margin-right: 5px !important;
-    border-radius: 4px !important;
+    border-radius: 7px !important;
     background: #F5F5F5 !important;
     border: 1px solid #B6B6B6 !important;
     box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.4) !important;
@@ -92,7 +92,7 @@ menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup) {
     margin-bottom: 10px !important;
     margin-left: 5px !important;
     margin-right: 5px !important;
-    border-radius: 4px !important;
+    border-radius: 7px !important;
     background: #4A4A4F !important;
     color: #fff !important;
     border: 1px solid #272727 !important;
@@ -164,7 +164,7 @@ menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup):-moz-l
     margin-bottom: 10px !important;
     margin-left: 5px !important;
     margin-right: 5px !important;
-    border-radius: 4px !important;
+    border-radius: 7px !important;
     background: #404040 !important;
     color: #fff !important;
     border: 1px solid #272727 !important;
@@ -693,7 +693,8 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 
 /*** DROPDOWN MENU CONTENT ***/
 .panel-arrowcontent {
-    border-radius: 4px !important;
+    overflow: hidden !important;
+    border-radius: 7px !important;
     box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.4) !important;
 }
 
