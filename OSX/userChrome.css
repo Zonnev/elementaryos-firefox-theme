@@ -550,7 +550,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 }
 .tab-content:not([selected="true"]):not([pinned]) {
     -moz-box-direction: reverse !important;
-    padding: 0px 4px 0px 13px !important;
+    padding: 0px 3px 0px 12px !important;
 }
 .tabbrowser-tab:after {
   display: none !important; /* don't show border between tabs  */
