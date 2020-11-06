@@ -531,6 +531,15 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     min-height: var(--tab-min-height) !important;
     max-height: var(--tab-min-height) !important;
 }
+.tabbrowser-tab[pinned][selected="true"] {
+    width: 40px !important;
+}
+.tabbrowser-tab[pinned]:not([selected="true"]) {
+    width: 42px !important;
+}
+.tab-content[pinned]:not([selected="true"]) {
+    margin: 0 1px !important;
+}
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     padding: 0px 3px 0px 12px !important;
