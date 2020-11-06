@@ -542,10 +542,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     width: 40px !important;
 }
 .tabbrowser-tab[pinned]:not([selected="true"]) {
-    width: 42px !important;
-}
-.tab-content[pinned]:not([selected="true"]) {
-    margin: 0 1px !important;
+    width: 40px !important;
 }
 .tab-content[selected="true"]:not([pinned]) {
     -moz-box-direction: reverse !important;
