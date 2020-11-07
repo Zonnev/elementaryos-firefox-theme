@@ -1199,18 +1199,44 @@ menubar > menu[open="true"] {
 private browsing
 ****************/
 
+/*** TILED WINDOW FIXES ***/
+#main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #navigator-toolbox {
+    border-radius: 7px 7px 0 0 !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-bottom: 0px !important;
+}
+#main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #browser {
+    border-bottom: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
+
 /*** FOCUS FIX for PRIVATE MODE ***/
+#main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #navigator-toolbox:-moz-window-inactive {
+    border-radius: 7px 7px 0 0 !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-bottom: 0px !important;
+}
+#main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #browser:-moz-window-inactive {
+    border-bottom: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
 #main-window[privatebrowsingmode="temporary"] #navigator-toolbox:-moz-window-inactive {
     border-radius: 7px 7px 0 0 !important;
-    border-top: 1px solid rgba(119,105,150,1) !important;
-    border-left: 1px solid rgba(119,105,150,1) !important;
-    border-right: 1px solid rgba(119,105,150,1) !important;
+    border-top: 1px solid rgba(32,32,32,1) !important;
+    border-left: 1px solid rgba(32,32,32,1) !important;
+    border-right: 1px solid rgba(32,32,32,1) !important;
     border-bottom: 0px !important;
 }
 #main-window[privatebrowsingmode="temporary"] #browser:-moz-window-inactive {
-    border-bottom: 1px solid rgba(119,105,150,1) !important;
-    border-left: 1px solid rgba(119,105,150,1) !important;
-    border-right: 1px solid rgba(119,105,150,1) !important;
+    border-bottom: 1px solid rgba(32,32,32,1) !important;
+    border-left: 1px solid rgba(32,32,32,1) !important;
+    border-right: 1px solid rgba(32,32,32,1) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #nav-bar:-moz-window-inactive {
     background: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)) !important;
