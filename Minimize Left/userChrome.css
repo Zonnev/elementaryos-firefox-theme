@@ -105,7 +105,8 @@ toolbarseparator:-moz-lwtheme-brighttext  {
     border-top: 1px solid #5C5C61 !important;
 }
 menuitem[disabled="true"]:-moz-lwtheme-brighttext,
-menu[disabled="true"]:-moz-lwtheme-brighttext {
+menu[disabled="true"]:-moz-lwtheme-brighttext,
+.subview-subheader {
     color: #96968F !important;
 }
 menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon:-moz-lwtheme-brighttext {
@@ -180,7 +181,8 @@ toolbarseparator {
     border-top: 1px solid #5C5C61 !important;
 }
 menuitem[disabled="true"],
-menu[disabled="true"] {
+menu[disabled="true"],
+.subview-subheader {
     color: #96968F !important;
 }
 menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon {
