@@ -507,6 +507,11 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 #nav-bar-overflow-button {
     margin-right: -8px !important;
 }
+#downloads-button,
+#fxa-toolbar-menu-button {
+    margin-right: 4px !important;
+}
+
 
 /*** TAB BAR ***/
 #TabsToolbar {
@@ -698,6 +703,11 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 .webextension-browser-action {
     padding-left: 4px !important;
     padding-right: 4px !important;
+}
+
+/*** CTRL TAB PANEL ***/
+#ctrlTab-panel {
+    border-radius: 7px !important;
 }
 
 /*****************
