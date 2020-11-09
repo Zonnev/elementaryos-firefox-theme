@@ -123,6 +123,9 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
     border: 1px solid rgba(200,200,200,1) !important;
     border-radius: 3px !important;
 }
+#screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext {
+    filter: invert(1) !important;
+}
 menuitem:hover:not([disabled="true"]):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer):-moz-lwtheme-brighttext,
 menu:hover:not([disabled="true"]):not(#file-menu):not(#edit-menu):not(#view-menu):not(#history-menu):not(#bookmarksMenu):not(#tools-menu):not(#helpMenu):not(.subviewbutton):-moz-lwtheme-brighttext {
     appearance: none !important;
@@ -195,6 +198,9 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
     border: 1px solid rgba(40,40,40,1) !important;
     border-radius: 3px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+#screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon {
+    filter: invert(1) !important;
 }
 menuitem:hover:not([disabled="true"]):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer),
 menu:hover:not([disabled="true"]):not(#file-menu):not(#edit-menu):not(#view-menu):not(#history-menu):not(#bookmarksMenu):not(#tools-menu):not(#helpMenu):not(.subviewbutton) {
@@ -380,7 +386,7 @@ Normal mode
     margin-top: 0px !important;
 }
 #urlbar[breakout][breakout-extend][breakout-extend-animate] {
-    top: 3px !important;
+    top: 2.5px !important;
 }
 #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container {
     height: 39px !important;
