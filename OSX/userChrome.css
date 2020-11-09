@@ -85,6 +85,9 @@ menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup) {
     margin-right: -5px !important;
     border: none !important;
 }
+.subviewbutton-back {
+    border-radius: 4px 0 0 0 !important;
+}
 
 /* menu popups DARK MODE */
 .menupopup-arrowscrollbox:not([part="arrowscrollbox"]):-moz-lwtheme-brighttext,
@@ -268,6 +271,11 @@ Normal mode
     border-left: 0px !important;
     border-right: 0px !important;
 }
+#customization-container {
+    border-bottom: 1px solid gray !important;
+    border-left: 1px solid gray !important;
+    border-right: 1px solid gray !important;
+}
 
 /*** FOCUS FIX ***/
 #navigator-toolbox:-moz-window-inactive  {
@@ -278,6 +286,11 @@ Normal mode
     border-bottom: 0px !important;
 }
 #browser:-moz-window-inactive {
+    border-bottom: 1px solid silver !important;
+    border-left: 1px solid silver !important;
+    border-right: 1px solid silver !important;
+}
+#customization-container:-moz-window-inactive {
     border-bottom: 1px solid silver !important;
     border-left: 1px solid silver !important;
     border-right: 1px solid silver !important;
@@ -826,6 +839,11 @@ TILED WINDOW FIXES
     border-left: 1px solid black !important;
     border-right: 1px solid black !important;
 }
+#customization-container:-moz-lwtheme-brighttext {
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
 :root[sizemode="maximized"] #browser:-moz-lwtheme-brighttext {
     border-bottom: 0px !important;
     border-left: 0px !important;
@@ -1015,6 +1033,11 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
     border-right: 1px solid black !important;
     border-bottom: 1px solid black !important;
 }
+#customization-container:-moz-window-inactive {
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
 #TabsToolbar:-moz-window-inactive {
 	background: linear-gradient(180deg, rgb(48, 48, 48) 0%, rgb(51, 51, 51) 10%, rgb(51, 51, 51) 100%) !important;
     border-top: 1px solid #292929 !important;
@@ -1077,6 +1100,11 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
     border-right: 0px !important;
 }
 #browser {
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
+#customization-container {
     border-bottom: 1px solid black !important;
     border-left: 1px solid black !important;
     border-right: 1px solid black !important;
@@ -1244,6 +1272,11 @@ private browsing
     border-left: 0px !important;
     border-right: 0px !important;
 }
+#main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #customization-container {
+    border-bottom: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
 
 /*** FOCUS FIX for PRIVATE MODE ***/
 #main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #navigator-toolbox:-moz-window-inactive {
@@ -1266,6 +1299,11 @@ private browsing
     border-bottom: 0px !important;
 }
 #main-window[privatebrowsingmode="temporary"] #browser:-moz-window-inactive {
+    border-bottom: 1px solid rgba(32,32,32,1) !important;
+    border-left: 1px solid rgba(32,32,32,1) !important;
+    border-right: 1px solid rgba(32,32,32,1) !important;
+}
+#main-window[privatebrowsingmode="temporary"] #customization-container:-moz-window-inactive {
     border-bottom: 1px solid rgba(32,32,32,1) !important;
     border-left: 1px solid rgba(32,32,32,1) !important;
     border-right: 1px solid rgba(32,32,32,1) !important;
@@ -1320,6 +1358,11 @@ private browsing
     border-bottom: 0px !important;
     border-left: 0px !important;
     border-right: 0px !important;
+}
+#main-window[privatebrowsingmode="temporary"] #customization-container {
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
 }
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
     -moz-appearance: none !important;
