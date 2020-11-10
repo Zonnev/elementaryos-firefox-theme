@@ -742,6 +742,11 @@ TILED WINDOW FIXES
     border-left: 0px !important;
     border-right: 0px !important;
 }
+#main-window[gtktiledwindow="true"] #customization-container {
+    border-bottom: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+}
 
 /********************
  Standalone DARK MODE
