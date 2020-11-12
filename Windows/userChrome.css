@@ -30,7 +30,7 @@ menuitem[disabled="true"],
 menu[disabled="true"] {
     color: gray !important;
 }
-menuitem:hover:not([disabled="true"]):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer),
+menuitem:hover:not([disabled="true"]):not(.menuitem-iconic):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer),
 menu:hover:not([disabled="true"]):not(#file-menu):not(#edit-menu):not(#view-menu):not(#history-menu):not(#bookmarksMenu):not(#tools-menu):not(#helpMenu):not(.subviewbutton) {
     appearance: none !important;
     padding: 6px 12px 6px 12px !important;
@@ -130,7 +130,7 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
 #screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext {
     filter: invert(1) !important;
 }
-menuitem:hover:not([disabled="true"]):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer):-moz-lwtheme-brighttext,
+menuitem:hover:not([disabled="true"]):not(.menuitem-iconic):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer):-moz-lwtheme-brighttext,
 menu:hover:not([disabled="true"]):not(#file-menu):not(#edit-menu):not(#view-menu):not(#history-menu):not(#bookmarksMenu):not(#tools-menu):not(#helpMenu):not(.subviewbutton):-moz-lwtheme-brighttext {
     appearance: none !important;
     padding: 6px 12px 6px 12px !important;
@@ -207,7 +207,7 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
 #screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon {
     filter: invert(1) !important;
 }
-menuitem:hover:not([disabled="true"]):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer),
+menuitem:hover:not([disabled="true"]):not(.menuitem-iconic):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer),
 menu:hover:not([disabled="true"]):not(#file-menu):not(#edit-menu):not(#view-menu):not(#history-menu):not(#bookmarksMenu):not(#tools-menu):not(#helpMenu):not(.subviewbutton) {
     appearance: none !important;
     padding: 6px 12px 6px 12px !important;
