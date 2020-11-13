@@ -130,6 +130,10 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
 #screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext {
     filter: invert(1) !important;
 }
+#editBMPanel_folderMenuList[_moz-menuactive="true"]:-moz-lwtheme-brighttext {
+    fill: white !important;
+    color: white !important;
+}
 menuitem:hover:not([disabled="true"]):not(.menuitem-iconic):not(#customization-uidensity-menuitem-compact):not(#customization-uidensity-menuitem-normal):not(#customization-uidensity-menuitem-touch):not(#BMB_viewBookmarksSidebar):not(#BMB_bookmarksShowAllTop):not(#BMB_bookmarksShowAll):not(.subviewbutton):not(#BMB_viewBookmarksToolbar):not(.panel-subview-footer):-moz-lwtheme-brighttext,
 menu:hover:not([disabled="true"]):not(#file-menu):not(#edit-menu):not(#view-menu):not(#history-menu):not(#bookmarksMenu):not(#tools-menu):not(#helpMenu):not(.subviewbutton):-moz-lwtheme-brighttext {
     appearance: none !important;
