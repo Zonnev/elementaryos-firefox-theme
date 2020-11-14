@@ -538,6 +538,9 @@ Normal mode
 }
 
 /*** URLBAR + MEGABAR ***/
+#urlbar-input-container {
+    border-radius: 3.5px !important;
+}
 #urlbar-container {
     -moz-window-dragging: drag !important;
     margin-top: -1px !important;
