@@ -652,13 +652,13 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     margin-bottom: 1.5px !important;
 }
 #tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-background:not([selected="true"]) {
-    margin-bottom: 1.5px !important;
+    margin-bottom: 2.5px !important;
 }
 #tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-content[pinned][selected="true"] {
     padding-bottom: 3px !important;
 }
 #tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-content[pinned]:not([selected="true"]) {
-    padding-bottom: 3px !important;
+    padding-bottom: 5px !important;
 }
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
@@ -684,7 +684,6 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 .tabbrowser-tab[selected="true"] {
     margin-bottom: 1.5px !important;
     border-radius: 4px !important;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1) !important;
 }
 .tab-background:not([selected="true"]) {
     -moz-transition: 0.5s !important;
@@ -696,6 +695,7 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     background: #FAFAFA !important;
 	border: 1px solid rgba(207,207,207,1) !important;
     border-radius: 4px !important;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1) !important;
 }
 #new-tab-button .toolbarbutton-icon {
     list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%23333333' transform='translate%28-293 -117%29'%3E%3Cpath d='M300 120v4h-4v2h4v4h2v-4h4v-2h-4v-4z' fill='%23333333' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
