@@ -673,6 +673,9 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
 }
+.tabbrowser-tab:before {
+    display: none !important; /* don't show border between tabs  */
+}
 .tabbrowser-tab:not([selected="true"]) {
     margin-top: 1px !important;
     margin-bottom: 2px !important;
@@ -1540,6 +1543,10 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] .tab-background[selected="true"] {
     background: rgba(255,255,255,0.25) !important;
     border: 1px solid rgba(0,0,0,0.4) !important;
+}
+#main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs[movingtab] > #tabbrowser-arrowscrollbox > .tabbrowser-tab[selected="true"] {
+    background: rgba(141,32,174,1) !important;
+    border: none !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
     background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
