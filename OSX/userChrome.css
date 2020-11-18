@@ -687,9 +687,6 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     margin-bottom: 2px !important;
     border-radius: 4px !important;
 }
-.tabbrowser-tab[visuallyselected="true"] {
-    z-index: 0 !important;
-}
 .tabbrowser-tab[selected="true"] {
     margin-bottom: 1.5px !important;
     border-radius: 4px !important;
