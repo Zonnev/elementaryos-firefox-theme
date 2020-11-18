@@ -1550,6 +1550,9 @@ private browsing
     background: rgba(141,32,174,1) !important;
     border: none !important;
 }
+#main-window[privatebrowsingmode="temporary"] .tab-content > image:not(.tab-icon-image) {
+  fill: rgba(255,255,255,1) !important;
+}
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
     background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
     border-top: 1px solid rgba(0,0,0,0.4) !important;
