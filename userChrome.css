@@ -1244,6 +1244,7 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
     border-top: 1px solid #5F6670 !important;
 }
 :root {
+    --panel-separator-color: #5C5C61 !important;
     --urlbar-separator-color: #5F6670 !important;
 }
 .urlbarView-row:not([type="tip"]):not([type="dynamic"])[selected] > .urlbarView-row-inner,
