@@ -816,6 +816,42 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.1) !important;
 }
 
+/*** PROTECTIONS DROPDOWN ***/
+#tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
+    transform: none !important;
+}
+.panel-arrow {
+    fill: var(--arrowpanel-background) !important;
+    stroke: var(--arrowpanel-border-color) !important;
+}
+#protections-popup-mainView-panel-header-section {
+    background: linear-gradient(125deg, transparent 5%, rgba(0,0,0,0.3) 100%) !important;
+    color: #333333 !important;
+}
+#protections-popup-toast-panel-tp-off-desc,
+#protections-popup-toast-panel-tp-on-desc {
+    padding: 15px !important;
+    color: #333333 !important;
+}
+#protections-popup-info-button:-moz-any([checked], :hover, :active) {
+    background-color: rgba(255,255,255,0.3) !important;
+}
+#protections-popup-message remote-text {
+    color: #333333 !important;
+}
+.protections-popup-tp-switch:hover {
+    background-color: gray !important;
+}
+.protections-popup-tp-switch {
+    background-color: black !important;
+}
+.protections-popup-tp-switch[enabled]:hover {
+    background-color: gray !important;
+}
+.protections-popup-tp-switch[enabled] {
+    background-color: black !important;
+}
+
 /*** MISC. ***/
 .button-menu-dropmarker {
     margin-left: 3px !important;
@@ -1034,6 +1070,32 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
     border: 1px solid rgba(56,56,56,1) !important;
     border-radius: 3px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+
+/*** PROTECTIONS DROPDOWN for DARK MODE ***/
+#protections-popup-mainView-panel-header-section:-moz-lwtheme-brighttext {
+    background: linear-gradient(125deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
+    color: #fff !important;
+}
+#protections-popup-toast-panel-tp-off-desc:-moz-lwtheme-brighttext,
+#protections-popup-toast-panel-tp-on-desc:-moz-lwtheme-brighttext {
+    padding: 15px !important;
+    color: #fff !important;
+}
+.protections-popup-tp-switch:-moz-lwtheme-brighttext {
+    background-color: black !important;
+}
+.protections-popup-tp-switch:hover:-moz-lwtheme-brighttext {
+    background-color: silver !important;
+}
+.protections-popup-tp-switch[enabled]:hover:-moz-lwtheme-brighttext {
+    background-color: silver !important;
+}
+.protections-popup-tp-switch[enabled]:-moz-lwtheme-brighttext {
+    background-color: black !important;
+}
+#protections-popup-message remote-text:-moz-lwtheme-brighttext {
+    color: #fff !important;
 }
 
 /*** TEXT COLOR for DARK MODE ***/
@@ -1289,6 +1351,35 @@ menubar > menu[open="true"] {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
 }
 
+/*** PROTECTION DROPDOWN DARK MODE for Tweaks ***/
+#protections-popup-mainView-panel-header-section {
+    background: linear-gradient(125deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
+    color: #fff !important;
+}
+#protections-popup-toast-panel-tp-off-desc,
+#protections-popup-toast-panel-tp-on-desc {
+    padding: 15px !important;
+    color: #fff !important;
+}
+#protections-popup[hasException] #protections-popup-tp-switch-section {
+    background: repeating-linear-gradient(-56deg, hsla(0,0%,80%,.1), hsla(0,0%,80%,.1) 10px, transparent 10px, transparent 20px) !important;
+}
+.protections-popup-tp-switch {
+    background-color: black !important;
+}
+.protections-popup-tp-switch:hover {
+    background-color: silver !important;
+}
+.protections-popup-tp-switch[enabled]:hover {
+    background-color: silver !important;
+}
+.protections-popup-tp-switch[enabled] {
+    background-color: black !important;
+}
+#protections-popup-message remote-text  {
+    color: #fff !important;
+}
+
 /*** TEXT COLOR DARK MODE for Tweaks ***/
 .bookmark-item > .toolbarbutton-text {
 	color: #fff !important;
@@ -1501,6 +1592,11 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] .titlebar-restore,
 #main-window[privatebrowsingmode="temporary"] .titlebar-close  {
     filter: brightness(450%) drop-shadow(0 1px 0 #603C7B) !important;
+}
+
+/*** PROTECTIONS ICON for PRIVATE MODE ***/
+#main-window[privatebrowsingmode="temporary"] #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
+    filter: invert(100%) brightness(500%) opacity(60%) !important;
 }
 
 /*** TEXT COLOR for PRIVATE MODE ***/
