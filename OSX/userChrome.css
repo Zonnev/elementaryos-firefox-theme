@@ -29,6 +29,7 @@ toolbarseparator {
 menuitem[disabled="true"],
 menu[disabled="true"] {
     color: gray !important;
+    background: none !important;
 }
 menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
     appearance: none !important;
@@ -37,18 +38,19 @@ menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
     background: #E9E9E9 !important;
 }
 menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menupopup menu:hover,
+menubar > menupopup menu:hover:not([disabled="true"]),
 menubar > menupopup menu[open="true"],
 menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menu > menupopup menu:hover,
+menubar > menu > menupopup menu:hover:not([disabled="true"]),
 menubar > menu > menupopup menu[open="true"],
 popupset > menupopup > menu[open="true"],
-popupset > menupopup > menu:hover,
-popupset > menupopup > menu > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menu > menu:hover,
-popupset > menupopup > menu > menu[open="true"],
+popupset > menupopup > menu:hover:not([disabled="true"]),
+popupset > menupopup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]),
+popupset > menupopup > menu > menupopup menu[open="true"],
 popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menugroup > menu:hover,
+popupset > menupopup > menugroup > menu:hover:not([disabled="true"]),
 popupset > menupopup > menugroup > menu[open="true"],
 scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
 scrollbox > toolbarbutton > menupopup menu[open="true"],
@@ -155,6 +157,7 @@ menuitem[disabled="true"]:-moz-lwtheme-brighttext,
 menu[disabled="true"]:-moz-lwtheme-brighttext,
 .subview-subheader {
     color: #96968F !important;
+    background: none !important;
 }
 menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext,
 menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext,
@@ -224,18 +227,19 @@ menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]):-mo
     background: #5C5C61 !important;
 }
 menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-menubar > menupopup menu:hover:-moz-lwtheme-brighttext,
+menubar > menupopup menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
 menubar > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
 menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-menubar > menu > menupopup menu:hover:-moz-lwtheme-brighttext,
+menubar > menu > menupopup menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
 menubar > menu > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
 popupset > menupopup > menu[open="true"]:-moz-lwtheme-brighttext,
-popupset > menupopup > menu:hover:-moz-lwtheme-brighttext,
-popupset > menupopup > menu > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-popupset > menupopup > menu > menu:hover:-moz-lwtheme-brighttext,
-popupset > menupopup > menu > menu[open="true"]:-moz-lwtheme-brighttext,
+popupset > menupopup > menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
+popupset > menupopup > menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
+popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
+popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
+popupset > menupopup > menu > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
 popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-popupset > menupopup > menugroup > menu:hover:-moz-lwtheme-brighttext,
+popupset > menupopup > menugroup > menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
 popupset > menupopup > menugroup > menu[open="true"]:-moz-lwtheme-brighttext,
 scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
 scrollbox > toolbarbutton > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
@@ -336,6 +340,7 @@ menuitem[disabled="true"],
 menu[disabled="true"],
 .subview-subheader {
     color: #96968F !important;
+    background: none !important;
 }
 menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
 menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon,
@@ -358,18 +363,19 @@ menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
     background: #717171 !important;
 }
 menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menupopup menu:hover,
+menubar > menupopup menu:hover:not([disabled="true"]),
 menubar > menupopup menu[open="true"],
 menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menu > menupopup menu:hover,
+menubar > menu > menupopup menu:hover:not([disabled="true"]),
 menubar > menu > menupopup menu[open="true"],
 popupset > menupopup > menu[open="true"],
-popupset > menupopup > menu:hover,
-popupset > menupopup > menu > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menu > menu:hover,
-popupset > menupopup > menu > menu[open="true"],
+popupset > menupopup > menu:hover:not([disabled="true"]),
+popupset > menupopup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]),
+popupset > menupopup > menu > menupopup menu[open="true"],
 popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menugroup > menu:hover,
+popupset > menupopup > menugroup > menu:hover:not([disabled="true"]),
 popupset > menupopup > menugroup > menu[open="true"],
 scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
 scrollbox > toolbarbutton > menupopup menu[open="true"],
@@ -1631,7 +1637,8 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete label,
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete button,
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete richlistitem,
-#main-window[privatebrowsingmode="temporary"] #identity-icon-label {
+#main-window[privatebrowsingmode="temporary"] #identity-icon-label,
+#main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder label {
     color: #fff !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete {
