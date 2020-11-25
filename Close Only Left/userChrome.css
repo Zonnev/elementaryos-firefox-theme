@@ -10,21 +10,35 @@
 MENU POPUPS + right mouse click menus
 *************************************/
 
+:root {
+    --default-arrowpanel-background: #F5F5F5 !important;
+    --panel-separator-color: rgba(0,0,0,0.15) !important;
+}
+menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
+    color: #000 !important;
+}
+menupopup:not(#BMB_bookmarksPopup) {
+    appearance: none !important;
+    background-color: #F5F5F5 !important;
+    border: 10px solid transparent !important;
+    border-radius: 18px !important;
+    background-origin: border-box !important;
+    background-clip: content-box, border-box !important;
+    margin: -10px !important;
+}
 .menupopup-arrowscrollbox:not([part="arrowscrollbox"]),
 .menupopup-arrowscrollbox[exportparts="scrollbox: arrowscrollbox-scrollbox"] {
-    margin-bottom: 10px !important;
-    margin-left: 5px !important;
-    margin-right: 5px !important;
+    appearance: none !important;
+    background-color: transparent !important;
+    box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.4) !important;
     border-radius: 7px !important;
-    background: #F5F5F5 !important;
-    border: 1px solid #B6B6B6 !important;
-    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(0,0,0,0.2) !important;
     overflow: hidden !important;
 }
 menuseparator,
 toolbarseparator {
     appearance: none !important;
-    border-top: 1px solid #B6B6B6 !important;
+    border-top: 1px solid rgba(0,0,0,0.15) !important;
 }
 menuitem[disabled="true"],
 menu[disabled="true"] {
@@ -91,23 +105,6 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
     border-radius: 3px !important;
     box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.3), 0 1px 0 0 rgba(0,0,0,0.2) !important;
 }
-#goPopup,
-#bookmarksMenuPopup {
-    appearance: none !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-    border-radius: 0px !important;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup) {
-    appearance: none !important;
-    background-color: transparent !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-    border: none !important;
-}
 .subviewbutton-back {
     border-radius: 4px 0 0 0 !important;
 }
@@ -136,17 +133,17 @@ treechildren::-moz-tree-image(selected) {
 }
 
 /* menu popups DARK MODE */
-.menupopup-arrowscrollbox:not([part="arrowscrollbox"]):-moz-lwtheme-brighttext,
-.menupopup-arrowscrollbox[exportparts="scrollbox: arrowscrollbox-scrollbox"]:-moz-lwtheme-brighttext  {
-    margin-bottom: 10px !important;
-    margin-left: 5px !important;
-    margin-right: 5px !important;
-    border-radius: 7px !important;
-    background: #4A4A4F !important;
+menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover):-moz-lwtheme-brighttext {
     color: #fff !important;
-    border: 1px solid #272727 !important;
-    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.4) !important;
-    overflow: hidden !important;
+}
+menupopup:not(#BMB_bookmarksPopup):-moz-lwtheme-brighttext {
+    appearance: none !important;
+    background: #4A4A4F !important;
+    border: 10px solid transparent !important;
+    border-radius: 18px !important;
+    background-origin: border-box !important;
+    background-clip: content-box, border-box !important;
+    margin: -10px !important;
 }
 menuseparator:-moz-lwtheme-brighttext,
 toolbarseparator:-moz-lwtheme-brighttext  {
@@ -267,23 +264,6 @@ menuitem:-moz-lwtheme-brighttext {
 .menu-right:not([disabled="true"]):-moz-lwtheme-brighttext {
     filter: brightness(500%) !important;
 }}
-#goPopup:-moz-lwtheme-brighttext,
-#bookmarksMenuPopup:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-    border-radius: 0px !important;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup):-moz-lwtheme-brighttext {
-    appearance: none !important;
-    background-color: transparent !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-    border: none !important;
-}
 #editBMPanel_namePicker:-moz-lwtheme-brighttext,
 #editBMPanel_tagsField:-moz-lwtheme-brighttext,
 #editBMPanel_folderTree:-moz-lwtheme-brighttext,
@@ -316,20 +296,23 @@ menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup):-moz-l
     background: rgba(255,255,255,0.15) !important;
     color: #fff !important;
 }
+.sidebar-splitter:-moz-lwtheme-brighttext {
+    background: #38383D !important;
+}
 
 /* menu popups DARK MODE in elementary Tweaks */
 @media (prefers-color-scheme: dark) {
-.menupopup-arrowscrollbox:not([part="arrowscrollbox"]),
-.menupopup-arrowscrollbox[exportparts="scrollbox: arrowscrollbox-scrollbox"] {
-    margin-bottom: 10px !important;
-    margin-left: 5px !important;
-    margin-right: 5px !important;
-    border-radius: 7px !important;
-    background: #404040 !important;
+menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
     color: #fff !important;
-    border: 1px solid #0F0F0F !important;
-    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.4) !important;
-    overflow: hidden !important;
+}
+menupopup:not(#BMB_bookmarksPopup) {
+    appearance: none !important;
+    background: #404040 !important;
+    border: 10px solid transparent !important;
+    border-radius: 18px !important;
+    background-origin: border-box !important;
+    background-clip: content-box, border-box !important;
+    margin: -10px !important;
 }
 menuseparator,
 toolbarseparator {
@@ -393,23 +376,6 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
     padding: 6px 12px 6px 12px !important;
     color: #fff !important;
     background: #717171 !important;
-}c
-#goPopup,
-#bookmarksMenuPopup {
-    appearance: none !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-    border-radius: 0px !important;
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup) {
-    appearance: none !important;
-    background-color: transparent !important;
-    margin-left: -5px !important;
-    margin-right: -5px !important;
-    border: none !important;
 }
 .openintabs-menuitem {
     appearance: none !important;
@@ -422,6 +388,202 @@ menupopup:not(#goPopup):not(#bookmarksMenuPopup):not(#BMB_bookmarksPopup) {
     background: rgba(255,255,255,0.35) !important;
     color: #fff !important;
 }}
+
+/* menu popups PRIVATE MODE */
+:root[privatebrowsingmode="temporary"] {
+    --default-arrowpanel-background: #8266C4 !important;
+    --default-arrowpanel-color: #fff !important;
+    --panel-separator-color: rgba(255,255,255,0.1) !important;
+}
+:root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
+    --arrowpanel-background: #8266C4 !important;
+    --arrowpanel-border-color: rgba(0,0,0,0.3) !important;
+}
+@media (prefers-color-scheme: dark ) {
+:root[privatebrowsingmode="temporary"] {
+    --default-arrowpanel-background: #8266C4 !important;
+    --default-arrowpanel-border-color: rgba(0,0,0,0.3) !important;
+}}
+:root[privatebrowsingmode="temporary"] menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
+    color: #fff !important;
+}
+:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) {
+    appearance: none !important;
+    background: #8266C4 !important;
+    border: 10px solid transparent !important;
+    border-radius: 18px !important;
+    background-origin: border-box !important;
+    background-clip: content-box, border-box !important;
+    margin: -10px !important;
+}
+:root[privatebrowsingmode="temporary"] menuseparator,
+:root[privatebrowsingmode="temporary"] toolbarseparator {
+    appearance: none !important;
+    border-top: 1px solid rgba(255,255,255,0.2) !important;
+}
+:root[privatebrowsingmode="temporary"] menu,
+:root[privatebrowsingmode="temporary"] menuitem {
+    color: #fff !important;
+    box-shadow: none !important;
+}
+:root[privatebrowsingmode="temporary"] menuitem[disabled="true"],
+:root[privatebrowsingmode="temporary"] menu[disabled="true"],
+:root[privatebrowsingmode="temporary"] .subview-subheader,
+:root[privatebrowsingmode="temporary"] .subviewbutton[disabled="true"] {
+    color: rgba(255,255,255,0.5) !important;
+    fill: rgba(255,255,255,0.5) !important;
+    background: none !important;
+}
+:root[privatebrowsingmode="temporary"] menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+:root[privatebrowsingmode="temporary"] menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
+    height: 17px !important;
+    width: 17px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+:root[privatebrowsingmode="temporary"] menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon,
+:root[privatebrowsingmode="temporary"] .menu-iconic-left[checked="false"] > .menu-iconic-icon {
+    height: 17px !important;
+    width: 17px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+:root[privatebrowsingmode="temporary"] #screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon,
+:root[privatebrowsingmode="temporary"] .menu-right {
+    filter: invert(1) !important;
+}
+:root[privatebrowsingmode="temporary"] .subviewbutton > .menu-right {
+    filter: none !important;
+}
+@media (prefers-color-scheme: dark) {
+:root[privatebrowsingmode="temporary"] .menu-right {
+    filter: none !important;
+}}
+:root[privatebrowsingmode="temporary"] menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
+    appearance: none !important;
+    margin: 0px !important;
+    padding: 7px 0px 7px 17px !important;
+    color: #fff !important;
+    background: #8F76CA !important;
+}
+:root[privatebrowsingmode="temporary"] menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] menubar > menupopup menu:hover:not([disabled="true"]),
+:root[privatebrowsingmode="temporary"] menubar > menupopup menu[open="true"],
+:root[privatebrowsingmode="temporary"] menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] menubar > menu > menupopup menu:hover:not([disabled="true"]),
+:root[privatebrowsingmode="temporary"] menubar > menu > menupopup menu[open="true"],
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menu[open="true"],
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menu:hover:not([disabled="true"]),
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]),
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menu > menupopup menu[open="true"],
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menugroup > menu:hover:not([disabled="true"]),
+:root[privatebrowsingmode="temporary"] popupset > menupopup > menugroup > menu[open="true"],
+:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup menu[open="true"],
+:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup menu:hover,
+:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup > menu > menupopup menu[open="true"],
+:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup > menu > menupopup menu:hover,
+:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup menu:hover,
+:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup menu[open="true"],
+:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
+:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu:hover,
+:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
+    appearance: none !important;
+    margin: 0px !important;
+    padding: 6px 12px 6px 12px !important;
+    color: #fff !important;
+    background: #8F76CA !important;
+}
+:root[privatebrowsingmode="temporary"] menulist {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' width='10mm' height='10mm' viewBox='0 0 10 10' version='1.1' id='svg8' inkscape:version='1.0.1 (0767f8302a, 2020-10-17)' sodipodi:docname='arrowdown.svg'%3E%3Cdefs id='defs2' /%3E%3Csodipodi:namedview id='base' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:pageopacity='0.0' inkscape:pageshadow='2' inkscape:zoom='31.678384' inkscape:cx='21.807418' inkscape:cy='23.509509' inkscape:document-units='mm' inkscape:current-layer='layer1' inkscape:document-rotation='0' showgrid='false' inkscape:window-width='2560' inkscape:window-height='1325' inkscape:window-x='0' inkscape:window-y='30' inkscape:window-maximized='1' /%3E%3Cmetadata id='metadata5'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title /%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cg inkscape:label='Laag 1' inkscape:groupmode='layer' id='layer1'%3E%3Ctext xml:space='preserve' style='font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:%23000000;fill-opacity:1;stroke:none;stroke-width:0.264583' x='111.72037' y='126.5725' id='text835'%3E%3Ctspan sodipodi:role='line' id='tspan833' x='111.72037' y='126.5725' style='stroke-width:0.264583' /%3E%3C/text%3E%3Cpath id='rect837' style='fill:%23FFFFFF;fill-opacity:1;stroke:%23FFFFFF;stroke-width:0.50;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none' d='m 1.6553434,2.7661344 c -0.1491327,0 -0.2982926,0.057142 -0.4125659,0.1714151 -0.2285451,0.228545 -0.2285457,0.5964835 0,0.8250285 L 4.543096,7.0628975 C 4.6687237,7.1885232 4.8364274,7.2446444 4.9999997,7.2321627 5.1635659,7.2446464 5.3312816,7.1885192 5.4569033,7.0628975 L 8.7572229,3.762578 c 0.228545,-0.228545 0.228545,-0.5964835 0,-0.8250285 -0.2285469,-0.2285449 -0.5965864,-0.2285449 -0.8251314,0 L 4.9999997,5.8697444 2.0678061,2.9375495 C 1.9535328,2.8232761 1.8044756,2.7661344 1.6553434,2.7661344 Z' /%3E%3C/g%3E%3C/svg%3E"); !important;
+    background-repeat: no-repeat !important;
+    background-position: 97% 45% !important;
+    background-size: 12px 12px !important;
+    appearance: none !important;
+    padding: 3px 4px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+	color: #fff !important;
+	fill: #fff !important;
+	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+:root[privatebrowsingmode="temporary"] menulist[open="true"] {
+    appearance: none !important;
+    padding: 3px 4px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
+	color: #fff !important;
+	fill: #fff !important;
+}
+:root[privatebrowsingmode="temporary"] #editBMPanel_namePicker,
+:root[privatebrowsingmode="temporary"] #editBMPanel_tagsField,
+:root[privatebrowsingmode="temporary"] #editBMPanel_folderTree,
+:root[privatebrowsingmode="temporary"] #editBMPanel_tagsSelector {
+    appearance: none !important;
+    padding: 4px !important;
+    color: #fff !important;
+    fill: #fff !important;
+	background: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+}
+:root[privatebrowsingmode="temporary"] #editBMPanel_newFolderButton {
+    appearance: none !important;
+    padding: 4px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+	color: #fff !important;
+	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+:root[privatebrowsingmode="temporary"] .expander-down.panel-button {
+    appearance: none !important;
+    padding: 5px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+:root[privatebrowsingmode="temporary"] .expander-up.panel-button {
+    appearance: none !important;
+    padding: 5px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
+}
+:root[privatebrowsingmode="temporary"] .expander-down > .button-box,
+:root[privatebrowsingmode="temporary"] .expander-up > .button-box {
+    filter: invert(1) brightness(500%) !important;
+}
+@media (prefers-color-scheme: dark) {
+:root[privatebrowsingmode="temporary"] .expander-down > .button-box,
+:root[privatebrowsingmode="temporary"] .expander-up > .button-box {
+    filter: none !important;
+}}
+:root[privatebrowsingmode="temporary"] .openintabs-menuitem {
+    appearance: none !important;
+    margin: 0px !important;
+    padding: 5px 6px 5px 6px !important;
+    color: #fff !important;
+    background: #8F76CA !important;
+}
+:root[privatebrowsingmode="temporary"] .openintabs-menuitem:hover {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff !important;
+}
 
 /**********
 Normal mode
@@ -1760,6 +1922,8 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar .tab-close-button {
 	list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
 }
+
+/*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
 #main-window[privatebrowsingmode="temporary"] #customization-lwtheme-button,
 #main-window[privatebrowsingmode="temporary"] #customization-toolbar-visibility-button,
 #main-window[privatebrowsingmode="temporary"] #customization-uidensity-button,
@@ -1785,4 +1949,56 @@ private browsing
     border-radius: 3px !important;
     box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
 	color: #fff !important;
+}
+
+/*** CHECKBOX BUTTONS CUSTOMIZATION PANEL for PRIVATE MODE ***/
+#main-window[privatebrowsingmode="temporary"] .checkbox-check {
+    appearance: none !important;
+    height: 16px !important;
+    width: 16px !important;
+    background-color: #A894D6 !important;
+    border: 1px solid rgba(0,0,0,0.50) !important;
+    border-radius: 3px !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
+}
+
+/*** PROTECTION and SECURITY PULL DOWN MENUS for PRIVATE MODE ***/
+#main-window[privatebrowsingmode="temporary"] #protections-popup-mainView-panel-header-section {
+    background: linear-gradient(125deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
+    color: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] #protections-popup-toast-panel-tp-off-desc,
+#main-window[privatebrowsingmode="temporary"] #protections-popup-toast-panel-tp-on-desc {
+    padding: 15px !important;
+    color: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] #protections-popup-multiView .text-link,
+#main-window[privatebrowsingmode="temporary"] #protections-popup-content label,
+#main-window[privatebrowsingmode="temporary"] #protections-popup-multiView description,
+#main-window[privatebrowsingmode="temporary"] #protections-popup-footer-protection-type-label,
+#main-window[privatebrowsingmode="temporary"] #protections-popup-trackers-blocked-counter-description,
+#main-window[privatebrowsingmode="temporary"] .identity-popup-connection-secure,
+#main-window[privatebrowsingmode="temporary"] #identity-popup-permissions-content description {
+    color: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] #protections-popup-content image {
+    fill: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] #protections-popup[hasException] #protections-popup-tp-switch-section {
+    background: repeating-linear-gradient(-56deg, hsla(0,0%,80%,.1), hsla(0,0%,80%,.1) 10px, transparent 10px, transparent 20px) !important;
+}
+#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch {
+    background-color: #5A4789 !important;
+}
+#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch:hover {
+    background-color: #9C8AC7 !important;
+}
+#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch[enabled]:hover {
+    background-color: #9C8AC7 !important;
+}
+#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch[enabled] {
+    background-color: #5A4789 !important;
+}
+#main-window[privatebrowsingmode="temporary"] #protections-popup-message remote-text  {
+    color: #fff !important;
 }
