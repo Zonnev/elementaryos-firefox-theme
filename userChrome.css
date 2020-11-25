@@ -302,6 +302,10 @@ menuitem:-moz-lwtheme-brighttext {
 
 /* menu popups DARK MODE in elementary Tweaks */
 @media (prefers-color-scheme: dark) {
+:root {
+    --default-arrowpanel-background: #404040 !important;
+    --panel-separator-color: rgba(0,0,0,0.15) !important;
+}
 menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
     color: #fff !important;
 }
