@@ -1940,7 +1940,8 @@ private browsing
 }
 @media (prefers-color-scheme: dark) {
 #main-window[privatebrowsingmode="temporary"] #alltabs-button:not(:-moz-lwtheme-darktext),
-#main-window[privatebrowsingmode="temporary"] #wrapper-alltabs-button:not(:-moz-lwtheme-darktext) {
+#main-window[privatebrowsingmode="temporary"] #wrapper-alltabs-button:not(:-moz-lwtheme-darktext),
+#main-window[privatebrowsingmode="temporary"] #profiler-button > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme-brighttext) {
     filter: none !important; 
 }}
 
