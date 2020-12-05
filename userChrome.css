@@ -45,9 +45,19 @@ menu[disabled="true"] {
     color: gray !important;
     background: none !important;
 }
-menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
+menulist[open="true"] > .in-menulist:not(#PanelUI-profiler-presets-menupopup) > menuitem:hover:not([disabled="true"]) {
     appearance: none !important;
     padding: 7px 0px 7px 17px !important;
+    color: #000 !important;
+    background: #E9E9E9 !important;
+}
+menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem {
+    margin: 4.6px 0px 4.6px 0px !important;
+}
+menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem:not([disabled="true"]):-moz-any([_moz-menuactive], :hover) {
+    appearance: none !important;
+    margin: 0px !important;
+    padding: 7px 0px 7px 5px !important;
     color: #000 !important;
     background: #E9E9E9 !important;
 }
@@ -190,7 +200,7 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
 .expander-up > .button-box:-moz-lwtheme-brighttext {
     filter: invert(1) brightness(500%) !important;
 }
-menulist:-moz-lwtheme-brighttext {
+menulist:not(#PanelUI-profiler-presets):-moz-lwtheme-brighttext {
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' width='10mm' height='10mm' viewBox='0 0 10 10' version='1.1' id='svg8' inkscape:version='1.0.1 (0767f8302a, 2020-10-17)' sodipodi:docname='arrowdown.svg'%3E%3Cdefs id='defs2' /%3E%3Csodipodi:namedview id='base' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:pageopacity='0.0' inkscape:pageshadow='2' inkscape:zoom='31.678384' inkscape:cx='21.807418' inkscape:cy='23.509509' inkscape:document-units='mm' inkscape:current-layer='layer1' inkscape:document-rotation='0' showgrid='false' inkscape:window-width='2560' inkscape:window-height='1325' inkscape:window-x='0' inkscape:window-y='30' inkscape:window-maximized='1' /%3E%3Cmetadata id='metadata5'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title /%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cg inkscape:label='Laag 1' inkscape:groupmode='layer' id='layer1'%3E%3Ctext xml:space='preserve' style='font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:%23000000;fill-opacity:1;stroke:none;stroke-width:0.264583' x='111.72037' y='126.5725' id='text835'%3E%3Ctspan sodipodi:role='line' id='tspan833' x='111.72037' y='126.5725' style='stroke-width:0.264583' /%3E%3C/text%3E%3Cpath id='rect837' style='fill:%23FFFFFF;fill-opacity:1;stroke:%23FFFFFF;stroke-width:0.50;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none' d='m 1.6553434,2.7661344 c -0.1491327,0 -0.2982926,0.057142 -0.4125659,0.1714151 -0.2285451,0.228545 -0.2285457,0.5964835 0,0.8250285 L 4.543096,7.0628975 C 4.6687237,7.1885232 4.8364274,7.2446444 4.9999997,7.2321627 5.1635659,7.2446464 5.3312816,7.1885192 5.4569033,7.0628975 L 8.7572229,3.762578 c 0.228545,-0.228545 0.228545,-0.5964835 0,-0.8250285 -0.2285469,-0.2285449 -0.5965864,-0.2285449 -0.8251314,0 L 4.9999997,5.8697444 2.0678061,2.9375495 C 1.9535328,2.8232761 1.8044756,2.7661344 1.6553434,2.7661344 Z' /%3E%3C/g%3E%3C/svg%3E"); !important;
     background-repeat: no-repeat !important;
     background-position: 97% 50% !important;
@@ -217,9 +227,16 @@ menulist[open="true"]:-moz-lwtheme-brighttext {
 #label-box:-moz-lwtheme-brighttext {
     margin-left: 4px !important;
 }
-menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext {
+menulist[open="true"] > .in-menulist:not(#PanelUI-profiler-presets-menupopup) > menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext {
     appearance: none !important;
     padding: 7px 0px 7px 17px !important;
+    color: #fff !important;
+    background: #5C5C61 !important;
+}
+menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem:not([disabled="true"]):-moz-any([_moz-menuactive], :hover):-moz-lwtheme-brighttext {
+    appearance: none !important;
+    margin: 0px !important;
+    padding: 7px 0px 7px 5px !important;
     color: #fff !important;
     background: #5C5C61 !important;
 }
@@ -343,11 +360,21 @@ menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-ic
 #screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon {
     filter: invert(1) !important;
 }
-menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
+menulist[open="true"] > .in-menulist:not(#PanelUI-profiler-presets-menupopup) > menuitem:hover:not([disabled="true"]) {
     appearance: none !important;
     padding: 7px 0px 7px 17px !important;
     color: #fff !important;
     background: #717171 !important;
+}
+menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem:not([disabled="true"]):-moz-any([_moz-menuactive], :hover) {
+    appearance: none !important;
+    margin: 0px !important;
+    padding: 7px 0px 7px 5px !important;
+    color: #fff !important;
+    background: #717171 !important;
+}
+#PanelUI-profiler-presets {
+    background-color: rgba(0,0,0,0.3) !important;
 }
 menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
 menubar > menupopup menu:hover:not([disabled="true"]),
@@ -1121,6 +1148,22 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     background-color: black !important;
 }
 
+/*** PROFILER DROPDOWN ***/
+#PanelUI-profiler-header[isinfocollapsed="false"] {
+    background: linear-gradient(225deg, transparent 5%, rgba(0,0,0,0.3) 100%) !important;
+    color: #333333 !important;
+}
+#PanelUI-profiler-info-button:-moz-any([checked], :hover, :active) {
+    background-color: rgba(0,0,0,0.1) !important;
+}
+.PanelUI-profiler-button-primary:-moz-any([checked], :hover, :active),
+.PanelUI-profiler-button-primary {
+    background-color: gray !important;
+}
+#PanelUI-profiler-info button {
+    color: #333333 !important;
+}
+
 /*** MISC. ***/
 .button-menu-dropmarker {
     margin-left: 3px !important;
@@ -1368,6 +1411,21 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
 }
 #protections-popup-message remote-text:-moz-lwtheme-brighttext {
     color: #fff !important;
+}
+
+/*** PROFILER DROPDOWN for DARK MODE ***/
+#PanelUI-profiler-header[isinfocollapsed="false"]:-moz-lwtheme-brighttext {
+    background: linear-gradient(225deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
+    color: #fff !important;
+}
+#PanelUI-profiler-info-button:-moz-any([checked], :hover, :active):-moz-lwtheme-brighttext {
+    background-color: rgba(255,255,255,0.3) !important;
+}
+#PanelUI-profiler-info button:-moz-lwtheme-brighttext {
+    color: #fff !important;
+}
+#profiler-button > .toolbarbutton-menu-dropmarker:-moz-lwtheme-brighttext {
+    filter: invert(1) brightness(100%) !important;
 }
 
 /*** TEXT COLOR for DARK MODE ***/
@@ -1656,6 +1714,18 @@ menubar > menu[open="true"] {
     color: #fff !important;
 }
 
+/*** PROFILER DROPDOWN DARK MODE for Tweaks ***/
+#PanelUI-profiler-header[isinfocollapsed="false"] {
+    background: linear-gradient(225deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
+    color: #fff !important;
+}
+#PanelUI-profiler-info-button:-moz-any([checked], :hover, :active) {
+    background-color: rgba(255,255,255,0.3) !important;
+}
+#PanelUI-profiler-info button {
+    color: #fff !important;
+}
+
 /*** TEXT COLOR DARK MODE for Tweaks ***/
 .bookmark-item > .toolbarbutton-text {
 	color: #fff !important;
@@ -1727,6 +1797,9 @@ private browsing
 }
 
 /*** ELEMENTS IN PRIVATE MODE ***/
+:root[privatebrowsingmode="temporary"] {
+    --toolbarseparator-color: rgba(255,255,255,0.6) !important;
+}
 #main-window[privatebrowsingmode="temporary"] #fullscreen-and-pointerlock-wrapper {
     border: 1px solid rgba(0,0,0,0.5) !important;
 }
@@ -1774,7 +1847,8 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] .tab-content > image:not(.tab-icon-image),
 #main-window[privatebrowsingmode="temporary"] .toolbarbutton-icon[type="menu"],
 #main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder image,
-#main-window[privatebrowsingmode="temporary"] #PlacesChevron .toolbarbutton-icon {
+#main-window[privatebrowsingmode="temporary"] #PlacesChevron .toolbarbutton-icon,
+#main-window[privatebrowsingmode="temporary"] #import-button image {
     fill: #fff !important;
 }
 :root[privatebrowsingmode="temporary"]    {
@@ -1797,7 +1871,8 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete button,
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete richlistitem,
 #main-window[privatebrowsingmode="temporary"] #identity-icon-label,
-#main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder label {
+#main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder label,
+#main-window[privatebrowsingmode="temporary"] #import-button label {
     color: #fff !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete {
@@ -1858,7 +1933,8 @@ private browsing
     margin-left: 3px !important;
     filter: none !important;
 }}
-#main-window[privatebrowsingmode="temporary"] #alltabs-button:not(:-moz-lwtheme-brighttext) {
+#main-window[privatebrowsingmode="temporary"] #alltabs-button:not(:-moz-lwtheme-brighttext),
+#main-window[privatebrowsingmode="temporary"] #profiler-button > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme-brighttext) {
     filter: invert(1) brightness(500%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #wrapper-alltabs-button:not(:-moz-lwtheme-brighttext) {
@@ -2006,5 +2082,17 @@ private browsing
     background-color: #5A4789 !important;
 }
 #main-window[privatebrowsingmode="temporary"] #protections-popup-message remote-text  {
+    color: #fff !important;
+}
+
+/*** PROFILER PULL DOWN MENU for PRIVATE MODE ***/
+#main-window[privatebrowsingmode="temporary"] #PanelUI-profiler-header[isinfocollapsed="false"] {
+    background: linear-gradient(225deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
+    color: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] #PanelUI-profiler-info-button:-moz-any([checked], :hover, :active) {
+    background-color: rgba(255,255,255,0.3) !important;
+}
+#main-window[privatebrowsingmode="temporary"] #PanelUI-profiler-info button {
     color: #fff !important;
 }
