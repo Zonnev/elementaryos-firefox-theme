@@ -1857,7 +1857,9 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PlacesChevron .toolbarbutton-icon,
 #main-window[privatebrowsingmode="temporary"] #import-button image,
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarbutton:not(hbox) > image,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarpaletteitem image {
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarpaletteitem image,
+#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #zoom-controls > toolbarbutton > image,
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > image  {
     fill: #fff !important;
 }
 :root[privatebrowsingmode="temporary"]    {
@@ -1881,8 +1883,15 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete richlistitem,
 #main-window[privatebrowsingmode="temporary"] #identity-icon-label,
 #main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder label,
-#main-window[privatebrowsingmode="temporary"] #import-button label {
+#main-window[privatebrowsingmode="temporary"] #import-button label,
+#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #zoom-controls > toolbarbutton > label,
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > label,
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label, 
+#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label {
     color: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
+    background-image: linear-gradient( #fff 0, #fff 100%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete {
     background: #A267A9 !important;
