@@ -903,6 +903,9 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 :root[sizemode="fullscreen"] #TabsToolbar {
     margin-top: -1px !important;
 }
+#tabbrowser-arrowscrollbox {
+    padding-left: 2px !important;
+}
 #tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-background[selected="true"] {
     margin-bottom: 1.5px !important;
 }
