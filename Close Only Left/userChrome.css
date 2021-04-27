@@ -864,7 +864,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     padding: 0 !important;
     position: absolute !important; /* makes tab bar go to bottom */
     width: 100vw !important;
-    height: 36px !important;
+    height: 38px !important;
     border-top: 1px solid #B5B5B5 !important;
     border-bottom: 1px solid #D9D9D9 !important;
     background: linear-gradient(180deg, rgba(223,223,223,1) 0%, rgba(241,241,241,1) 10%, rgba(241,241,241,1) 100%) !important;
@@ -915,6 +915,10 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     margin-bottom: 1.5px !important;
     border-radius: 4px !important;
 }
+.tabbrowser-tab {
+    min-height: 28px !important;
+    padding-inline: 0px !important;
+}
 .tab-background:not([selected="true"]) {
     -moz-transition: 0.5s !important;
     border-radius: 4px !important;
@@ -925,7 +929,15 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     background: #FAFAFA !important;
 	border: 1px solid rgba(207,207,207,1) !important;
     border-radius: 4px !important;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1) !important;
+}
+.tab-background {
+    margin-block: 0px 1px !important;
+}
+#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+    box-shadow: none !important;
+}
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 0px !important;
 }
 #new-tab-button .toolbarbutton-icon {
     list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%23333333' transform='translate%28-293 -117%29'%3E%3Cpath d='M300 120v4h-4v2h4v4h2v-4h4v-2h-4v-4z' fill='%23333333' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
