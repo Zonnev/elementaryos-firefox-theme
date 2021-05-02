@@ -633,6 +633,9 @@ Normal mode
     background: linear-gradient(180deg, rgba(236,236,236,1) 0%, rgba(250,250,250,1) 10%, rgba(250,250,250,1) 100%) !important;
     border-top: 1px solid #C9C9C9 !important;
 }
+.tab-background[selected="true"]:-moz-window-inactive {
+    background: #FAFAFA !important;
+}
 #toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
 #PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
     background: #E9E9E9 !important;
@@ -901,13 +904,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 }
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
-    padding: 0px 6px 0px 6px !important;
-}
-.tab-content:not([pinned]):not([selected="true"]) {
-    padding-bottom: 2px !important;
-}
-.tab-content[pinned]:not([selected="true"]) {
-    padding-bottom: 2px !important;
+    padding: 0px 6px 1px 6px !important;
 }
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
@@ -915,32 +912,23 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 .tabbrowser-tab:before {
     display: none !important; /* don't show border between tabs  */
 }
-.tabbrowser-tab:not([selected="true"]) {
-    margin-top: 1px !important;
-    margin-bottom: 2px !important;
-    border-radius: 4px !important;
-}
-.tabbrowser-tab[selected="true"] {
-    margin-bottom: 1.5px !important;
-    border-radius: 4px !important;
-}
 .tabbrowser-tab {
-    min-height: 28px !important;
-    padding-inline: 0px !important;
+    min-height: 32px !important;
+    border-radius: 3px !important;
+    padding-inline: 0.5px !important;
+    margin-block: 1px 1px !important;
 }
 .tab-background:not([selected="true"]) {
     -moz-transition: 0.5s !important;
-    border-radius: 4px !important;
+    border-radius: 3px !important;
+    margin-block: 1px !important;
 }
 .tab-background[selected="true"] {
     -moz-transition: 0.5s !important;
-    background-attachment: none !important;
-    background: #FAFAFA !important;
-	border: 1px solid rgba(207,207,207,1) !important;
-    border-radius: 4px !important;
-}
-.tab-background {
-    margin-block: 0px 1px !important;
+    background: #FFFFFF !important;
+    border-radius: 3px !important;
+	border: 1px solid #E1E1E1 !important;
+    margin-block: 1px !important;
 }
 #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
