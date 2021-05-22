@@ -776,6 +776,9 @@ Normal mode
 #PopupSearchAutoComplete {
     border-radius: 0 0 7px 7px !important;
 }
+#urlbar-zoom-button {
+    margin-block: calc((var(--urlbar-min-height) - var(--urlbar-container-padding) - 6px - 18px) / 2) !important;
+}
 
 /* selected text url bar */
 ::selection {
