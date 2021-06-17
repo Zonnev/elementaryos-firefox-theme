@@ -787,6 +787,9 @@ Normal mode
     padding: 0px 3px !important;
     margin:  0px 2px !important;
 }
+#notification-popup-box {
+    padding: 2px 6px 2px 2px !important;
+}
 
 /* selected text url bar */
 ::selection {
