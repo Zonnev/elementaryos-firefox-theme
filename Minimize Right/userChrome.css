@@ -1042,6 +1042,9 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 .tabbrowser-tab {
     -moz-box-direction: reverse !important;
 }
+.tab-icon-overlay:not([crashed]):is([pinned], [sharing]) {
+    inset-inline-end: -10px !important;
+}
 
 /* drag space */
 .titlebar-spacer[type="pre-tabs"] {
@@ -1930,6 +1933,12 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] #wrapper-alltabs-button:not(:-moz-lwtheme-brighttext) {
     filter: none !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture], [crashed]):not(:is([pinned])) {
+    fill: #fff !important;
+}
+#main-window[privatebrowsingmode="temporary"] .tab-secondary-label {
+    color: rgba(255,255,255,1) !important;
 }
 @media (prefers-color-scheme: dark) {
 #main-window[privatebrowsingmode="temporary"] #alltabs-button:not(:-moz-lwtheme-darktext),
