@@ -141,6 +141,9 @@ treechildren::-moz-tree-image(selected) {
     background: rgba(0,0,0,0.1) !important;
     color: #000 !important;
 }
+.openintabs-menuitem.subviewbutton {
+    margin: 0px 8px !important;
+}
 
 /* menu popups DARK MODE */
 menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover):-moz-lwtheme-brighttext {
@@ -316,6 +319,9 @@ menuitem:-moz-lwtheme-brighttext {
 .sidebar-splitter:-moz-lwtheme-brighttext {
     background: #38383D !important;
 }
+.openintabs-menuitem.subviewbutton:-moz-lwtheme-brighttext {
+    margin: 0px 8px !important;
+}
 
 /* menu popups DARK MODE in elementary Tweaks */
 @media (prefers-color-scheme: dark) {
@@ -418,6 +424,9 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
 .openintabs-menuitem:hover {
     background: rgba(255,255,255,0.35) !important;
     color: #fff !important;
+}
+.openintabs-menuitem.subviewbutton {
+    margin: 0px 8px !important;
 }}
 
 /* menu popups PRIVATE MODE */
@@ -614,6 +623,9 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
 :root[privatebrowsingmode="temporary"] .openintabs-menuitem:hover {
     background: rgba(255,255,255,0.15) !important;
     color: #fff !important;
+}
+:root[privatebrowsingmode="temporary"] .openintabs-menuitem.subviewbutton {
+    margin: 0px 8px !important;
 }
 
 /**********
