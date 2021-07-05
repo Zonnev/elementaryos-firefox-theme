@@ -890,6 +890,20 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 #fxa-toolbar-menu-button {
     margin-right: 4px !important;
 }
+#customization-palette #wrapper-home-button #home-button .toolbarbutton-icon,
+#customization-palette #wrapper-stop-reload-button #stop-reload-button .toolbarbutton-icon {
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+#customization-palette #home-button,
+#customization-palette #reload-button {
+    padding: 12px 0 5px !important;
+}
+toolbarpaletteitem > #stop-reload-button {
+    -moz-box-pack: center !important;
+}
 
 /*** TAB BAR ***/
 #TabsToolbar {
