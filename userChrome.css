@@ -1178,58 +1178,6 @@ toolbarpaletteitem > #stop-reload-button {
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.1) !important;
 }
 
-/*** PROTECTIONS DROPDOWN ***/
-#tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
-    transform: none !important;
-}
-.panel-arrow {
-    fill: var(--arrowpanel-background) !important;
-    stroke: var(--arrowpanel-border-color) !important;
-}
-#protections-popup-mainView-panel-header-section {
-    background: linear-gradient(125deg, transparent 5%, rgba(0,0,0,0.3) 100%) !important;
-    color: #333333 !important;
-}
-#protections-popup-toast-panel-tp-off-desc,
-#protections-popup-toast-panel-tp-on-desc {
-    padding: 15px !important;
-    color: #333333 !important;
-}
-#protections-popup-info-button:-moz-any([checked], :hover, :active) {
-    background-color: rgba(255,255,255,0.3) !important;
-}
-#protections-popup-message remote-text {
-    color: #333333 !important;
-}
-.protections-popup-tp-switch:hover {
-    background-color: gray !important;
-}
-.protections-popup-tp-switch {
-    background-color: black !important;
-}
-.protections-popup-tp-switch[enabled]:hover {
-    background-color: gray !important;
-}
-.protections-popup-tp-switch[enabled] {
-    background-color: black !important;
-}
-
-/*** PROFILER DROPDOWN ***/
-#PanelUI-profiler-header[isinfocollapsed="false"] {
-    background: linear-gradient(225deg, transparent 5%, rgba(0,0,0,0.3) 100%) !important;
-    color: #333333 !important;
-}
-#PanelUI-profiler-info-button:-moz-any([checked], :hover, :active) {
-    background-color: rgba(0,0,0,0.1) !important;
-}
-.PanelUI-profiler-button-primary:-moz-any([checked], :hover, :active),
-.PanelUI-profiler-button-primary {
-    background-color: gray !important;
-}
-#PanelUI-profiler-info button {
-    color: #333333 !important;
-}
-
 /*** MISC. ***/
 .button-menu-dropmarker {
     margin-left: 3px !important;
@@ -1439,47 +1387,6 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon:-moz-lwtheme
     border: 1px solid rgba(56,56,56,1) !important;
     border-radius: 3px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-
-/*** PROTECTIONS DROPDOWN for DARK MODE ***/
-#protections-popup-mainView-panel-header-section:-moz-lwtheme-brighttext {
-    background: linear-gradient(125deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
-    color: #fff !important;
-}
-#protections-popup-toast-panel-tp-off-desc:-moz-lwtheme-brighttext,
-#protections-popup-toast-panel-tp-on-desc:-moz-lwtheme-brighttext {
-    padding: 15px !important;
-    color: #fff !important;
-}
-.protections-popup-tp-switch:-moz-lwtheme-brighttext {
-    background-color: black !important;
-}
-.protections-popup-tp-switch:hover:-moz-lwtheme-brighttext {
-    background-color: silver !important;
-}
-.protections-popup-tp-switch[enabled]:hover:-moz-lwtheme-brighttext {
-    background-color: silver !important;
-}
-.protections-popup-tp-switch[enabled]:-moz-lwtheme-brighttext {
-    background-color: black !important;
-}
-#protections-popup-message remote-text:-moz-lwtheme-brighttext {
-    color: #fff !important;
-}
-
-/*** PROFILER DROPDOWN for DARK MODE ***/
-#PanelUI-profiler-header[isinfocollapsed="false"]:-moz-lwtheme-brighttext {
-    background: linear-gradient(225deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
-    color: #fff !important;
-}
-#PanelUI-profiler-info-button:-moz-any([checked], :hover, :active):-moz-lwtheme-brighttext {
-    background-color: rgba(255,255,255,0.3) !important;
-}
-#PanelUI-profiler-info button:-moz-lwtheme-brighttext {
-    color: #fff !important;
-}
-#profiler-button > .toolbarbutton-menu-dropmarker:-moz-lwtheme-brighttext {
-    filter: invert(1) brightness(100%) !important;
 }
 
 /*** TEXT COLOR for DARK MODE ***/
@@ -1725,47 +1632,6 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     border: 1px solid rgba(56,56,56,1) !important;
     border-radius: 3px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-
-/*** PROTECTION DROPDOWN DARK MODE for Tweaks ***/
-#protections-popup-mainView-panel-header-section {
-    background: linear-gradient(125deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
-    color: #fff !important;
-}
-#protections-popup-toast-panel-tp-off-desc,
-#protections-popup-toast-panel-tp-on-desc {
-    padding: 15px !important;
-    color: #fff !important;
-}
-#protections-popup[hasException] #protections-popup-tp-switch-section {
-    background: repeating-linear-gradient(-56deg, hsla(0,0%,80%,.1), hsla(0,0%,80%,.1) 10px, transparent 10px, transparent 20px) !important;
-}
-.protections-popup-tp-switch {
-    background-color: black !important;
-}
-.protections-popup-tp-switch:hover {
-    background-color: silver !important;
-}
-.protections-popup-tp-switch[enabled]:hover {
-    background-color: silver !important;
-}
-.protections-popup-tp-switch[enabled] {
-    background-color: black !important;
-}
-#protections-popup-message remote-text  {
-    color: #fff !important;
-}
-
-/*** PROFILER DROPDOWN DARK MODE for Tweaks ***/
-#PanelUI-profiler-header[isinfocollapsed="false"] {
-    background: linear-gradient(225deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
-    color: #fff !important;
-}
-#PanelUI-profiler-info-button:-moz-any([checked], :hover, :active) {
-    background-color: rgba(255,255,255,0.3) !important;
-}
-#PanelUI-profiler-info button {
-    color: #fff !important;
 }
 
 /*** TEXT COLOR DARK MODE for Tweaks ***/
@@ -2089,57 +1955,4 @@ private browsing
     border: 1px solid rgba(0,0,0,0.50) !important;
     border-radius: 3px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-
-/*** PROTECTION and SECURITY PULL DOWN MENUS for PRIVATE MODE ***/
-#main-window[privatebrowsingmode="temporary"] #protections-popup-mainView-panel-header-section {
-    background: linear-gradient(125deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
-    color: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] #protections-popup-toast-panel-tp-off-desc,
-#main-window[privatebrowsingmode="temporary"] #protections-popup-toast-panel-tp-on-desc {
-    padding: 15px !important;
-    color: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] #protections-popup-multiView .text-link,
-#main-window[privatebrowsingmode="temporary"] #protections-popup-content label,
-#main-window[privatebrowsingmode="temporary"] #protections-popup-multiView description,
-#main-window[privatebrowsingmode="temporary"] #protections-popup-footer-protection-type-label,
-#main-window[privatebrowsingmode="temporary"] #protections-popup-trackers-blocked-counter-description,
-#main-window[privatebrowsingmode="temporary"] .identity-popup-connection-secure,
-#main-window[privatebrowsingmode="temporary"] #identity-popup-permissions-content description {
-    color: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] #protections-popup-content image {
-    fill: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] #protections-popup[hasException] #protections-popup-tp-switch-section {
-    background: repeating-linear-gradient(-56deg, hsla(0,0%,80%,.1), hsla(0,0%,80%,.1) 10px, transparent 10px, transparent 20px) !important;
-}
-#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch {
-    background-color: #5A4789 !important;
-}
-#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch:hover {
-    background-color: #9C8AC7 !important;
-}
-#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch[enabled]:hover {
-    background-color: #9C8AC7 !important;
-}
-#main-window[privatebrowsingmode="temporary"] .protections-popup-tp-switch[enabled] {
-    background-color: #5A4789 !important;
-}
-#main-window[privatebrowsingmode="temporary"] #protections-popup-message remote-text  {
-    color: #fff !important;
-}
-
-/*** PROFILER PULL DOWN MENU for PRIVATE MODE ***/
-#main-window[privatebrowsingmode="temporary"] #PanelUI-profiler-header[isinfocollapsed="false"] {
-    background: linear-gradient(225deg, transparent 5%, rgba(255,255,255,0.15) 100%) !important;
-    color: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] #PanelUI-profiler-info-button:-moz-any([checked], :hover, :active) {
-    background-color: rgba(255,255,255,0.3) !important;
-}
-#main-window[privatebrowsingmode="temporary"] #PanelUI-profiler-info button {
-    color: #fff !important;
 }
