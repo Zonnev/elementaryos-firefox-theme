@@ -1013,10 +1013,6 @@ toolbarpaletteitem > #stop-reload-button {
 }
 
 /* move tab icon overlay */
-.tab-icon-overlay {
-    margin-right: -23px !important;
-    margin-left: 0px !important;
-}
 .tab-icon-overlay[pinned] {
     margin-inline: -4px !important;
 }
