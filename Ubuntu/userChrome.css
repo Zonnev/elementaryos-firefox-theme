@@ -1063,8 +1063,12 @@ toolbarpaletteitem > #stop-reload-button {
 .tab-icon-overlay:not([crashed]):is([pinned], [sharing]) {
     inset-inline-end: -10px !important;
 }
-.tab-icon-image:not([pinned]) {
+.tab-icon-image:not([pinned]),
+.tab-icon-overlay:not([pinned]) {
     margin-inline-end: 0px !important;
+}
+.tab-label-container {
+    mask-image: linear-gradient(to left, transparent, black var(--tab-label-mask-size)) !important;
 }
 
 /* drag space */
