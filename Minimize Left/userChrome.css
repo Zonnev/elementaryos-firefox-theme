@@ -1073,6 +1073,9 @@ toolbarpaletteitem > #stop-reload-button {
 .tab-icon-overlay:not([crashed]):is([pinned], [sharing]) {
     inset-inline-end: -10px !important;
 }
+.tab-icon-image:not([pinned]) {
+    margin-inline-end: 0px !important;
+}
 
 /* drag space */
 .titlebar-spacer[type="pre-tabs"] {
