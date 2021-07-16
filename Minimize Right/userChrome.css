@@ -1062,7 +1062,7 @@ toolbarpaletteitem > #stop-reload-button {
 }
 .tab-secondary-label {
     margin-top: -2px !important;
-    margin-left: 5px !important;
+    margin-left: 6px !important;
 }
 .tabbrowser-tab {
     -moz-box-direction: reverse !important;
@@ -1076,6 +1076,7 @@ toolbarpaletteitem > #stop-reload-button {
 }
 .tab-label-container {
     mask-image: linear-gradient(to left, transparent, black var(--tab-label-mask-size)) !important;
+    margin-right: 10px !important;
 }
 
 /* drag space */
