@@ -1149,7 +1149,7 @@ toolbarpaletteitem > #stop-reload-button {
     margin-inline-end: 4px !important;
     padding: 0px !important;
 }
-#PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon {
+#PersonalToolbar .toolbarbutton-1:not(#PlacesChevron) > .toolbarbutton-icon {
     max-height: 16px !important;
     margin: 6px !important;
 }
