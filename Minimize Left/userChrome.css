@@ -1135,8 +1135,7 @@ toolbarpaletteitem > #stop-reload-button {
     min-height: 33px !important;
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
-    padding: 6px !important;
-    margin: 2px 0px 1px 0px !important;
+    margin: 2px 2px 1px 2px !important;
     background: rgba(51,51,51, 0.15) !important;
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu) label {
