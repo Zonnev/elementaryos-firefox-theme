@@ -745,7 +745,7 @@ Normal mode
     top: 2.5px !important;
 }
 #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container {
-    height: 39px !important;
+    height: 35px !important;
     padding: 2px !important;
 }
 #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container > #page-action-buttons > #reader-mode-button {
@@ -800,6 +800,9 @@ Normal mode
     height: 16px !important;
     padding: 0px !important;
     margin: 0px 6px !important;
+}
+#urlbar .search-one-offs:not([hidden]) {
+    padding-block: 5px !important;
 }
 
 /* selected text url bar */
