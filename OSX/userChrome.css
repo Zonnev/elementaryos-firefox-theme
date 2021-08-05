@@ -1740,7 +1740,8 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] .urlbarView-row:not([type="tip"]):not([type="dynamic"])[selected] > .urlbarView-row-inner,
 #main-window[privatebrowsingmode="temporary"] .search-one-offs button[selected],
-#main-window[privatebrowsingmode="temporary"] .autocomplete-richlistitem[selected] {
+#main-window[privatebrowsingmode="temporary"] .autocomplete-richlistitem[selected],
+#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator {
     background: rgba(0,0,0,0.2) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #urlbar-input-container image,
@@ -1760,7 +1761,8 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarbutton:not(hbox) > image,
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarpaletteitem image,
 #main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #zoom-controls > toolbarbutton > image,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > image  {
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > image,
+#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator-close {
     fill: #fff !important;
 }
 :root[privatebrowsingmode="temporary"]    {
@@ -1783,13 +1785,13 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete button,
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete richlistitem,
 #main-window[privatebrowsingmode="temporary"] #identity-icon-label,
-#main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder label,
 #main-window[privatebrowsingmode="temporary"] #import-button label,
 #main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #zoom-controls > toolbarbutton > label,
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > label,
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label, 
 #main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label,
-#main-window[privatebrowsingmode="temporary"] #urlbar-zoom-button label {
+#main-window[privatebrowsingmode="temporary"] #urlbar-zoom-button label,
+#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator-title {
     color: #fff !important;
 }
 #main-window[privatebrowsingmode="temporary"] toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
