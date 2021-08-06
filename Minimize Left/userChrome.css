@@ -431,8 +431,8 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
 
 /* menu popups PRIVATE MODE */
 :root[privatebrowsingmode="temporary"] {
-    --default-arrowpanel-background: #8266C4 !important;
-    --default-arrowpanel-color: #fff !important;
+    --arrowpanel-background: #8266C4 !important;
+    --arrowpanel-color: #fff !important;
     --panel-separator-color: rgba(255,255,255,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
@@ -441,8 +441,8 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
 }
 @media (prefers-color-scheme: dark ) {
 :root[privatebrowsingmode="temporary"] {
-    --default-arrowpanel-background: #8266C4 !important;
-    --default-arrowpanel-border-color: rgba(0,0,0,0.3) !important;
+    --arrowpanel-background: #8266C4 !important;
+    --arrowpanel-border-color: rgba(0,0,0,0.3) !important;
 }}
 :root[privatebrowsingmode="temporary"] menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
     color: #fff !important;
