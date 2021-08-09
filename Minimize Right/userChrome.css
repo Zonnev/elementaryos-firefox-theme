@@ -745,11 +745,6 @@ Normal mode
     height: 35px !important;
     padding: 2px !important;
 }
-#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container > #page-action-buttons > #reader-mode-button {
-    width: 22px !important;
-    height: 22px !important;
-    margin: 6px !important;
-}
 #urlbar, #searchbar {
     -moz-window-dragging: no-drag !important;
     min-height: 25px !important;
@@ -784,9 +779,10 @@ Normal mode
     border-radius: 0 0 7px 7px !important;
 }
 .urlbar-icon {
-    width: 22px !important;
-    height: 22px !important;
-    padding: 2.5px !important;
+    width: 16px !important;
+    height: 16px !important;
+    padding: 0px !important;
+    margin: 0px 6px !important;
 }
 #urlbar-zoom-button {
     padding: 0px 3px !important;
