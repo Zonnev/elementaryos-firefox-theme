@@ -800,10 +800,13 @@ Normal mode
     padding-block: 5px !important;
 }
 
-/* selected text url bar */
+/* selected text and icons url bar */
 ::selection {
     color: #FFFFFF !important;
     background-color: #1E90FF !important;
+}
+:root {
+    --toolbarbutton-icon-fill-attention: #1E90FF !important;
 }
 
 /*** TOOLBAR ***/
@@ -943,6 +946,9 @@ toolbarpaletteitem > #stop-reload-button {
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     padding: 0px 6px 3px 6px !important;
+}
+.tab-content[pinned] {
+    padding: 0px 0px 0px 10px !important;
 }
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
