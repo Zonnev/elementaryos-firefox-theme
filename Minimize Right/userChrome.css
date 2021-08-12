@@ -26,7 +26,6 @@ menupopup:not(#BMB_bookmarksPopup) {
     background-clip: content-box, border-box !important;
     margin: -10px !important;
 }
-.menupopup-arrowscrollbox:not([part="arrowscrollbox"]),
 .menupopup-arrowscrollbox[exportparts="scrollbox: arrowscrollbox-scrollbox"] {
     appearance: none !important;
     background-color: transparent !important;
