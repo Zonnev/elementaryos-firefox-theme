@@ -11,7 +11,7 @@ MENU POPUPS + right mouse click menus
 *************************************/
 
 :root {
-    --default-arrowpanel-background: #F5F5F5 !important;
+    --arrowpanel-background: #F5F5F5 !important;
     --panel-separator-color: rgba(0,0,0,0.15) !important;
 }
 menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
@@ -145,6 +145,9 @@ treechildren::-moz-tree-image(selected) {
 }
 
 /* menu popups DARK MODE */
+:root:-moz-lwtheme-brighttext {
+    --arrowpanel-background: #4A4A4F !important;
+}
 menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover):-moz-lwtheme-brighttext {
     color: #fff !important;
 }
@@ -325,7 +328,7 @@ menuitem:-moz-lwtheme-brighttext {
 /* menu popups DARK MODE in elementary Tweaks */
 @media (prefers-color-scheme: dark) {
 :root {
-    --default-arrowpanel-background: #404040 !important;
+    --arrowpanel-background: #404040 !important;
     --panel-separator-color: rgba(0,0,0,0.15) !important;
 }
 menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
