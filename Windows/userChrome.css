@@ -10,28 +10,9 @@
 MENU POPUPS + right mouse click menus
 *************************************/
 
-:root {
-    --arrowpanel-background: #F5F5F5 !important;
-    --panel-separator-color: rgba(0,0,0,0.15) !important;
-}
-menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
-    color: #000 !important;
-}
-menupopup:not(#BMB_bookmarksPopup) {
-    appearance: none !important;
-    background-color: #F5F5F5 !important;
-    border: 10px solid transparent !important;
-    border-radius: 18px !important;
-    background-origin: border-box !important;
-    background-clip: content-box, border-box !important;
-    margin: -10px !important;
-}
-.menupopup-arrowscrollbox[exportparts="scrollbox: arrowscrollbox-scrollbox"] {
-    appearance: none !important;
-    background-color: transparent !important;
-    box-shadow: 0px 4px 6px -3px rgba(0,0,0,0.4) !important;
+/* Normal Mode menu popups */
+.menupopup-arrowscrollbox {
     border-radius: 7px !important;
-    border: 1px solid rgba(0,0,0,0.2) !important;
     overflow: auto !important;
 }
 menuseparator,
@@ -39,403 +20,63 @@ toolbarseparator {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.15) !important;
 }
-menuitem[disabled="true"],
-menu[disabled="true"] {
-    color: gray !important;
-    background: none !important;
-}
-menulist[open="true"] > .in-menulist:not(#PanelUI-profiler-presets-menupopup) > menuitem:hover:not([disabled="true"]) {
-    appearance: none !important;
-    padding: 7px 0px 7px 17px !important;
-    color: #000 !important;
-    background: #E9E9E9 !important;
-}
-menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem {
-    margin: 4.6px 0px 4.6px 0px !important;
-}
-menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem:not([disabled="true"]):-moz-any([_moz-menuactive], :hover) {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 7px 0px 7px 5px !important;
-    color: #000 !important;
-    background: #E9E9E9 !important;
-}
-menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menupopup menu:hover:not([disabled="true"]),
-menubar > menupopup menu[open="true"],
-menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menu > menupopup menu:hover:not([disabled="true"]),
-menubar > menu > menupopup menu[open="true"],
-popupset > menupopup > menu[open="true"],
-popupset > menupopup > menu:hover:not([disabled="true"]),
-popupset > menupopup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]),
-popupset > menupopup > menu > menupopup menu[open="true"],
-popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menugroup > menu:hover:not([disabled="true"]),
-popupset > menupopup > menugroup > menu[open="true"],
-scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-scrollbox > toolbarbutton > menupopup menu[open="true"],
-scrollbox > toolbarbutton > menupopup menu:hover,
-scrollbox > toolbarbutton > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-scrollbox > toolbarbutton > menupopup > menu > menupopup menu[open="true"],
-scrollbox > toolbarbutton > menupopup > menu > menupopup menu:hover,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menu:hover,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menu[open="true"],
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu:hover,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
-    appearance: none !important;
-    padding: 6px 12px 6px 12px !important;
-    color: #000 !important;
-    background: #E9E9E9 !important;
-}
-menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
-menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon,
-menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon,
-.menu-iconic-left[checked="false"] > .menu-iconic-icon {
-    height: 17px !important;
-    width: 17px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.20) !important;
-    border-radius: 3px !important;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.1) !important;
-}
-.menu-iconic-left[checked="true"] > .menu-iconic-icon,
-.checkbox-check[checked] {
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='svg2' height='24' width='24' version='1.2'%3E%3Cdefs id='defs4'%3E%3ClinearGradient id='linearGradient4011'%3E%3Cstop offset='0' style='stop-color:%23ffffff;stop-opacity:1' id='stop4013' /%3E%3Cstop offset='0.507761' style='stop-color:%23ffffff;stop-opacity:0.23529412' id='stop4015-3' /%3E%3Cstop offset='0.83456558' style='stop-color:%23ffffff;stop-opacity:0.15686275' id='stop4017-2' /%3E%3Cstop offset='1' style='stop-color:%23ffffff;stop-opacity:0.39215687' id='stop4019' /%3E%3C/linearGradient%3E%3ClinearGradient gradientTransform='matrix(0.5135135,0,0,0.5135135,-24.83614,-1.0212801)' gradientUnits='userSpaceOnUse' xlink:href='%23linearGradient4011' id='linearGradient12398-3' y2='44.340794' x2='71.204407' y1='6.2375584' x1='71.204407' /%3E%3ClinearGradient gradientTransform='matrix(0.8047894,0,0,0.60165743,-1628.8199,-1928.0804)' gradientUnits='userSpaceOnUse' xlink:href='%23linearGradient947-5' id='linearGradient11527-6-5' y2='3241.9966' x2='2035.1652' y1='3208.0737' x1='2035.1652' /%3E%3ClinearGradient id='linearGradient947-5'%3E%3Cstop offset='0' style='stop-color:%2364baff;stop-opacity:1' id='stop943-6' /%3E%3Cstop offset='1' style='stop-color:%233689e6;stop-opacity:1' id='stop945-2' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cmetadata id='metadata7'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cpath style='color:%23000000;display:inline;overflow:visible;visibility:visible;opacity:0.98999999;fill:url(%23linearGradient11527-6-5);fill-opacity:1.0;fill-rule:nonzero;stroke:none;stroke-width:0.99999982;marker:none;enable-background:accumulate' id='path2555-7-8-5-0-9' d='M 12,1.4999999 C 6.2064599,1.4999999 1.4999999,6.2064599 1.4999999,12 1.4999999,17.79354 6.2064599,22.5 12,22.5 17.79354,22.5 22.50001,17.79354 22.5,12 22.5,6.2064599 17.79354,1.4999999 12,1.4999999 Z' /%3E%3Cpath style='color:%23000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;stroke:%23002e99;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;clip-rule:nonzero;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000000;solid-opacity:1;fill-opacity:1;fill-rule:nonzero;filter-blend-mode:normal;filter-gaussianBlur-deviation:0;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' id='path2555-7-8-5-1' d='M 12,1.4999999 C 6.2064599,1.4999999 1.4999999,6.2064599 1.4999999,12 1.4999999,17.79354 6.2064599,22.5 12,22.5 17.79354,22.5 22.50001,17.79354 22.5,12 22.5,6.2064599 17.79354,1.4999999 12,1.4999999 Z' /%3E%3Cpath style='color:%23000000;display:inline;overflow:visible;visibility:visible;opacity:0.5;fill:none;stroke:url(%23linearGradient12398-3);stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate' id='path8655-6-0-9-5-0' d='m 21.49999,11.99966 c 0,5.24688 -4.25361,9.50034 -9.49988,9.50034 -5.2467501,0 -9.5001101,-4.25351 -9.5001101,-9.50034 0,-5.2466301 4.25336,-9.4996601 9.5001101,-9.4996601 5.24627,0 9.49988,4.25303 9.49988,9.4996601 z' /%3E%3Cpath d='m 16.019531,6.625 a 1.0009301,1.0009301 0 0 0 -0.820312,0.3808594 l -4.544922,5.7773436 -2.2656251,-1.96875 a 1.0009301,1.0009301 0 0 0 -1.4550781,0.152344 l -1.7324219,2.294922 a 1.0009301,1.0009301 0 0 0 0.1445312,1.361328 l 5.2343749,4.511719 a 1.0009301,1.0009301 0 0 0 1.453125,-0.154297 l 6.765625,-8.939453 A 1.0009301,1.0009301 0 0 0 18.669922,8.6933594 l -2.013672,-1.8125 A 1.0009301,1.0009301 0 0 0 16.019531,6.625 Z' id='path2922-6-6-0-9-4-3' style='color:%23000000;display:inline;overflow:visible;visibility:visible;opacity:0.05;vector-effect:none;fill:%23002e99;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;font-variant-east_asian:normal' /%3E%3Cpath style='color:%23000000;display:inline;overflow:visible;visibility:visible;fill:%23002e99;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:accumulate;font-variant-east_asian:normal;opacity:0.15;vector-effect:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1' id='path2922-6-6-0-9-4' d='m 15.98656,7.62453 2.01342,1.81209 -6.76511,8.93959 -5.2348901,-4.51006 1.73154,-2.29531 3.0604001,2.65772 z' /%3E%3Cpath style='color:%23000000;display:inline;overflow:visible;visibility:visible;fill:%23ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.84323651;marker:none;enable-background:accumulate' id='path2922-6-6-0-9' d='m 15.98656,6.62417 2.01342,1.81209 -6.76511,8.93959 -5.2348901,-4.51006 1.73154,-2.29531 3.0604001,2.65772 z' /%3E%3C/svg%3E") !important;
-    background-position: 50% 55% !important;
-    background-size: 27px 27px !important;
-    height: 16px !important;
-    width: 16px !important;
-    border: 1px solid #2C92E3 !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.3), 0 1px 0 0 rgba(0,0,0,0.2) !important;
-}
-.subviewbutton-back {
-    border-radius: 4px 0 0 0 !important;
-}
-:-moz-any(#editBMPanel_folderTree)
-treechildren::-moz-tree-row(selected) {
-    background-color: #1E90FF !important;
-}
-:-moz-any(#editBMPanel_folderTree)
-treechildren::-moz-tree-cell-text(selected) {
-    color: #fff !important;
-}
-:-moz-any(#editBMPanel_folderTree)
-treechildren::-moz-tree-image(selected) {
-    fill: #fff !important;
-}
-.openintabs-menuitem {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 5px 6px 5px 6px !important;
-    color: #000 !important;
-    background: #E9E9E9 !important;
-}
-.openintabs-menuitem:hover {
-    background: rgba(0,0,0,0.1) !important;
-    color: #000 !important;
-}
-.openintabs-menuitem.subviewbutton {
-    margin: 0px 8px !important;
-}
 
-/* menu popups DARK MODE */
-:root:-moz-lwtheme-brighttext {
-    --arrowpanel-background: #4A4A4F !important;
-}
-menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover):-moz-lwtheme-brighttext {
-    color: #fff !important;
-}
-menupopup:not(#BMB_bookmarksPopup):-moz-lwtheme-brighttext {
-    appearance: none !important;
-    background: #4A4A4F !important;
-    border: 10px solid transparent !important;
-    border-radius: 18px !important;
-    background-origin: border-box !important;
-    background-clip: content-box, border-box !important;
-    margin: -10px !important;
-}
+/* Dark Mode menu popups */
 menuseparator:-moz-lwtheme-brighttext,
 toolbarseparator:-moz-lwtheme-brighttext  {
     appearance: none !important;
     border-top: 1px solid #5C5C61 !important;
 }
-menuitem[disabled="true"]:-moz-lwtheme-brighttext,
-menu[disabled="true"]:-moz-lwtheme-brighttext,
-.subview-subheader {
-    color: #96968F !important;
-    background: none !important;
-}
-menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext,
-menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext,
-menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon:-moz-lwtheme-brighttext,
-.menu-iconic-left[checked="false"] > .menu-iconic-icon:-moz-lwtheme-brighttext {
-    height: 17px !important;
-    width: 17px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(56,56,56,1) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-#screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon:-moz-lwtheme-brighttext {
-    filter: invert(1) !important;
-}
-.expander-down.panel-button:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 6px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-.expander-up.panel-button:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 6px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
-}
-.expander-down > .button-box:-moz-lwtheme-brighttext,
-.expander-up > .button-box:-moz-lwtheme-brighttext {
-    filter: invert(1) brightness(500%) !important;
-}
-menulist:not(#PanelUI-profiler-presets):-moz-lwtheme-brighttext {
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' width='10mm' height='10mm' viewBox='0 0 10 10' version='1.1' id='svg8' inkscape:version='1.0.1 (0767f8302a, 2020-10-17)' sodipodi:docname='arrowdown.svg'%3E%3Cdefs id='defs2' /%3E%3Csodipodi:namedview id='base' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:pageopacity='0.0' inkscape:pageshadow='2' inkscape:zoom='31.678384' inkscape:cx='21.807418' inkscape:cy='23.509509' inkscape:document-units='mm' inkscape:current-layer='layer1' inkscape:document-rotation='0' showgrid='false' inkscape:window-width='2560' inkscape:window-height='1325' inkscape:window-x='0' inkscape:window-y='30' inkscape:window-maximized='1' /%3E%3Cmetadata id='metadata5'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title /%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cg inkscape:label='Laag 1' inkscape:groupmode='layer' id='layer1'%3E%3Ctext xml:space='preserve' style='font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:%23000000;fill-opacity:1;stroke:none;stroke-width:0.264583' x='111.72037' y='126.5725' id='text835'%3E%3Ctspan sodipodi:role='line' id='tspan833' x='111.72037' y='126.5725' style='stroke-width:0.264583' /%3E%3C/text%3E%3Cpath id='rect837' style='fill:%23FFFFFF;fill-opacity:1;stroke:%23FFFFFF;stroke-width:0.50;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none' d='m 1.6553434,2.7661344 c -0.1491327,0 -0.2982926,0.057142 -0.4125659,0.1714151 -0.2285451,0.228545 -0.2285457,0.5964835 0,0.8250285 L 4.543096,7.0628975 C 4.6687237,7.1885232 4.8364274,7.2446444 4.9999997,7.2321627 5.1635659,7.2446464 5.3312816,7.1885192 5.4569033,7.0628975 L 8.7572229,3.762578 c 0.228545,-0.228545 0.228545,-0.5964835 0,-0.8250285 -0.2285469,-0.2285449 -0.5965864,-0.2285449 -0.8251314,0 L 4.9999997,5.8697444 2.0678061,2.9375495 C 1.9535328,2.8232761 1.8044756,2.7661344 1.6553434,2.7661344 Z' /%3E%3C/g%3E%3C/svg%3E"); !important;
-    background-repeat: no-repeat !important;
-    background-position: 97% 50% !important;
-    background-size: 12px 12px !important;
-    appearance: none !important;
-    padding: 3px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-	color: #fff !important;
-	fill: #fff !important;
-}
-menulist[open="true"]:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 3px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
-	color: #fff !important;
-	fill: #fff !important;
-}
-#label-box:-moz-lwtheme-brighttext {
-    margin-left: 4px !important;
-}
-menulist[open="true"] > .in-menulist:not(#PanelUI-profiler-presets-menupopup) > menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 7px 0px 7px 17px !important;
-    color: #fff !important;
-    background: #5C5C61 !important;
-}
-menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem:not([disabled="true"]):-moz-any([_moz-menuactive], :hover):-moz-lwtheme-brighttext {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 7px 0px 7px 5px !important;
-    color: #fff !important;
-    background: #5C5C61 !important;
-}
-menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-menubar > menupopup menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
-menubar > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
-menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-menubar > menu > menupopup menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
-menubar > menu > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
-popupset > menupopup > menu[open="true"]:-moz-lwtheme-brighttext,
-popupset > menupopup > menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
-popupset > menupopup > menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
-popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
-popupset > menupopup > menu > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
-popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-popupset > menupopup > menugroup > menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext,
-popupset > menupopup > menugroup > menu[open="true"]:-moz-lwtheme-brighttext,
-scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-scrollbox > toolbarbutton > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
-scrollbox > toolbarbutton > menupopup menu:hover:-moz-lwtheme-brighttext,
-scrollbox > toolbarbutton > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-scrollbox > toolbarbutton > menupopup > menu > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
-scrollbox > toolbarbutton > menupopup > menu > menupopup menu:hover:-moz-lwtheme-brighttext,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menu:hover:-moz-lwtheme-brighttext,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menu[open="true"]:-moz-lwtheme-brighttext,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem):-moz-lwtheme-brighttext,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu:hover:-moz-lwtheme-brighttext,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"]:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 6px 12px 6px 12px !important;
-    color: #fff !important;
-    background: #5C5C61 !important;
-}
-menu:-moz-lwtheme-brighttext,
-menuitem:-moz-lwtheme-brighttext {
-    color: #fff !important;
-    box-shadow: none !important;
-}
-@media (prefers-color-scheme: light) {
-.menu-right:not([disabled="true"]):-moz-lwtheme-brighttext {
-    filter: brightness(500%) !important;
-}}
-#editBMPanel_namePicker:-moz-lwtheme-brighttext,
-#editBMPanel_tagsField:-moz-lwtheme-brighttext,
-#editBMPanel_folderTree:-moz-lwtheme-brighttext,
-#editBMPanel_tagsSelector:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 4px !important;
-    color: #fff !important;
-    fill: #fff !important;
-	background: linear-gradient(#3C3C3C, #404040) !important;
-    border: 1px solid #272727 !important;
-    border-radius: 3px !important;
-}
-#editBMPanel_newFolderButton:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    padding: 4px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-	color: #fff !important;
-	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-.openintabs-menuitem:-moz-lwtheme-brighttext {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 5px 6px 5px 6px !important;
-    color: #fff !important;
-    background: #5C5C61 !important;
-}
-.openintabs-menuitem:hover:-moz-lwtheme-brighttext {
-    background: rgba(255,255,255,0.15) !important;
-    color: #fff !important;
-}
-.sidebar-splitter:-moz-lwtheme-brighttext {
-    background: #38383D !important;
-}
-.openintabs-menuitem.subviewbutton:-moz-lwtheme-brighttext {
-    margin: 0px 8px !important;
+menupopup:-moz-lwtheme-brighttext {
+    --panel-background: rgb(66,65,77) !important;
 }
 
-/* menu popups DARK MODE in elementary Tweaks */
+/* Dark Mode in Tweaks menu popups */
 @media (prefers-color-scheme: dark) {
-:root {
-    --arrowpanel-background: #404040 !important;
-    --panel-separator-color: rgba(0,0,0,0.15) !important;
-}
-menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
-    color: #fff !important;
-}
-menupopup:not(#BMB_bookmarksPopup) {
-    appearance: none !important;
-    background: #404040 !important;
-    border: 10px solid transparent !important;
-    border-radius: 18px !important;
-    background-origin: border-box !important;
-    background-clip: content-box, border-box !important;
-    margin: -10px !important;
-}
 menuseparator,
 toolbarseparator {
     appearance: none !important;
     border-top: 1px solid #5C5C61 !important;
 }
-menuitem[disabled="true"],
-menu[disabled="true"],
-.subview-subheader {
-    color: #96968F !important;
-    background: none !important;
-}
-menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
-menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon,
-menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon,
-.menu-iconic-left[checked="false"] > .menu-iconic-icon {
-    height: 17px !important;
-    width: 17px !important;
-    background-color: rgba(68,68,68,1) !important;
-    border: 1px solid rgba(0,0,0,0.4) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-#screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon {
-    filter: invert(1) !important;
-}
-menulist[open="true"] > .in-menulist:not(#PanelUI-profiler-presets-menupopup) > menuitem:hover:not([disabled="true"]) {
-    appearance: none !important;
-    padding: 7px 0px 7px 17px !important;
-    color: #fff !important;
-    background: #717171 !important;
-}
-menulist[open="true"] > #PanelUI-profiler-presets-menupopup > menuitem:not([disabled="true"]):-moz-any([_moz-menuactive], :hover) {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 7px 0px 7px 5px !important;
-    color: #fff !important;
-    background: #717171 !important;
-}
-#PanelUI-profiler-presets {
-    background-color: rgba(0,0,0,0.3) !important;
-}
-menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menupopup menu:hover:not([disabled="true"]),
-menubar > menupopup menu[open="true"],
-menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-menubar > menu > menupopup menu:hover:not([disabled="true"]),
-menubar > menu > menupopup menu[open="true"],
-popupset > menupopup > menu[open="true"],
-popupset > menupopup > menu:hover:not([disabled="true"]),
-popupset > menupopup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]),
-popupset > menupopup > menu > menupopup menu[open="true"],
-popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-popupset > menupopup > menugroup > menu:hover:not([disabled="true"]),
-popupset > menupopup > menugroup > menu[open="true"],
-scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-scrollbox > toolbarbutton > menupopup menu[open="true"],
-scrollbox > toolbarbutton > menupopup menu:hover,
-scrollbox > toolbarbutton > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-scrollbox > toolbarbutton > menupopup > menu > menupopup menu[open="true"],
-scrollbox > toolbarbutton > menupopup > menu > menupopup menu:hover,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menu:hover,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup menu[open="true"],
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu:hover,
-toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
-    appearance: none !important;
-    padding: 6px 12px 6px 12px !important;
-    color: #fff !important;
-    background: #717171 !important;
-}
-.openintabs-menuitem {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 5px 6px 5px 6px !important;
-    color: #fff !important;
-    background: #717171 !important;
-}
-.openintabs-menuitem:hover {
-    background: rgba(255,255,255,0.35) !important;
-    color: #fff !important;
-}
-.openintabs-menuitem.subviewbutton {
-    margin: 0px 8px !important;
+menupopup {
+    --panel-background: Field !important;
 }}
 
-/* menu popups PRIVATE MODE */
+/* Private Mode menu popups */
+:root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled="true"]) {
+    color: #fff !important;
+}
+:root[privatebrowsingmode="temporary"] menuitem[disabled="true"],
+:root[privatebrowsingmode="temporary"] menu[disabled="true"] {
+    color: rgba(255,255,255,0.5) !important;
+    fill: rgba(255,255,255,0.5) !important;
+    background: none !important;
+}
+:root[privatebrowsingmode="temporary"] menuseparator,
+:root[privatebrowsingmode="temporary"] toolbarseparator {
+    appearance: none !important;
+    border-top: 1px solid rgba(255,255,255,0.2) !important;
+}
+:root[privatebrowsingmode="temporary"] menupopup {
+    --panel-background: #8266C4 !important;
+    --panel-color: #fff !important;
+}
+:root[privatebrowsingmode="temporary"] menupopup:-moz-lwtheme-brighttext {
+    --panel-background: #8266C4 !important;
+    --panel-color: #fff !important;
+}
+@media (prefers-color-scheme: dark ) {
+:root[privatebrowsingmode="temporary"] menupopup {
+    --panel-background: #8266C4 !important;
+    --panel-color: #fff !important;
+}}
 :root[privatebrowsingmode="temporary"] {
     --arrowpanel-background: #8266C4 !important;
     --arrowpanel-color: #fff !important;
     --panel-separator-color: rgba(255,255,255,0.1) !important;
+    --panel-disabled-color: rgba(255,255,255,0.5) !important;
+    --panel-description-color: rgba(255,255,255,0.5) !important;
 }
 :root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
     --arrowpanel-background: #8266C4 !important;
@@ -446,53 +87,18 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
     --arrowpanel-background: #8266C4 !important;
     --arrowpanel-border-color: rgba(0,0,0,0.3) !important;
 }}
-:root[privatebrowsingmode="temporary"] menupopup > *:not(label):not([disabled="true"]):not(.menu-iconic-left):not(.menu-accel-container):not(image):not(:hover) {
+:root[privatebrowsingmode="temporary"] .expander-down > .button-box,
+:root[privatebrowsingmode="temporary"] .expander-up > .button-box {
+    filter: invert(1) brightness(500%) !important;
+}
+@media (prefers-color-scheme: dark) {
+:root[privatebrowsingmode="temporary"] .expander-down > .button-box,
+:root[privatebrowsingmode="temporary"] .expander-up > .button-box {
+    filter: none !important;
+}}
+:root[privatebrowsingmode="temporary"] .openintabs-menuitem:hover {
+    background: rgba(255,255,255,0.15) !important;
     color: #fff !important;
-}
-:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) {
-    appearance: none !important;
-    background: #8266C4 !important;
-    border: 10px solid transparent !important;
-    border-radius: 18px !important;
-    background-origin: border-box !important;
-    background-clip: content-box, border-box !important;
-    margin: -10px !important;
-}
-:root[privatebrowsingmode="temporary"] menuseparator,
-:root[privatebrowsingmode="temporary"] toolbarseparator {
-    appearance: none !important;
-    border-top: 1px solid rgba(255,255,255,0.2) !important;
-}
-:root[privatebrowsingmode="temporary"] menu,
-:root[privatebrowsingmode="temporary"] menuitem {
-    color: #fff !important;
-    box-shadow: none !important;
-}
-:root[privatebrowsingmode="temporary"] menuitem[disabled="true"],
-:root[privatebrowsingmode="temporary"] menu[disabled="true"],
-:root[privatebrowsingmode="temporary"] .subview-subheader,
-:root[privatebrowsingmode="temporary"] .subviewbutton[disabled="true"] {
-    color: rgba(255,255,255,0.5) !important;
-    fill: rgba(255,255,255,0.5) !important;
-    background: none !important;
-}
-:root[privatebrowsingmode="temporary"] menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
-:root[privatebrowsingmode="temporary"] menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
-    height: 17px !important;
-    width: 17px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-:root[privatebrowsingmode="temporary"] menuitem[type="checkbox"] > .menu-iconic-left[_moz-menuactive="true"] > .menu-iconic-icon,
-:root[privatebrowsingmode="temporary"] .menu-iconic-left[checked="false"] > .menu-iconic-icon {
-    height: 17px !important;
-    width: 17px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
 }
 :root[privatebrowsingmode="temporary"] #screenshots_mozilla_org-menuitem-_create-screenshot > .menu-iconic-left > .menu-iconic-icon,
 :root[privatebrowsingmode="temporary"] .menu-right {
@@ -505,130 +111,6 @@ toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
 :root[privatebrowsingmode="temporary"] .menu-right {
     filter: none !important;
 }}
-:root[privatebrowsingmode="temporary"] menulist[open="true"] > .in-menulist > menuitem:hover:not([disabled="true"]) {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 7px 0px 7px 17px !important;
-    color: #fff !important;
-    background: #8F76CA !important;
-}
-:root[privatebrowsingmode="temporary"] menubar > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] menubar > menupopup menu:hover:not([disabled="true"]),
-:root[privatebrowsingmode="temporary"] menubar > menupopup menu[open="true"],
-:root[privatebrowsingmode="temporary"] menubar > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] menubar > menu > menupopup menu:hover:not([disabled="true"]),
-:root[privatebrowsingmode="temporary"] menubar > menu > menupopup menu[open="true"],
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menu[open="true"],
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menu:hover:not([disabled="true"]),
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menu > menupopup menu:hover:not([disabled="true"]),
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menu > menupopup menu[open="true"],
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menugroup > menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menugroup > menu:hover:not([disabled="true"]),
-:root[privatebrowsingmode="temporary"] popupset > menupopup > menugroup > menu[open="true"],
-:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup menu[open="true"],
-:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup menu:hover,
-:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup > menu > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup > menu > menupopup menu[open="true"],
-:root[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > menupopup > menu > menupopup menu:hover,
-:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup menu:hover,
-:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup menu[open="true"],
-:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menuitem:hover:not([disabled="true"]):not(.openintabs-menuitem),
-:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu:hover,
-:root[privatebrowsingmode="temporary"] toolbaritem > hbox > hbox > toolbarbutton > menupopup > menu menu[open="true"] {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 6px 12px 6px 12px !important;
-    color: #fff !important;
-    background: #8F76CA !important;
-}
-:root[privatebrowsingmode="temporary"] menulist {
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' width='10mm' height='10mm' viewBox='0 0 10 10' version='1.1' id='svg8' inkscape:version='1.0.1 (0767f8302a, 2020-10-17)' sodipodi:docname='arrowdown.svg'%3E%3Cdefs id='defs2' /%3E%3Csodipodi:namedview id='base' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:pageopacity='0.0' inkscape:pageshadow='2' inkscape:zoom='31.678384' inkscape:cx='21.807418' inkscape:cy='23.509509' inkscape:document-units='mm' inkscape:current-layer='layer1' inkscape:document-rotation='0' showgrid='false' inkscape:window-width='2560' inkscape:window-height='1325' inkscape:window-x='0' inkscape:window-y='30' inkscape:window-maximized='1' /%3E%3Cmetadata id='metadata5'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title /%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cg inkscape:label='Laag 1' inkscape:groupmode='layer' id='layer1'%3E%3Ctext xml:space='preserve' style='font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:%23000000;fill-opacity:1;stroke:none;stroke-width:0.264583' x='111.72037' y='126.5725' id='text835'%3E%3Ctspan sodipodi:role='line' id='tspan833' x='111.72037' y='126.5725' style='stroke-width:0.264583' /%3E%3C/text%3E%3Cpath id='rect837' style='fill:%23FFFFFF;fill-opacity:1;stroke:%23FFFFFF;stroke-width:0.50;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none' d='m 1.6553434,2.7661344 c -0.1491327,0 -0.2982926,0.057142 -0.4125659,0.1714151 -0.2285451,0.228545 -0.2285457,0.5964835 0,0.8250285 L 4.543096,7.0628975 C 4.6687237,7.1885232 4.8364274,7.2446444 4.9999997,7.2321627 5.1635659,7.2446464 5.3312816,7.1885192 5.4569033,7.0628975 L 8.7572229,3.762578 c 0.228545,-0.228545 0.228545,-0.5964835 0,-0.8250285 -0.2285469,-0.2285449 -0.5965864,-0.2285449 -0.8251314,0 L 4.9999997,5.8697444 2.0678061,2.9375495 C 1.9535328,2.8232761 1.8044756,2.7661344 1.6553434,2.7661344 Z' /%3E%3C/g%3E%3C/svg%3E"); !important;
-    background-repeat: no-repeat !important;
-    background-position: 97% 45% !important;
-    background-size: 12px 12px !important;
-    appearance: none !important;
-    padding: 3px 4px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-	color: #fff !important;
-	fill: #fff !important;
-	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-:root[privatebrowsingmode="temporary"] menulist[open="true"] {
-    appearance: none !important;
-    padding: 3px 4px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
-	color: #fff !important;
-	fill: #fff !important;
-}
-:root[privatebrowsingmode="temporary"] #editBMPanel_namePicker,
-:root[privatebrowsingmode="temporary"] #editBMPanel_tagsField,
-:root[privatebrowsingmode="temporary"] #editBMPanel_folderTree,
-:root[privatebrowsingmode="temporary"] #editBMPanel_tagsSelector {
-    appearance: none !important;
-    padding: 4px !important;
-    color: #fff !important;
-    fill: #fff !important;
-	background: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-}
-:root[privatebrowsingmode="temporary"] #editBMPanel_newFolderButton {
-    appearance: none !important;
-    padding: 4px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-	color: #fff !important;
-	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-:root[privatebrowsingmode="temporary"] .expander-down.panel-button {
-    appearance: none !important;
-    padding: 5px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.10) !important;
-}
-:root[privatebrowsingmode="temporary"] .expander-up.panel-button {
-    appearance: none !important;
-    padding: 5px !important;
-    background-color: white !important;
-    border: 1px solid rgba(0,0,0,0.50) !important;
-    border-radius: 3px !important;
-    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2) !important;
-}
-:root[privatebrowsingmode="temporary"] .expander-down > .button-box,
-:root[privatebrowsingmode="temporary"] .expander-up > .button-box {
-    filter: invert(1) brightness(500%) !important;
-}
-@media (prefers-color-scheme: dark) {
-:root[privatebrowsingmode="temporary"] .expander-down > .button-box,
-:root[privatebrowsingmode="temporary"] .expander-up > .button-box {
-    filter: none !important;
-}}
-:root[privatebrowsingmode="temporary"] .openintabs-menuitem {
-    appearance: none !important;
-    margin: 0px !important;
-    padding: 5px 6px 5px 6px !important;
-    color: #fff !important;
-    background: #8F76CA !important;
-}
-:root[privatebrowsingmode="temporary"] .openintabs-menuitem:hover {
-    background: rgba(255,255,255,0.15) !important;
-    color: #fff !important;
-}
-:root[privatebrowsingmode="temporary"] .openintabs-menuitem.subviewbutton {
-    margin: 0px 8px !important;
-}
 
 /**********
 Normal mode
@@ -1786,7 +1268,8 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label, 
 #main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label,
 #main-window[privatebrowsingmode="temporary"] #urlbar-zoom-button label,
-#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator-title {
+#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator-title,
+#main-window[privatebrowsingmode="temporary"] #wrapper-personal-bookmarks label {
     color: #fff !important;
 }
 #main-window[privatebrowsingmode="temporary"] toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
