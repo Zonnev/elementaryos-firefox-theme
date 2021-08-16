@@ -4,20 +4,13 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
-/* This userChrome is for button layout OSX */
+/* This userChrome is for button layout Close left */
 
 /************************************
 MENU POPUPS + right mouse click menus
 *************************************/
 
 /* Normal Mode menu popups */
-:root {
-    --arrowpanel-menuitem-padding: 7px 15px 7px 30px !important;
-    --arrowpanel-menuitem-border-radius: 0px !important;
-    --arrowpanel-menuitem-margin: 0px !important;
-    --arrowpanel-background: #fafafa !important;
-    --panel-separator-margin: 4px 0px 4px 0px !important;
-}
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
     overflow: auto !important;
@@ -34,10 +27,8 @@ toolbarseparator:-moz-lwtheme-brighttext  {
     appearance: none !important;
     border-top: 1px solid #5C5C61 !important;
 }
-:root:-moz-lwtheme-brighttext {
-    --arrowpanel-background: #303030 !important;
-    --arrowpanel-border-color: #000 !important;
-    --button-hover-bgcolor: rgba(255,255,255,0.13) !important;
+menupopup:-moz-lwtheme-brighttext {
+    --panel-background: rgb(66,65,77) !important;
 }
 
 /* Dark Mode in Tweaks menu popups */
@@ -47,8 +38,8 @@ toolbarseparator {
     appearance: none !important;
     border-top: 1px solid #5C5C61 !important;
 }
-:root {
-    --arrowpanel-background: Field !important;
+menupopup {
+    --panel-background: Field !important;
 }}
 
 /* Private Mode menu popups */
@@ -86,7 +77,6 @@ toolbarseparator {
     --panel-separator-color: rgba(255,255,255,0.1) !important;
     --panel-disabled-color: rgba(255,255,255,0.5) !important;
     --panel-description-color: rgba(255,255,255,0.5) !important;
-    --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
     --arrowpanel-background: #8266C4 !important;
@@ -190,22 +180,13 @@ Normal mode
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
-    flex-direction: row-reverse !important;
-    top: 11px !important; 
+    margin-left: 1px !important;
+    top: 11px !important;
     position: fixed !important;
     display: flex !important;
     width: calc(100vw - 6px) !important;
     height: 25px !important;
     justify-content: start !important;
-}
-
-/* brings max and min button to the right */
-.titlebar-restore,
-.titlebar-max { 
-    margin-left: 36px !important;
-}
-.titlebar-min { 
-    margin-left: -62px !important;
 }
 
 /* dont show window controls in fullscreen */
@@ -222,7 +203,7 @@ Normal mode
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
     border-radius: 7px 7px 0 0 !important;
     height: 46px !important;
-    padding: 0px 1px 0px 110px !important;
+    padding: 0px 1px 0px 48px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 /* fullscreen fixes for the nav bar */

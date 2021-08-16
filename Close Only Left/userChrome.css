@@ -11,6 +11,13 @@ MENU POPUPS + right mouse click menus
 *************************************/
 
 /* Normal Mode menu popups */
+:root {
+    --arrowpanel-menuitem-padding: 7px 15px 7px 30px !important;
+    --arrowpanel-menuitem-border-radius: 0px !important;
+    --arrowpanel-menuitem-margin: 0px !important;
+    --arrowpanel-background: #fafafa !important;
+    --panel-separator-margin: 4px 0px 4px 0px !important;
+}
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
     overflow: auto !important;
@@ -27,8 +34,10 @@ toolbarseparator:-moz-lwtheme-brighttext  {
     appearance: none !important;
     border-top: 1px solid #5C5C61 !important;
 }
-menupopup:-moz-lwtheme-brighttext {
-    --panel-background: rgb(66,65,77) !important;
+:root:-moz-lwtheme-brighttext {
+    --arrowpanel-background: #303030 !important;
+    --arrowpanel-border-color: #000 !important;
+    --button-hover-bgcolor: rgba(255,255,255,0.13) !important;
 }
 
 /* Dark Mode in Tweaks menu popups */
@@ -38,8 +47,8 @@ toolbarseparator {
     appearance: none !important;
     border-top: 1px solid #5C5C61 !important;
 }
-menupopup {
-    --panel-background: Field !important;
+:root {
+    --arrowpanel-background: Field !important;
 }}
 
 /* Private Mode menu popups */
@@ -77,6 +86,7 @@ menupopup {
     --panel-separator-color: rgba(255,255,255,0.1) !important;
     --panel-disabled-color: rgba(255,255,255,0.5) !important;
     --panel-description-color: rgba(255,255,255,0.5) !important;
+    --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
     --arrowpanel-background: #8266C4 !important;
