@@ -85,18 +85,13 @@ echo ""
 selectLayout "$1"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
-FIREFOX_DIR_FLATPAK="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
 USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-odin-firefox-theme/userChrome.css"
 USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-odin-firefox-theme/userContent.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
-	if [ ! -d "${FIREFOX_DIR_FLATPAK}" ]; then
-		>&2 echo "failed, please check Firefox installation, unable to find ${FIREFOX_DIR} or ${FIREFOX_DIR_FLATPAK}"
-		exit 1
-	else
-		FIREFOX_DIR="${FIREFOX_DIR_FLATPAK}"
-	fi
+	>&2 echo "failed, please check Firefox installation, unable to find ${FIREFOX_DIR}"
+	exit 1
 fi
 PROFILES_FILE="${FIREFOX_DIR}/profiles.ini"
 if [ ! -f "${PROFILES_FILE}" ]; then
