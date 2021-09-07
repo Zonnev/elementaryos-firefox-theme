@@ -7,6 +7,8 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 ## Install
 
+I recommend installing Firefox in the terminal, typing: `sudo apt install firefox`, because Firefox in the Appcenter is a flatpak version which doesn't work well with the userChrome of this theme.
+
 **Firefox does not support userChrome.css by default. Here are the steps to make it work:**
 
   1. Load **about:config** in the Firefox address bar.
