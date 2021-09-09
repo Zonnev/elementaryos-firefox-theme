@@ -943,14 +943,6 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     border: none !important;
 }
 
-#back-button:active > .toolbarbutton-icon,
-#forward-button:active .toolbarbutton-icon,
-#reload-button:active .toolbarbutton-icon,
-#stop-button:active .toolbarbutton-icon,
-#home-button:active .toolbarbutton-icon {
-    background: none !important; /* no backgrounds for navigation buttons in elementary OS Odin */
-}
-
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive{
