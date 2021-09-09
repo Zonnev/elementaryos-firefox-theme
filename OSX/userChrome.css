@@ -27,6 +27,9 @@ toolbarseparator {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.15) !important;
 }
+.widget-overflow-list toolbarbutton {
+    padding-left: 30px !important;
+}
 
 /* Dark Mode menu popups */
 menuseparator:-moz-lwtheme-brighttext,
@@ -325,7 +328,7 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
 #stop-button .toolbarbutton-icon,
 #home-button .toolbarbutton-icon {
     padding: 2px !important;
-    border-radius: 50% !important;
+    clip-path: circle(50%) !important;
 }
 
 /* buttons in normal mode */
@@ -335,7 +338,7 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     background: none !important;
 }
 #back-button:active > .toolbarbutton-icon {
-    background: none !important;
+    background: rgba(51,51,51, 0.15) !important;
     box-shadow: none !important;
 }
 #forward-button {
@@ -374,17 +377,19 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     border-radius: 50% !important;
 }
 toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon {
-    background: none !important;
+    background: rgba(51,51,51, 0.15) !important;
+    clip-path: circle(50%) !important;
 }
 toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
-    background: none !important;
+    background: rgba(51,51,51, 0.15) !important;
+    clip-path: circle(50%) !important;
 }
 #PanelUI-button {
     border: none !important;
     margin-left: 0px !important;
 }
 #nav-bar-overflow-button {
-    margin-right: -8px !important;
+    margin-right: -4px !important;
 }
 #downloads-button,
 #fxa-toolbar-menu-button {
