@@ -279,10 +279,10 @@ Normal mode
     border-radius: 0 0 7px 7px !important;
 }
 .urlbar-icon {
-    width: 16px !important;
-    height: 16px !important;
-    padding: 0px !important;
-    margin: 0px 6px !important;
+    margin: -4px 0px -4px 2px !important;
+}
+:root {
+    --urlbar-icon-padding: 4px !important;
 }
 #urlbar-zoom-button {
     padding: 0px 3px !important;
