@@ -190,13 +190,16 @@ Normal mode
     display: flex !important;
     pointer-events: none;
 }
+#TabsToolbar .titlebar-buttonbox-container {
+    display: none !important;
+}
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
     flex-direction: row-reverse !important;
     top: 11px !important;
     margin-left: 1px !important;
-    position: fixed !important;
+    position: absolute !important;
     display: flex !important;
     width: 100vw !important;
     height: 25px !important;
