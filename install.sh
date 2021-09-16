@@ -84,7 +84,7 @@ echo ""
 
 selectLayout "$1"
 
-FIREFOX_DIR="${HOME}/.mozilla/firefox" "${HOME}/.librewolf"
+FIREFOX_DIR="${HOME}/.mozilla/firefox"
 USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-odin-firefox-theme/userChrome.css"
 USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-odin-firefox-theme/userContent.css"
 
