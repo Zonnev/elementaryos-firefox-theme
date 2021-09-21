@@ -29,5 +29,6 @@ Just copy the line to your terminal and press enter. Then it lets you choose whi
 
 ## After installation
 
-1. Disable Title bar in the customization panel in Firefox. 
-2. In the customization panel in Firefox you can move the new tab button to the left if you wish and use the dark mode option as well, in combination with [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/).
+1. Disable Title bar in the customization panel in Firefox.
+2. In the customization panel in Firefox you can move the new tab button to the left and select System theme. You can also use the dark theme option but light theme is not supported.
+3. If you use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) with the dark mode on, the theme changes to dark mode by itself.
