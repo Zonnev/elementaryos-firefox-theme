@@ -238,7 +238,8 @@ Normal mode
 }
 
 /*** URLBAR + MEGABAR ***/
-#urlbar-container {
+#urlbar-container,
+#search-container {
     -moz-window-dragging: drag !important;
 }
 #urlbar-input-container {
