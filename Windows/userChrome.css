@@ -272,6 +272,9 @@ Normal mode
     border: none !important;
     background: none !important;
 }
+#urlbar[focused="true"] > #urlbar-background {
+    outline: none !important;
+}
 #PopupSearchAutoComplete {
     border-radius: 0 0 7px 7px !important;
 }
