@@ -147,9 +147,8 @@ Normal mode
 }
 #toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
 #PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-    background: #E9E9E9 !important;
-    border-top: 1px solid #C9C9C9 !important;
-    border-bottom: 1px solid #EDEDED !important;
+    background: rgba(250,250,250,1) !important;
+    border-bottom: 1px solid #D9D9D9 !important;
 }
 
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
@@ -614,11 +613,12 @@ toolbarpaletteitem > #stop-reload-button {
     height: 33px !important;
 }
 #toolbar-menubar {
+    -moz-box-ordinal-group: 2;
     margin: 0px !important;
     padding: 0px !important;
-    background: #DFDFDF !important;
-    border-top: 1px solid #B5B5B5 !important;
-    border-bottom: 1px solid #E5E5E5 !important;
+    background: rgba(241,241,241,1) !important;
+    border-top: none !important;
+    border-bottom: 1px solid #D9D9D9 !important;
 }
 #titlebar-content {
     margin-bottom: 0 !important; /* menubar fix */
@@ -629,13 +629,13 @@ toolbarpaletteitem > #stop-reload-button {
     background-color: transparent !important;
 }
 #PersonalToolbar {
-    -moz-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 1;
     padding: 0px !important;
     max-height: 35px !important;
     min-height: 35px !important;
-    background: #DFDFDF !important;
-    border-top: 1px solid #B5B5B5 !important;
-    border-bottom: 1px solid #E5E5E5 !important;
+    background: rgba(241,241,241,1) !important;
+    border-top: none !important;
+    border-bottom: 1px solid #D9D9D9 !important;
 }
 #PlacesToolbar {
     min-height: 33px !important;
@@ -751,9 +751,9 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #toolbar-menubar:-moz-lwtheme-brighttext:-moz-window-inactive,
 #PersonalToolbar:-moz-lwtheme-brighttext:-moz-window-inactive {
-    background: #383838 !important;
-    border-top: 1px solid #272727 !important;
-    border-bottom: 1px solid #404040 !important;
+    background: rgb(51, 51, 51) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 .tab-label[selected="true"]:-moz-lwtheme-brighttext:-moz-window-inactive {
     color: #FFF !important;
@@ -814,14 +814,14 @@ toolbarpaletteitem > #stop-reload-button {
 	background: unset !important;
 }
 #PersonalToolbar:-moz-lwtheme-brighttext {
-    background: #2C2C2C !important;
-    border-top: 1px solid #1C1C1C !important;
-    border-bottom: 1px solid #343434 !important;
+    background: rgb(45, 45, 45) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #toolbar-menubar:-moz-lwtheme-brighttext {
-    background: #2C2C2C !important;
-    border-top: 1px solid #1C1C1C !important;
-    border-bottom: 1px solid #343434 !important;
+    background: rgb(45, 45, 45) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active):-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.1) !important;
@@ -990,14 +990,14 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 	border: 1px solid rgba(45,45,45,1) !important;
 }
 #toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-    background: #383838 !important;
-    border-top: 1px solid #272727 !important;
-    border-bottom: 1px solid #404040 !important;
+    background: rgb(51, 51, 51) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-    background: #383838 !important;
-    border-top: 1px solid #272727 !important;
-    border-bottom: 1px solid #404040 !important;
+    background: rgb(51, 51, 51) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background-color: rgba(255,255,255,0.1) !important;
@@ -1070,14 +1070,14 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 	background: unset !important;
 }
 #PersonalToolbar {
-    background: #2C2C2C !important;
-    border-top: 1px solid #1C1C1C !important;
-    border-bottom: 1px solid #343434 !important;
+    background: rgb(45, 45, 45) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 #toolbar-menubar {
-    background: #2C2C2C !important;
-    border-top: 1px solid #1C1C1C !important;
-    border-bottom: 1px solid #343434 !important;
+    background: rgb(45, 45, 45) !important;
+    border-top: none !important;
+	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
 menubar > menu[open="true"] {
 	color: #d1d1d1 !important;
@@ -1218,10 +1218,10 @@ private browsing
                 linear-gradient(90deg, rgba(167,147,255,1), rgba(229,155,216,1) 100%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar:-moz-window-inactive {
-    background: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)) !important;
+    background: linear-gradient(90deg, rgba(167,147,255,1), rgba(229,155,216,1) 100%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #toolbar-menubar:-moz-window-inactive {
-    background: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)) !important;
+    background: linear-gradient(90deg, rgba(167,147,255,1), rgba(229,155,216,1) 100%) !important;
 }
 
 /*** ELEMENTS IN PRIVATE MODE ***/
@@ -1349,14 +1349,14 @@ private browsing
     color: #fff !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
-    background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
-    border-top: 1px solid rgba(0,0,0,0.4) !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    background: linear-gradient(90deg, rgba(115,98,200,1), rgba(171,100,157,1) 100%) !important;
+    border-top: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.2) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #toolbar-menubar {
-    background: linear-gradient(to right, #5E4BC5, #a24c8d) !important;
-    border-top: 1px solid rgba(0,0,0,0.4) !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    background: linear-gradient(90deg, rgba(115,98,200,1), rgba(171,100,157,1) 100%) !important;
+    border-top: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.2) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background-color: rgba(255,255,255,0.3) !important;
