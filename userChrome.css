@@ -702,6 +702,29 @@ toolbarpaletteitem > #stop-reload-button {
     margin-left: 3px !important;
 }
 
+/*** Override titlebar-buttons default styling in all modes to get back the elementary OS buttons ***/
+.titlebar-button:-moz-lwtheme {
+    appearance: auto !important;
+    border-radius: none !important;
+}
+.titlebar-button > .toolbarbutton-icon:-moz-lwtheme {
+    padding: initial !important;
+    -moz-context-properties: none !important;
+    stroke: none !important;
+}
+.titlebar-min:-moz-lwtheme {
+    list-style-image: initial !important;
+}
+.titlebar-max:-moz-lwtheme {
+    list-style-image: initial !important;
+}
+.titlebar-restore:-moz-lwtheme {
+    list-style-image: initial !important;
+}
+.titlebar-close:-moz-lwtheme {
+    list-style-image: initial !important;
+}
+
 
 /********************
  Standalone DARK MODE
