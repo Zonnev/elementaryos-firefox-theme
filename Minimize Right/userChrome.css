@@ -416,7 +416,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 toolbarpaletteitem > #stop-reload-button {
     -moz-box-pack: center !important;
 }
-toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button) {
+toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button) {
     margin-right: -8px !important;
 }
 #PanelUI-menu-button {
@@ -482,12 +482,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin-block: 0px 1px !important;
 }
 .tab-background:not([selected="true"]) {
-    -moz-transition: 0.5s !important;
     border-radius: 3.5px !important;
     margin-block: 1px 3px !important;
 }
 .tab-background[selected="true"] {
-    -moz-transition: 0.5s !important;
     background: #FFFFFF !important;
     border-radius: 3.5px !important;
 	border-left: 1px solid #D5D5D5 !important;
@@ -652,11 +650,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     min-height: 33px !important;
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
-    margin: 2px 2px 1px 2px !important;
-    background: rgba(51,51,51, 0.15) !important;
-}
-#PlacesToolbarItems .bookmark-item:not(menuitem):not(menu) label {
-    margin: 0px 0px 1px 0px !important;
+    background: rgba(51,51,51, 0.08) !important;
 }
 #PersonalToolbar .toolbarbutton-1 {
     padding: 0px !important;
