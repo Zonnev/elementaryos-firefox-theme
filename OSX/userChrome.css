@@ -461,18 +461,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-arrowscrollbox {
     padding-left: 2px !important;
 }
-#tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-background[selected="true"] {
-    margin-bottom: 1.5px !important;
-}
-#tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-background:not([selected="true"]) {
-    margin-bottom: 2.5px !important;
-}
-#tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-content[pinned][selected="true"] {
-    padding-bottom: 3px !important;
-}
-#tabbrowser-arrowscrollbox[overflowing="true"] > .tabbrowser-tab[pinned] > .tab-stack > .tab-content[pinned]:not([selected="true"]) {
-    padding-bottom: 5px !important;
-}
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     padding: 0px 6px 3px 6px !important;
