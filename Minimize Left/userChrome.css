@@ -386,13 +386,15 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
     padding: 4px !important;
     border-radius: 50% !important;
 }
-toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon {
-    background: rgba(51,51,51, 0.15) !important;
-    clip-path: circle(50%) !important;
-}
+toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
 toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
     background: rgba(51,51,51, 0.15) !important;
     clip-path: circle(50%) !important;
+}
+#TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
+#TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
+    background: #cce1f4 !important;
+    clip-path: none !important;
 }
 #PanelUI-button {
     border: none !important;
@@ -423,7 +425,21 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin-right: -8px !important;
 }
 #PanelUI-menu-button {
-  padding-inline-start: var(--toolbar-start-end-padding) !important;
+    padding-inline-start: var(--toolbar-start-end-padding) !important;
+}
+#scrollbutton-up,
+#scrollbutton-down:-moz-locale-dir(ltr) {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: -2px !important;
+}
+#scrollbutton-up image:active,
+#scrollbutton-down:-moz-locale-dir(ltr) image:active {
+    background: #cce1f4 !important;
+}
+:root {
+    --toolbarbutton-hover-background: #cce1f4 !important;
+    --toolbarbutton-active-background: #cce1f4 !important;
 }
 
 /*** TAB BAR ***/
@@ -509,6 +525,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     height: 28px !important;
     padding: 6px !important;
     border-radius: 3px !important;
+    margin-top: -2px !important; 
     margin-left: 1px !important;
     margin-right: 1px !important;
 }
@@ -518,7 +535,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     height: 28px !important;
     padding: 6px !important;
     border-radius: 3px !important;
-    margin: 0px !important;
+    margin-top: -2px !important; 
     margin-left: 1px !important;
     margin-right: 1px !important;
 }
@@ -536,30 +553,24 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /* hide and show close tab button */
 #TabsToolbar .tab-close-button {
     list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%23333333' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='%23333333' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
-    margin: 3px !important;
-    width: 16px !important;
-    height: 16px !important;
-    padding: 0px !important;
+    margin-left: -2px !important;
+    margin-right: 0px !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 4px !important;
 }
 #TabsToolbar tab:not([visuallyselected="true"]):not(:hover) .tab-close-button {
     opacity: 0 !important;
-    margin-top: 4px !important;
 }
-#TabsToolbar tab:hover .tab-close-button {
-    -moz-transition: 0.5s !important;
+#TabsToolbar tab .tab-close-button:hover {
     opacity: 1 !important;
-    margin-top: 4px !important;
+    background: none !important;
 }
-#TabsToolbar tab .close-icon:hover {
-    -moz-image-region: unset !important;
-    margin-top: 4px !important;
-    background-color: none !important;
-    background-clip: padding-box !important;
+#TabsToolbar tab .tab-close-button:active {
+    opacity: 1 !important;
+    background: #cce1f4 !important;
 }
-#TabsToolbar tab .close-icon:hover:active {
-    margin-top: 4px !important;
-    background-color: none !important;
-}
+
 /* touch density adjustment */
 :root[uidensity="touch"] .tab-close-button {
     padding: 0px !important;
@@ -869,6 +880,15 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack:-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.2) !important;
 }
+#TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon:-moz-lwtheme-brighttext,
+#TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack:-moz-lwtheme-brighttext  {
+    background: #2d5b86 !important;
+    clip-path: none !important;
+}
+:root:-moz-lwtheme-brighttext {
+    --toolbarbutton-hover-background: #2d5b86 !important;
+    --toolbarbutton-active-background: #2d5b86 !important;
+}
 
 /*** BUTTONS IN DARK MODE ***/
 #back-button > .toolbarbutton-icon:-moz-lwtheme-brighttext {
@@ -901,6 +921,10 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 }
 #TabsToolbar .tab-close-button:-moz-lwtheme-brighttext {
 	list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+#TabsToolbar tab .tab-close-button:active:-moz-lwtheme-brighttext {
+    opacity: 1 !important;
+    background: #2d5b86 !important;
 }
 #customization-lwtheme-button:-moz-lwtheme-brighttext,
 #customization-toolbar-visibility-button:-moz-lwtheme-brighttext,
@@ -1125,6 +1149,15 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
     background-color: rgba(255,255,255,0.2) !important;
 }
+#TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
+#TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack  {
+    background: #2d5b86 !important;
+    clip-path: none !important;
+}
+:root {
+    --toolbarbutton-hover-background: #2d5b86 !important;
+    --toolbarbutton-active-background: #2d5b86 !important;
+}
 
 /*** BUTTONS IN DARK MODE for Tweaks ***/
 #back-button > .toolbarbutton-icon {
@@ -1157,6 +1190,10 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 }
 #TabsToolbar .tab-close-button {
 	list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+#TabsToolbar tab .tab-close-button:active {
+    opacity: 1 !important;
+    background: #2d5b86 !important;
 }
 #customization-lwtheme-button,
 #customization-toolbar-visibility-button,
@@ -1421,6 +1458,15 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #profiler-button > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme-brighttext) {
     filter: none !important; 
 }}
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack  {
+    background: #503da8 !important;
+    clip-path: none !important;
+}
+:root[privatebrowsingmode="temporary"] {
+    --toolbarbutton-hover-background: #503da8 !important;
+    --toolbarbutton-active-background: #503da8 !important;
+}
 
 /*** MAKE WINDOW CONTROLS WHITE for PRIVATE MODE ***/
 #main-window[privatebrowsingmode="temporary"] .titlebar-min,
@@ -1479,6 +1525,10 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar .tab-close-button {
 	list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+#main-window[privatebrowsingmode="temporary"] #TabsToolbar tab .tab-close-button:active {
+    opacity: 1 !important;
+    background: #503da8 !important;
 }
 
 /*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
