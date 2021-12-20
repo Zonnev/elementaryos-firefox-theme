@@ -166,9 +166,6 @@ Normal mode
 #fullscr-toggler {
     height: 3px !important;
 }
-#fullscreen-exit-button {
-    color: #ffffff !important;
-}
 #window-controls {
     display: none !important;
 }
