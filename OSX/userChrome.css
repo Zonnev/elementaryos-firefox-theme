@@ -735,13 +735,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
  Standalone DARK MODE
 *********************/
 
-/*** lets make ROUNDED CORNERS for standalone DARK MODE ***/
-@media (-moz-gtk-csd-transparent-background) {
-    :root[tabsintitlebar][sizemode="normal"]:-moz-lwtheme-brighttext {
-    background-color: transparent !important;
-    appearance: none !important;
-}}
-
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar:-moz-lwtheme-brighttext,
 :root[gtktiledwindow="true"] #nav-bar:-moz-lwtheme-brighttext:-moz-window-inactive{
@@ -791,6 +784,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /*** ELEMENTS IN DARK MODE ***/
+#navigator-toolbox:-moz-lwtheme-brighttext {
+    border: none !important;
+    background-color: rgba(255,255,255,0.3) !important;
+    border-radius: 6px 6px 0 0 !important;
+}
 #nav-bar:-moz-lwtheme-brighttext {
     appearance: none !important;
     border-radius: 6px 6px 0 0 !important;
@@ -823,10 +821,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     background: rgba(0,0,0,0.2) !important;
     color: #fff !important;
 }
-#PopupSearchAutoComplete:-moz-lwtheme-brighttext {
-	background: linear-gradient(#3C3C3C, #404040) !important;
-    border: 1px solid #262626 !important;
-    border-radius: 0 0 7px 7px !important;
+#PopupSearchAutoComplete:-moz-lwtheme-brighttext  {
+  --panel-color: #fff !important;
+  --panel-background: linear-gradient(#3C3C3C, #404040) !important;
 }
 #TabsToolbar:-moz-lwtheme-brighttext {
 	background: linear-gradient(180deg, rgb(42, 42, 42) 0%, rgb(45, 45, 45) 10%, rgb(45, 45, 45) 100%) !important;
@@ -990,11 +987,6 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 
 @media (prefers-color-scheme: dark) {
 
-#navigator-toolbox {
-    appearance: none !important;
-    border: none !important;
-}
-
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive{
@@ -1051,6 +1043,11 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 }
 
 /*** ELEMENTS IN DARK MODE for Tweaks ***/
+#navigator-toolbox {
+    border: none !important;
+    background-color: rgba(255,255,255,0.3) !important;
+    border-radius: 6px 6px 0 0 !important;
+}
 #nav-bar {
     appearance: none !important;
     border-radius: 6px 6px 0 0 !important;
@@ -1093,9 +1090,8 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     color: #fff !important;
 }
 #PopupSearchAutoComplete {
-	background: linear-gradient(#3C3C3C, #404040) !important;
-    border: 1px solid #262626 !important;
-    border-radius: 0 0 7px 7px !important;
+  --panel-color: #fff !important;
+  --panel-background: linear-gradient(#3C3C3C, #404040) !important;
 }
 #TabsToolbar {
 	background: linear-gradient(180deg, rgb(42, 42, 42) 0%, rgb(45, 45, 45) 10%, rgb(45, 45, 45) 100%) !important;
@@ -1368,9 +1364,8 @@ private browsing
     background-image: linear-gradient( #fff 0, #fff 100%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete {
-    background: #A267A9 !important;
-    border: 1px solid rgba(0,0,0,0.4) !important;
-    border-radius: 0 0 7px 7px !important;
+  --panel-color: #fff !important;
+  --panel-background: #A267A9 !important;
 }
 #main-window[privatebrowsingmode="temporary"] .autocomplete-richlistbox {
     overflow-x: hidden !important;
