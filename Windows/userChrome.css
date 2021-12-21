@@ -209,7 +209,7 @@ Normal mode
 /*** NAV BAR ***/
 #navigator-toolbox {
     border: none !important;
-    background-color: black !important;
+    background-color: rgba(0,0,0,0.6) !important;
     border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
