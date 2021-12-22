@@ -22,8 +22,8 @@ echo "Installing with the 'Windows' layout"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 FIREFOX_DIR_FLATPAK="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
-USER_CHROME_CSS_URL="https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Windows/userChrome.css"
-USER_CONTENT_CSS_URL="https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Windows/userContent.css"
+USER_CHROME_CSS_URL="https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/windows/userChrome.css"
+USER_CONTENT_CSS_URL="https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/windows/userContent.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then

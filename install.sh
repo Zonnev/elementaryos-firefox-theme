@@ -24,37 +24,37 @@ function selectLayout() {
 	case $USER_CHROME_LAYOUT in
 		2 )
 		    echo "Calling the install script for the 'Close Only Left' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Close%20Only%20Left/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/close%20only%20left/install.sh | bash
 			exit 0
 			;;
 		3 )
 		    echo "Calling the install script for the 'Close Only Right' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Close%20Only%20Right/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/close%20only%20right/install.sh | bash
 			exit 0
 			;;
 		4 )
 		    echo "Calling the install script for the 'Minimize Left' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Minimize%20Left/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/minimize%20left/install.sh | bash
 			exit 0
 			;;
 		5 )
 		    echo "Calling the install script for the 'Minimize Right' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Minimize%20Right/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/minimize%20right/install.sh | bash
 			exit 0
 			;;
 		6 )
 		    echo "Calling the install script for the 'OSX' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/OSX/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/osx/install.sh | bash
 			exit 0
 			;;
 		7 )
 		    echo "Calling the install script for the 'Ubuntu' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Ubuntu/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/ubuntu/install.sh | bash
 			exit 0
 			;;
 		8 )
 		    echo "Calling the install script for the 'Windows' layout"
-			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/Windows/install.sh | bash
+			curl -s -o- https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/windows/install.sh | bash
 			exit 0
 			;;
 		* )
