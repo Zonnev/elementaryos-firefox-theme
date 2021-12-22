@@ -23,7 +23,7 @@ You can set 8 different window buttons layouts with [Pantheon Tweaks](https://gi
 Use this one line install script which let you select the window buttons layout you like:
 
 ```bash
-curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-odin-firefox-theme/install.sh | bash
+curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/install.sh | bash
 ```
 Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again. If you don't want to install elementary Tweaks, then you select the default layout (option 1 in the installer).
 
