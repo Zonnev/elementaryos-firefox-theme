@@ -209,7 +209,7 @@ Normal mode
 /*** NAV BAR ***/
 #navigator-toolbox {
     border: none !important;
-    background-color: rgba(0,0,0,0.6) !important;
+    background-color: rgba(0,0,0,0.7) !important;
     border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
@@ -777,7 +777,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /*** ELEMENTS IN DARK MODE ***/
 #navigator-toolbox:-moz-lwtheme-brighttext {
     border: none !important;
-    background-color: rgba(255,255,255,0.3) !important;
+    background-color: rgba(255,255,255,0.2) !important;
     border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar:-moz-lwtheme-brighttext {
@@ -1036,7 +1036,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 /*** ELEMENTS IN DARK MODE for Tweaks ***/
 #navigator-toolbox {
     border: none !important;
-    background-color: rgba(255,255,255,0.3) !important;
+    background-color: rgba(255,255,255,0.2) !important;
     border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
