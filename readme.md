@@ -1,4 +1,4 @@
-# An elementary OS 6 (Odin) theme for Firefox
+# An elementary OS theme for Firefox
 ![Screenshot](theme.png)
 
 ## Credits
