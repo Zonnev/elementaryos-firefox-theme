@@ -22,8 +22,8 @@ echo "Installing with the 'Close Only Right' layout"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 FIREFOX_DIR_FLATPAK="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
-USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/Close%20Only%20Right/userChrome.css"
-USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/Close%20Only%20Right/userContent.css"
+USER_CHROME_CSS_URL="https://github.com/Zonnev/elementaryos-firefox-theme/Close%20Only%20Right/userChrome.css"
+USER_CONTENT_CSS_URL="https://github.com/Zonnev/elementaryos-firefox-theme/Close%20Only%20Right/userContent.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
