@@ -21,11 +21,17 @@ MENU POPUPS + right mouse click menus
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
     overflow: auto !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), inset 0 0 0 1px rgba(255,255,255,0.2) !important;
+}
+panelview {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 menuseparator,
 toolbarseparator {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.15) !important;
+    border-bottom: 1px solid rgba(255,255,255,1) !important;
+    margin: 3px 0px 3px 0px !important;
 }
 .widget-overflow-list toolbarbutton {
     padding-left: 30px !important;
@@ -35,7 +41,14 @@ toolbarseparator {
 menuseparator:-moz-lwtheme-brighttext,
 toolbarseparator:-moz-lwtheme-brighttext  {
     appearance: none !important;
-    border-top: 1px solid #5C5C61 !important;
+    border-top: 1px solid rgba(0,0,0,0.3) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+.menupopup-arrowscrollbox:-moz-lwtheme-brighttext {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
+}
+panelview:-moz-lwtheme-brighttext {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
 }
 :root:-moz-lwtheme-brighttext {
     --arrowpanel-background: #303030 !important;
@@ -48,13 +61,26 @@ toolbarseparator:-moz-lwtheme-brighttext  {
 menuseparator,
 toolbarseparator {
     appearance: none !important;
-    border-top: 1px solid #5C5C61 !important;
+    border-top: 1px solid rgba(0,0,0,0.3) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+.menupopup-arrowscrollbox {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
+}
+panelview {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
 }
 :root {
     --arrowpanel-background: Field !important;
 }}
 
 /* Private Mode menu popups */
+:root[privatebrowsingmode="temporary"] .menupopup-arrowscrollbox {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
+:root[privatebrowsingmode="temporary"] panelview {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
+}
 :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled="true"]),
 :root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled="true"]) {
     color: #fff !important;
@@ -68,7 +94,8 @@ toolbarseparator {
 :root[privatebrowsingmode="temporary"] menuseparator,
 :root[privatebrowsingmode="temporary"] toolbarseparator {
     appearance: none !important;
-    border-top: 1px solid rgba(255,255,255,0.2) !important;
+    border-top: 1px solid rgba(0,0,0,0.2) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"] menupopup {
     --panel-background: #8266C4 !important;
@@ -211,7 +238,7 @@ Normal mode
 /*** NAV BAR ***/
 #navigator-toolbox {
     border: none !important;
-    background-color: rgba(0,0,0,0.7) !important;
+    background-color: rgba(0,0,0,0.6) !important;
     border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
@@ -296,6 +323,9 @@ Normal mode
 }
 #urlbar .search-one-offs:not([hidden]) {
     padding-block: 5px !important;
+}
+.search-one-offs:not([is_searchbar="true"]) {
+    border-top: none !important;
 }
 
 /* selected text and icons url bar */
@@ -1069,7 +1099,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
     background: none !important;
 }
 .urlbarView-body-inner,
-.search-one-offs {
+.search-one-offs:not([is_searchbar="true"]) {
     border-top: 1px solid #5F6670 !important;
 }
 :root {
@@ -1327,7 +1357,7 @@ private browsing
     --urlbar-separator-color: rgba(255,255,255,0.3) !important;
 }
 #main-window[privatebrowsingmode="temporary"] .urlbarView-body-inner,
-#main-window[privatebrowsingmode="temporary"] .search-one-offs,
+#main-window[privatebrowsingmode="temporary"] .search-one-offs:not([is_searchbar="true"]),
 #main-window[privatebrowsingmode="temporary"] #customization-footer {
     border-top: 1px solid rgba(255,255,255,0.2) !important;
 }
