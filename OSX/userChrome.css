@@ -331,7 +331,7 @@ Normal mode
 #urlbar .search-one-offs:not([hidden]) {
     padding-block: 5px !important;
 }
-.search-one-offs:not([is_searchbar="true"]) {
+.search-one-offs[is_searchbar="true"]) {
     border-top: none !important;
 }
 
