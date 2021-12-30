@@ -529,6 +529,12 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     border-bottom: 1px solid #C2C2C2 !important;
     margin-block: 1px 3px !important;
 }
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
+    margin: 0px !important;
+}
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected="true"]) > .tab-context-line {
+    margin: 1px 0 0 !important;
+}
 #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
 }
