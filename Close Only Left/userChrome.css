@@ -591,11 +591,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 
 /* tab label */
 .tab-label {
-    -moz-box-flex: 1 !important;
-    color: #4b4b4b !important;
     margin-left: 6px !important;
     margin-right: 6px !important;
-    text-align: center !important;
 }
 .tab-label[selected="true"] {
     color: #333 !important;
