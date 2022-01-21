@@ -16,6 +16,7 @@ function selectLayout() {
 		echo "   6. OSX"
 		echo "   7. Ubuntu"
 		echo "   8. Windows"
+		echo "   9. Titlebar Enabled"
 		echo ""
 		read -p "Please select the preferred layout (press Enter for default) [1-8]:" USER_CHROME_LAYOUT < /dev/tty
 		echo ""
@@ -55,6 +56,11 @@ function selectLayout() {
 		8 )
 		    echo "Calling the install script for the 'Windows' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Windows/install.sh | bash
+			exit 0
+			;;
+		9 )
+		    echo "Calling the install script for 'Titlebar Enabled'"
+			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Titlebar%20Enabled/install.sh | bash
 			exit 0
 			;;
 		* )
