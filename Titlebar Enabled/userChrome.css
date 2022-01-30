@@ -1326,7 +1326,7 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator {
     background: rgba(0,0,0,0.2) !important;
 }
-#main-window[privatebrowsingmode="temporary"] #urlbar-input-container image,
+#main-window[privatebrowsingmode="temporary"] #urlbar-input-container image:not(#userContext-indicator),
 #main-window[privatebrowsingmode="temporary"] .urlbarView image,
 #main-window[privatebrowsingmode="temporary"] #customization-palette-container image,
 #main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > toolbarbutton:not(hbox) > image,
