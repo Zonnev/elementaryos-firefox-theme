@@ -27,6 +27,8 @@ curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/
 ```
 Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again. If you don't want to install elementary Tweaks, then you select the default layout (option 1 in the installer).
 
+I have added two extra styles of the theme. Option 9 in the installer will install the theme version with Titlebar enabled. Option 10 in the installer will install the Private Mode Style (purple colours) as the default style. Please note that the Private Mode Style is made only for the default button layout.
+
 ## After installation
 
 1. Disable Title bar in the customization panel in Firefox.

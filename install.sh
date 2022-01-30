@@ -63,6 +63,11 @@ function selectLayout() {
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Titlebar%20Enabled/install.sh | bash
 			exit 0
 			;;
+		10 )
+		    echo "Calling the install script for 'Private Mode Style'"
+			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Private%20Mode%20Style/install.sh | bash
+			exit 0
+			;;
 		* )
 		    echo "Installing Default layout"
 			;;

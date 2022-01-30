@@ -18,12 +18,12 @@ function saveProfile() {
 
 echo "Install ElementaryOS Firefox Theme (https://github.com/Zonnev/elementaryos-firefox-theme/tree/elementaryos-firefox-theme)"
 echo ""
-echo "Installing 'Title Bar Enabled'"
+echo "Installing 'Private Mode Style'"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 FIREFOX_DIR_FLATPAK="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
-USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Titlebar%20Enabled/userChrome.css"
-USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Titlebar%20Enabled/userContent.css"
+USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Private%20Mode%20Style/userChrome.css"
+USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Private%20Mode%20Style/userContent.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
