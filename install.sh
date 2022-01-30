@@ -17,6 +17,7 @@ function selectLayout() {
 		echo "   7. Ubuntu"
 		echo "   8. Windows"
 		echo "   9. Titlebar Enabled"
+		echo "   10. Private Mode Style"
 		echo ""
 		read -p "Please select the preferred layout (press Enter for default) [1-8]:" USER_CHROME_LAYOUT < /dev/tty
 		echo ""
