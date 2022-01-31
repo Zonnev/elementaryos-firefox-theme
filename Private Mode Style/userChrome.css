@@ -392,9 +392,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     border-radius: 3.5px !important;
     margin-block: 1px 3px !important;
 }
-.tab-background[selected="true"] {
+.tab-background[selected="true"],
+.tab-background[selected="true"]:-moz-lwtheme-brighttext {
     border-radius: 3.5px !important;
     margin-block: 1px 3px !important;
+    box-shadow: none !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
     margin: 0px !important;
