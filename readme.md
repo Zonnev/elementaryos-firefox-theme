@@ -18,16 +18,16 @@ I recommend installing Firefox in the terminal, typing: `sudo apt install firefo
 
 **Follow this step to install the userChrome.css:**
 
-You can set 8 different window buttons layouts with [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/). Now it's possible to install this theme to match these window button layouts.
+You can set 10 different window buttons layouts with [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/). Now it's possible to install this theme to match these window button layouts.
 
 Use this one line install script which let you select the window buttons layout you like:
 
 ```bash
 curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/install.sh | bash
 ```
-Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-8) and press enter again. If you don't want to install elementary Tweaks, then you select the default layout (option 1 in the installer).
+Just copy the line to your terminal and press enter. Then it lets you choose which window buttons layout you need (1-10) and press enter again. If you don't want to install Pantheon Tweaks, then you select the Elementary layout (option 1 in the installer).
 
-I have added two extra styles of the theme. Option 9 in the installer will install the theme version with Titlebar enabled. Option 10 in the installer will install the Private Mode Style (purple colours) as the default style. Please note that the Private Mode Style is made only for the default button layout.
+I have added two extra styles of the theme. Option 11 in the installer will install the theme version with Titlebar Enabled (enable the titlebar for this version). Option 12 in the installer will install the Private Mode Style (purple colours) as the default style. Please note that the Private Mode Style is made only for the Elementary button layout.
 
 ## After installation
 
