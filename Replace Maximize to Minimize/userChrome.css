@@ -4,7 +4,7 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
-/* This userChrome is for button layout OSX */
+/* This userChrome is for button layout Elementary */
 
 /************************************
 MENU POPUPS + right mouse click menus
@@ -219,22 +219,15 @@ Normal mode
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
+    appearance: none !important;
     flex-direction: row-reverse !important;
-    top: 11px !important; 
+    margin-left: 4px !important;
+    top: 11px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: calc(100vw - 11px) !important;
     height: 25px !important;
-    justify-content: start !important;
-}
-
-/* brings max and min button to the right */
-.titlebar-restore,
-.titlebar-max { 
-    margin-left: 36px !important;
-}
-.titlebar-min { 
-    margin-left: -62px !important;
+    justify-content: space-between !important;
 }
 
 /* dont show window controls in fullscreen */
@@ -253,7 +246,7 @@ Normal mode
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
     border-radius: 6px 6px 0 0 !important;
     height: 46px !important;
-    padding: 0px 1px 0px 110px !important;
+    padding: 0px 42px 0px 48px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 /* fullscreen fixes for the nav bar */

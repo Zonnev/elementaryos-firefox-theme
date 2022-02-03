@@ -8,69 +8,81 @@ function selectLayout() {
 	else
 		echo "Select Available Layouts:"
 		echo ""
-		echo "   1. Default"
-		echo "   2. Close Only Left"
-		echo "   3. Close Only Right"
-		echo "   4. Minimize Left"
-		echo "   5. Minimize Right"
-		echo "   6. OSX"
-		echo "   7. Ubuntu"
-		echo "   8. Windows"
-		echo "   9. Titlebar Enabled"
-		echo "   10. Private Mode Style"
+		echo "   1. Elementary"
+		echo "   2. Elementary Reversed"
+		echo "   3. Close Only Left"
+		echo "   4. Close Only Right"
+		echo "   5. Minimize Left"
+		echo "   6. Minimize Right"
+		echo "   7. macOS"
+		echo "   8. Ubuntu"
+		echo "   9. Windows"
+		echo "   10. Replace Maximize to Minimize"
+		echo "   11. Titlebar Enabled"
+		echo "   12. Private Mode Style"
 		echo ""
-		read -p "Please select the preferred layout (press Enter for default) [1-8]:" USER_CHROME_LAYOUT < /dev/tty
+		read -p "Please select the preferred layout [1-12] (press Enter for Elementary layout):" USER_CHROME_LAYOUT < /dev/tty
 		echo ""
 	fi
 	
 	case $USER_CHROME_LAYOUT in
 		2 )
+		    echo "Calling the install script for the 'Elementary Reversed' layout"
+			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Elementary%20Reversed/install.sh | bash
+			exit 0
+			;;
+		3 )
 		    echo "Calling the install script for the 'Close Only Left' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Close%20Only%20Left/install.sh | bash
 			exit 0
 			;;
-		3 )
+		4 )
 		    echo "Calling the install script for the 'Close Only Right' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Close%20Only%20Right/install.sh | bash
 			exit 0
 			;;
-		4 )
+		5 )
 		    echo "Calling the install script for the 'Minimize Left' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Minimize%20Left/install.sh | bash
 			exit 0
 			;;
-		5 )
+		6 )
 		    echo "Calling the install script for the 'Minimize Right' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Minimize%20Right/install.sh | bash
 			exit 0
 			;;
-		6 )
-		    echo "Calling the install script for the 'OSX' layout"
-			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/OSX/install.sh | bash
+		7 )
+		    echo "Calling the install script for the 'macOS' layout"
+			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/macOS/install.sh | bash
 			exit 0
 			;;
-		7 )
+		8 )
 		    echo "Calling the install script for the 'Ubuntu' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Ubuntu/install.sh | bash
 			exit 0
 			;;
-		8 )
+		9 )
 		    echo "Calling the install script for the 'Windows' layout"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Windows/install.sh | bash
 			exit 0
 			;;
-		9 )
+		10 )
+		    echo "Calling the install script for the 'Replace Maximize to Minimize' layout"
+			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Replace%20Maximize%20to%20Minimize/install.sh | bash
+			exit 0
+			;;
+		11 )
 		    echo "Calling the install script for 'Titlebar Enabled'"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Titlebar%20Enabled/install.sh | bash
 			exit 0
 			;;
-		10 )
+		12 )
 		    echo "Calling the install script for 'Private Mode Style'"
 			curl -s -o- https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/Private%20Mode%20Style/install.sh | bash
 			exit 0
 			;;
 		* )
-		    echo "Installing Default layout"
+		    echo "Installing Elementary layout"
 			;;
 	esac
 	echo ""

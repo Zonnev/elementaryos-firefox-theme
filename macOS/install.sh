@@ -18,12 +18,12 @@ function saveProfile() {
 
 echo "Install ElementaryOS Firefox Theme (https://github.com/Zonnev/elementaryos-firefox-theme/tree/elementaryos-firefox-theme)"
 echo ""
-echo "Installing with the 'OSX' layout"
+echo "Installing with the 'macOS' layout"
 
 FIREFOX_DIR="${HOME}/.mozilla/firefox"
 FIREFOX_DIR_FLATPAK="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
-USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/OSX/userChrome.css"
-USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/OSX/userContent.css"
+USER_CHROME_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/macOS/userChrome.css"
+USER_CONTENT_CSS_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/macOS/userContent.css"
 
 echo -n "  1. Check Firefox installation ... "
 if [ ! -d "${FIREFOX_DIR}" ]; then
