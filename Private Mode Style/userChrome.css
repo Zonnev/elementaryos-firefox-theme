@@ -9,6 +9,25 @@
 COLOURS & LAYOUT OF MENU POPUPS
 *******************************/
 
+:root {
+    --arrowpanel-menuitem-padding: 7px 12px 7px 27px !important;
+    --arrowpanel-menuitem-border-radius: 0px !important;
+    --arrowpanel-menuitem-margin: 0px !important;
+    --panel-separator-margin: 4px 0px 4px 0px !important;
+}
+.toolbaritem-combined-buttons {
+    margin-right: -3px !important;
+}
+#BMB_bookmarksPopup .menu-iconic-left {
+    margin-left: -7px !important;
+}
+.menupopup-arrowscrollbox {
+    border-radius: 7px !important;
+    overflow: auto !important;
+}
+.widget-overflow-list toolbarbutton {
+    padding-left: 27px !important;
+}
 .menupopup-arrowscrollbox {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
