@@ -17,20 +17,20 @@ BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-trunk" || exit 0'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
 
-# BROWSER="Firefox (Flatpak)";
-# BROWSERS+=("${BROWSER}");
-# BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "org.mozilla.firefox" | cut -f1'
-# BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/org.mozilla.firefox/cache/mozilla/firefox"
+BROWSER="Firefox (Flatpak)";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "org.mozilla.firefox" | cut -f1'
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
 
-# BROWSER="Librewolf";
-# BROWSERS+=("${BROWSER}");
-# BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "librewolf" || exit 0'
-# BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.cache/librewolf"
+BROWSER="Librewolf";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "librewolf" || exit 0'
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.librewolf"
 
-# BROWSER="Librewolf (Flatpak)";
-# BROWSERS+=("${BROWSER}");
-# BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "io.gitlab.librewolf-community" | cut -f1'
-# BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/io.gitlab.librewolf-community/cache/librewolf"
+BROWSER="Librewolf (Flatpak)";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "io.gitlab.librewolf-community" | cut -f1'
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/io.gitlab.librewolf-community/.librewolf"
 
 declare -a LAYOUTS
 declare -A LAYOUTS_PATHS
