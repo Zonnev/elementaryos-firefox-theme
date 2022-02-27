@@ -623,7 +623,7 @@ function installThemeAtBrowserProfile {
     increaseLogPadding
     info "Ensure chrome directory"
     mkdir -p "${CHROME_DIR}"
-    info "Downalod stylesheets to chrome directory"
+    info "Download stylesheets to chrome directory"
     wget --output-document="${USER_CHROME_FILE}" --quiet "${USER_CHROME_URL}"
     wget --output-document="${USER_CONTENT_FILE}" --quiet "${USER_CONTENT_URL}"
     decreaseLogPadding
