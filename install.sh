@@ -139,7 +139,7 @@ $(
 )
 
 When Firefox window uses native titlebar (by default is not) Firefox Elementary
-Theme requires special stylesheet, which is completelly indifferent to controls
+Theme requires special stylesheet, which is completely indifferent to controls
 layout. Installation script will detect is Firefox using native titlebar or not
 and will select corresponding theme stylesheet.
 
@@ -216,14 +216,14 @@ OPTIONS:
   This preference disables Firefox preferences patching:
 
     1. 'toolkit.legacyUserProfileCustomizations.stylesheets'. This preference
-       must be turned on to use theme stylesheets. Script default behavour is
+       must be turned on to use theme stylesheets. Script default behaviour is
        turn preference on if not yet;
     2. 'browser.tabs.inTitlebar'. This preference define whether Firefox window
        use native titlebar or not. Script may want to switch this preference
        when '--native-titlebar yes|no' options is used.
 
   Patching Firefox preferences requires no Firefox process to be running. By
-  default script will ask user to shut down all Firefox processe before
+  default script will ask user to shut down all Firefox processes before
   patching preferences, so when this option is used, script won't ask user to
   shut down Firefox processes.
 
