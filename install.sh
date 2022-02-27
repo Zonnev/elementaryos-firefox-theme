@@ -405,6 +405,9 @@ function detectBrowsersProfiles {
   }
 
   if [ ${#BROWSER_PROFILES[@]} -eq 0 ]; then
+    OLD_IFS="${IFS}"
+    IFS=$'\n'
+
     info "Detect browser profiles"
     increaseLogPadding
     for BROWSER in "${BROWSERS[@]}"; do
@@ -419,6 +422,8 @@ function detectBrowsersProfiles {
       fi
     done
     decreaseLogPadding
+
+    IFS="${OLD_IFS}"
   fi
 
   if [ ${#BROWSER_PROFILES[@]} -eq 0 ]; then
