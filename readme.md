@@ -7,7 +7,18 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 ## Install
 
-❗I recommend installing Firefox in the terminal, typing: `sudo apt install firefox`, because Firefox in the AppCenter is a flatpak version which doesn't work well with the userChrome of this theme.
+For now theme installation is supported for:
+
+1. Firefox installed with apt package manager.
+   To install it run command `sudo apt install firefox` with your Terminal;
+2. Firefox Nightly installed with apt package manager.
+3. [Firefox Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox);
+4. [Librewolf Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community);
+5. [Librewolf Appimage version](https://librewolf.net/installation/linux/).
+
+❗*For best experience we recommend to use theme with Firefox installed with apt package manager.*
+*Other installations has limited support. We also welcome contributions like editing a userChrome,*
+*for example to make a fully supported other version possible. Thanks in advance.*
 
 Use this one line install script which let you select the window buttons layout you like:
 
