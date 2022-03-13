@@ -55,10 +55,7 @@ menupopup menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
     padding: 4px 6px 4px 6px !important;
 }
 menubar > menu[open="true"] {
-    appearance: none !important;
-	color: #d1d1d1 !important;
-	background-color: rgba(255,255,255,0.13) !important;
-	margin: 0px 6px !important;
+	color: #fff !important;
 }
 .checkbox-check,
 menupopup > menuitem image {
