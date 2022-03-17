@@ -716,5 +716,7 @@ detectBrowsersProfiles
 for BROWSER_PROFILE in "${BROWSER_PROFILES[@]}"; do
   installThemeAtBrowserProfile
 done
-info "Please, restart the browser to apply changes."
+info ""
 info "Done!"
+info "Please, restart the browser to apply changes."
+info ""
