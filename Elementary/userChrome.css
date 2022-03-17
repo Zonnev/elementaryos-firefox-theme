@@ -4,20 +4,22 @@
 
 /*This style will blend Firefox 65+ in elementary OS.  Currently tested on Linux on Nightly*/
 
-/* This userChrome is for button layout Ubuntu */
+/* This userChrome is for button layout Elementary */
 
 @import "base.css";
 @import "flatpak.css";
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
+    appearance: none !important;
     flex-direction: row-reverse !important;
-    top: 11px !important; 
+    margin-left: 4px !important;
+    top: 11px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: calc(100vw - 11px) !important;
     height: 25px !important;
-    justify-content: start !important;
+    justify-content: space-between !important;
 }
 
 /* dont show window controls in fullscreen */
@@ -27,5 +29,5 @@
 
 /* makes room for window control buttons */
 #nav-bar {
-    padding: 0px 6px 0px 110px !important;
+    padding: 0px 42px 0px 48px !important;
 }

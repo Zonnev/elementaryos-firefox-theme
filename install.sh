@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+GITHUB_BRANCH_NAME="master"
+GITHUB_PROJECT_NAME="Zonnev/elementaryos-firefox-theme"
+GITHUB_URL="https://github.com"
+GITHUB_URL_RAW="https://raw.githubusercontent.com"
+
 declare -a BROWSERS
 declare -A BROWSERS_PROCESS_ID
 declare -A BROWSERS_PROFILES_ROOT
@@ -39,73 +44,70 @@ declare -A LAYOUTS_TITLEBARS
 
 LAYOUT="Elementary"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]=""
+LAYOUTS_PATHS["${LAYOUT}"]="Elementary"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close:maximize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯    —    ⤢]"
 
 LAYOUT="Elementary Reversed"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Elementary%20Reversed/"
+LAYOUTS_PATHS["${LAYOUT}"]="Elementary%20Reversed"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'maximize:close'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⤢    —    ⨯]"
 
 LAYOUT="Close Only Left"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Close%20Only%20Left/"
+LAYOUTS_PATHS["${LAYOUT}"]="Close%20Only%20Left"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close:'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯    —     ]"
 
 LAYOUT="Close Only Right"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Close%20Only%20Right/"
+LAYOUTS_PATHS["${LAYOUT}"]="Close%20Only%20Right"
 LAYOUTS_SETTINGS["${LAYOUT}"]="':close'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[     —    ⨯]"
 
 LAYOUT="Minimize Left"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Minimize%20Left/"
+LAYOUTS_PATHS["${LAYOUT}"]="Minimize%20Left"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close,minimize:maximize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤓   —    ⤢]"
 
 LAYOUT="Minimize Right"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Minimize%20Right/"
+LAYOUTS_PATHS["${LAYOUT}"]="Minimize%20Right"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close:minimize,maximize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯    —   ⤓⤢]"
 
 LAYOUT="MacOS"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="macOS/"
+LAYOUTS_PATHS["${LAYOUT}"]="macOS"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close,minimize,maximize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤓⤢  —     ]"
 
 LAYOUT="Ubuntu"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Ubuntu/"
+LAYOUTS_PATHS["${LAYOUT}"]="Ubuntu"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close,maximize,minimize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤢⤓  —     ]"
 
 LAYOUT="Windows"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Windows/"
+LAYOUTS_PATHS["${LAYOUT}"]="Windows"
 LAYOUTS_SETTINGS["${LAYOUT}"]="':minimize,maximize,close'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[     —  ⤓⤢⨯]"
 
 LAYOUT="Replace Maximize to Minimize"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Replace%20Maximize%20to%20Minimize/"
+LAYOUTS_PATHS["${LAYOUT}"]="Replace%20Maximize%20to%20Minimize"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close:minimize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯    —    ⤓]"
 
-PRIVATE_MODE_PATH="Private%20Mode%20Style/"
-TITLEBAR_ENABLED_PATH="Titlebar%20Enabled/"
+PRIVATE_MODE_PATH="Private%20Mode%20Style"
+TITLEBAR_ENABLED_PATH="Titlebar%20Enabled"
 
 APP_EXECUTABLE="install.sh"
-APP_HELP_MESSAGE="
-Firefox Elementary Theme installation script
-============================================
-
-Installation script is recommended to install Firefox Elementary Theme.
+APP_NAME="Firefox Elementary Theme installation script"
+APP_HELP_MESSAGE="Installation script is recommended to install Firefox Elementary Theme.
 
 Firefox Theme is set of stylesheets ('userChrome.css' and 'userContent.css').
 To apply theme, stylesheets need to be placed at 'chrome' directory inside user
@@ -126,7 +128,7 @@ in which order). Installation script will detect current window controls layout
 and select corresponding stylesheets. Detection requires gsetting
 (https://www.linux.org/docs/man1/gsettings.html) to be installed.
 Window controls layout may be changed with Pantheon Tweaks application
-(https://github.com/pantheon-tweaks/pantheon-tweaks).
+(${GITHUB_URL}/pantheon-tweaks/pantheon-tweaks).
 
 Supported window controls layouts are:
 
@@ -157,7 +159,7 @@ ${DEFAULT_BROWSER}. Other installations has limited support.
 We welcome contributions like editing a userChrome, for example to make a fully
 supported Flatpak version possible. Thanks in advance.
 
-See more at theme homepage https://github.com/Zonnev/elementaryos-firefox-theme
+See more at theme homepage ${GITHUB_URL}/${GITHUB_PROJECT_NAME}
 
 Usage: ${APP_EXECUTABLE} [OPTIONS]
 
@@ -187,6 +189,22 @@ OPTIONS:
 
   Example: ${APP_EXECUTABLE} --controls-layout 'Elementary Reversed'
   Example: ${APP_EXECUTABLE} --controls-layout 2
+
+--github-branch-name <branch>
+
+  Overrides theme branch name at ${GITHUB_URL}. Instalation script will copy theme
+  stylesheets using this branch name. By default it is ${GITHUB_BRANCH_NAME}.
+  This options is useful for testing purposes.
+
+  Example: ${APP_EXECUTABLE} --github-branch-name '${GITHUB_BRANCH_NAME}'
+
+--github-project-name <project>
+
+  Overrides theme project name at ${GITHUB_URL}. Instalation script will copy theme
+  stylesheets using this project name. By default it is ${GITHUB_PROJECT_NAME}.
+  This options is useful for testing purposes.
+
+  Example: ${APP_EXECUTABLE} --github-project-name '${GITHUB_PROJECT_NAME}'
 
 --native-titlebar yes|no
 
@@ -230,17 +248,12 @@ OPTIONS:
   Example: ${APP_EXECUTABLE} --skip-preferences-patch
 "
 
-# #############################################################################
-#  Parse options
-# #############################################################################
-
 declare -a BROWSER_PROFILES
 BROWSER_PROFILES=()
 CONTROLS_LAYOUT=""
 NATIVE_TITLEBAR=""
 PATCH_PREFERENCES="yes"
 PRIVATE_MODE_STYLE="no"
-REPOSITORY_FILES_URL="https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme"
 
 LOG_PADDING=""
 
@@ -284,6 +297,11 @@ function parseOptions {
         exit 0
         ;;
 
+      "--browser-profile")
+        BROWSER_PROFILES+=("${2}")
+        shift 2
+        ;;
+
       "--controls-layout")
         case "${2}" in
           # empty string
@@ -323,8 +341,13 @@ function parseOptions {
         esac
         ;;
 
-      "--browser-profile")
-        BROWSER_PROFILES+=("${2}")
+      "--github-branch-name")
+        GITHUB_BRANCH_NAME="${2}"
+        shift 2
+        ;;
+
+      "--github-project-name")
+        GITHUB_PROJECT_NAME="${2}"
         shift 2
         ;;
 
@@ -611,21 +634,52 @@ function installThemeAtBrowserProfile {
   }
 
   function installStyleSheets {
-    local BROWSER_PROFILE="${1}"
-    local STYLE_SHEETS_PATH="${2}"
+    local BROWSER="${1}"
+    local BROWSER_PROFILE="${2}"
+    local LAYOUT_PATH="${3}"
+
+    local BASE_CSS="base.css"
+    local FLATPAK_CSS="flatpak.css"
+    local USER_CHROME_CSS="userChrome.css"
+    local USER_CONTENT_CSS="userContent.css"
+
     local CHROME_DIR="${BROWSER_PROFILE}/chrome"
-    local USER_CHROME_FILE="${CHROME_DIR}/userChrome.css"
-    local USER_CONTENT_FILE="${CHROME_DIR}/userContent.css"
-    local USER_CHROME_URL="${REPOSITORY_FILES_URL}/${STYLE_SHEETS_PATH}userChrome.css"
-    local USER_CONTENT_URL="${REPOSITORY_FILES_URL}/${STYLE_SHEETS_PATH}userContent.css"
+    local BASE_FILE="${CHROME_DIR}/${BASE_CSS}"
+    local FLATPAK_FILE="${CHROME_DIR}/${FLATPAK_CSS}"
+    local USER_CHROME_FILE="${CHROME_DIR}/${USER_CHROME_CSS}"
+    local USER_CONTENT_FILE="${CHROME_DIR}/${USER_CONTENT_CSS}"
+
+    local FILES_URL="${GITHUB_URL_RAW}/${GITHUB_PROJECT_NAME}/${GITHUB_BRANCH_NAME}"
+    local BASE_URL="${FILES_URL}/${BASE_CSS}"
+    local FLATPAK_URL="${FILES_URL}/${FLATPAK_CSS}"
+    local USER_CHROME_URL="${FILES_URL}/${LAYOUT_PATH}/${USER_CHROME_CSS}"
+    local USER_CONTENT_URL="${FILES_URL}/${USER_CONTENT_CSS}"
 
     info "Install stylesheets at ${BROWSER_PROFILE}"
     increaseLogPadding
     info "Ensure chrome directory"
     mkdir -p "${CHROME_DIR}"
-    info "Download stylesheets to chrome directory"
+    info "Update stylesheets at chrome directory"
+    increaseLogPadding
+
+    info "- Download ${BASE_CSS} (${BASE_URL})"
+    wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
+
+    if [[ "${BROWSER}" == *"(Flatpak)"* ]]; then
+      info "- Download ${FLATPAK_CSS} (${FLATPAK_URL})"
+      wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
+    elif [ -f "${FLATPAK_FILE}" ]; then
+      info "- Remove ${FLATPAK_CSS} (${FLATPAK_FILE})"
+      rm "${FLATPAK_FILE}"
+    fi
+
+    info "- Download ${USER_CHROME_CSS} (${USER_CHROME_URL})"
     wget --output-document="${USER_CHROME_FILE}" --quiet "${USER_CHROME_URL}"
+
+    info "- Download ${USER_CONTENT_CSS} (${USER_CONTENT_URL})"
     wget --output-document="${USER_CONTENT_FILE}" --quiet "${USER_CONTENT_URL}"
+
+    decreaseLogPadding
     decreaseLogPadding
   }
 
@@ -642,20 +696,27 @@ function installThemeAtBrowserProfile {
   fi
 
   if [ "${PRIVATE_MODE_STYLE}" == "yes" ]; then
-    installStyleSheets "${BROWSER_PROFILE}" "${PRIVATE_MODE_PATH}"
+    installStyleSheets "${BROWSER}" "${BROWSER_PROFILE}" "${PRIVATE_MODE_PATH}"
   elif [ $(getBrowserNativeTitlebarEnabled "${BROWSER_PROFILE}") == "yes" ]; then
-    installStyleSheets "${BROWSER_PROFILE}" "${TITLEBAR_ENABLED_PATH}"
+    installStyleSheets "${BROWSER}" "${BROWSER_PROFILE}" "${TITLEBAR_ENABLED_PATH}"
   else
     delectControlsLayout
-    installStyleSheets "${BROWSER_PROFILE}" "${LAYOUTS_PATHS[${CONTROLS_LAYOUT}]}"
+    installStyleSheets "${BROWSER}" "${BROWSER_PROFILE}" "${LAYOUTS_PATHS[${CONTROLS_LAYOUT}]}"
   fi
 
   decreaseLogPadding
 }
 
+info ""
+info "${APP_NAME}"
+info "${APP_NAME//?/=}"
+info ""
 parseOptions "${@}"
 detectBrowsersProfiles
 for BROWSER_PROFILE in "${BROWSER_PROFILES[@]}"; do
   installThemeAtBrowserProfile
 done
-info "Done! Please, restart browser."
+info ""
+info "Done!"
+info "Please, restart the browser to apply changes."
+info ""
