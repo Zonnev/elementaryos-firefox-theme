@@ -17,7 +17,7 @@ For now theme installation is supported for:
 5. [Librewolf Appimage version](https://librewolf.net/installation/linux/).
 
 ❗*For best experience we recommend to use theme with Firefox installed with apt package manager.*
-*Other installations has limited support. We also welcome contributions like editing a userChrome,*
+*Other installations have limited support. We also welcome contributions like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
 
 Use this one line install script which let you select the window buttons layout you like:
@@ -50,4 +50,4 @@ This will make purple colors of Private Mode as default style.
 ## After installation
 
 1. In the customization panel in Firefox you can move the new tab button to the left and select System theme. You can also use the dark theme option but light theme is not supported.
-2. If you use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) with the dark mode on, the theme changes to dark mode by itself.
+2. If you use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) with the dark mode on, the theme changes to dark mode by itself. Firefox 98 and newer are changing to dark mode when the elementary OS system dark mode is set.
