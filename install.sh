@@ -321,10 +321,8 @@ function parseOptions {
         case "${2}" in
           # empty string
           ""|"--"*)
-            error ""
-            error "❗ Controls layout is not specified."
-            error "❗ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-            error ""
+            error "💥 Controls layout is not specified."
+            error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
             exit 1
             ;;
 
@@ -332,10 +330,8 @@ function parseOptions {
           *[!0-9]*)
             CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
             if [ -z "${CONTROLS_LAYOUT}" ]; then
-              error ""
-              error "❗ Unknown controls layout '${2}' is specified."
-              error "❗ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-              error ""
+              error "💥 Unknown controls layout '${2}' is specified."
+              error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
               exit 1
             fi
             shift 2
@@ -345,10 +341,8 @@ function parseOptions {
           *)
             CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
             if [ -z "${CONTROLS_LAYOUT}" ]; then
-              error ""
-              error "❗ Unknown controls layout number '${2}' is specified."
-              error "❗ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-              error ""
+              error "💥 Unknown controls layout number '${2}' is specified."
+              error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
               exit 1
             fi
             shift 2
@@ -368,11 +362,9 @@ function parseOptions {
 
       "--native-titlebar")
         if [ "${2}" != "yes" ] && [ "${2}" != "no" ]; then
-          error ""
-          error "❗ Unknown option value '${2}' is specified."
-          error "❗ Expect '--native-titlebar yes' or '--native-titlebar no'."
-          error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-          error ""
+          error "💥 Unknown option value '${2}' is specified."
+          error "💥 Expect '--native-titlebar yes' or '--native-titlebar no'."
+          error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
           exit 1
         fi
         NATIVE_TITLEBAR="${2}"
@@ -390,35 +382,27 @@ function parseOptions {
         ;;
 
       *)
-        error ""
-        error "❗ Unknown option: ${1}"
-        error "❗ Try '${APP_EXECUTABLE} --help' to see available options."
-        error ""
+        error "💥 Unknown option: ${1}"
+        error "❓ Try '${APP_EXECUTABLE} --help' to see available options."
         exit 1
     esac
   done
 
   if [ ! -z "${CONTROLS_LAYOUT}" ] && [ "${NATIVE_TITLEBAR}" == "yes" ]; then
-    error ""
-    error "❗ Options '--controls-layout ${CONTROLS_LAYOUT}' and '--native-titlebar yes' are incompatible."
-    error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+    error "💥 Options '--controls-layout ${CONTROLS_LAYOUT}' and '--native-titlebar yes' are incompatible."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 
   if [ ! -z "${CONTROLS_LAYOUT}" ] && [ "${PRIVATE_MODE_STYLE}" == "yes" ]; then
-    error ""
-    error "❗ Options '--controls-layout ${CONTROLS_LAYOUT}' and '--private-mode-style' are incompatible."
-    error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+    error "💥 Options '--controls-layout ${CONTROLS_LAYOUT}' and '--private-mode-style' are incompatible."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 
   if [ "${NATIVE_TITLEBAR}" == "yes" ] && [ "${PRIVATE_MODE_STYLE}" == "yes" ]; then
-    error ""
-    error "❗ Options '--native-titlebar yes' and '--private-mode-style' are incompatible."
-    error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+    error "💥 Options '--native-titlebar yes' and '--private-mode-style' are incompatible."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 
@@ -465,12 +449,10 @@ function detectBrowsersProfiles {
     IFS="${OLD_IFS}"
   fi
 
-  if [ ${#BROWSER_PROFILES[@]} -eq 0 ]; then
-    error ""
-    error "❗ Unable to detect browsers profiles."
-    error "❗ Please, specify profiles with '--browser-profile' option."
-    error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+  if [ "${#BROWSER_PROFILES[@]}" -eq 0 ]; then
+    error "💥 Unable to detect browsers profiles."
+    error "💥 Please, specify profiles with '--browser-profile' option."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 }
@@ -547,11 +529,9 @@ function installThemeAtBrowserProfile {
   function delectControlsLayout {
     if [ -z "${CONTROLS_LAYOUT}" ]; then
       if ! (which gsettings >/dev/null); then
-        error ""
-        error "❗ Unable to detect window controls layout. Util gsettings is not installed."
-        error "❗ Please, install gsettings or specify layout with '--controls-layout' option."
-        error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-        error ""
+        error "💥 Unable to detect window controls layout. Util gsettings is not installed."
+        error "💥 Please, install gsettings or specify layout with '--controls-layout' option."
+        error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
         exit 1
       fi
 
@@ -575,11 +555,9 @@ function installThemeAtBrowserProfile {
       fi
 
       if [ -z "${CONTROLS_LAYOUT}" ]; then
-        error ""
-        error "❗ Unable to detect window controls layout."
-        error "❗ Please, specify layout with '--controls-layout' option."
-        error "❗ Try '${APP_EXECUTABLE} --help' to see manual."
-        error ""
+        error "💥 Unable to detect window controls layout."
+        error "💥 Please, specify layout with '--controls-layout' option."
+        error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
         exit 1
       fi
     fi
