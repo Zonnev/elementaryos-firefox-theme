@@ -9,12 +9,12 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 For now theme installation is supported for:
 
-1. Firefox installed with apt package manager.
-   To install it run command `sudo apt install firefox` with your Terminal;
-2. Firefox Nightly installed with apt package manager.
-3. [Firefox Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox);
-4. [Librewolf Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community);
-5. [Librewolf Appimage version](https://librewolf.net/installation/linux/).
+1. 🦊 Firefox installed with apt package manager.
+   To install it run command `sudo apt install firefox` with your Terminal.
+2. 🦊 Firefox Nightly installed with apt package manager.
+3. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
+5. [🐺 Librewolf Appimage version](https://librewolf.net/installation/linux/).
+4. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
 
 ❗*For best experience we recommend to use theme with Firefox installed with apt package manager.*
 *Other installations have limited support. We also welcome contributions like editing a userChrome,*
