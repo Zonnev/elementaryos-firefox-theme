@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 set -e
 
 GITHUB_BRANCH_NAME="master"
@@ -10,29 +15,29 @@ declare -a BROWSERS
 declare -A BROWSERS_PROCESS_ID
 declare -A BROWSERS_PROFILES_ROOT
 
-DEFAULT_BROWSER="Firefox"
+DEFAULT_BROWSER="🦊 Firefox"
 
 BROWSER="${DEFAULT_BROWSER}";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox" || exit 0'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.mozilla/firefox"
 
-BROWSER="Firefox Nightly";
+BROWSER="🦊 Firefox Nightly";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-trunk" || exit 0'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
 
-BROWSER="Firefox (Flatpak)";
+BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "org.mozilla.firefox" | cut -f1'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
 
-BROWSER="Librewolf";
+BROWSER="🐺 Librewolf";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "librewolf" || exit 0'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.librewolf"
 
-BROWSER="Librewolf (Flatpak)";
+BROWSER="🐺 Librewolf (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "io.gitlab.librewolf-community" | cut -f1'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/io.gitlab.librewolf-community/.librewolf"
@@ -106,26 +111,26 @@ PRIVATE_MODE_PATH="Private%20Mode%20Style"
 TITLEBAR_ENABLED_PATH="Titlebar%20Enabled"
 
 APP_EXECUTABLE="install.sh"
-APP_NAME="Firefox Elementary Theme installation script"
-APP_HELP_MESSAGE="Installation script is recommended to install Firefox Elementary Theme.
+APP_NAME="🦊 Firefox Elementary Theme installation"
+APP_HELP_MESSAGE="Installation script is recommended to install 🦊 Firefox Elementary Theme.
 
-Firefox Theme is set of stylesheets ('userChrome.css' and 'userContent.css').
-To apply theme, stylesheets need to be placed at 'chrome' directory inside user
-profile. That is what installation script will do.
+Theme is set of stylesheets ('userChrome.css' and 'userContent.css'). To apply
+theme, stylesheets need to be placed at 'chrome' directory inside user profile.
+That is what installation script will do.
 
 Using custom stylesheets also requires preference
 'toolkit.legacyUserProfileCustomizations.stylesheets' to be enabled. By default
 it is turned off, so installation script will turn it on. Changing  preference
-value requires all Firefox processes to be stopped, so installation script may
-ask user to quit Firefox.
+value requires no active browser processes, so installation script ma ask user
+to close browser windows.
 
-Firefox Elementary Theme requires different stylesheets depending on window
-controls layout. This is because Firefox not using native window titlebar by
-default, and stylesheets also responsible for window controls placement at
-browser window. Window controls layout defines which of buttons (⨯⤓⤢) will be
-placed at window title bar, and how these buttons will placed (left or right,
-in which order). Installation script will detect current window controls layout
-and select corresponding stylesheets. Detection requires gsetting
+Theme requires different stylesheets depending on window controls layout. This
+is because browser not using native window titlebar by default, and stylesheets
+also responsible for window controls placement at browser window. Window
+controls layout defines which of buttons (⨯⤓⤢) will be placed at window title
+bar, and how these buttons will placed (left or right, in which order).
+Installation script will detect current window controls layout and select
+corresponding stylesheets. Detection requires gsetting
 (https://www.linux.org/docs/man1/gsettings.html) to be installed.
 Window controls layout may be changed with Pantheon Tweaks application
 (${GITHUB_URL}/pantheon-tweaks/pantheon-tweaks).
@@ -140,10 +145,10 @@ $(
   done
 )
 
-When Firefox window uses native titlebar (by default is not) Firefox Elementary
-Theme requires special stylesheet, which is completely indifferent to controls
-layout. Installation script will detect is Firefox using native titlebar or not
-and will select corresponding theme stylesheet.
+When browser window uses native titlebar (by default is not) theme requires
+special stylesheet, which is completely indifferent to controls layout.
+Installation script will detect whether browser uses native titlebar or not and
+will select corresponding stylesheet.
 
 Installation script supports:
 
@@ -153,13 +158,13 @@ $(
   done
 )
 
-For best experience with Firefox Elementary Theme it is recommended to use
-${DEFAULT_BROWSER}. Other installations has limited support.
+For best experience with theme it is recommended to use ${DEFAULT_BROWSER}.
+Other installations has limited support. We welcome contributions like editing
+a 'userChrome.css', for example to make a fully supported 📦 Flatpak version
+possible. Thanks in advance.
 
-We welcome contributions like editing a userChrome, for example to make a fully
-supported Flatpak version possible. Thanks in advance.
-
-See more at theme homepage ${GITHUB_URL}/${GITHUB_PROJECT_NAME}
+Theme homepage ${GITHUB_URL}/${GITHUB_PROJECT_NAME}
+Theme issues ${GITHUB_URL}/${GITHUB_PROJECT_NAME}/issues
 
 Usage: ${APP_EXECUTABLE} [OPTIONS]
 
@@ -210,12 +215,12 @@ OPTIONS:
 
   Controls whether to use native titlebar or not. By default installation
   script will detect whether titlebar enabled or not, by reading preference
-  'browser.tabs.inTitlebar' at Firefox profile. When native titlebar is enabled
-  options '--controls-layout' and '--private-mode-style' are inapplicable. When
-  this options is specified installation script will ensure that preference
-  'browser.tabs.inTitlebar' has corresponding value. Changing the preference
-  requires all Firefox processes to be stopped, so script may ask user to quit
-  Firefox.
+  'browser.tabs.inTitlebar' at browser profile. When native titlebar is
+  enabled options '--controls-layout' and '--private-mode-style' are
+  inapplicable. When this options is specified installation script will ensure
+  that preference 'browser.tabs.inTitlebar' has corresponding value. Changing
+  the preference requires all browser processes to be stopped, so script may
+  ask user to close browser windows.
 
   Example: ${APP_EXECUTABLE} --native-titlebar yes
   Example: ${APP_EXECUTABLE} --native-titlebar no
@@ -231,19 +236,19 @@ OPTIONS:
 
 --skip-preferences-patch
 
-  This preference disables Firefox preferences patching:
+  This preference disables browser preferences patching:
 
     1. 'toolkit.legacyUserProfileCustomizations.stylesheets'. This preference
        must be turned on to use theme stylesheets. Script default behaviour is
        turn preference on if not yet;
-    2. 'browser.tabs.inTitlebar'. This preference define whether Firefox window
+    2. 'browser.tabs.inTitlebar'. This preference define whether browser window
        use native titlebar or not. Script may want to switch this preference
        when '--native-titlebar yes|no' options is used.
 
-  Patching Firefox preferences requires no Firefox process to be running. By
-  default script will ask user to shut down all Firefox processes before
+  Patching browser preferences requires no browser process to be running. By
+  default script will ask user to shut down all close browser windows before
   patching preferences, so when this option is used, script won't ask user to
-  shut down Firefox processes.
+  close browser windows.
 
   Example: ${APP_EXECUTABLE} --skip-preferences-patch
 "
@@ -274,6 +279,16 @@ function error {
   local MESSAGE="${@}"
   echo "${LOG_PADDING}${MESSAGE}" >&2
 }
+
+function replaceHomedir {
+  local DIR="${1}"
+  if [ "${DIR:0:${#HOME}}" == "${HOME}" ]; then
+    echo "~${DIR:${#HOME}}"
+  else
+    echo "${DIR}"
+  fi
+}
+
 
 function parseWindowControlsLayout {
   local LAYOUT="${1}"
@@ -306,10 +321,8 @@ function parseOptions {
         case "${2}" in
           # empty string
           ""|"--"*)
-            error ""
-            error "Controls layout is not specified."
-            error "Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-            error ""
+            error "💥 Controls layout is not specified."
+            error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
             exit 1
             ;;
 
@@ -317,10 +330,8 @@ function parseOptions {
           *[!0-9]*)
             CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
             if [ -z "${CONTROLS_LAYOUT}" ]; then
-              error ""
-              error "Unknown controls layout '${2}' is specified."
-              error "Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-              error ""
+              error "💥 Unknown controls layout '${2}' is specified."
+              error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
               exit 1
             fi
             shift 2
@@ -330,10 +341,8 @@ function parseOptions {
           *)
             CONTROLS_LAYOUT="$(parseWindowControlsLayout "${2}")"
             if [ -z "${CONTROLS_LAYOUT}" ]; then
-              error ""
-              error "Unknown controls layout number '${2}' is specified."
-              error "Try '${APP_EXECUTABLE} --help' to see available controls layouts."
-              error ""
+              error "💥 Unknown controls layout number '${2}' is specified."
+              error "❓ Try '${APP_EXECUTABLE} --help' to see available controls layouts."
               exit 1
             fi
             shift 2
@@ -353,11 +362,9 @@ function parseOptions {
 
       "--native-titlebar")
         if [ "${2}" != "yes" ] && [ "${2}" != "no" ]; then
-          error ""
-          error "Unknown option value '${2}' is specified."
-          error "Expect '--native-titlebar yes' or '--native-titlebar no'."
-          error "Try '${APP_EXECUTABLE} --help' to see manual."
-          error ""
+          error "💥 Unknown option value '${2}' is specified."
+          error "💥 Expect '--native-titlebar yes' or '--native-titlebar no'."
+          error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
           exit 1
         fi
         NATIVE_TITLEBAR="${2}"
@@ -375,35 +382,27 @@ function parseOptions {
         ;;
 
       *)
-        error ""
-        error "Unknown option: ${1}"
-        error "Try '${APP_EXECUTABLE} --help' to see available options."
-        error ""
+        error "💥 Unknown option: ${1}"
+        error "❓ Try '${APP_EXECUTABLE} --help' to see available options."
         exit 1
     esac
   done
 
   if [ ! -z "${CONTROLS_LAYOUT}" ] && [ "${NATIVE_TITLEBAR}" == "yes" ]; then
-    error ""
-    error "Options '--controls-layout ${CONTROLS_LAYOUT}' and '--native-titlebar yes' are incompatible."
-    error "Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+    error "💥 Options '--controls-layout ${CONTROLS_LAYOUT}' and '--native-titlebar yes' are incompatible."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 
   if [ ! -z "${CONTROLS_LAYOUT}" ] && [ "${PRIVATE_MODE_STYLE}" == "yes" ]; then
-    error ""
-    error "Options '--controls-layout ${CONTROLS_LAYOUT}' and '--private-mode-style' are incompatible."
-    error "Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+    error "💥 Options '--controls-layout ${CONTROLS_LAYOUT}' and '--private-mode-style' are incompatible."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 
   if [ "${NATIVE_TITLEBAR}" == "yes" ] && [ "${PRIVATE_MODE_STYLE}" == "yes" ]; then
-    error ""
-    error "Options '--native-titlebar yes' and '--private-mode-style' are incompatible."
-    error "Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+    error "💥 Options '--native-titlebar yes' and '--private-mode-style' are incompatible."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 
@@ -431,30 +430,29 @@ function detectBrowsersProfiles {
     OLD_IFS="${IFS}"
     IFS=$'\n'
 
-    info "Detect browser profiles"
+    info "🔍 Searching for browser profiles"
     increaseLogPadding
     for BROWSER in "${BROWSERS[@]}"; do
       declare -a FOUND_PROFILES
       FOUND_PROFILES=($(findBrowserProfiles "${BROWSERS_PROFILES_ROOT["${BROWSER}"]}"))
       if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
-        info "- Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s) at"
+        info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s):"
+        increaseLogPadding
         for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
-          info "  Directory ${FOUND_PROFILE}"
+          info "📁 $(replaceHomedir ${FOUND_PROFILE})"
         done
+        decreaseLogPadding
         BROWSER_PROFILES+=("${FOUND_PROFILES[@]}")
       fi
     done
     decreaseLogPadding
-
     IFS="${OLD_IFS}"
   fi
 
-  if [ ${#BROWSER_PROFILES[@]} -eq 0 ]; then
-    error ""
-    error "Unable to detect browsers profiles."
-    error "Please, specify profiles with '--browser-profile' option."
-    error "Try '${APP_EXECUTABLE} --help' to see manual."
-    error ""
+  if [ "${#BROWSER_PROFILES[@]}" -eq 0 ]; then
+    error "💥 Unable to detect browsers profiles."
+    error "💥 Please, specify profiles with '--browser-profile' option."
+    error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
     exit 1
   fi
 }
@@ -502,14 +500,16 @@ function installThemeAtBrowserProfile {
       return 0
     fi
 
-    info "Set preference '${PREFERENCE}' to '${TARGET_VALUE}'"
-    increaseLogPadding
+    info "📝 Changing preference '${PREFERENCE}' to '${TARGET_VALUE}'"
 
-    while [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; do
-      info "Please, close all ${BROWSER} windows."
-      info "Press 'Enter' to proceed ..."
-      read -s
-    done
+    if [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; then
+      info "❓ Please, close ${BROWSER} windows to proceed ...."
+      while [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; do
+        sleep 1
+      done
+    fi
+
+    increaseLogPadding
 
     local LINE_NUMBER=""
 
@@ -529,11 +529,9 @@ function installThemeAtBrowserProfile {
   function delectControlsLayout {
     if [ -z "${CONTROLS_LAYOUT}" ]; then
       if ! (which gsettings >/dev/null); then
-        error ""
-        error "Unable to detect window controls layout. Util gsettings is not installed."
-        error "Please, install gsettings or specify layout with '--controls-layout' option."
-        error "Try '${APP_EXECUTABLE} --help' to see manual."
-        error ""
+        error "💥 Unable to detect window controls layout. Util gsettings is not installed."
+        error "💥 Please, install gsettings or specify layout with '--controls-layout' option."
+        error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
         exit 1
       fi
 
@@ -557,11 +555,9 @@ function installThemeAtBrowserProfile {
       fi
 
       if [ -z "${CONTROLS_LAYOUT}" ]; then
-        error ""
-        error "Unable to detect window controls layout."
-        error "Please, specify layout with '--controls-layout' option."
-        error "Try '${APP_EXECUTABLE} --help' to see manual."
-        error ""
+        error "💥 Unable to detect window controls layout."
+        error "💥 Please, specify layout with '--controls-layout' option."
+        error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
         exit 1
       fi
     fi
@@ -655,37 +651,33 @@ function installThemeAtBrowserProfile {
     local USER_CHROME_URL="${FILES_URL}/${LAYOUT_PATH}/${USER_CHROME_CSS}"
     local USER_CONTENT_URL="${FILES_URL}/${USER_CONTENT_CSS}"
 
-    info "Install stylesheets at ${BROWSER_PROFILE}"
-    increaseLogPadding
-    info "Ensure chrome directory"
-    mkdir -p "${CHROME_DIR}"
-    info "Update stylesheets at chrome directory"
-    increaseLogPadding
+    if [ ! -d ${CHROME_DIR} ]; then
+      info "✅ Creating 📁 $(replaceHomedir ${CHROME_DIR})"
+      mkdir -p "${CHROME_DIR}"
+    fi
 
-    info "- Download ${BASE_CSS} (${BASE_URL})"
+    info "⬇️  Downloading ${BASE_CSS} (${BASE_URL})"
     wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
 
-    if [[ "${BROWSER}" == *"(Flatpak)"* ]]; then
-      info "- Download ${FLATPAK_CSS} (${FLATPAK_URL})"
+    if [[ "${BROWSER}" == *"Flatpak"* ]]; then
+      info "⬇️  Downloading ${FLATPAK_CSS} (${FLATPAK_URL})"
       wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
     elif [ -f "${FLATPAK_FILE}" ]; then
-      info "- Remove ${FLATPAK_CSS} (${FLATPAK_FILE})"
+      info "🗑️  Removing ${FLATPAK_CSS} (${FLATPAK_FILE})"
       rm "${FLATPAK_FILE}"
     fi
 
-    info "- Download ${USER_CHROME_CSS} (${USER_CHROME_URL})"
+    info "⬇️  Downloading ${USER_CHROME_CSS} (${USER_CHROME_URL})"
     wget --output-document="${USER_CHROME_FILE}" --quiet "${USER_CHROME_URL}"
 
-    info "- Download ${USER_CONTENT_CSS} (${USER_CONTENT_URL})"
+    info "⬇️  Downloading ${USER_CONTENT_CSS} (${USER_CONTENT_URL})"
     wget --output-document="${USER_CONTENT_FILE}" --quiet "${USER_CONTENT_URL}"
-
-    decreaseLogPadding
-    decreaseLogPadding
   }
 
+  local BROWSER_PROFILE="${1}"
   local BROWSER=$(detectBrowser "${BROWSER_PROFILE}")
 
-  info "Installing theme for ${BROWSER} profile ${BROWSER_PROFILE}"
+  info "🔧 Installing theme at ${BROWSER} profile 📁 $(replaceHomedir ${BROWSER_PROFILE})"
   increaseLogPadding
 
   if [ "${PATCH_PREFERENCES}" == "yes" ]; then
@@ -707,16 +699,13 @@ function installThemeAtBrowserProfile {
   decreaseLogPadding
 }
 
-info ""
 info "${APP_NAME}"
-info "${APP_NAME//?/=}"
 info ""
 parseOptions "${@}"
 detectBrowsersProfiles
+info ""
 for BROWSER_PROFILE in "${BROWSER_PROFILES[@]}"; do
-  installThemeAtBrowserProfile
+  installThemeAtBrowserProfile "${BROWSER_PROFILE}"
+  info ""
 done
-info ""
-info "Done!"
-info "Please, restart the browser to apply changes."
-info ""
+info "🎉 Done! Please, restart the browser to changes take effect."
