@@ -57,7 +57,7 @@ BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.local/share/torbrowser/tbb/x86_6
 FLATPAK_ID="com.github.micahflee.torbrowser-launcher"
 BROWSER="🧅 Tor Browser (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
-BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
+BROWSERS_PROCESS_ID["${BROWSER}"]="pidof ${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_*/Browser/firefox.real || exit 0"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_*/Browser/TorBrowser/Data/Browser"
 
 declare -a LAYOUTS
