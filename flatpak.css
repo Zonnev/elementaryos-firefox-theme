@@ -11,15 +11,20 @@ MENU POPUPS + right mouse click menus
 *************************************/
 
 /* Default theme */
-menupopup menu[_moz-menuactive="true"]:not([disabled="true"]),
-menupopup menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton),
+menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton) {
     appearance: none !important;
     background-color: rgba(0,0,0,0.2) !important;
     color: #000 !important;
     padding: 4px 6px 4px 6px !important;
 }
+#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"],
+#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"] {
+    appearance: none !important;
+    background-color: rgba(0,0,0,0) !important;
+}
 .checkbox-check,
-menupopup > menuitem image {
+menupopup > menuitem:not(.menuitem-with-favicon) image {
     height: 16px !important;
     width: 16px !important;
     background-color: white !important;
@@ -48,12 +53,17 @@ menupopup:-moz-lwtheme-brighttext {
     --panel-color: #fff !important;
     --panel-border-color: #000 !important;
 }
-menupopup menu[_moz-menuactive="true"]:not([disabled="true"]):-moz-lwtheme-brighttext,
-menupopup menuitem[_moz-menuactive="true"]:not([disabled="true"]):-moz-lwtheme-brighttext {
+menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton):-moz-lwtheme-brighttext,
+menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton):-moz-lwtheme-brighttext {
     appearance: none !important;
     color: #FFF !important;
     background-color: rgba(255,255,255,0.13) !important;
     padding: 4px 6px 4px 6px !important;
+}
+#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"]:-moz-lwtheme-brighttext,
+#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"]:-moz-lwtheme-brighttext {
+    appearance: none !important;
+    background-color: #303030 !important;
 }
 menubar > menu[open="true"]:-moz-lwtheme-brighttext {
     appearance: none !important;
@@ -62,7 +72,7 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
 	margin: 0px 6px !important;
 }
 .checkbox-check:-moz-lwtheme-brighttext,
-menupopup > menuitem image:-moz-lwtheme-brighttext {
+menupopup > menuitem:not(.menuitem-with-favicon) image:-moz-lwtheme-brighttext {
     height: 16px !important;
     width: 16px !important;
     background-color: rgba(68,68,68,1) !important;
@@ -168,18 +178,23 @@ menupopup {
     --panel-color: #fff !important;
     --panel-border-color: #000 !important;
 }
-menupopup menu[_moz-menuactive="true"]:not([disabled="true"]),
-menupopup menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton),
+menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton) {
     appearance: none !important;
     color: #FFF !important;
     background-color: rgba(255,255,255,0.13) !important;
     padding: 4px 6px 4px 6px !important;
 }
+#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"],
+#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"] {
+    appearance: none !important;
+    background-color: #303030 !important;
+}
 menubar > menu[open="true"] {
 	color: #fff !important;
 }
 .checkbox-check,
-menupopup > menuitem image {
+menupopup > menuitem:not(.menuitem-with-favicon) image {
     height: 16px !important;
     width: 16px !important;
     background-color: rgba(68,68,68,1) !important;
