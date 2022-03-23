@@ -457,7 +457,11 @@ function detectBrowsersProfiles {
         FOUND_PROFILES+=($(findBrowserProfiles "${BROWSER_PROFILES_ROOT}"))
       done
       if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
-        info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s):"
+        if [ "${#FOUND_PROFILES[@]}" -eq 1 ]; then
+          info "✅ Found 1 ${BROWSER} profile:"
+        else
+          info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profiles:"
+        fi
         increaseLogPadding
         for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
           info "📁 $(replaceHomedir ${FOUND_PROFILE})"
