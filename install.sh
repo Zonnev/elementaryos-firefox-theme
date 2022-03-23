@@ -452,18 +452,19 @@ function detectBrowsersProfiles {
     increaseLogPadding
     for BROWSER in "${BROWSERS[@]}"; do
       declare -a FOUND_PROFILES
+      FOUND_PROFILES=()
       for BROWSER_PROFILES_ROOT in ${BROWSERS_PROFILES_ROOTS["${BROWSER}"]}; do
-        FOUND_PROFILES=($(findBrowserProfiles "${BROWSER_PROFILES_ROOT}"))
-        if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
-          info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s):"
-          increaseLogPadding
-          for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
-            info "📁 $(replaceHomedir ${FOUND_PROFILE})"
-          done
-          decreaseLogPadding
-          BROWSER_PROFILES+=("${FOUND_PROFILES[@]}")
-        fi
+        FOUND_PROFILES+=($(findBrowserProfiles "${BROWSER_PROFILES_ROOT}"))
       done
+      if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
+        info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s):"
+        increaseLogPadding
+        for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
+          info "📁 $(replaceHomedir ${FOUND_PROFILE})"
+        done
+        decreaseLogPadding
+        BROWSER_PROFILES+=("${FOUND_PROFILES[@]}")
+      fi
     done
     decreaseLogPadding
     IFS="${OLD_IFS}"
