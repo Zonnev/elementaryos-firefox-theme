@@ -448,7 +448,7 @@ function detectBrowsersProfiles {
     OLD_IFS="${IFS}"
     IFS=$'\n'
 
-    info "🔍 Searching for browser profiles"
+    info "🔍 Searching for browser profiles:"
     increaseLogPadding
     for BROWSER in "${BROWSERS[@]}"; do
       declare -a FOUND_PROFILES
