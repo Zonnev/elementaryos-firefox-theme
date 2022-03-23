@@ -10,7 +10,6 @@ GITHUB_BRANCH_NAME="master"
 GITHUB_PROJECT_NAME="Zonnev/elementaryos-firefox-theme"
 GITHUB_URL="https://github.com"
 GITHUB_URL_RAW="https://raw.githubusercontent.com"
-LOCALE="$(echo ${LANG} | cut -d '.' -f 1 | tr '_' '-')"
 
 function getFlatpakProcessIdCommand {
   local FLATPAK_ID="${1}"
@@ -19,47 +18,47 @@ function getFlatpakProcessIdCommand {
 
 declare -a BROWSERS
 declare -A BROWSERS_PROCESS_ID
-declare -A BROWSERS_PROFILES_ROOT
+declare -A BROWSERS_PROFILES_ROOTS
 
 DEFAULT_BROWSER="🦊 Firefox"
 
 BROWSER="${DEFAULT_BROWSER}";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox" || exit 0'
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.mozilla/firefox"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox"
 
 BROWSER="🦊 Firefox Nightly";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-trunk" || exit 0'
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
 
 FLATPAK_ID="org.mozilla.firefox"
 BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox"
 
 BROWSER="🐺 Librewolf";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "librewolf" || exit 0'
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.librewolf"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.librewolf"
 
 FLATPAK_ID="io.gitlab.librewolf-community"
 BROWSER="🐺 Librewolf (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.librewolf"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.librewolf"
 
 BROWSER="🧅 Tor Browser";
 BROWSERS+=("${BROWSER}");
-BROWSERS_PROCESS_ID["${BROWSER}"]="pidof \"${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_${LOCALE}/Browser/firefox.real\" || exit 0"
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_${LOCALE}/Browser/TorBrowser/Data/Browser"
+BROWSERS_PROCESS_ID["${BROWSER}"]="pidof \"${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/firefox.real\" || exit 0"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/TorBrowser/Data/Browser"
 
 FLATPAK_ID="com.github.micahflee.torbrowser-launcher"
 BROWSER="🧅 Tor Browser (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_${LOCALE}/Browser/TorBrowser/Data/Browser"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_*/Browser/TorBrowser/Data/Browser"
 
 declare -a LAYOUTS
 declare -A LAYOUTS_PATHS
@@ -453,16 +452,18 @@ function detectBrowsersProfiles {
     increaseLogPadding
     for BROWSER in "${BROWSERS[@]}"; do
       declare -a FOUND_PROFILES
-      FOUND_PROFILES=($(findBrowserProfiles "${BROWSERS_PROFILES_ROOT["${BROWSER}"]}"))
-      if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
-        info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s):"
-        increaseLogPadding
-        for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
-          info "📁 $(replaceHomedir ${FOUND_PROFILE})"
-        done
-        decreaseLogPadding
-        BROWSER_PROFILES+=("${FOUND_PROFILES[@]}")
-      fi
+      for BROWSER_PROFILES_ROOT in ${BROWSERS_PROFILES_ROOTS["${BROWSER}"]}; do
+        FOUND_PROFILES=($(findBrowserProfiles "${BROWSER_PROFILES_ROOT}"))
+        if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
+          info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profile(s):"
+          increaseLogPadding
+          for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
+            info "📁 $(replaceHomedir ${FOUND_PROFILE})"
+          done
+          decreaseLogPadding
+          BROWSER_PROFILES+=("${FOUND_PROFILES[@]}")
+        fi
+      done
     done
     decreaseLogPadding
     IFS="${OLD_IFS}"
@@ -480,11 +481,13 @@ function installThemeAtBrowserProfile {
   function detectBrowser {
     local BROWSER_PROFILE="${1}"
     for BROWSER in "${BROWSERS[@]}"; do
-      local BROWSER_PROFILES_ROOT="${BROWSERS_PROFILES_ROOT["${BROWSER}"]}/"
-      if [ "${BROWSER_PROFILE:0:${#BROWSER_PROFILES_ROOT}}" == "${BROWSER_PROFILES_ROOT}" ]; then
-        echo "${BROWSER}"
-        return 0
-      fi
+      for BROWSER_PROFILES_ROOT in ${BROWSERS_PROFILES_ROOTS["${BROWSER}"]}; do
+        BROWSER_PROFILES_ROOT="${BROWSER_PROFILES_ROOT}/"
+        if [ "${BROWSER_PROFILE:0:${#BROWSER_PROFILES_ROOT}}" == "${BROWSER_PROFILES_ROOT}" ]; then
+          echo "${BROWSER}"
+          return 0
+        fi
+      done
     done
     echo "${DEFAULT_BROWSER}"
   }
