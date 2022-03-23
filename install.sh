@@ -458,9 +458,9 @@ function detectBrowsersProfiles {
       done
       if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
         if [ "${#FOUND_PROFILES[@]}" -eq 1 ]; then
-          info "✅ Found 1 ${BROWSER} profile:"
+          info "✅ Found ${BROWSER} profile:"
         else
-          info "✅ Found ${#FOUND_PROFILES[@]} ${BROWSER} profiles:"
+          info "✅ Found ${BROWSER} profiles:"
         fi
         increaseLogPadding
         for FOUND_PROFILE in "${FOUND_PROFILES[@]}"; do
