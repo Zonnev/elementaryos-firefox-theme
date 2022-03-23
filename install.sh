@@ -51,7 +51,7 @@ BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.librewolf
 
 BROWSER="🧅 Tor Browser";
 BROWSERS+=("${BROWSER}");
-BROWSERS_PROCESS_ID["${BROWSER}"]="pidof \"${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/firefox.real\" || exit 0"
+BROWSERS_PROCESS_ID["${BROWSER}"]="pidof ${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/firefox.real || exit 0"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/TorBrowser/Data/Browser"
 
 FLATPAK_ID="com.github.micahflee.torbrowser-launcher"
