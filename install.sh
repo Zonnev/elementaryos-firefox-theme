@@ -10,6 +10,12 @@ GITHUB_BRANCH_NAME="master"
 GITHUB_PROJECT_NAME="Zonnev/elementaryos-firefox-theme"
 GITHUB_URL="https://github.com"
 GITHUB_URL_RAW="https://raw.githubusercontent.com"
+LOCALE="$(echo ${LANG} | cut -d '.' -f 1 | tr '_' '-')"
+
+function getFlatpakProcessIdCommand {
+  local FLATPAK_ID="${1}"
+  echo "flatpak ps --columns=pid,application | grep \"${FLATPAK_ID}\" | cut -f1"
+}
 
 declare -a BROWSERS
 declare -A BROWSERS_PROCESS_ID
@@ -27,20 +33,33 @@ BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-trunk" || exit 0'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
 
+FLATPAK_ID="org.mozilla.firefox"
 BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
-BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "org.mozilla.firefox" | cut -f1'
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/org.mozilla.firefox/.mozilla/firefox"
+BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox"
 
 BROWSER="🐺 Librewolf";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "librewolf" || exit 0'
 BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.librewolf"
 
+FLATPAK_ID="io.gitlab.librewolf-community"
 BROWSER="🐺 Librewolf (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
-BROWSERS_PROCESS_ID["${BROWSER}"]='flatpak ps --columns=pid,application | grep "io.gitlab.librewolf-community" | cut -f1'
-BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/io.gitlab.librewolf-community/.librewolf"
+BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.librewolf"
+
+BROWSER="🧅 Tor Browser";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]="pidof \"${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_${LOCALE}/Browser/firefox.real\" || exit 0"
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_${LOCALE}/Browser/TorBrowser/Data/Browser"
+
+FLATPAK_ID="com.github.micahflee.torbrowser-launcher"
+BROWSER="🧅 Tor Browser (📦 Flatpak)";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
+BROWSERS_PROFILES_ROOT["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_${LOCALE}/Browser/TorBrowser/Data/Browser"
 
 declare -a LAYOUTS
 declare -A LAYOUTS_PATHS
