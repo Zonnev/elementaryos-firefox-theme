@@ -27,3 +27,11 @@ The other css files are `userChrome.css` and `userContent.css` and `flatpak.css`
 If you use `Private Mode Style` or `Titlebar Enabled` theme then you also have a `userChrome.css` just for that special theme.
 
 **Note:** The `userChrome.css` is always the main file that is used by Firefox to theme the browser. That is why `userChrome.css` from a window control button layout imports `base.css` to make the browser theme complete.
+
+## Fork and clone
+
+1. After editing the css's, you can now fork and clone your fork by following this: [Contributing to projects](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
+2. After all is set you can copy and overwrite the edited css's to the cloned directory locally and push the changes to your fork online.
+3. You can now make a pull request to my repository and explain your changes in the message option.
+
+*Thanks in advance for your contribution and happy theming!*
