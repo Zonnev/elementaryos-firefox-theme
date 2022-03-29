@@ -16,9 +16,9 @@ To edit elements in the Browser you need to open `base.css` in your profile dire
 
 If you want to change an element in the browser, you have selected it with Browser Toolbox and know the elements id or class, then you can search in Code for that exact name in `base.css`. This way you see what styling is there already for that element and you can start experimenting with the values to make it behave the way you want it.
 
-If the element doesn't exist in `base.css`, then you can add it. Try to add it under a chapter. For example `base.css` starts with chapter `MENU POPUPS + right mouse click menus`, under this chapter you can put any element that has to do with menu's and right click menu's.
+If the element doesn't exist in `base.css`, then you can add it. Try to add it under a chapter. For example `base.css` starts with chapter `MENU POPUPS + right mouse click menus`, under this chapter you can put any element that has to do with menus and right click menus.
 
-**Note:** I have tried to put as many chapter's in `base.css` as I could, but for example the private mode section is a bit messy. This is because a lot of element's needed to become white colored so I had put them all under one chapter `ELEMENTS IN PRIVATE MODE`. I have tried to devide button's and other element's in chapter's so be sure they are under the right chapter when you add one.
+**Note:** I have tried to put as many chapters in `base.css` as I could, but for example the private mode section is a bit messy. This is because a lot of elements needed to become white colored so I had put them all under one chapter `ELEMENTS IN PRIVATE MODE`. I have tried to devide buttons and other elements in chapters so be sure they are under the right chapter when you add one.
 
 ## Other css files
 
