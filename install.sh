@@ -269,6 +269,16 @@ OPTIONS:
   close browser windows.
 
   Example: ${APP_EXECUTABLE} --skip-preferences-patch
+
+--update
+
+  Enable update mode, in this mode script installs theme stylesheets only at
+  browser profiles, which contains theme stylesheets already. Profiles without
+  stylesheets will be ignored.
+
+  This also enables '--skip-preferences-patch' option.
+
+  Example: ${APP_EXECUTABLE} --update
 "
 
 declare -a BROWSER_PROFILES
@@ -277,6 +287,7 @@ CONTROLS_LAYOUT=""
 NATIVE_TITLEBAR=""
 PATCH_PREFERENCES="yes"
 PRIVATE_MODE_STYLE="no"
+UPDATE_ONLY="no"
 
 LOG_PADDING=""
 
@@ -299,7 +310,7 @@ function error {
 }
 
 function replaceHomedir {
-  local DIR="${1}"
+  local DIR="${@}"
   if [ "${DIR:0:${#HOME}}" == "${HOME}" ]; then
     echo "~${DIR:${#HOME}}"
   else
@@ -399,6 +410,12 @@ function parseOptions {
         shift
         ;;
 
+      "--update")
+        PATCH_PREFERENCES="no"
+        UPDATE_ONLY="yes"
+        shift
+        ;;
+
       *)
         error "💥 Unknown option: ${1}"
         error "❓ Try '${APP_EXECUTABLE} --help' to see available options."
@@ -430,6 +447,18 @@ function parseOptions {
 }
 
 function detectBrowsersProfiles {
+  function filterBrowserProfiles {
+    if [ "${UPDATE_ONLY}" == "yes" ]; then
+      while IFS='$\n' read -r BROWSER_PROFILE; do
+        if [ -d "${BROWSER_PROFILE}/chrome" ] && [ -f "${BROWSER_PROFILE}/chrome/userChrome.css" ]; then
+          echo "${BROWSER_PROFILE}"
+        fi
+      done
+    else
+      cat
+    fi
+  }
+
   function findBrowserProfiles {
     local FIREFOX_DIR="${1}"
     if [ -d "${FIREFOX_DIR}" ]; then
@@ -454,7 +483,7 @@ function detectBrowsersProfiles {
       declare -a FOUND_PROFILES
       FOUND_PROFILES=()
       for BROWSER_PROFILES_ROOT in ${BROWSERS_PROFILES_ROOTS["${BROWSER}"]}; do
-        FOUND_PROFILES+=($(findBrowserProfiles "${BROWSER_PROFILES_ROOT}"))
+        FOUND_PROFILES+=($(findBrowserProfiles "${BROWSER_PROFILES_ROOT}" | filterBrowserProfiles))
       done
       if [ "${#FOUND_PROFILES[@]}" -gt 0 ]; then
         if [ "${#FOUND_PROFILES[@]}" -eq 1 ]; then
@@ -679,7 +708,7 @@ function installThemeAtBrowserProfile {
     local USER_CONTENT_URL="${FILES_URL}/${USER_CONTENT_CSS}"
 
     if [ ! -d ${CHROME_DIR} ]; then
-      info "✅ Creating 📁 $(replaceHomedir ${CHROME_DIR})"
+      info "✅ Creating 📁 $(replaceHomedir "${CHROME_DIR}")"
       mkdir -p "${CHROME_DIR}"
     fi
 

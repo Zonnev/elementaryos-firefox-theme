@@ -1,11 +1,11 @@
 # An elementary OS theme for Firefox
 ![Screenshot](theme.png)
 
-## Credits
+## 🙏 Credits
 
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [Surendrajat](https://github.com/Surendrajat), [DRHAX34](https://github.com/DRHAX34) and [sempasha](https://github.com/sempasha) for the install script and the elementary team for the UI design and icons.
 
-## Install
+## ⬇️ Install
 
 For now theme installation is supported for:
 
@@ -40,7 +40,7 @@ bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonne
 ```
 
 Installation script will also patch Firefox preference to enable native titlebar usage.
-Firefox use native titlebar by default, but Elementary Firefox Theme not.
+Firefox doesn't use native titlebar by default.
 
 To force installation of Private Mode Style, use script:
 
@@ -50,7 +50,15 @@ bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonne
 
 This will make purple colors of Private Mode as default style.
 
-## After installation
+## ➕ After installation
 
 1. In the customization panel in Firefox you can move the new tab button to the left and select System theme. You can also use the dark theme option but light theme is not supported.
 2. If you use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) with the dark mode on, the theme changes to dark mode by itself. Firefox 98 and newer are changing to dark mode when the elementary OS system dark mode is set.
+
+## 🔁 Update
+
+To update installed theme, use script
+
+```bash
+bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/install.sh") --update
+```
