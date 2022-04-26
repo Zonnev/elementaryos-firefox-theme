@@ -1,5 +1,5 @@
 # An elementary OS theme for Firefox
-![Screenshot](theme.png)
+![Screenshot](Promo_image.png)
 
 ## 🙏 Credits
 
@@ -20,7 +20,7 @@ For now theme installation is supported for:
 7. [🧅 Tor Browser 📦 Flatpak version](https://flathub.org/apps/details/com.github.micahflee.torbrowser-launcher).
 
 ❗*For best experience we recommend to use theme with Firefox installed with apt package manager.*
-*Other installations have limited support. We also welcome contributions like editing a userChrome,*
+*Other installations have limited support. [We also welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
 
 Use this one line install script which let you select the window buttons layout you like:
