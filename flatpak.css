@@ -158,6 +158,16 @@ menupopup > menuitem[checked="true"] image:-moz-lwtheme-brighttext,
 #customization-container:-moz-lwtheme-brighttext {
     background: #2A2A2E !important;
 }
+.browserContainer > findbar:-moz-lwtheme-brighttext {
+    background-color: #303030 !important;
+    color: #fff !important;
+    border: 1px solid rgba(56,56,56,1) !important;
+}
+.findbar-textbox:-moz-lwtheme-brighttext {
+    background-color: rgba(68,68,68,1) !important;
+    color: #fff !important;
+    border: 1px solid rgba(56,56,56,1) !important;
+}
 
 /*** MAKE WINDOW CONTROLS WHITE for DARK MODE ***/
 .titlebar-min:-moz-lwtheme-brighttext,
@@ -281,6 +291,16 @@ menupopup > menuitem[checked="true"] image,
 }
 #customization-container {
     background: #2A2A2E !important;
+}
+.browserContainer > findbar {
+    background-color: #303030 !important;
+    color: #fff !important;
+    border: 1px solid rgba(56,56,56,1) !important;
+}
+.findbar-textbox {
+    background-color: rgba(68,68,68,1) !important;
+    color: #fff !important;
+    border: 1px solid rgba(56,56,56,1) !important;
 }
 
 /*** MAKE WINDOW CONTROLS WHITE for DARK MODE ***/
