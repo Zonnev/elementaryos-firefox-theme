@@ -172,15 +172,6 @@ menupopup > menuitem[checked="true"] image:-moz-lwtheme-brighttext,
     fill: #fff !important;
 }
 
-/*** MAKE WINDOW CONTROLS WHITE for DARK MODE ***/
-.titlebar-min:-moz-lwtheme-brighttext,
-.titlebar-max:-moz-lwtheme-brighttext,
-.titlebar-restore:-moz-lwtheme-brighttext,
-.titlebar-close:-moz-lwtheme-brighttext {
-    filter: invert(1) brightness(200%) !important;
-}
-
-
 /* Dark Mode in Tweaks and elementary OS System */
 @media (prefers-color-scheme: dark) {
 :root {
@@ -307,12 +298,4 @@ menupopup > menuitem[checked="true"] image,
 }
 .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture], [crashed]):not(:is([pinned])) {
     fill: #fff !important;
-}
-
-/*** MAKE WINDOW CONTROLS WHITE for DARK MODE ***/
-.titlebar-min,
-.titlebar-max,
-.titlebar-restore,
-.titlebar-close {
-    filter: invert(1) brightness(200%) !important;
 }}
