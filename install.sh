@@ -621,20 +621,39 @@ function installThemeAtBrowserProfile {
 
   function getBrowserNativeTitlebarEnabled {
     local BROWSER_PROFILE="${1}"
-    local CURRENT_VALUE=$(\
-      getFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.inTitlebar" \
-    )
-    case "${CURRENT_VALUE}" in
-      "0")
-        echo "yes"
-        ;;
-      "1")
-        echo "no"
-        ;;
-      *)
-        echo "no"
-        ;;
-    esac
+    local BROWSER_MAJOR_VERSION=$(getBrowserVersion "${BROWSER_PROFILE}" | cut -d '.' -f 1)
+
+    if [ -z "${BROWSER_MAJOR_VERSION}" ] || [ "${BROWSER_MAJOR_VERSION}" -ge 95 ]; then
+      local CURRENT_VALUE=$(\
+        getFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.inTitlebar" \
+      )
+      case "${CURRENT_VALUE}" in
+        "0")
+          echo "yes"
+          ;;
+        "1")
+          echo "no"
+          ;;
+        *)
+          echo "no"
+          ;;
+      esac
+    else
+      local CURRENT_VALUE=$(\
+        getFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.drawInTitlebar" \
+      )
+      case "${CURRENT_VALUE}" in
+        "false")
+          echo "yes"
+          ;;
+        "true")
+          echo "no"
+          ;;
+        *)
+          echo "no"
+          ;;
+      esac
+    fi
   }
 
   function setBrowserNativeTitlebarEnabled {
@@ -646,10 +665,20 @@ function installThemeAtBrowserProfile {
       return 0
     fi
 
-    if [ "${TARGET_VALUE}" == "yes" ]; then
-      setFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.inTitlebar" "0"
+    local BROWSER_MAJOR_VERSION=$(getBrowserVersion "${BROWSER_PROFILE}" | cut -d '.' -f 1)
+
+    if [ -z "${BROWSER_MAJOR_VERSION}" ] || [ "${BROWSER_MAJOR_VERSION}" -ge 95 ]; then
+      if [ "${TARGET_VALUE}" == "yes" ]; then
+        setFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.inTitlebar" "0"
+      else
+        setFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.inTitlebar" "1"
+      fi
     else
-      setFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.inTitlebar" "1"
+      if [ "${TARGET_VALUE}" == "yes" ]; then
+        setFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.drawInTitlebar" "false"
+      else
+        setFirefoxPreference "${BROWSER_PROFILE}" "browser.tabs.drawInTitlebar" "true"
+      fi
     fi
   }
 
@@ -683,6 +712,19 @@ function installThemeAtBrowserProfile {
 
     setFirefoxPreference "${BROWSER_PROFILE}" \
       "toolkit.legacyUserProfileCustomizations.stylesheets" "true"
+  }
+
+  function getBrowserVersion {
+    local BROWSER_PROFILE="${1}"
+    local CURRENT_VALUE=$(\
+      getFirefoxPreference "${BROWSER_PROFILE}" "extensions.lastAppVersion" \
+    )
+
+    if [ -z "${CURRENT_VALUE}" ]; then
+      echo ""
+    else
+      echo $(echo "${CURRENT_VALUE}" | cut -d '"' -f 2)
+    fi
   }
 
   function installStyleSheets {
