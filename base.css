@@ -230,9 +230,9 @@ Normal mode
 .tab-background[selected="true"]:-moz-window-inactive {
     background: #FAFAFA !important;
 }
-#toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext),
-#PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
-    background: rgba(250,250,250,1) !important;
+#toolbar-menubar:-moz-window-inactive,
+#PersonalToolbar:-moz-window-inactive {
+    background: #FAFAFA !important;
     border-bottom: 1px solid #D9D9D9 !important;
 }
 
@@ -835,8 +835,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 	background: rgb(51,51,51) !important;
 	border: 1px solid rgba(45,45,45,1) !important;
 }
-#toolbar-menubar:-moz-lwtheme-brighttext:-moz-window-inactive,
-#PersonalToolbar:-moz-lwtheme-brighttext:-moz-window-inactive {
+#toolbar-menubar:-moz-lwtheme-brighttext:not(:-moz-lwtheme):-moz-window-inactive,
+#PersonalToolbar:-moz-lwtheme-brighttext:not(:-moz-lwtheme):-moz-window-inactive {
     background: rgb(51, 51, 51) !important;
     border-top: none !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
@@ -1087,12 +1087,12 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 	background:  rgb(51,51,51) !important;
 	border: 1px solid rgba(45,45,45,1) !important;
 }
-#toolbar-menubar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
+#toolbar-menubar:-moz-window-inactive {
     background: rgb(51, 51, 51) !important;
     border-top: none !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
 }
-#PersonalToolbar:-moz-window-inactive:not(:-moz-lwtheme-brighttext) {
+#PersonalToolbar:-moz-window-inactive {
     background: rgb(51, 51, 51) !important;
     border-top: none !important;
 	border-bottom: 1px solid rgb(36, 38, 39) !important;
