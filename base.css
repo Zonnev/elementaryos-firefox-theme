@@ -516,6 +516,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs {
     width: 100vw !important;
 }
+.titlebar-spacer[type="post-tabs"] {
+  width: 15px !important;
+}
 :root[sizemode="fullscreen"] #TabsToolbar {
     margin-top: -1px !important;
 }
@@ -592,6 +595,13 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin-top: -2px !important; 
     margin-left: 1px !important;
     margin-right: 1px !important;
+}
+.all-tabs-item {
+  margin-inline: 0px !important;
+  border-radius: 0px !important;
+}
+#firefox-view-button {
+    margin: 0 0 2px 1px !important;
 }
 
 /* get rid of privatebrowsing icon in tab bar */
