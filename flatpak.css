@@ -58,7 +58,6 @@ menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disable
     appearance: none !important;
     color: #FFF !important;
     background-color: rgba(255,255,255,0.13) !important;
-    padding: 4px 6px 4px 6px !important;
 }
 #BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"]:-moz-lwtheme-brighttext,
 #BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"]:-moz-lwtheme-brighttext {
@@ -189,7 +188,6 @@ menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disable
     appearance: none !important;
     color: #FFF !important;
     background-color: rgba(255,255,255,0.13) !important;
-    padding: 4px 6px 4px 6px !important;
 }
 #BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"],
 #BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"] {
