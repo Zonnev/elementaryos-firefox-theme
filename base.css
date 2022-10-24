@@ -9,6 +9,10 @@ MENU POPUPS + right mouse click menus
 *************************************/
 
 /* Normal Mode menu popups */
+menu, menuitem, menucaption {
+    appearance: none !important;
+    padding: 7px 12px !important;
+}
 :root {
     --arrowpanel-menuitem-padding: 7px 12px 7px 27px !important;
     --arrowpanel-menuitem-border-radius: 0px !important;
@@ -60,6 +64,12 @@ menupopup > menuitem[checked="true"] image,
 }
 
 /* Dark Mode menu popups */
+menu:-moz-lwtheme-brighttext:hover, menuitem:-moz-lwtheme-brighttext:hover, menucaption:-moz-lwtheme-brighttext:hover {
+    background-color: rgba(255,255,255,0.20) !important;
+}
+menu[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menuitem[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menucaption[_moz-menuactive="true"]:-moz-lwtheme-brighttext {
+    background-color: rgba(255,255,255,0.20) !important;
+}
 menuseparator:-moz-lwtheme-brighttext,
 toolbarseparator:-moz-lwtheme-brighttext  {
     appearance: none !important;
@@ -98,6 +108,12 @@ menupopup > menuitem[checked="true"] image:-moz-lwtheme-brighttext,
 
 /* Dark Mode in Tweaks menu popups */
 @media (prefers-color-scheme: dark) {
+menu:hover, menuitem:hover, menucaption:hover {
+    background-color: rgba(255,255,255,0.20) !important;
+}
+menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"], menucaption[_moz-menuactive="true"] {
+    background-color: rgba(255,255,255,0.20) !important;
+}
 menuseparator,
 toolbarseparator {
     appearance: none !important;
@@ -147,7 +163,6 @@ menupopup > menuitem[checked="true"] image,
 :root[privatebrowsingmode="temporary"] menu[disabled="true"] {
     color: rgba(255,255,255,0.5) !important;
     fill: rgba(255,255,255,0.5) !important;
-    background: none !important;
 }
 :root[privatebrowsingmode="temporary"] menuseparator,
 :root[privatebrowsingmode="temporary"] toolbarseparator {
@@ -156,17 +171,17 @@ menupopup > menuitem[checked="true"] image,
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"] menupopup {
-    --panel-background: #8266C4 !important;
-    --panel-color: #fff !important;
+    --panel-background: var(--arrowpanel-background) !important;
+    --panel-color: var(--arrowpanel-color) !important;
 }
 :root[privatebrowsingmode="temporary"] menupopup:-moz-lwtheme-brighttext {
-    --panel-background: #8266C4 !important;
-    --panel-color: #fff !important;
+    --panel-background: var(--arrowpanel-background) !important;
+    --panel-color: var(--arrowpanel-color) !important;
 }
 @media (prefers-color-scheme: dark ) {
 :root[privatebrowsingmode="temporary"] menupopup {
-    --panel-background: #8266C4 !important;
-    --panel-color: #fff !important;
+    --panel-background: var(--arrowpanel-background) !important;
+    --panel-color: var(--arrowpanel-color) !important;
 }}
 :root[privatebrowsingmode="temporary"] {
     --arrowpanel-background: #8266C4 !important;
@@ -174,7 +189,15 @@ menupopup > menuitem[checked="true"] image,
     --panel-separator-color: rgba(255,255,255,0.1) !important;
     --panel-disabled-color: rgba(255,255,255,0.5) !important;
     --panel-description-color: rgba(255,255,255,0.5) !important;
-    --button-hover-bgcolor: rgba(0,0,0,0.1) !important;
+    --button-bgcolor: rgba(0,0,0,0.1) !important;
+    --button-hover-bgcolor: rgba(0,0,0,0.2) !important;
+    --panel-item-hover-bgcolor: rgba(0,0,0,0.1) !important;
+}
+:root[privatebrowsingmode="temporary"] menu:hover, :root[privatebrowsingmode="temporary"] menuitem:hover, :root[privatebrowsingmode="temporary"] menucaption:hover {
+    background-color: rgba(0,0,0,0.1) !important;
+}
+:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"], :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"], :root[privatebrowsingmode="temporary"] menucaption[_moz-menuactive="true"] {
+    background-color: rgba(0,0,0,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
     --arrowpanel-background: #8266C4 !important;
