@@ -16,7 +16,6 @@ menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disable
     appearance: none !important;
     background-color: rgba(0,0,0,0.2) !important;
     color: #000 !important;
-    padding: 4px 6px 4px 6px !important;
 }
 #BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"],
 #BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"] {
