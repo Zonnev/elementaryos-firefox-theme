@@ -518,9 +518,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     border-bottom: 1px solid #D9D9D9 !important;
     background: linear-gradient(180deg, rgba(223,223,223,1) 0%, rgba(241,241,241,1) 10%, rgba(241,241,241,1) 98%, rgba(223,223,223,1) 100%) !important;
 }
-#tabbrowser-tabs {
-    width: 94vw !important;
-}
 #TabsToolbar .toolbarbutton-1 {
     margin: auto 2px !important;
 }
