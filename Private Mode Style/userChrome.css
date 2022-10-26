@@ -360,7 +360,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin: auto 2px !important;
 }
 .toolbar-items {
-    min-height: 37px !important;
+    min-height: 36px !important;
 }
 .titlebar-spacer[type="post-tabs"] {
     width: 15px !important;
@@ -397,7 +397,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     border-radius: 3.5px !important;
     margin: 1px -2px 3px -2px !important;
 }
-.tab-background[selected="true"],
+.tab-background[selected="true"] {
+    border-radius: 3.5px !important;
+    margin: 1px -2px 3px -2px !important;
+}
 .tab-background[selected="true"]:-moz-lwtheme-brighttext {
     border-radius: 3.5px !important;
     margin: 1px -2px 3px -2px !important;
