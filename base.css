@@ -13,6 +13,9 @@ menu, menuitem, menucaption {
     appearance: none !important;
     padding: 7px 12px !important;
 }
+menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
+    background: none !important;
+}
 :root {
     --arrowpanel-menuitem-padding: 7px 12px 7px 27px !important;
     --arrowpanel-menuitem-border-radius: 0px !important;
@@ -70,6 +73,9 @@ menu:-moz-lwtheme-brighttext:hover, menuitem:-moz-lwtheme-brighttext:hover, menu
 menu[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menuitem[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menucaption[_moz-menuactive="true"]:-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.20) !important;
 }
+menu[disabled="true"]:-moz-lwtheme-brighttext, menuitem[disabled="true"]:-moz-lwtheme-brighttext, menucaption[disabled="true"]:-moz-lwtheme-brighttext {
+    background: none !important;
+}
 menuseparator:-moz-lwtheme-brighttext,
 toolbarseparator:-moz-lwtheme-brighttext  {
     appearance: none !important;
@@ -114,6 +120,9 @@ menu:hover, menuitem:hover, menucaption:hover {
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"], menucaption[_moz-menuactive="true"] {
     background-color: rgba(255,255,255,0.20) !important;
 }
+menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
+    background: none !important;
+}
 menuseparator,
 toolbarseparator {
     appearance: none !important;
@@ -149,6 +158,15 @@ menupopup > menuitem[checked="true"] image,
 }}
 
 /* Private Mode menu popups */
+:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton),
+:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton) {
+    appearance: none !important;
+    color: #FFF !important;
+    background-color: rgba(0,0,0,0.1) !important;
+}
+:root[privatebrowsingmode="temporary"] menu[disabled="true"], :root[privatebrowsingmode="temporary"] menuitem[disabled="true"], :root[privatebrowsingmode="temporary"] menucaption[disabled="true"] {
+    background-color: none !important;
+}
 :root[privatebrowsingmode="temporary"] .menupopup-arrowscrollbox {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
@@ -193,10 +211,10 @@ menupopup > menuitem[checked="true"] image,
     --button-hover-bgcolor: rgba(0,0,0,0.2) !important;
     --panel-item-hover-bgcolor: rgba(0,0,0,0.1) !important;
 }
-:root[privatebrowsingmode="temporary"] menu:hover, :root[privatebrowsingmode="temporary"] menuitem:hover, :root[privatebrowsingmode="temporary"] menucaption:hover {
+:root[privatebrowsingmode="temporary"] menu:hover:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menuitem:hover:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menucaption:hover:not([disabled="true"]) {
     background-color: rgba(0,0,0,0.1) !important;
 }
-:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"], :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"], :root[privatebrowsingmode="temporary"] menucaption[_moz-menuactive="true"] {
+:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menucaption[_moz-menuactive="true"]:not([disabled="true"]) {
     background-color: rgba(0,0,0,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"]:-moz-lwtheme-brighttext {
@@ -510,7 +528,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 toolbarpaletteitem > #stop-reload-button {
     -moz-box-pack: center !important;
 }
-toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button) {
+toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button) {
     margin-right: -8px !important;
 }
 #PanelUI-menu-button {
@@ -629,6 +647,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     padding: 6px !important;
     border-radius: 3px !important;
     margin: -2px 2px 0px 2px !important;
+}
+#tabbrowser-tabs {
+    border-inline-start: none !important;
 }
 
 /* get rid of privatebrowsing icon in tab bar */
