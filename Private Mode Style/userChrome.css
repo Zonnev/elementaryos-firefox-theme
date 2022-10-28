@@ -328,7 +328,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 toolbarpaletteitem > #stop-reload-button {
     -moz-box-pack: center !important;
 }
-toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button) {
+toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button) {
     margin-right: -8px !important;
 }
 #PanelUI-menu-button {
@@ -443,6 +443,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     padding: 6px !important;
     border-radius: 3px !important;
     margin: -2px 2px 0px 2px !important;
+}
+#tabbrowser-tabs {
+    border-inline-start: none !important;
 }
 
 /* get rid of privatebrowsing icon in tab bar */
