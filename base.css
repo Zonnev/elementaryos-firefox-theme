@@ -258,7 +258,7 @@ Normal mode
 /*** FOCUS FIX ***/
 #nav-bar:-moz-window-inactive {
     background: linear-gradient(to bottom, #EAEAEA, #E9E9E9) !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
 }
 .titlebar-buttonbox:-moz-window-inactive {
@@ -283,7 +283,7 @@ Normal mode
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive{
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
 }
 :root[sizemode="maximized"] #nav-bar,
@@ -326,12 +326,12 @@ Normal mode
 #navigator-toolbox {
     border: none !important;
     background-color: rgba(0,0,0,0.6) !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
     -moz-box-ordinal-group: 0;
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     height: 46px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
 }
@@ -861,7 +861,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar:-moz-lwtheme-brighttext,
 :root[gtktiledwindow="true"] #nav-bar:-moz-lwtheme-brighttext:-moz-window-inactive{
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
 }
 :root[sizemode="maximized"] #nav-bar:-moz-lwtheme-brighttext,
@@ -877,7 +877,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /*** FOCUS FIX ***/
 #nav-bar:-moz-lwtheme-brighttext:-moz-window-inactive {
     appearance: none !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     background: linear-gradient(to bottom, #3B3B3B, #383838) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
 }
@@ -915,11 +915,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #navigator-toolbox:-moz-lwtheme-brighttext {
     border: none !important;
     background-color: rgba(255,255,255,0.2) !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar:-moz-lwtheme-brighttext {
     appearance: none !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     background: linear-gradient(to bottom, #343434, #2C2C2C) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
 }
@@ -1118,7 +1118,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive{
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
 }
 :root[sizemode="maximized"] #nav-bar,
@@ -1134,7 +1134,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 /*** FOCUS FIX for Tweaks ***/
 #nav-bar:-moz-window-inactive {
     appearance: none !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     background: linear-gradient(to bottom, #3B3B3B, #383838) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
 }
@@ -1177,11 +1177,11 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 #navigator-toolbox {
     border: none !important;
     background-color: rgba(255,255,255,0.2) !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
     appearance: none !important;
-    border-radius: 4.5px 4.5px 0 0 !important;
+    border-radius: 6px 6px 0 0 !important;
     background: linear-gradient(to bottom, #343434, #2C2C2C) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
 }
@@ -1413,6 +1413,9 @@ private browsing
 }
 :root[privatebrowsingmode="temporary"] {
     --toolbarseparator-color: rgba(255,255,255,0.6) !important;
+}
+#main-window[privatebrowsingmode="temporary"] #navigator-toolbox {
+    background-color: rgba(0,0,0,1) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #nav-bar {
     -moz-appearance: none !important;
