@@ -693,6 +693,9 @@ COLOURS
     background: linear-gradient(to right, rgba(94,75,197,1), rgba(162,76,141,1)) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
+#navigator-toolbox {
+    background-color: rgba(0,0,0,1) !important;
+}
 #searchbar:not([focused="true"]) {
     border: 1px solid rgba(0,0,0,0.4) !important;
     border-radius: 3px !important; 
@@ -738,7 +741,9 @@ COLOURS
 #TabsToolbar-customization-target > toolbarpaletteitem image,
 #nav-bar-customization-target > #zoom-controls > toolbarbutton > image,
 #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > image,
-#urlbar-search-mode-indicator-close {
+#urlbar-search-mode-indicator-close,
+#alltabs-button image,
+#unified-extensions-button image {
     fill: #fff !important;
 }
 :root   {
