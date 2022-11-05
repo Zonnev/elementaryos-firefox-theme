@@ -27,7 +27,10 @@ menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
     margin-right: -3px !important;
 }
 #BMB_bookmarksPopup .menu-iconic-left {
-    margin-left: -7px !important;
+    margin-left: 3px !important;
+}
+#BMB_bookmarksPopup .menu-text {
+    margin-left: 3px !important;
 }
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
@@ -45,7 +48,7 @@ toolbarseparator {
     margin: 3px 0px 3px 0px !important;
 }
 .widget-overflow-list toolbarbutton {
-    padding-left: 30px !important;
+    padding-left: 25px !important;
 }
 .checkbox-check,
 menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image {
@@ -332,7 +335,7 @@ Normal mode
     -moz-box-ordinal-group: 0;
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
     border-radius: 6px 6px 0 0 !important;
-    height: 46px !important;
+    height: 44px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
 }
 /* fullscreen fixes for the nav bar */
