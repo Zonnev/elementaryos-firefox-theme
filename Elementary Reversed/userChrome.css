@@ -12,7 +12,7 @@
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
     flex-direction: row-reverse !important;
-    top: 11px !important;
+    top: 9px !important;
     position: absolute !important;
     display: flex !important;
     width: calc(0px - 100vw) !important;

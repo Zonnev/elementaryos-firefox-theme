@@ -14,7 +14,7 @@
     appearance: none !important;
     flex-direction: row-reverse !important;
     margin-left: 4px !important;
-    top: 11px !important;
+    top: 9px !important;
     position: absolute !important;
     display: flex !important;
     width: calc(100vw - 11px) !important;

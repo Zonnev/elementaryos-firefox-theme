@@ -19,7 +19,7 @@ COLOURS & LAYOUT OF MENU POPUPS
     margin-right: -3px !important;
 }
 #BMB_bookmarksPopup .menu-iconic-left {
-    margin-left: -7px !important;
+    margin-left: -3px !important;
 }
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
@@ -136,7 +136,7 @@ LAYOUT
     appearance: none !important;
     flex-direction: row-reverse !important;
     margin-left: 4px !important;
-    top: 11px !important;
+    top: 9px !important;
     position: absolute !important;
     display: flex !important;
     width: calc(100vw - 11px) !important;
@@ -158,7 +158,7 @@ LAYOUT
 #nav-bar {
     -moz-box-ordinal-group: 0;
     border-radius: 6px 6px 0 0 !important;
-    height: 46px !important;
+    height: 44px !important;
     padding: 0px 42px 0px 48px !important;
 }
 /* fullscreen fixes for the nav bar */
