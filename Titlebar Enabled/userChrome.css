@@ -353,6 +353,9 @@ Normal mode
     -moz-window-dragging: no-drag !important;
     min-height: 25px !important;
 }
+#searchbar {
+    height: 25px !important;
+}
 #urlbar[focused="true"] {
     border: 1px solid silver !important;
     border-radius: 7px !important; 
@@ -385,8 +388,15 @@ Normal mode
 #PopupSearchAutoComplete {
     border-radius: 0 0 7px 7px !important;
 }
-.urlbar-icon {
-    margin: -4px 0px -4px 2px !important;
+.urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
+    margin: auto auto !important;
+    min-height: 16px !important;
+    min-width: 16px !important;
+}
+.urlbar-page-action, #urlbar-go-button, .search-go-button {
+    padding: 0px 6px !important;
+    min-height: 16px !important;
+    min-width: 16px !important;
 }
 :root {
     --urlbar-icon-padding: 4px !important;
