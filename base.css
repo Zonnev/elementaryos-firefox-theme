@@ -358,6 +358,8 @@ Normal mode
 #urlbar, #searchbar {
     -moz-window-dragging: no-drag !important;
     min-height: 25px !important;
+}
+#searchbar {
     height: 25px !important;
 }
 #urlbar[focused="true"] {
