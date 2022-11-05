@@ -392,7 +392,14 @@ Normal mode
     border-radius: 0 0 7px 7px !important;
 }
 .urlbar-icon {
-    margin: 2px 0px 2px 2px !important;
+    margin: auto auto !important;
+    min-height: 16px !important;
+    min-width: 16px !important;
+}
+.urlbar-page-action, #urlbar-go-button, .search-go-button {
+    padding: 0px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
 }
 :root {
     --urlbar-icon-padding: 4px !important;
