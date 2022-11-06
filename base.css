@@ -401,8 +401,7 @@ Normal mode
 }
 .urlbar-page-action, #urlbar-go-button, .search-go-button {
     padding: 0px 6px !important;
-    min-height: 16px !important;
-    min-width: 16px !important;
+    height: 19px !important;
 }
 :root {
     --urlbar-icon-padding: 4px !important;
