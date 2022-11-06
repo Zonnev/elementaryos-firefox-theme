@@ -31,10 +31,7 @@ menu, menuitem, menucaption {
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
     overflow: auto !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
-}
-panelview {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px rgba(0,0,0,0.15) !important;
 }
 menuseparator,
 toolbarseparator {
@@ -79,10 +76,7 @@ toolbarseparator:-moz-lwtheme-brighttext  {
     border-bottom: 1px solid rgba(255,255,255,0.05) !important;
 }
 .menupopup-arrowscrollbox:-moz-lwtheme-brighttext {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
-}
-panelview:-moz-lwtheme-brighttext {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03), 0px 0px 3px rgba(0,0,0,0.15) !important;
 }
 :root:-moz-lwtheme-brighttext {
     --arrowpanel-background: #303030 !important;
@@ -123,10 +117,7 @@ toolbarseparator {
     border-bottom: 1px solid rgba(255,255,255,0.05) !important;
 }
 .menupopup-arrowscrollbox {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
-}
-panelview {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03) !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.03), 0px 0px 3px rgba(0,0,0,0.15) !important;
 }
 :root {
     --arrowpanel-background: Field !important;
@@ -152,10 +143,7 @@ menupopup > menuitem[checked="true"] image,
 
 /* Private Mode menu popups */
 :root[privatebrowsingmode="temporary"] .menupopup-arrowscrollbox {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
-}
-:root[privatebrowsingmode="temporary"] panelview {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05) !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px rgba(0,0,0,0.15) !important;
 }
 :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled="true"]),
 :root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled="true"]) {
