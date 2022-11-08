@@ -1,5 +1,5 @@
 # An elementary OS theme for Firefox
-![Screenshot](Promo_image.png)
+![Screenshot](Promo_image_nov2022.png)
 
 ## 🙏 Credits
 
