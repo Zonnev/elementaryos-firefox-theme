@@ -329,6 +329,13 @@ Normal mode
 }
 
 /*** URLBAR + MEGABAR ***/
+:root #urlbar {
+    --urlbar-height: 25px !important;
+}
+#urlbar-input-container label {
+    margin: 2px 0px !important;
+    line-height: 15px !important;
+}
 #urlbar-container,
 #search-container {
     -moz-window-dragging: drag !important;
@@ -384,11 +391,11 @@ Normal mode
 }
 .urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
     margin: auto auto !important;
-    min-height: 16px !important;
-    min-width: 16px !important;
+    padding: 1px 0px 1px 0px !important;
+    min-height: 19px !important;
 }
 .urlbar-page-action, #urlbar-go-button, .search-go-button {
-    padding: 0px 6px !important;
+    padding: 0px 5px !important;
     height: 19px !important;
 }
 :root {
