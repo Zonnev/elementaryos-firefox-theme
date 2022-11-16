@@ -164,6 +164,13 @@ LAYOUT
 }
 
 /*** URLBAR + MEGABAR ***/
+:root #urlbar {
+    --urlbar-height: 25px !important;
+}
+#urlbar-input-container label {
+    margin: 2px 0px !important;
+    line-height: 15px !important;
+}
 #urlbar-container,
 #search-container {
     -moz-window-dragging: drag !important;
@@ -210,13 +217,12 @@ LAYOUT
 }
 .urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
     margin: auto auto !important;
-    min-height: 16px !important;
-    min-width: 16px !important;
+    padding: 1px 0px 1px 0px !important;
+    min-height: 19px !important;
 }
 .urlbar-page-action, #urlbar-go-button, .search-go-button {
-    padding: 0px 6px !important;
-    min-height: 16px !important;
-    min-width: 16px !important;
+    padding: 0px 5px !important;
+    min-height: 19px !important;
 }
 :root {
     --urlbar-icon-padding: 4px !important;
@@ -363,7 +369,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     width: 100vw !important;
     height: 36px !important;
 }
-#TabsToolbar .toolbarbutton-1 {
+#TabsToolbar .toolbarbutton-1:not(#new-tab-button):not(#tabs-newtab-button):not(#firefox-view-button) {
     margin: auto 2px !important;
 }
 .toolbar-items {
@@ -440,6 +446,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     border-radius: 3px !important;
     margin: -2px 0px 0px 0px !important;
 }
+#new-tab-button,
+#tabs-newtab-button {
+    margin: 0px 0px 0px 2px !important;
+}
 .all-tabs-item {
   margin-inline: 0px !important;
   border-radius: 0px !important;
@@ -449,7 +459,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     height: 28px !important;
     padding: 6px !important;
     border-radius: 3px !important;
-    margin: -2px 2px 0px 2px !important;
+    margin: -2px 0px 0px 0px !important;
+}
+#firefox-view-button {
+    margin: 0px 0px 0px 2px !important;
 }
 #tabbrowser-tabs {
     border-inline-start: none !important;
