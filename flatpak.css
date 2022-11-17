@@ -23,7 +23,7 @@ menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disable
     background-color: rgba(0,0,0,0) !important;
 }
 .checkbox-check,
-menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image {
+menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image {
     height: 16px !important;
     width: 16px !important;
     background-color: white !important;
@@ -71,7 +71,7 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
 	margin: 0px 6px !important;
 }
 .checkbox-check:-moz-lwtheme-brighttext,
-menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image:-moz-lwtheme-brighttext {
+menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image:-moz-lwtheme-brighttext {
     height: 16px !important;
     width: 16px !important;
     background-color: rgba(68,68,68,1) !important;
@@ -198,7 +198,7 @@ menubar > menu[open="true"] {
 	color: #fff !important;
 }
 .checkbox-check,
-menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image {
+menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image {
     height: 16px !important;
     width: 16px !important;
     background-color: rgba(68,68,68,1) !important;
