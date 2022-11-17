@@ -45,7 +45,7 @@ toolbarseparator {
     padding-left: 25px !important;
 }
 .checkbox-check,
-menupopup:not(#BMB_bookmarksPopup):not(.new-tab-popup):not(#contentAreaContextMenu) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image {
+menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image {
     height: 16px !important;
     width: 16px !important;
     background-color: white !important;
