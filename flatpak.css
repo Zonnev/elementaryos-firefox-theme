@@ -296,3 +296,12 @@ menupopup > menuitem[checked="true"] image,
 .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture], [crashed]):not(:is([pinned])) {
     fill: #fff !important;
 }}
+
+
+/*** Normal mode menu ***/
+
+menu[_moz-menuactive="true"],
+menubar > menu[open] {
+    background: rgba(0,0,0,0.05) !important;
+    color: black !important;
+}
