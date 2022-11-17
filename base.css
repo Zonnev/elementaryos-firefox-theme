@@ -88,7 +88,7 @@ toolbarseparator:-moz-lwtheme-brighttext  {
     --button-hover-bgcolor: rgba(255,255,255,0.13) !important;
 }
 .checkbox-check:-moz-lwtheme-brighttext,
-menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image:-moz-lwtheme-brighttext {
+menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image:-moz-lwtheme-brighttext {
     height: 16px !important;
     width: 16px !important;
     background-color: rgba(68,68,68,1) !important;
@@ -130,7 +130,7 @@ toolbarseparator {
     --arrowpanel-background: Field !important;
 }
 .checkbox-check,
-menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-with-favicon):not(.subviewbutton) image {
+menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image {
     height: 16px !important;
     width: 16px !important;
     background-color: rgba(68,68,68,1) !important;
