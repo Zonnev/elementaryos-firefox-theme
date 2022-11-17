@@ -996,10 +996,12 @@ menubar > menu[open="true"]:-moz-lwtheme-brighttext {
 toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon:-moz-lwtheme-brighttext {
     background: rgba(255,255,255, 0.18) !important;
 }
-toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon:-moz-lwtheme-brighttext {
+toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon:-moz-lwtheme-brighttext,
+toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack:-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.2) !important;
 }
-toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack:-moz-lwtheme-brighttext {
+toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :hover:active):-moz-lwtheme-brighttext,
+toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:active):-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.2) !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon:-moz-lwtheme-brighttext,
@@ -1266,10 +1268,12 @@ menubar > menu[open="true"] {
 toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     background: rgba(255,255,255, 0.3) !important;
 }
-toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon {
+toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
+toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
     background-color: rgba(255,255,255,0.2) !important;
 }
-toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
+toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :hover:active),
+toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:active) {
     background-color: rgba(255,255,255,0.2) !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
