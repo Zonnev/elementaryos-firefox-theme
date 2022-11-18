@@ -489,7 +489,8 @@ toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack,
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1 {
     background: none !important;
     box-shadow: none !important;
-    padding: 4px !important;
+    padding: 8px !important;
+    margin: -4px !important;
     border-radius: 50% !important;
 }
 toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
@@ -499,8 +500,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any
 }
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :hover:active),
 toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:active) {
-    background: rgba(51,51,51, 0.15) !important;
-    clip-path: circle(15px) !important;
+    background: radial-gradient(circle, rgba(51,51,51, 0.15) 49%, rgba(51,51,51, 0) 50%) !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
@@ -1002,7 +1002,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any
 }
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :hover:active):-moz-lwtheme-brighttext,
 toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:active):-moz-lwtheme-brighttext {
-    background-color: rgba(255,255,255,0.2) !important;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 49%, rgba(255,255,255,0) 50%) !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon:-moz-lwtheme-brighttext,
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack:-moz-lwtheme-brighttext  {
@@ -1274,7 +1274,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any
 }
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :hover:active),
 toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:active) {
-    background-color: rgba(255,255,255,0.2) !important;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 49%, rgba(255,255,255,0) 50%) !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack  {
