@@ -767,7 +767,7 @@ function installThemeAtBrowserProfile {
     info "⬇️  Downloading ${BASE_CSS} (${BASE_URL})"
     wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
 
-    if [[ "${BROWSER}" == *"Flatpak"* ]]; then
+    if [[ "${BROWSER}" == *"(📦 Flatpak)" ]] || [[ "${BROWSER}" == *"(📦 Snap)" ]]; then
       info "⬇️  Downloading ${FLATPAK_CSS} (${FLATPAK_URL})"
       wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
     elif [ -f "${FLATPAK_FILE}" ]; then
