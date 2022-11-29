@@ -13,6 +13,7 @@ For now theme installation is supported for:
 2. [🦊 Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)
    installed with apt package manager.
 3. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
+3. [🦊 Firefox 📦 Snap version](https://snapcraft.io/firefox).
 4. [🐺 Librewolf Appimage version](https://librewolf.net/installation/linux/).
 5. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
 6. [🧅 Tor Browser](https://community.torproject.org/onion-services/setup/install/).

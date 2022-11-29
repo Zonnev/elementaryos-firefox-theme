@@ -16,6 +16,11 @@ function getFlatpakProcessIdCommand {
   echo "flatpak ps --columns=pid,application | grep \"${FLATPAK_ID}\" | cut -f1"
 }
 
+function getSnapProcessIdCommand {
+  local PROCESS_NAME="${1}"
+  echo "for pid in \$(pidof ${PROCESS_NAME}); do ps --no-headers \${pid} | grep '/snap/' | awk '{print \$1}'; done"
+}
+
 declare -a BROWSERS
 declare -A BROWSERS_PROCESS_ID
 declare -A BROWSERS_PROFILES_ROOTS
@@ -37,6 +42,11 @@ BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox"
+
+BROWSER="🦊 Firefox (📦 Snap)";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]="$(getSnapProcessIdCommand "firefox")"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/snap/firefox/common/.mozilla/firefox"
 
 BROWSER="🐺 Librewolf";
 BROWSERS+=("${BROWSER}");
@@ -757,7 +767,7 @@ function installThemeAtBrowserProfile {
     info "⬇️  Downloading ${BASE_CSS} (${BASE_URL})"
     wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
 
-    if [[ "${BROWSER}" == *"Flatpak"* ]]; then
+    if [[ "${BROWSER}" == *"(📦 Flatpak)" ]] || [[ "${BROWSER}" == *"(📦 Snap)" ]]; then
       info "⬇️  Downloading ${FLATPAK_CSS} (${FLATPAK_URL})"
       wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
     elif [ -f "${FLATPAK_FILE}" ]; then
