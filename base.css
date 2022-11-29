@@ -556,11 +556,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #scrollbutton-up image:active,
 #scrollbutton-down:-moz-locale-dir(ltr) image:active {
-    background: #cce1f4 !important;
+    background: rgba(51,51,51, 0.15) !important;
 }
 :root {
-    --toolbarbutton-hover-background: #cce1f4 !important;
-    --toolbarbutton-active-background: #cce1f4 !important;
+    --toolbarbutton-hover-background: rgba(51,51,51, 0.15) !important;
+    --toolbarbutton-active-background: rgba(51,51,51, 0.15) !important;
 }
 
 /*** TAB BAR ***/

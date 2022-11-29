@@ -390,12 +390,15 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:ac
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
-    background: #cce1f4 !important;
+    background: rgba(255,255,255,0.2) !important;
     clip-path: none !important;
 }
 #PanelUI-button {
     border: none !important;
     margin-left: 0px !important;
+}
+#unified-extensions-button {
+    margin-left: 4px !important;
 }
 #nav-bar-overflow-button {
     margin-right: -4px !important;
@@ -418,7 +421,7 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover:ac
 toolbarpaletteitem > #stop-reload-button {
     -moz-box-pack: center !important;
 }
-toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button) {
+toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button):not(#PlacesChevron) {
     margin-right: -8px !important;
 }
 #PanelUI-menu-button {
@@ -432,11 +435,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #scrollbutton-up image:active,
 #scrollbutton-down:-moz-locale-dir(ltr) image:active {
-    background: #cce1f4 !important;
+    background: rgba(255,255,255,0.2) !important;
 }
 :root {
-    --toolbarbutton-hover-background: #cce1f4 !important;
-    --toolbarbutton-active-background: #cce1f4 !important;
+    --toolbarbutton-hover-background: rgba(255,255,255,0.2) !important;
+    --toolbarbutton-active-background: rgba(255,255,255,0.2) !important;
 }
 
 /*** TAB BAR ***/
@@ -446,14 +449,14 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     width: 100vw !important;
     height: 36px !important;
 }
-#TabsToolbar .toolbarbutton-1:not(#new-tab-button):not(#tabs-newtab-button):not(#firefox-view-button) {
+#TabsToolbar .toolbarbutton-1:not(#new-tab-button):not(#tabs-newtab-button):not(#firefox-view-button):not(#alltabs-button) {
     margin: auto 2px !important;
 }
 .toolbar-items {
     min-height: 36px !important;
 }
 .titlebar-spacer[type="post-tabs"] {
-    width: 15px !important;
+    width: 0px !important;
 }
 :root[sizemode="fullscreen"] #TabsToolbar {
     margin-top: -1px !important;
@@ -544,6 +547,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs {
     border-inline-start: none !important;
 }
+#alltabs-button {
+    margin-right: 5px !important;
+    padding: 0px !important;
+    border-radius: 50% !important;
+}
 
 /* get rid of privatebrowsing icon in tab bar */
 .private-browsing-indicator {
@@ -573,7 +581,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #TabsToolbar tab .tab-close-button:active {
     opacity: 1 !important;
-    background: #cce1f4 !important;
+    background: rgba(255,255,255,0.2) !important;
 }
 
 /* touch density adjustment */
@@ -685,6 +693,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #wrapper-personal-bookmarks,
 #wrapper-import-button {
     min-height: 33px !important;
+}
+#PlacesChevron {
+    margin: 5px !important;
 }
 
 /*** DROPDOWN MENU CONTENT ***/
@@ -959,7 +970,7 @@ menubar > menu[open] {
 }}
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hover:active) > .toolbarbutton-badge-stack  {
-    background: #503da8 !important;
+    background: rgba(255,255,255, 0.2) !important;
     clip-path: none !important;
 }
 :root {
@@ -1027,7 +1038,7 @@ scrollbox > toolbarbutton > .toolbarbutton-text {
 }
 #TabsToolbar tab .tab-close-button:active {
     opacity: 1 !important;
-    background: #503da8 !important;
+    background: rgba(255,255,255, 0.2) !important;
 }
 
 /*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
