@@ -40,6 +40,10 @@ toolbarseparator {
     border-bottom: 1px solid rgba(255,255,255,1) !important;
     margin: 3px 0px 3px 0px !important;
 }
+menuseparator::before,
+toolbarseparator::before {
+    border-top: none !important;
+}
 .widget-overflow-list toolbarbutton {
     padding-left: 30px !important;
 }

@@ -61,6 +61,10 @@ toolbarseparator {
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     margin: 3px 0px 3px 0px !important;
 }
+menuseparator::before,
+toolbarseparator::before {
+    border-top: none !important;
+}
 menupopup, panel {
     --panel-background: #8266C4 !important;
     --panel-color: #fff !important;
