@@ -492,7 +492,7 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     padding: 0px !important;
     margin: -4px !important;
 }
-toolbar .toolbarbutton-1:not(#alltabs-button) > .toolbarbutton-badge-stack,
+toolbar .toolbarbutton-1:not(#alltabs-button):not(#PanelUI-menu-button) > .toolbarbutton-badge-stack,
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1 {
     background: none !important;
     box-shadow: none !important;
