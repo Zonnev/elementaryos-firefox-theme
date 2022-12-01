@@ -827,6 +827,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin: 3px !important;
     border-radius: 3px !important;
 }
+#PlacesChevron image {
+    background: none !important;
+}
 #import-button {
     margin-left: 3px !important;
     padding: 4px !important;
