@@ -326,7 +326,7 @@ LAYOUT
 }
 
 /*** TOOLBAR ***/
-toolbar:not(.browser-toolbar.chromeclass-directories.instant.customization-target) .toolbarbutton-1 > .toolbarbutton-icon {
+toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon {
     width: 28px !important;
     height: 28px !important;
     padding: 6px !important;
