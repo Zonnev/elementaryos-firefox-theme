@@ -22,11 +22,11 @@ menu, menuitem, menucaption {
     --arrowpanel-background: #fafafa !important;
     --panel-separator-margin: 4px 0px 4px 0px !important;
 }
+#BMB_bookmarksPopup .menu-text {
+    margin-left: 0px !important;
+}
 .toolbaritem-combined-buttons {
     margin-right: -3px !important;
-}
-#BMB_bookmarksPopup .menu-iconic-left {
-    margin-left: -3px !important;
 }
 .menupopup-arrowscrollbox {
     border-radius: 7px !important;
@@ -43,9 +43,6 @@ toolbarseparator {
 menuseparator::before,
 toolbarseparator::before {
     border-top: none !important;
-}
-.widget-overflow-list toolbarbutton {
-    padding-left: 30px !important;
 }
 .checkbox-check,
 menupopup:not(#BMB_bookmarksPopup) > menuitem:not(.menuitem-iconic) image {
