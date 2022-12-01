@@ -701,8 +701,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     min-height: 33px !important;
 }
 #PlacesChevron {
-    padding: 5px 6px !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 2px 3px !important;
     margin: 3px !important;
+    border-radius: 3px !important;
 }
 #import-button {
     margin-left: 3px !important;
