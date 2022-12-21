@@ -13,11 +13,11 @@
 .titlebar-buttonbox {
     appearance: none !important;
     flex-direction: row-reverse !important;
-    margin-left: 4px !important;
+    margin-left: 6px !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 11px) !important;
+    width: calc(100vw - 12px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }
@@ -29,5 +29,5 @@
 
 /* makes room for window control buttons */
 #nav-bar {
-    padding: 0px 42px 0px 48px !important;
+    padding: 0px 41px 0px 45px !important;
 }

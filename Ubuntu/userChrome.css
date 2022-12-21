@@ -14,8 +14,9 @@
     flex-direction: row-reverse !important;
     top: 9px !important; 
     position: absolute !important;
+    margin-left: 3px !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: start !important;
 }
@@ -27,5 +28,5 @@
 
 /* makes room for window control buttons */
 #nav-bar {
-    padding: 0px 6px 0px 110px !important;
+    padding: 0px 0px 0px 108px !important;
 }

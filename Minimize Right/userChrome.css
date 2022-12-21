@@ -21,10 +21,10 @@
 
 /* brings max and min button to the right */
 .titlebar-min { 
-    margin-left: calc(100vw - 72px) !important;
+    margin-left: calc(100vw - 71px) !important;
 }
 .titlebar-close {
-    margin-left: calc(12px - 100vw) !important;
+    margin-left: calc(14px - 100vw) !important;
 }
 
 /* dont show window controls in fullscreen */
@@ -34,5 +34,5 @@
 
 /* makes room for window control buttons */
 #nav-bar {
-    padding: 0px 74px 0px 48px !important;
+    padding: 0px 73px 0px 45px !important;
 }

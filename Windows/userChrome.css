@@ -11,11 +11,11 @@
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
-    margin-left: -94px !important;
+    margin-left: -96px !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: start !important;
 }
@@ -27,5 +27,5 @@
 
 /* makes room for window control buttons */
 #nav-bar {
-    padding: 0px 105px 0px 4px !important;
+    padding: 0px 105px 0px 0px !important;
 }
