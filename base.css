@@ -619,11 +619,13 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 .tabbrowser-tab[selected="true"] {
     min-height: 32px !important;
+    max-height: 32px !important;
     border-radius: 3.5px !important;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.03) !important;
 }
 .tabbrowser-tab:not([selected="true"]) {
     min-height: 32px !important;
+    max-height: 32px !important;
     border-radius: 3.5px !important;
 }
 .tab-background:not([selected="true"]) {
