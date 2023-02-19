@@ -9,7 +9,7 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 For now theme installation is supported for:
 
 1. [🦊 Firefox](https://www.mozilla.org/en-US/firefox/new/) installed with apt package manager.
-   To install it run command `sudo apt install firefox` with your Terminal.
+   Follow instructions from [ask ubuntu](https://askubuntu.com/a/1404401) to install it.
 2. [🦊 Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)
    installed with apt package manager.
 3. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
