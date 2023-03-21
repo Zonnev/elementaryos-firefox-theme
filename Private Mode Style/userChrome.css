@@ -196,14 +196,15 @@ LAYOUT
     display: flex !important;
     pointer-events: none;
 }
-#TabsToolbar .titlebar-buttonbox-container {
-    display: none !important;
+#titlebar {
+    -moz-box-ordinal-group: 2;
+    order: 2;
 }
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
     appearance: none !important;
-    flex-direction: row-reverse !important;
+    flex-direction: row !important;
     margin-left: 4px !important;
     top: 9px !important;
     position: absolute !important;
@@ -457,7 +458,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     -moz-appearance: none !important;
     padding: 0 !important;
     width: 100vw !important;
-    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
 }
 #TabsToolbar .toolbarbutton-1:not(#new-tab-button):not(#tabs-newtab-button):not(#firefox-view-button):not(#alltabs-button) {
     margin: auto 2px !important;
@@ -476,6 +478,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
+    flex-direction: row-reverse !important;
     padding: 0px 10px 3px 6px !important;
 }
 .tab-content[pinned] {
@@ -621,6 +624,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 .tabbrowser-tab {
     -moz-box-direction: reverse !important;
+    flex-direction: row-reverse !important;
 }
 .tab-icon-overlay:not([crashed]):is([pinned], [sharing]) {
     inset-inline-end: -10px !important;
@@ -676,7 +680,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     background-color: transparent !important;
 }
 #PersonalToolbar {
-    -moz-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 2;
+    order: 2;
     padding: 0px !important;
     max-height: 35px !important;
     min-height: 35px !important;
