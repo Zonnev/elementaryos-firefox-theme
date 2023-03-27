@@ -309,9 +309,8 @@ Normal mode
     display: flex !important;
     pointer-events: none;
 }
-#titlebar {
-    -moz-box-ordinal-group: 2;
-    order: 2;
+#TabsToolbar .titlebar-buttonbox-container {
+    display: none !important;
 }
 
 /*** NAV BAR ***/
@@ -321,6 +320,8 @@ Normal mode
     border-radius: 6px 6px 0 0 !important;
 }
 #nav-bar {
+    -moz-box-ordinal-group: 0;
+    order: -1;
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
     border-radius: 6px 6px 0 0 !important;
     height: 44px !important;
@@ -798,7 +799,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     height: 33px !important;
 }
 #toolbar-menubar {
-    -moz-box-ordinal-group: 1 !important;
+    -moz-box-ordinal-group: 1;
+    order: 0;
     margin: 0px !important;
     padding: 0px !important;
     background: #DFDFDF !important;
