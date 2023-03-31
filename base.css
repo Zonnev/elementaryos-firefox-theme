@@ -270,6 +270,9 @@ Normal mode
 #toolbar-menubar:-moz-window-inactive {
     background: #E9E9E9 !important;
 }
+#PanelUI-menu-button:-moz-window-inactive {
+    opacity: 0.5 !important;
+}
 
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
