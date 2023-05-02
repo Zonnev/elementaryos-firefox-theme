@@ -26,4 +26,5 @@ url-prefix(about:addons) {
     --in-content-button-background-active: #575757 !important;
     --in-content-primary-button-background: #1E90FF !important;
     --in-content-primary-button-background-hover: rgba(150,210,255) !important;
+    --in-content-focus-outline-color: #1E90FF !important;
 }}
