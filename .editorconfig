@@ -9,3 +9,4 @@ trim_trailing_whitespace = true
 [*.sh]
 indent_size = 2
 indent_style = space
+

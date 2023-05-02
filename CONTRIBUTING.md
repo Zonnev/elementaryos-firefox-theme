@@ -26,7 +26,7 @@ The other css files are `userChrome.css` and `userContent.css` and `flatpak.css`
 
 If you use `Private Mode Style` or `Titlebar Enabled` theme then you also have a `userChrome.css` just for that special theme.
 
-**Note:** The `userChrome.css` is always the main file that is used by Firefox to theme the browser. That is why `userChrome.css` from a window control button layout imports `base.css` to make the browser theme complete.
+**Note:** The `userChrome.css` is always the main file that is used by Firefox to theme the browser. That is why `userChrome.css` for a window control button layout imports `base.css` to make the browser theme complete.
 
 ## Fork and clone
 
