@@ -23,7 +23,7 @@ For now theme installation is supported for:
 *Other installations have limited support. [We also welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
 
-Use this one line install script which let you select the window buttons layout you like:
+Use this one line install script. When you want a different window control layout, use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/ first to select one, after that this script will automatically install the right userChrome:
 
 ```bash
 bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/install.sh")
