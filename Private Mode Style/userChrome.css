@@ -203,7 +203,7 @@ LAYOUT
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
     appearance: none !important;
-    flex-direction: row-reverse !important;
+    flex-direction: row !important;
     margin-left: 4px !important;
     top: 9px !important;
     position: absolute !important;

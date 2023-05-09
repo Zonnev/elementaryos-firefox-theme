@@ -20,11 +20,8 @@
 }
 
 /* brings max and min button to the right */
-.titlebar-min { 
-    margin-left: calc(100vw - 71px) !important;
-}
-.titlebar-close {
-    margin-left: calc(14px - 100vw) !important;
+.titlebar-min {
+    margin-left: calc(100vw - 99px) !important;
 }
 
 /* dont show window controls in fullscreen */

@@ -11,22 +11,13 @@
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
-    flex-direction: row-reverse !important;
+    flex-direction: row !important;
     top: 9px !important; 
     position: absolute !important;
     display: flex !important;
     width: calc(100vw - 6px) !important;
     height: 25px !important;
     justify-content: start !important;
-}
-
-/* brings max and min button to the right */
-.titlebar-restore,
-.titlebar-max { 
-    margin-left: 36px !important;
-}
-.titlebar-min { 
-    margin-left: -62px !important;
 }
 
 /* dont show window controls in fullscreen */
