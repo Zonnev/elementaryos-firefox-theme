@@ -390,13 +390,12 @@ Normal mode
     border-radius: 0 0 7px 7px !important;
 }
 .urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
-    margin: auto auto !important;
-    padding: 1px 0px 1px 0px !important;
     min-height: 19px !important;
+    margin: -4px 0px !important;
 }
-.urlbar-page-action {
-    padding: 0px 0px !important;
-    min-height: 19px !important;
+.urlbar-page-action, #notification-popup-box {
+    height: 19px !important;
+    width: 24px !important;
 }
 #urlbar-go-button {
     padding: 2px !important;
@@ -416,7 +415,7 @@ Normal mode
     width: 16px !important;
     height: 16px !important;
     padding: 0px !important;
-    margin: 0px 6px !important;
+    margin: 0px 4px !important;
 }
 #urlbar .search-one-offs:not([hidden]) {
     padding-block: 5px !important;
