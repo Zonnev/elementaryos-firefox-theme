@@ -337,7 +337,8 @@ Normal mode
 
 /*** URLBAR + MEGABAR ***/
 :root #urlbar {
-    --urlbar-height: 25px !important;
+    --urlbar-min-height: 25px !important;
+    --urlbar-max-height: 25px !important;
 }
 #urlbar-input-container label {
     margin: 2px 0px !important;
@@ -402,11 +403,12 @@ Normal mode
     min-height: 19px !important;
 }
 .urlbar-page-action, #urlbar-go-button, .search-go-button {
-    padding: 0px 5px !important;
+    padding: 0px 0px !important;
     min-height: 19px !important;
 }
 :root {
     --urlbar-icon-padding: 4px !important;
+    --urlbar-icon-border-radius: 2px !important;
 }
 #urlbar-zoom-button {
     padding: 0px 3px !important;
