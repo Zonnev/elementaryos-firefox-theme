@@ -336,12 +336,11 @@ Normal mode
 }
 
 /*** URLBAR + MEGABAR ***/
-:root #urlbar {
+:root {
     --urlbar-min-height: 25px !important;
     --urlbar-max-height: 25px !important;
 }
 #urlbar-input-container label {
-    margin: 2px 0px !important;
     line-height: 15px !important;
 }
 #urlbar-container,
@@ -351,12 +350,18 @@ Normal mode
 #urlbar-input-container {
     border-radius: 3px !important;
 }
+#urlbar[breakout][breakout-extend] {
+    left: calc(0 * var(--urlbar-margin-inline)) !important;
+    width: calc(100% + 0 * var(--urlbar-margin-inline)) !important;
+}
 #urlbar[breakout][breakout-extend][breakout-extend-animate] {
-    top: 2.5px !important;
+    top: 10px !important;
 }
 #urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container {
-    height: 35px !important;
-    padding: 2px !important;
+    height: 24px !important;
+    padding-block: 1px !important;
+    padding-inline: 1px !important;
+    margin: -1px 0px !important;
 }
 #urlbar, #searchbar {
     -moz-window-dragging: no-drag !important;
@@ -367,12 +372,12 @@ Normal mode
 }
 #urlbar[focused="true"] {
     border: 1px solid silver !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
     background: #ffffff !important;
 }
 #searchbar[focused="true"] {
     border: 1px solid silver !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
     background: #ffffff !important;
 }
 #searchbar:not([focused="true"]) {
@@ -395,10 +400,10 @@ Normal mode
     outline: none !important;
 }
 #PopupSearchAutoComplete {
-    border-radius: 0 0 7px 7px !important;
+    border-radius: 3px !important;
 }
 .urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
-    min-height: 19px !important;
+    height: 19px !important;
     margin: -4px 0px !important;
 }
 .urlbar-page-action, #notification-popup-box {
@@ -426,10 +431,18 @@ Normal mode
     margin: 0px 4px !important;
 }
 #urlbar .search-one-offs:not([hidden]) {
-    padding-block: 5px !important;
+    padding-block: 2px !important;
+    height: 25px !important;
 }
 .search-one-offs[is_searchbar="true"]) {
     border-top: none !important;
+}
+#urlbar .search-panel-one-offs-header,
+#urlbar .search-panel-one-offs,
+#urlbar .search-panel-one-offs-container,
+#urlbar .searchbar-engine-one-off-item {
+    height: 20px !important;
+    min-height: 20px !important;
 }
 
 /* selected text and icons url bar */
