@@ -1015,7 +1015,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #urlbar[focused="true"]:-moz-lwtheme-brighttext {
     border: 1px solid #2B2C2C !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
 	background: #3A3A3A !important; 
 }
 #urlbar:not([focused="true"]):-moz-lwtheme-brighttext,
@@ -1280,12 +1280,12 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover, :
 }
 #urlbar[focused="true"] {
     border: 1px solid #2B2C2C !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
 	background: #3A3A3A !important; 
 }
 #searchbar[focused="true"] {
     border: 1px solid #2B2C2C !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
 	background: #3A3A3A !important;
 }
 #urlbar:not([focused="true"]),
@@ -1536,7 +1536,7 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] #urlbar[focused="true"] {
     border: 1px solid rgba(0,0,0,0.4) !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
 }
 #main-window[privatebrowsingmode="temporary"] .urlbarView-url,

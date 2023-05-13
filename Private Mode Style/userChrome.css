@@ -866,7 +866,7 @@ COLOURS
 }
 #urlbar[focused="true"] {
     border: 1px solid rgba(0,0,0,0.4) !important;
-    border-radius: 7px !important; 
+    border-radius: 4px !important; 
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
 }
 .urlbarView-url,
