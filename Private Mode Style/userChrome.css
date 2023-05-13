@@ -324,7 +324,7 @@ LAYOUT
 }
 #urlbar .search-one-offs:not([hidden]) {
     padding-block: 5px !important;
-    height: 25px !important;
+    min-height: 25px !important;
 }
 .search-one-offs[is_searchbar="true"]) {
     border-top: none !important;
@@ -333,8 +333,7 @@ LAYOUT
 #urlbar .search-panel-one-offs,
 #urlbar .search-panel-one-offs-container,
 #urlbar .searchbar-engine-one-off-item {
-    height: 20px !important;
-    min-height: 20px !important;
+    min-height: 25px !important;
 }
 
 /* selected text and icons url bar */
