@@ -263,7 +263,7 @@ LAYOUT
     height: 24px !important;
     padding-block: 1px !important;
     padding-inline: 1px !important;
-    margin: -1px 0px !important;
+    margin: -1px 0px 2px 0px !important;
 }
 #urlbar, #searchbar {
     -moz-window-dragging: no-drag !important;
