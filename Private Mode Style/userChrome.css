@@ -237,9 +237,14 @@ LAYOUT
 }
 
 /*** URLBAR + MEGABAR ***/
-:root #urlbar {
-    --urlbar-min-height: 25px !important;
-    --urlbar-max-height: 25px !important;
+#urlbar[breakout][breakout-extend][breakout-extend-animate],
+#urlbar[breakout][breakout-extend],
+#urlbar[breakout] {
+    --urlbar-height: 25px !important;
+    --urlbar-toolbar-height: 25px !important;
+    top: 10px !important;
+    left: 0px !important;
+    width: 100% !important;
 }
 #urlbar-input-container label {
     margin: 2px 0px !important;
@@ -250,23 +255,14 @@ LAYOUT
     -moz-window-dragging: drag !important;
 }
 #urlbar-input-container {
-    border-radius: 3px !important;
-}
-#urlbar[breakout][breakout-extend] {
-    left: calc(0 * var(--urlbar-margin-inline)) !important;
-    width: calc(100% + 0 * var(--urlbar-margin-inline)) !important;
-}
-#urlbar[breakout][breakout-extend][breakout-extend-animate] {
-    top: 10px !important;
-}
-#urlbar[breakout][breakout-extend][breakout-extend-animate] > #urlbar-input-container {
     height: 24px !important;
-    padding-block: 1px !important;
-    padding-inline: 1px !important;
-    margin: -1px 0px 2px 0px !important;
+    border-radius: 3px !important;
+    padding: 0px 0px 1px 0px !important;
 }
 #urlbar, #searchbar {
     -moz-window-dragging: no-drag !important;
+}
+#urlbar {
     min-height: 25px !important;
 }
 #searchbar {
