@@ -364,7 +364,8 @@ Normal mode
     min-height: 25px !important;
 }
 #searchbar {
-    height: 25px !important;
+    min-height: 25px !important;
+    max-height: 25px !important;
 }
 #urlbar[focused="true"] {
     border: 1px solid silver !important;
