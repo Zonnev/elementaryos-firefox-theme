@@ -417,6 +417,10 @@ Normal mode
     padding: 0px 4px 1px 4px !important;
     margin: 0px 0px !important;
 }
+#identity-icon,
+#tracking-protection-icon-box {
+    margin: 0px 0px 1px 0px !important;
+}
 #urlbar-go-button {
     padding: 6px !important;
     margin: -4px 0px !important;
