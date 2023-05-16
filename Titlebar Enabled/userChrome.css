@@ -393,11 +393,20 @@ Normal mode
 }
 .urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
     height: 19px !important;
-    margin: -4px 0px !important;
+    margin: -3px 0px !important;
 }
-.urlbar-page-action, #notification-popup-box {
-    height: 19px !important;
+.urlbar-page-action  {
+    height: 22px !important;
     width: 24px !important;
+    margin: -3px 0px !important;
+}
+#notification-popup-box {
+    height: 22px !important;
+    margin: 0px 0px !important;
+}
+#identity-permission-box {
+    height: 22px !important;
+    margin: -1px 0px !important;
 }
 #urlbar-go-button {
     padding: 6px !important;
