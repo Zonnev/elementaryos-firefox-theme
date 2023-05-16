@@ -440,7 +440,7 @@ Normal mode
     width: 16px !important;
     height: 16px !important;
     padding: 0px !important;
-    margin: 0px 4px !important;
+    margin: 0px 4px 2px 4px !important;
 }
 #urlbar .search-one-offs:not([hidden]) {
     padding-block: 2px !important;
