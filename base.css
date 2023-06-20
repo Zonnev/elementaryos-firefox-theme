@@ -62,11 +62,11 @@ toolbarseparator::before {
 }
 
 /* Dark Mode menu popups */
-menu:-moz-lwtheme-brighttext:hover, menuitem:-moz-lwtheme-brighttext:hover, menucaption:-moz-lwtheme-brighttext:hover {
-    background-color: rgba(255,255,255,0.20) !important;
+menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext, menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext, menucaption:hover:not([disabled="true"]):-moz-lwtheme-brighttext {
+    background-color: rgba(255,255,255,0.10) !important;
 }
 menu[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menuitem[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menucaption[_moz-menuactive="true"]:-moz-lwtheme-brighttext {
-    background-color: rgba(255,255,255,0.20) !important;
+    background-color: rgba(255,255,255,0.10) !important;
 }
 menu[disabled="true"]:-moz-lwtheme-brighttext, menuitem[disabled="true"]:-moz-lwtheme-brighttext, menucaption[disabled="true"]:-moz-lwtheme-brighttext {
     background: none !important;
@@ -84,16 +84,17 @@ menupopup:-moz-lwtheme-brighttext,
 panel:-moz-lwtheme-brighttext {
     --arrowpanel-background: #303030 !important;
     --arrowpanel-border-color: #000 !important;
-    --button-hover-bgcolor: rgba(255,255,255,0.13) !important;
+    --panel-item-hover-bgcolor: rgba(255,255,255,0.10) !important;
+    --button-hover-bgcolor: rgba(255,255,255,0.10) !important;
 }
 
 /* Dark Mode in Tweaks menu popups */
 @media (prefers-color-scheme: dark) {
-menu:hover, menuitem:hover, menucaption:hover {
-    background-color: rgba(255,255,255,0.20) !important;
+menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
+    background-color: rgba(255,255,255,0.10) !important;
 }
 menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"], menucaption[_moz-menuactive="true"] {
-    background-color: rgba(255,255,255,0.20) !important;
+    background-color: rgba(255,255,255,0.10) !important;
 }
 menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
     background: none !important;
@@ -109,6 +110,8 @@ toolbarseparator {
 }
 menupopup, panel {
     --arrowpanel-background: Field !important;
+    --panel-item-hover-bgcolor: rgba(255,255,255,0.10) !important;
+    --button-hover-bgcolor: rgba(255,255,255,0.10) !important;
 }}
 
 /* Private Mode menu popups */
