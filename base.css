@@ -65,7 +65,7 @@ toolbarseparator::before {
 menu:hover:not([disabled="true"]):-moz-lwtheme-brighttext, menuitem:hover:not([disabled="true"]):-moz-lwtheme-brighttext, menucaption:hover:not([disabled="true"]):-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.10) !important;
 }
-menu[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menuitem[_moz-menuactive="true"]:-moz-lwtheme-brighttext, menucaption[_moz-menuactive="true"]:-moz-lwtheme-brighttext {
+menu[_moz-menuactive="true"]:not([disabled="true"]):-moz-lwtheme-brighttext, menuitem[_moz-menuactive="true"]:not([disabled="true"]):-moz-lwtheme-brighttext, menucaption[_moz-menuactive="true"]:not([disabled="true"]):-moz-lwtheme-brighttext {
     background-color: rgba(255,255,255,0.10) !important;
 }
 menu[disabled="true"]:-moz-lwtheme-brighttext, menuitem[disabled="true"]:-moz-lwtheme-brighttext, menucaption[disabled="true"]:-moz-lwtheme-brighttext {
@@ -93,7 +93,7 @@ panel:-moz-lwtheme-brighttext {
 menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
     background-color: rgba(255,255,255,0.10) !important;
 }
-menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"], menucaption[_moz-menuactive="true"] {
+menu[_moz-menuactive="true"]:not([disabled="true"]), menuitem[_moz-menuactive="true"]:not([disabled="true"]), menucaption[_moz-menuactive="true"]:not([disabled="true"]) {
     background-color: rgba(255,255,255,0.10) !important;
 }
 menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
