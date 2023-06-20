@@ -22,6 +22,10 @@ menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disable
     appearance: none !important;
     background-color: rgba(0,0,0,0) !important;
 }
+menubar > menu[_moz-menuactive="true"][open="true"] {
+    background: rgba(0,0,0,0.08) !important;
+    color: black !important;
+}
 
 /* Dark Mode in Firefox */
 menupopup:-moz-lwtheme-brighttext, panel:-moz-lwtheme-brighttext {
@@ -241,12 +245,3 @@ menubar > menu[_moz-menuactive="true"][open="true"] {
 .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture], [crashed]):not(:is([pinned])) {
     fill: #fff !important;
 }}
-
-
-/*** Normal mode menu ***/
-
-menubar > menu[_moz-menuactive="true"][open="true"] {
-    background: rgba(0,0,0,0.08) !important;
-    color: black !important;
-}
-
