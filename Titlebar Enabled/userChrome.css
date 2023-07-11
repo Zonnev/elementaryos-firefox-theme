@@ -317,14 +317,23 @@ Normal mode
 }
 
 /*** URLBAR + MEGABAR ***/
-#urlbar[breakout][breakout-extend][breakout-extend-animate],
-#urlbar[breakout][breakout-extend],
-#urlbar[breakout] {
+#urlbar[breakout][breakout-extend][breakout-extend-animate]:not([open]),
+#urlbar[breakout][breakout-extend]:not([open]),
+#urlbar[breakout]:not([open]) {
     --urlbar-height: 25px !important;
     --urlbar-toolbar-height: 25px !important;
     top: 10px !important;
     left: 0px !important;
     width: 100% !important;
+}
+#urlbar[open] {
+    top: 7px !important;
+    left: 0px !important;
+    width: 100% !important;
+}
+#urlbar[open] #urlbar-input-container {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
 }
 #urlbar-input-container label {
     line-height: 15px !important;
