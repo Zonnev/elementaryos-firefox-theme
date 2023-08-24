@@ -57,16 +57,12 @@ menupopup menu[disabled="true"] {
     fill: rgba(255,255,255,0.5) !important;
     background: none !important;
 }
-menuseparator,
+menuseparator::before,
 toolbarseparator {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.2) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     margin: 3px 0px 3px 0px !important;
-}
-menuseparator::before,
-toolbarseparator::before {
-    border-top: none !important;
 }
 menupopup, panel {
     --panel-background: #8266C4 !important;
@@ -469,10 +465,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     flex-direction: row-reverse !important;
-    padding: 0px 10px 3px 6px !important;
+    padding: 0px 10px 1px 6px !important;
 }
 .tab-content[pinned] {
-    padding: 0px 0px 3px 10px !important;
+    padding: 0px 0px 1px 10px !important;
 }
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
@@ -485,23 +481,31 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     max-height: 32px !important;
     border-radius: 3.5px !important;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.03) !important;
+    margin-bottom: 4px !important;
 }
 .tabbrowser-tab:not([selected="true"]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
+    margin-bottom: 4px !important;
 }
 .tab-background:not([selected="true"]) {
+    min-height: 32px !important;
+    max-height: 32px !important;
     border-radius: 3.5px !important;
-    margin: 1px -2px 3px -2px !important;
+    margin: 1px -2px 1px -2px !important;
 }
 .tab-background[selected="true"] {
+    min-height: 32px !important;
+    max-height: 32px !important;
     border-radius: 3.5px !important;
-    margin: 1px -2px 3px -2px !important;
+    margin: 1px -2px 1px -2px !important;
 }
 .tab-background[selected="true"]:-moz-lwtheme-brighttext {
+    min-height: 32px !important;
+    max-height: 32px !important;
     border-radius: 3.5px !important;
-    margin: 1px -2px 3px -2px !important;
+    margin: 1px -2px 1px -2px !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
     margin: 0px !important;

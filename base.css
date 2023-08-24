@@ -592,7 +592,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /*** TAB BAR ***/
 #TabsToolbar {
     -moz-appearance: none !important;
-    padding: 0 !important;
+    padding: 0px !important;
     width: 100vw !important;
     min-height: 36px !important;
     max-height: 36px !important;
@@ -607,7 +607,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     min-height: 36px !important;
 }
 .titlebar-spacer[type="post-tabs"] {
-  width: 0px !important;
+    width: 0px !important;
 }
 :root[sizemode="fullscreen"] #TabsToolbar {
     margin-top: -1px !important;
@@ -618,10 +618,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     flex-direction: row-reverse !important;
-    padding: 0px 10px 3px 6px !important;
+    padding: 0px 10px 1px 6px !important;
 }
 .tab-content[pinned] {
-    padding: 0px 0px 3px 10px !important;
+    padding: 0px 0px 1px 10px !important;
 }
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
@@ -634,24 +634,30 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     max-height: 32px !important;
     border-radius: 3.5px !important;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.03) !important;
+    margin-bottom: 4px !important;
 }
 .tabbrowser-tab:not([selected="true"]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
+    margin-bottom: 4px !important;
 }
 .tab-background:not([selected="true"]) {
+    min-height: 32px !important;
+    max-height: 32px !important;
     border-radius: 3.5px !important;
-    margin: 1px -2px 3px -2px !important;
+    margin: 1px -2px 1px -2px !important;
 }
 .tab-background[selected="true"] {
+    min-height: 32px !important;
+    max-height: 32px !important;
     background: #FFFFFF !important;
     border-radius: 3.5px !important;
 	border-left: 1px solid #D5D5D5 !important;
 	border-right: 1px solid #D5D5D5 !important;
 	border-top: 1px solid #D5D5D5 !important;
     border-bottom: 1px solid #C2C2C2 !important;
-    margin: 1px -2px 3px -2px !important;
+    margin: 1px -2px 1px -2px !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
     margin: 0px !important;
