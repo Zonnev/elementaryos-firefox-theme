@@ -59,3 +59,14 @@ To update installed theme, use script
 bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/install.sh") --update
 ```
 
+## ✖️ Uninstall this theme
+
+To uninstall this theme, do the following:
+1. Type `about:config` in the address bar of Firefox.
+2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and put it on `false`.
+Then restart the browser: the browser does not show the theme anymore.
+
+You can now delete the `chrome` folder(s) by doing the following:
+1. Type `about:profiles` in the address bar of Firefox and find your profile folder(s).
+2. Delete the `chrome` folder in your profile folder(s).
+After this you have completely uninstalled the theme.
