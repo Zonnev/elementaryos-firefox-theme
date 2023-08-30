@@ -476,32 +476,32 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tabbrowser-tab:before {
     display: none !important; /* don't show border between tabs  */
 }
-.tabbrowser-tab[selected="true"] {
+.tabbrowser-tab[selected] {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.03) !important;
     margin-bottom: 4px !important;
 }
-.tabbrowser-tab:not([selected="true"]) {
+.tabbrowser-tab:not([selected]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin-bottom: 4px !important;
 }
-.tab-background:not([selected="true"]) {
+.tab-background:not([selected]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin: 1px -2px 1px -2px !important;
 }
-.tab-background[selected="true"] {
+.tab-background:is([selected], [multiselected]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin: 1px -2px 1px -2px !important;
 }
-.tab-background[selected="true"]:-moz-lwtheme-brighttext {
+.tab-background:is([selected], [multiselected]):-moz-lwtheme-brighttext {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
@@ -584,14 +584,14 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     height: 24px !important;
     padding: 4px !important;
 }
-#TabsToolbar tab:not([visuallyselected="true"]):not(:hover) .tab-close-button {
+#TabsToolbar tab:not([selected="true"]):not(:hover) .tab-close-button {
     opacity: 0 !important;
 }
-#TabsToolbar tab .tab-close-button:hover {
+#TabsToolbar tab[selected="true"] .tab-close-button:hover {
     opacity: 1 !important;
     background: none !important;
 }
-#TabsToolbar tab .tab-close-button:active {
+#TabsToolbar tab[selected="true"] .tab-close-button:active {
     opacity: 1 !important;
     background: rgba(255,255,255,0.2) !important;
 }
