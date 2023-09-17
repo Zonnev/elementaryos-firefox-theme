@@ -924,7 +924,7 @@ toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
     border-top: 1px solid rgba(0,0,0,0.4) !important;
     border-bottom: 1px solid rgba(0,0,0,0.2) !important;
 }
-.tab-background[selected="true"] {
+.tab-background:is([selected], [multiselected]) {
     background: rgba(255,255,255,0.25) !important;
     border: 1px solid rgba(0,0,0,0.4) !important;
 }
