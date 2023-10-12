@@ -670,6 +670,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 	border-top: 1px solid #D5D5D5 !important;
     border-bottom: 1px solid #C2C2C2 !important;
     margin: 1px -2px 1px -2px !important;
+    box-shadow: none !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
     margin: 0px !important;

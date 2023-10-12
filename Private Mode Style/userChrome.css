@@ -500,12 +500,14 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin: 1px -2px 1px -2px !important;
+    box-shadow: none !important;
 }
 .tab-background:is([selected], [multiselected]):-moz-lwtheme-brighttext {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin: 1px -2px 1px -2px !important;
+    box-shadow: none !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
     margin: 0px !important;
