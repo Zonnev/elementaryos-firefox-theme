@@ -1543,69 +1543,10 @@ private browsing
     border-radius: 4px !important; 
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
 }
-#main-window[privatebrowsingmode="temporary"] .urlbarView-url,
-#main-window[privatebrowsingmode="temporary"] .urlbarView-title:not(:empty) ~ .urlbarView-action {
-    color: rgba(255,255,255,0.4) !important;
-}
-#main-window[privatebrowsingmode="temporary"] .urlbarView-row:not([type="tip"]):not([type="dynamic"])[selected] > .urlbarView-row-inner,
-#main-window[privatebrowsingmode="temporary"] .search-one-offs button[selected],
-#main-window[privatebrowsingmode="temporary"] .autocomplete-richlistitem[selected],
-#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator {
-    background: rgba(0,0,0,0.2) !important;
-}
-#main-window[privatebrowsingmode="temporary"] #urlbar-input-container image:not(#userContext-indicator),
-#main-window[privatebrowsingmode="temporary"] .urlbarView image,
-#main-window[privatebrowsingmode="temporary"] #customization-palette-container image,
-#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > toolbarbutton:not(hbox) > image,
-#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > toolbarpaletteitem image,
-#main-window[privatebrowsingmode="temporary"] #nav-bar-overflow-button image,
-#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target stack,
-#main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete image,
-#main-window[privatebrowsingmode="temporary"] #searchbar image,
-#main-window[privatebrowsingmode="temporary"] .tab-content > image:not(.tab-icon-image),
-#main-window[privatebrowsingmode="temporary"] .toolbarbutton-icon[type="menu"],
-#main-window[privatebrowsingmode="temporary"] #bookmarks-toolbar-placeholder image,
-#main-window[privatebrowsingmode="temporary"] #PlacesChevron .toolbarbutton-icon,
-#main-window[privatebrowsingmode="temporary"] #import-button image,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarbutton:not(hbox) > image,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > toolbarpaletteitem image,
-#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #zoom-controls > toolbarbutton > image,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > image,
-#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator-close {
-    fill: #fff !important;
-}
-:root[privatebrowsingmode="temporary"]    {
-    --urlbar-separator-color: rgba(255,255,255,0.3) !important;
-}
 #main-window[privatebrowsingmode="temporary"] .urlbarView-body-inner,
 #main-window[privatebrowsingmode="temporary"] .search-one-offs:not([is_searchbar="true"]),
 #main-window[privatebrowsingmode="temporary"] #customization-footer {
     border-top: 1px solid rgba(255,255,255,0.2) !important;
-}
-#main-window[privatebrowsingmode="temporary"] #urlbar-input,
-#main-window[privatebrowsingmode="temporary"] .urlbarView-title,
-#main-window[privatebrowsingmode="temporary"] #urlbar-one-offs-header-label,
-#main-window[privatebrowsingmode="temporary"] .urlbarView-title-separator,
-#main-window[privatebrowsingmode="temporary"] #customization-palette-container label,
-#main-window[privatebrowsingmode="temporary"] #customization-palette-container,
-#main-window[privatebrowsingmode="temporary"] #customization-footer checkbox,
-#main-window[privatebrowsingmode="temporary"] .searchbar-textbox,
-#main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete label,
-#main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete button,
-#main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete richlistitem,
-#main-window[privatebrowsingmode="temporary"] #identity-icon-label,
-#main-window[privatebrowsingmode="temporary"] #import-button label,
-#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #zoom-controls > toolbarbutton > label,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #zoom-controls > toolbarbutton > label,
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label, 
-#main-window[privatebrowsingmode="temporary"] #nav-bar-customization-target > #wrapper-zoom-controls > #zoom-controls > toolbarbutton > label,
-#main-window[privatebrowsingmode="temporary"] #urlbar-zoom-button label,
-#main-window[privatebrowsingmode="temporary"] #urlbar-search-mode-indicator-title,
-#main-window[privatebrowsingmode="temporary"] #wrapper-personal-bookmarks label {
-    color: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
-    background-image: linear-gradient( #fff 0, #fff 100%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PopupSearchAutoComplete {
   --panel-color: #fff !important;
@@ -1630,15 +1571,6 @@ private browsing
     background: rgba(141,32,174,1) !important;
     border: none !important;
 }
-#main-window[privatebrowsingmode="temporary"] .tab-content > image:not(.tab-icon-image) {
-  fill: rgba(255,255,255,1) !important;
-}
-#main-window[privatebrowsingmode="temporary"] .tab-icon-pending,
-#main-window[privatebrowsingmode="temporary"] .tab-throbber,
-#main-window[privatebrowsingmode="temporary"] .tab-loading-burst {
-    --tab-loading-fill: #fff !important;
-    color: #fff !important;
-}
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {
     background: linear-gradient(90deg, rgba(115,98,200,1), rgba(171,100,157,1) 100%) !important;
     border-top: none !important;
@@ -1655,34 +1587,6 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #customization-container {
     background: #2d0b44 !important;
 }
-#main-window[privatebrowsingmode="temporary"] .button-menu-dropmarker {
-    margin-left: 3px !important;
-    filter: invert(1) brightness(500%) !important;
-}
-@media (prefers-color-scheme: dark) {
-#main-window[privatebrowsingmode="temporary"] .button-menu-dropmarker {
-    margin-left: 3px !important;
-    filter: none !important;
-}}
-#main-window[privatebrowsingmode="temporary"] #alltabs-button:not(:-moz-lwtheme-brighttext),
-#main-window[privatebrowsingmode="temporary"] #profiler-button > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme-brighttext) {
-    filter: invert(1) brightness(500%) !important;
-}
-#main-window[privatebrowsingmode="temporary"] #wrapper-alltabs-button:not(:-moz-lwtheme-brighttext) {
-    filter: none !important;
-}
-#main-window[privatebrowsingmode="temporary"] .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture], [crashed]):not(:is([pinned])) {
-    fill: #fff !important;
-}
-#main-window[privatebrowsingmode="temporary"] .tab-secondary-label {
-    color: rgba(255,255,255,1) !important;
-}
-@media (prefers-color-scheme: dark) {
-#main-window[privatebrowsingmode="temporary"] #alltabs-button:not(:-moz-lwtheme-darktext),
-#main-window[privatebrowsingmode="temporary"] #wrapper-alltabs-button:not(:-moz-lwtheme-darktext),
-#main-window[privatebrowsingmode="temporary"] #profiler-button > .toolbarbutton-menu-dropmarker:not(:-moz-lwtheme-brighttext) {
-    filter: none !important; 
-}}
 #main-window[privatebrowsingmode="temporary"] toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-icon,
 #main-window[privatebrowsingmode="temporary"] toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
     background-color: rgba(255,255,255,0.2) !important;
@@ -1712,28 +1616,6 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] .titlebar-restore,
 #main-window[privatebrowsingmode="temporary"] .titlebar-close  {
     filter: brightness(450%) drop-shadow(0 1px 0 #603C7B) !important;
-}
-
-/*** PROTECTIONS ICON for PRIVATE MODE ***/
-#main-window[privatebrowsingmode="temporary"] #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
-    filter: invert(100%) brightness(500%) opacity(60%) !important;
-}
-
-/*** TEXT COLOR for PRIVATE MODE ***/
-#main-window[privatebrowsingmode="temporary"] scrollbox > toolbarbutton > .toolbarbutton-text {
-	color: #fff !important;
-	text-shadow: none !important;
-}
-#main-window[privatebrowsingmode="temporary"] .menubar-text {
-	color: #fff !important;
-	text-shadow: none !important;
-}
-#main-window[privatebrowsingmode="temporary"] .tab-label[selected="true"] {
-    color: #FFF !important;
-}
-#main-window[privatebrowsingmode="temporary"] .tab-label {
-	color: #fff !important;
-	text-shadow: none !important;
 }
 
 /*** BUTTONS for PRIVATE MODE ***/
@@ -1770,7 +1652,7 @@ private browsing
 }
 
 /*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
-#main-window[privatebrowsingmode="temporary"] #customization-lwtheme-button,
+ #main-window[privatebrowsingmode="temporary"] #customization-lwtheme-button,
 #main-window[privatebrowsingmode="temporary"] #customization-toolbar-visibility-button,
 #main-window[privatebrowsingmode="temporary"] #customization-uidensity-button,
 #main-window[privatebrowsingmode="temporary"] #customization-reset-button,
