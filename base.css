@@ -1652,7 +1652,7 @@ private browsing
 }
 
 /*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
- #main-window[privatebrowsingmode="temporary"] #customization-lwtheme-button,
+#main-window[privatebrowsingmode="temporary"] #customization-lwtheme-button,
 #main-window[privatebrowsingmode="temporary"] #customization-toolbar-visibility-button,
 #main-window[privatebrowsingmode="temporary"] #customization-uidensity-button,
 #main-window[privatebrowsingmode="temporary"] #customization-reset-button,
