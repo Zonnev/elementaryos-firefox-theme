@@ -216,6 +216,9 @@ Normal mode
 ***********/
 
 /*** FOCUS FIX ***/
+:root {
+    --inactive-titlebar-opacity: 1 !important;
+}
 #nav-bar:-moz-window-inactive {
     background: linear-gradient(to bottom, #EAEAEA, #E9E9E9) !important;
     border-radius: 6px 6px 0 0 !important;

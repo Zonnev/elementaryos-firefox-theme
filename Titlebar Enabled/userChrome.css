@@ -218,6 +218,9 @@ Normal mode
 ***********/
 
 /*** FOCUS FIX ***/
+:root {
+    --inactive-titlebar-opacity: 1 !important;
+}
 #navigator-toolbox:-moz-window-inactive {
     background: #E9E9E9 !important;
 }

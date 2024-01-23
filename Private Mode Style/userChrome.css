@@ -793,6 +793,9 @@ COLOURS
 }
 
 /*** FOCUS FIX for PRIVATE MODE ***/
+:root {
+    --inactive-titlebar-opacity: 1 !important;
+}
 #nav-bar:-moz-window-inactive {
     background: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)) !important;
 }
