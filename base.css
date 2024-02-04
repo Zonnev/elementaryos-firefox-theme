@@ -624,7 +624,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     padding: 0px 10px 1px 6px !important;
 }
 .tab-content[pinned] {
-    padding: 0px 0px 1px 10px !important;
+    padding: 0px 10px 1px 10px !important;
 }
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
@@ -786,10 +786,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tab-icon-overlay:not([pinned]) {
     margin-inline-end: 0px !important;
 }
-.tab-label-container {
-    mask-image: linear-gradient(to left, transparent, black var(--tab-label-mask-size)) !important;
-    margin-right: 10px !important;
-}
 
 /* drag space */
 .titlebar-spacer[type="pre-tabs"] {
@@ -815,6 +811,19 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /* all tabs */
 .all-tabs-close-button .toolbarbutton-icon {
     list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%23333333' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='%23333333' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+
+/* make tab content centered except tabs close button */
+.tab-icon-stack:not([pinned]) {
+    order: 1 !important;
+    margin-inline-start: auto;
+}
+.tab-close-button {
+    order: 2 !important;
+}
+.tab-label-container {
+    max-width: min-content;
+    margin-inline-end: auto;
 }
 
 /*** MENUBAR ***/
