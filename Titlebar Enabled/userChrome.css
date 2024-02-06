@@ -963,6 +963,19 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
  Standalone DARK MODE
 *********************/
 
+:root:-moz-lwtheme-brighttext {
+    --button-primary-bgcolor: #3689e6 !important;
+    --button-primary-hover-bgcolor: #64baff !important;
+}
+
+/* Common Dialogs */
+@-moz-document url("chrome://global/content/commonDialog.xhtml") {
+#commonDialog:-moz-lwtheme-brighttext {
+    --in-content-primary-button-background: #3689e6 !important;
+    --in-content-primary-button-background-hover: #64baff !important;
+    background-color: #333333 !important;
+}}
+
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar:-moz-lwtheme-brighttext,
 :root[gtktiledwindow="true"] #nav-bar:-moz-lwtheme-brighttext:-moz-window-inactive{
@@ -1229,6 +1242,19 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :active):
 ***************************************************/
 
 @media (prefers-color-scheme: dark) {
+
+:root {
+    --button-primary-bgcolor: #3689e6 !important;
+    --button-primary-hover-bgcolor: #64baff !important;
+}
+
+/* Common Dialogs */
+@-moz-document url("chrome://global/content/commonDialog.xhtml") {
+#commonDialog {
+    --in-content-primary-button-background: #3689e6 !important;
+    --in-content-primary-button-background-hover: #64baff !important;
+    background-color: #333333 !important;
+}}
 
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,

@@ -1,30 +1,137 @@
-/* ABOUT:HOME - ABOUT:NEWTAB */
+/* Reference: https://elementary.io/brand */
+:root {
+    --eOS-blueberry-100: #8cd5ff;
+    --eOS-blueberry-300: #64baff;
+    --eOS-blueberry-500: #3689e6;
+    --eOS-blueberry-700: #0d52bf;
+    --eOS-blueberry-900: #002e99;
+    --eOS-black-100: #666666;
+    --eOS-black-300: #4a4a4a;
+    --eOS-black-500: #333333;
+    --eOS-black-700: #1a1a1a;
+    --eOS-black-900: #000000;
+    --eOS-silver-100: #fafafa;
+    --eOS-silver-300: #d4d4d4;
+    --eOS-silver-500: #abacae;
+    --eOS-silver-700: #7e8087;
+    --eOS-silver-900: #555761; 
+    --eOS-lime-100: #d1ff82;
+    --eOS-lime-300: #9bdb4d;
+    --eOS-lime-500: #68b723;
+    --eOS-lime-700: #3a9104;
+    --eOS-lime-900: #206b00;
+    --eOS-mint-100: #89ffdd;
+    --eOS-mint-300: #43d6b5;
+    --eOS-mint-500: #28bca3;
+    --eOS-mint-700: #0e9a83;
+    --eOS-mint-900: #007367;
+    --eOS-strawberry-100: #ff8c82;
+    --eOS-strawberry-300: #ed5353;
+    --eOS-strawberry-500: #c6262e;
+    --eOS-strawberry-700: #a10705;
+    --eOS-strawberry-900: #7a0000; 
+    --eOS-banana-100: #fff394;
+    --eOS-banana-300: #ffe16b;
+    --eOS-banana-500: #f9c440;
+    --eOS-banana-700: #d48e15;
+    --eOS-banana-900: #ad5f00; 
+}
 
 @media (prefers-color-scheme: dark) {
-
-@-moz-document url-prefix(about:home),
-url-prefix(about:newtab),
-url-prefix(about:preferences),
-url-prefix(about:preferences#home),
-url-prefix(about:preferences#search),
-url-prefix(about:preferences#privacy),
-url-prefix(about:preferences#sync),
-url-prefix(about:preferences#moreFromMozilla),
-url-prefix(about:addons) {
+@-moz-document url-prefix("about:"),  url-prefix("chrome://browser/content") {
 :root {
-    --newtab-background-color: #3A3A3A !important;
-    --newtab-background-color-secondary: #4D4D4D !important;
-    --newtab-element-hover-color: #616161 !important;
+    --in-content-page-background: var(--eOS-black-500) !important;
+    --in-content-background-color: var(--eOS-black-500) !important;
+    --in-content-page-color: var(--eOS-silver-100) !important;
+    --in-content-table-background: var(--eOS-black-300) !important;
+    --in-content-primary-button-text-color: var(--eOS-silver-100) !important;
+    --in-content-primary-button-background: var(--eOS-blueberry-500) !important;
+    --in-content-primary-button-background-hover: var(--eOS-blueberry-300) !important;
+    --in-content-primary-button-background-active: var(--eOS-blueberry-500) !important;
+    --in-content-button-border-color: transparent !important;
+    --in-content-button-border-color-hover: transparent !important;
+    --in-content-button-border-color-active: transparent !important;
+
+    --newtab-background-color: var(--eOS-black-500) !important;
+    --newtab-background-color-secondary: var(--eOS-black-300) !important;
+    --newtab-element-hover-color: var(--eOS-black-300) !important; 
     --newtab-overlay-color: rgba(0,0,0,0.8) !important;
-    --newtab-primary-action-background: #1E90FF !important;
-    --newtab-primary-action-background-pocket: #1E90FF !important;
-    --in-content-page-background: #3A3A3A !important;
-    --in-content-box-background: #4D4D4D !important;
-    --in-content-box-background-odd: #4D4D4D !important;
-    --in-content-button-background: #4D4D4D !important;
-    --in-content-button-background-hover: #575757 !important;
-    --in-content-button-background-active: #575757 !important;
-    --in-content-primary-button-background: #1E90FF !important;
-    --in-content-primary-button-background-hover: rgba(150,210,255) !important;
-    --in-content-focus-outline-color: #1E90FF !important;
+    --newtab-primary-action-background: var(--eOS-blueberry-100) !important;
+    --newtab-primary-action-background-pocket: var(--eOS-blueberry-100) !important;
+
+    --box-background-color: var(--eOS-black-300) !important;
+    --box-background: var(--eOS-black-500) !important;
+
+    --brand-color-accent: var(--eOS-blueberry-300) !important;
+    --brand-color-accent-hover: var(--eOS-blueberry-100) !important;
+    --brand-color-accent-active: var(--eOS-blueberry-300) !important;
+
+    --color-background-information: var(--eOS-blueberry-500) !important;
+    --icon-color-information: var(--eOS-blueberry-100) !important;
+
+    --primary-button-background-color: var(--eOS-blueberry-500) !important;
+    --primary-button-hover-background-color: var(--eOS-blueberry-300) !important;
+    --primary-button-active-background-color: var(--eOS-blueberry-100) !important;
+    --primary-button-color: var(--eOS-silver-100) !important;
+
+    --card-background-color:  var(--eOS-black-500) !important; 
+
+    --button-color: var(--eOS-silver-100) !important;
+    --button-background-color: var(--eOS-black-300) !important;
+    --button-hover-background-color: var(--eOS-black-100) !important;
+    --sidebar-background-hover: var(--eOS-black-300) !important;
+
+/* Reader mode */
+    --dark-theme-foreground: var(--eOS-silver-300) !important;
+    --dark-theme-background: var(--eOS-black-700) !important;
+}
+
+/* Toggle button */
+.toggle-button{
+    --toggle-dot-background-color-on-pressed: var(--eOS-silver-100) !important;
+}
+  
+/* Dialog */
+.dialogBox, dialog {
+    background-color: var(--eOS-black-500) !important;
+}
+
+/* Separator */
+separator {
+    border-top-color: var(--eOS-silver-900) !important;
+    border-bottom-color: var(--eOS-silver-900) !important;
+}
+
+/* Checkbox */
+checkbox:not(:hover) .checkbox-check:not([checked="true"]), input[type="checkbox"]:not(:hover):not(:checked) {
+    appearance: none !important;
+    border: 2px solid var(--eOS-silver-300) !important;
+    background: var(--eOS-black-500) !important;
+    border-radius: 2px !important;
+}
+checkbox:hover .checkbox-check:not([checked="true"]), input[type="checkbox"]:hover:not(:checked) {
+    appearance: none !important; 
+    border: 2px solid var(--eOS-silver-100) !important;
+    background: var(--eOS-black-500) !important;
+    border-radius: 2px !important;
+}
+
+/* Radio */
+radio:not(:hover) .radio-check:not([selected="true"]), input[type="radio"]:not(:hover):not(:checked) {
+    appearance: none !important;
+    background: var(--eOS-black-500) !important;
+    border: 0.15em solid var(--eOS-silver-300) !important;
+    border-radius: 50% !important;
+}
+radio:hover .radio-check:not([selected="true"]), input[type="radio"]:hover:not(:checked) {
+    appearance: none !important;
+    background: var(--eOS-black-500) !important;
+    border: 0.15em solid var(--eOS-silver-100) !important;
+    border-radius: 50% !important;
+}}
+
+/* Private mode */
+@-moz-document url-prefix("about:privatebrowsing") {
+:root {
+    --in-content-page-background: #25003e !important;
 }}
