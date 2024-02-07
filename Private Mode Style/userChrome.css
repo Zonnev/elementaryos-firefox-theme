@@ -746,7 +746,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /*** CHECKBOXES ***/
-.checkbox-check {
+.checkbox-check:not(@-moz-document url("chrome://global/content/commonDialog.xhtml")) {
     appearance: none !important;
     height: 16px !important;
     width: 16px !important;

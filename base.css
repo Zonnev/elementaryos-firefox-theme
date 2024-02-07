@@ -911,7 +911,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /*** CHECKBOXES ***/
-.checkbox-check {
+.checkbox-check:not(@-moz-document url("chrome://global/content/commonDialog.xhtml")) {
     appearance: none !important;
     height: 16px !important;
     width: 16px !important;
@@ -961,7 +961,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 
 /* Common Dialogs */
 @-moz-document url("chrome://global/content/commonDialog.xhtml") {
-#commonDialog:-moz-lwtheme-brighttext {
+#commonDialog:-moz-lwtheme-brighttext  {
     --in-content-primary-button-background: #3689e6 !important;
     --in-content-primary-button-background-hover: #64baff !important;
     background-color: #333333 !important;
