@@ -173,6 +173,7 @@ LAYOUT
 }
 #nav-bar {
     -moz-box-ordinal-group: 0;
+    border-top: 0px !important;
     order: -1;
     border-radius: 6px 6px 0 0 !important;
     height: 44px !important;

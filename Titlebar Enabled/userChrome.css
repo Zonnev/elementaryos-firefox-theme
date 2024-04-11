@@ -305,6 +305,7 @@ Normal mode
 }
 #nav-bar {
     -moz-box-ordinal-group: 0;
+    border-top: 0px !important;
     order: -1;
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
     height: 44px !important;
