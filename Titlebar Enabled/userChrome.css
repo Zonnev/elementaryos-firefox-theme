@@ -394,10 +394,16 @@ Normal mode
     height: 19px !important;
     margin: -3px 0px !important;
 }
-.urlbar-page-action  {
+.urlbar-page-action:not(#translations-button[translationsactive="true"])  {
     height: 21px !important;
     width: 24px !important;
     margin: -3px 0px !important;
+}
+#translations-button[translationsactive="true"] {
+    height: 21px !important;
+}
+#translations-button-locale {
+    margin: -3px 2px !important;
 }
 #notification-popup-box {
     height: 21px !important;
