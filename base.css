@@ -320,18 +320,18 @@ Normal mode
     left: 0px !important;
     width: 100% !important;
 }
-#urlbar[open] #urlbar-input-container {
+#urlbar[open] .urlbar-input-container {
     margin-top: 3px !important;
     margin-bottom: 3px !important;
 }
-#urlbar-input-container label {
+.urlbar-input-container label {
     line-height: 15px !important;
 }
 #urlbar-container,
 #search-container {
     -moz-window-dragging: drag !important;
 }
-#urlbar-input-container {
+.urlbar-input-container {
     height: 24px !important;
     border-radius: 3px !important;
     padding: 0px 0px 1px 0px !important;
