@@ -247,7 +247,7 @@ LAYOUT
 #PopupSearchAutoComplete {
     border-radius: 0 0 7px 7px !important;
 }
-.urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
+.urlbar-icon:not(.search-go-button):not(.urlbar-go-button) {
     min-height: 19px !important;
     margin: -3px 0px !important;
 }
@@ -275,7 +275,7 @@ LAYOUT
 #tracking-protection-icon-box {
     margin: 0px 0px 1px 0px !important;
 }
-#urlbar-go-button {
+.urlbar-go-button {
     padding: 6px !important;
     margin: -4px 0px !important;
 }

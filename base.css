@@ -378,7 +378,7 @@ Normal mode
 #PopupSearchAutoComplete {
     border-radius: 3px !important;
 }
-.urlbar-icon:not(.search-go-button):not(#urlbar-go-button) {
+.urlbar-icon:not(.search-go-button):not(.urlbar-go-button) {
     height: 19px !important;
     margin: -3px 0px !important;
 }
@@ -406,7 +406,7 @@ Normal mode
 #tracking-protection-icon-box {
     margin: 0px 0px 1px 0px !important;
 }
-#urlbar-go-button {
+.urlbar-go-button {
     padding: 6px !important;
     margin: -4px 0px !important;
 }
