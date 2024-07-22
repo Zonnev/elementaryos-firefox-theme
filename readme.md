@@ -50,6 +50,8 @@ This will make purple colors of Private Mode as default style.
 
 1. In the customization panel in Firefox you can move the new tab button to the left and select System theme. You can also use the dark theme option but light theme is not supported.
 2. If you use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) with the dark mode on, the theme changes to dark mode by itself. Firefox 98 and newer are changing to dark mode when the elementary OS system dark mode is set.
+3. Go to `about:config` to set `widget.gtk.non-native-titlebar-buttons.enabled` on `false` to make window controls in private mode appear as eOS standard.
+4. In `about:config` you can make the bottom window corners rounded by setting `widget.gtk.rounded-bottom-corners.enabled` to `true`.
 
 ## 🔁 Update
 
