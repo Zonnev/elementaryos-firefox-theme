@@ -16,8 +16,8 @@ For now theme installation is supported for:
 3. [🦊 Firefox 📦 Snap version](https://snapcraft.io/firefox).
 4. [🐺 Librewolf Appimage version](https://librewolf.net/installation/linux/).
 5. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
-6. [🧅 Tor Browser](https://community.torproject.org/onion-services/setup/install/).
-7. [🧅 Tor Browser 📦 Flatpak version](https://flathub.org/apps/details/com.github.micahflee.torbrowser-launcher).
+6. [🧅 Tor Browser](https://community.torproject.org/onion-services/setup/install/). *The theme needs to be installed manually for this browser.*
+7. [🧅 Tor Browser 📦 Flatpak version](https://flathub.org/apps/details/com.github.micahflee.torbrowser-launcher). *The theme needs to be installed manually for this browser.*
 
 ❗*For best experience we recommend to use theme with Firefox installed with apt package manager.*
 *Other installations have limited support. [We also welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
