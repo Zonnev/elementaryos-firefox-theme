@@ -601,14 +601,11 @@ function installThemeAtBrowserProfile {
         exit 1
       fi
 
-      local GALA_BUTTON_LAYOUT="$(gsettings get org.pantheon.desktop.gala.appearance button-layout)"
       local WM_BUTTON_LAYOUT="$(gsettings get org.gnome.desktop.wm.preferences button-layout)"
       local BUTTON_LAYOUT=""
 
-      if [ ! -z "${GALA_BUTTON_LAYOUT}" ]; then
-        BUTTON_LAYOUT="${GALA_BUTTON_LAYOUT}"
-      elif [ ! -z "${WM_BUTTON_LAYOUT}" ]; then
-        BUTTON_LAYOUT="${GALA_BUTTON_LAYOUT}"
+      if [ ! -z "${WM_BUTTON_LAYOUT}" ]; then
+        BUTTON_LAYOUT="${WM_BUTTON_LAYOUT}"
       fi
 
       if [ ! -z "${BUTTON_LAYOUT}" ]; then
