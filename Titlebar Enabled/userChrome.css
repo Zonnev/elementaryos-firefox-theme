@@ -655,20 +655,19 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,0.03) !important;
     margin-bottom: 4px !important;
 }
 .tabbrowser-tab:not([selected]) {
-    min-height: 32px !important;
-    max-height: 32px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
     border-radius: 3.5px !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 2px !important;
 }
 .tab-background:not([selected]) {
-    min-height: 32px !important;
-    max-height: 32px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
     border-radius: 3.5px !important;
-    margin: 1px -2px 1px -2px !important;
+    margin: 2px -1px 2px -1px !important;
 }
 .tab-background:is([selected], [multiselected]) {
     min-height: 32px !important;
@@ -679,16 +678,16 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 	border-right: 1px solid #D5D5D5 !important;
 	border-top: 1px solid #D5D5D5 !important;
     border-bottom: 1px solid #C2C2C2 !important;
-    margin: 1px -2px 1px -2px !important;
+    margin: 1px -1px 1px -1px !important;
     box-shadow: none !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected="true"] > .tab-context-line {
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected] > .tab-context-line {
     margin: 0px !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected="true"]) > .tab-context-line {
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected]) > .tab-context-line {
     margin: 1px 0 0 !important;
 }
-#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
 }
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
@@ -764,16 +763,19 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     height: 24px !important;
     padding: 4px !important;
 }
-#TabsToolbar tab:not([selected="true"]):not(:hover) .tab-close-button {
+#TabsToolbar tab:not([selected]):not(:hover) .tab-close-button {
     opacity: 0 !important;
 }
-#TabsToolbar tab[selected="true"] .tab-close-button:hover {
+#TabsToolbar tab:not([selected]) .tab-close-button:hover {
+    background: none !important;
+}
+#TabsToolbar tab[selected] .tab-close-button:hover {
     opacity: 1 !important;
     background: none !important;
 }
-#TabsToolbar tab[selected="true"] .tab-close-button:active {
+#TabsToolbar tab[selected] .tab-close-button:active {
     opacity: 1 !important;
-    background: rgba(51,51,51, 0.15) !important;
+    background: none !important;
 }
 
 /* touch density adjustment */
