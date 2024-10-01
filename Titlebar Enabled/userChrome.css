@@ -727,6 +727,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #firefox-view-button {
     margin: 0px 0px 0px 2px !important;
 }
+#firefox-view-button[open] {
+    padding: 5px 2px 5px 2px !important;
+}
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon {
     box-shadow: none !important;
 }
