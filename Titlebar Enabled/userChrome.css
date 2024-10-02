@@ -1818,7 +1818,7 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar tab .tab-close-button:active {
     opacity: 1 !important;
-    background: rgba(255,255,255, 0.2) !important;
+    background: none !important;
 }
 #main-window[privatebrowsingmode="temporary"] .all-tabs-close-button .toolbarbutton-icon {
 	list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;

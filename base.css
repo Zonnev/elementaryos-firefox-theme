@@ -1698,7 +1698,7 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar tab .tab-close-button:active {
     opacity: 1 !important;
-    background: rgba(255,255,255,0.3) !important;
+    background: none !important;
 }
 
 /*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
