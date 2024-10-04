@@ -146,6 +146,9 @@ LAYOUT
 #TabsToolbar .titlebar-buttonbox-container {
     display: none !important;
 }
+#nav-bar .titlebar-buttonbox-container {
+    display: none !important;
+}
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {

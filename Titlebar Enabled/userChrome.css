@@ -286,6 +286,9 @@ Normal mode
 #TabsToolbar .titlebar-buttonbox-container {
     display: none !important;
 }
+#nav-bar .titlebar-buttonbox-container {
+    display: none !important;
+}
 
 /* dont show window controls */
 .titlebar-buttonbox {
