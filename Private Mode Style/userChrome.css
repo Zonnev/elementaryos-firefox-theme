@@ -177,6 +177,7 @@ LAYOUT
 #nav-bar {
     -moz-box-ordinal-group: 0;
     border-top: 0px !important;
+    border-bottom: 1px solid rgba(0,0,0,0.2) !important;
     order: -1;
     border-radius: 6px 6px 0 0 !important;
     height: 44px !important;
@@ -457,8 +458,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     -moz-appearance: none !important;
     padding: 0 !important;
     width: 100vw !important;
-    min-height: 36px !important;
-    max-height: 36px !important;
+    min-height: 35px !important;
+    max-height: 35px !important;
+    border-bottom: 1px solid rgba(0,0,0,0.2) !important;
 }
 #TabsToolbar .toolbarbutton-1:not(#new-tab-button):not(#tabs-newtab-button):not(#firefox-view-button):not(#alltabs-button) {
     margin: auto 2px !important;
@@ -682,6 +684,168 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin-top: unset !important;
 }
 
+/*** VERTICAL TABS ***/
+
+/* not expanded */
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tabbrowser-tab:is([selected], [multiselected]) {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        width: 50px !important;
+        margin: 1px 1px 1px 1px !important;
+        padding: 0px 0px !important;
+   }
+  }
+}
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tab-background:is([selected], [multiselected]) {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        width: 50px !important;
+        margin: 1px 1px 1px 1px !important;
+        padding: 0px 0px !important;
+   }
+  }
+}
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tabbrowser-tab {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        width: 50px !important;
+        margin: 1px 1px 1px 1px !important;
+        padding: 0px 0px !important;
+   }
+  }
+}
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tab-background {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        width: 50px !important;
+        margin: 1px 1px 1px 1px !important;
+        padding: 0px 0px !important;
+   }
+  }
+}
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & #vertical-pinned-tabs-container {
+        margin: 1px 2px 1px 2px !important;
+        padding: 0px 0px !important;
+   }
+  }
+}
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+   & #vertical-pinned-tabs-container {
+    & .tab-content {
+        padding: 0px 2px 1px 0px !important;
+    }
+  }
+ }
+}
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    & .tab-content {
+        padding: 0px 20px 1px 0px !important;
+    }
+  }
+}
+#tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {
+      margin: 4px 5px 4px 5px !important;
+      background: none !important;
+}
+
+/* expanded */
+#tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button {
+      margin: 4px 0px 4px 0px !important;
+      background: none !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tabbrowser-tab:is([selected], [multiselected]) {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        max-width: 240px !important;
+        margin: 2px 2px !important;
+        padding: 0px 5px !important;
+   }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tab-background:is([selected], [multiselected]) {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        max-width: 240px !important;
+        margin: 2px 2px !important;
+        padding: 0px 5px !important;
+   }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tabbrowser-tab {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        max-width: 240px !important;
+        margin: 2px 2px !important;
+        padding: 0px 5px !important;
+   }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tab-background {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        max-width: 240px !important;
+        margin: 2px 2px !important;
+        padding: 0px 5px !important;
+   }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tab-content {
+        padding: 0px 10px 1px 0px !important;
+    }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tab-content[pinned] {
+        padding: 0px 0px 1px 0px !important;
+    }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tabbrowser-tab[pinned] {
+        min-height: 32px !important;
+        max-height: 32px !important;
+        margin: 2px 2px !important;
+        padding: 0px 0px !important;
+   }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
+        list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%23333333' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='%23333333' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+        background: none !important;
+        margin: 4px !important;
+        padding: 4px !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tabbrowser-tab {
+      &:not(:hover) .tab-close-button:not([selected]) {
+        display: block !important;
+        opacity: 0 !important;
+      }
+   }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tabbrowser-tab[pinned]:not(:hover) {
+        & .tab-close-button {
+            display: none !important;
+    }
+  }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] {
+  & .tab-label-container {
+    contain: none !important;
+  }
+}
+
 /*** MENUBAR ***/
 #menubar-items {
     padding-top: 2px !important;
@@ -693,6 +857,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin: 0px !important;
     padding: 0px !important;
     border-top: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.2) !important;
+}
+#toolbar-menubar[autohide="true"] {
+    -moz-box-ordinal-group: 1;
+    order: 0;
     border-bottom: none !important;
 }
 #titlebar-content {
@@ -845,6 +1014,9 @@ COLOURS
 #PanelUI-menu-button:-moz-window-inactive {
     opacity: 0.5 !important;
 }
+#sidebar-main:-moz-window-inactive {
+    background: linear-gradient(to right, rgba(167,147,255,1), rgba(177,148,249,1)) !important;
+}
 
 /*** ELEMENTS IN PRIVATE MODE ***/
 :root {
@@ -852,6 +1024,7 @@ COLOURS
 }
 #nav-bar {
     -moz-appearance: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, rgba(94,75,197,1), rgba(162,76,141,1)) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
@@ -953,7 +1126,6 @@ toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
     appearance: none !important;
     background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0) 6%), 
                 linear-gradient(90deg, rgba(115,98,200,1), rgba(171,100,157,1) 100%) !important;
-    border-top: 1px solid rgba(0,0,0,0.4) !important;
     border-bottom: 1px solid rgba(0,0,0,0.2) !important;
 }
 .tab-background:is([selected], [multiselected]) {
@@ -980,8 +1152,6 @@ toolbar .toolbaritem-combined-buttons:not(:hover) > separator {
 }
 #toolbar-menubar {
     background: linear-gradient(to right, rgba(94,75,197,1), rgba(162,76,141,1)) !important;
-    border-top: none !important;
-    border-bottom: none !important;
 }
 menu[_moz-menuactive="true"],
 menubar > menu[open] {
@@ -993,6 +1163,22 @@ menubar > menu[open] {
 }
 #customization-container {
     background: #2d0b44 !important;
+}
+#sidebar-main {
+    background: linear-gradient(to right, rgba(115,98,200,1), rgba(126,98,192,1)) !important;
+}
+#tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
+  & > .toolbarbutton-text {
+    color: white !important;
+  }
+}
+:root {
+    --button-text-color-ghost: white !important;
+    --button-icon-color-ghost: white !important;
+    --button-text-color-ghost-hover: white !important;
+    --button-icon-color-ghost-hover: white !important;
+    --tab-icon-overlay-stroke: white !important;
+    --tab-icon-overlay-fill: black !important;
 }
 .button-menu-dropmarker {
     margin-left: 3px !important;
@@ -1009,9 +1195,6 @@ menubar > menu[open] {
 }
 #wrapper-alltabs-button:not(:-moz-lwtheme-brighttext) {
     filter: none !important;
-}
-.tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked], [pictureinpicture], [crashed]):not(:is([pinned])) {
-    fill: #fff !important;
 }
 .tab-secondary-label {
     color: rgba(255,255,255,1) !important;
@@ -1061,6 +1244,7 @@ scrollbox > toolbarbutton > .toolbarbutton-text {
 #nav-bar #back-button > .toolbarbutton-icon {
     list-style-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' id='svg6' version='1.1' width='16' height='16'%3E%3Cmetadata id='metadata12'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs10' /%3E%3Cpath id='path873-5' style='opacity:1;fill:%23ffffff;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:%23000000' d='m 7.2260666,2.5 c 0.4312184,0 0.7783725,0.3346464 0.7783725,0.7503279 V 6 H 13.221628 C 13.652847,6 14,6.3346463 14,6.7503279 V 8.249672 C 14,8.6653541 13.652847,9.0004099 13.221628,9 H 8.0044391 v 2.749674 C 8.0044391,12.165354 7.657285,12.5 7.2260666,12.5 6.9936571,12.5 6.7861919,12.40264 6.6438073,12.247938 L 2.212837,8.0241533 C 2.081227,7.8897736 2,7.7091601 2,7.5097679 2,7.3103755 2.081225,7.129763 2.212837,6.995383 L 6.6438073,2.7520634 C 6.7861919,2.5973529 6.9936571,2.5 7.2260666,2.5 Z' /%3E%3C/svg%3E") !important;
     margin-right: 6px !important;
+    margin-left: 6px !important;
 }
 #nav-bar #forward-button {
     list-style-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' id='svg6' version='1.1' width='16' height='16'%3E%3Cmetadata id='metadata12'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs10' /%3E%3Cpath id='path873-5' style='opacity:1;fill:%23ffffff;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:%23000000' d='M 8.7739334,2.5 C 8.342715,2.5 7.9955609,2.8346464 7.9955609,3.2503279 L 7.9955609,6 H 2.778372 C 2.347153,6 2,6.3346463 2,6.7503279 L 2,8.249672 C 2,8.6653541 2.3471532,9.0004099 2.778372,9 h 5.2171889 l 0,2.749674 c 0,0.41568 0.3471541,0.750326 0.7783725,0.750326 0.2324095,0 0.4398747,-0.09736 0.5822593,-0.252062 L 13.787163,8.0241533 C 13.918773,7.8897736 14,7.7091601 14,7.5097679 14,7.3103755 13.918775,7.129763 13.787163,6.995383 L 9.3561927,2.7520634 C 9.2138081,2.5973529 9.0063429,2.5 8.7739334,2.5 Z' /%3E%3C/svg%3E") !important;
@@ -1094,8 +1278,15 @@ scrollbox > toolbarbutton > .toolbarbutton-text {
     opacity: 1 !important;
     background: none !important;
 }
+#tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
+        list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
 .all-tabs-close-button .toolbarbutton-icon {
 	list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg color='%235b5b5b' transform='translate%28-713 -157%29'%3E%3Cpath d='M720.97 163.556L723.5 161l1.5 1.5-2.598 2.487L725 167.5l-1.5 1.5-2.512-2.599L718.5 169l-1.5-1.5 2.586-2.5-2.586-2.5 1.5-1.5z' fill='rgb(255, 255, 255)' overflow='visible' style='marker:none'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+#tabbrowser-tabs[orient="vertical"] .button-background {
+    fill: white !important;
+    stroke: white !important;
 }
 
 /*** CUSTOMIZATION BUTTONS for PRIVATE MODE ***/
