@@ -194,12 +194,11 @@ LAYOUT
 #urlbar[breakout]:not([open]) {
     --urlbar-height: 25px !important;
     --urlbar-toolbar-height: 25px !important;
-    top: 10px !important;
     left: 0px !important;
     width: 100% !important;
 }
 #urlbar[open] {
-    top: 7px !important;
+    top: 6px !important;
     left: 0px !important;
     width: 100% !important;
 }
