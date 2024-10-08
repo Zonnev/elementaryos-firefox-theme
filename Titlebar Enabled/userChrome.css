@@ -720,6 +720,9 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     border-radius: 3px !important;
     margin: -2px 0px 0px 0px !important;
 }
+#nav-bar #firefox-view-button .toolbarbutton-icon {
+    margin: 0px 0px 0px 0px !important;
+}
 #firefox-view-button {
     margin: 0px 0px 0px 2px !important;
 }
