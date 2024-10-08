@@ -214,8 +214,8 @@ LAYOUT
     -moz-window-dragging: drag !important;
 }
 .urlbar-input-container {
-    height: 24px !important;
-    border-radius: 3px !important;
+    height: 25px !important;
+    border-radius: 4px !important;
     padding: 0px 0px 1px 0px !important;
 }
 #urlbar, #searchbar {
@@ -231,23 +231,26 @@ LAYOUT
 .searchbar-separator {
     border-top: none !important;
 }
-#urlbar[focused="true"] {
-    border-radius: 4px !important; 
-}
-#searchbar[focused="true"] {
-    border-radius: 4px !important; 
-}
-#searchbar:not([focused="true"]) {
+#urlbar[focused] {
     border-radius: 3px !important; 
 }
-#urlbar:not([focused="true"]) {
+#searchbar[focused] {
+    border-radius: 3px !important; 
+}
+#searchbar:not([focused]) {
+    border-radius: 3px !important; 
+}
+#urlbar:not([focused]) {
     border-radius: 3px !important; 
 }
 #urlbar-background {
     border: none !important;
     background: none !important;
 }
-#urlbar[focused="true"] > #urlbar-background {
+#urlbar[focused] > #urlbar-background {
+    outline: none !important;
+}
+#searchbar:focus-within {
     outline: none !important;
 }
 #PopupSearchAutoComplete {

@@ -334,8 +334,8 @@ Normal mode
     -moz-window-dragging: drag !important;
 }
 .urlbar-input-container {
-    height: 24px !important;
-    border-radius: 3px !important;
+    height: 25px !important;
+    border-radius: 4px !important;
     padding: 0px 0px 1px 0px !important;
 }
 #urlbar, #searchbar {
@@ -348,23 +348,23 @@ Normal mode
     min-height: 25px !important;
     max-height: 25px !important;
 }
-#urlbar[focused="true"] {
+#urlbar[focused] {
     border: 1px solid silver !important;
-    border-radius: 4px !important;
+    border-radius: 3px !important;
     background: #ffffff !important;
 }
-#searchbar[focused="true"] {
+#searchbar[focused] {
     border: 1px solid silver !important;
-    border-radius: 4px !important; 
+    border-radius: 3px !important;
     background: #ffffff !important;
 }
-#searchbar:not([focused="true"]) {
+#searchbar:not([focused]) {
     border: 1px solid #B8B8B8 !important;
     border-radius: 3px !important; 
     background: #ffffff !important;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.7) !important;
 }
-#urlbar:not([focused="true"]) {
+#urlbar:not([focused]) {
     border: 1px solid #B8B8B8 !important;
     border-radius: 3px !important; 
     background: #ffffff !important;
@@ -374,7 +374,10 @@ Normal mode
     border: none !important;
     background: none !important;
 }
-#urlbar[focused="true"] > #urlbar-background {
+#urlbar[focused] > #urlbar-background {
+    outline: none !important;
+}
+#searchbar:focus-within {
     outline: none !important;
 }
 #PopupSearchAutoComplete {
@@ -401,7 +404,7 @@ Normal mode
 }
 #identity-permission-box {
     height: 21px !important;
-    padding: 0px 4px 1px 4px !important;
+    padding: 0px 4px 0px 4px !important;
     margin: 0px 0px !important;
 }
 #identity-icon,
