@@ -692,6 +692,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 
 /*** VERTICAL TABS ***/
 
+#TabsToolbar[collapsed] ~ #nav-bar {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), 0px 0px 3px 0px rgba(0,0,0,0.3) !important;
+}
+
 /* not expanded */
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
@@ -1001,6 +1005,9 @@ COLOURS
 #nav-bar:-moz-window-inactive {
     background: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)) !important;
 }
+#TabsToolbar[collapsed] ~ #nav-bar:-moz-window-inactive {
+    box-shadow: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)), 0px 0px 3px 0px rgba(0,0,0,0.3) !important;
+}
 #urlbar:not([focused="true"]):-moz-window-inactive {
     background: linear-gradient(to right, #A793FF, #D198E5) !important;
 }
@@ -1033,6 +1040,9 @@ COLOURS
     border-bottom: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, rgba(94,75,197,1), rgba(162,76,141,1)) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1) !important;
+}
+#TabsToolbar[collapsed] ~ #nav-bar {
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), 0px 0px 3px 0px rgba(0,0,0,0.3) !important;
 }
 #navigator-toolbox {
     background-color: rgba(0,0,0,1) !important;
