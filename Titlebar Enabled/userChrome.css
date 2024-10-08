@@ -417,7 +417,7 @@ Normal mode
 }
 #identity-permission-box {
     height: 21px !important;
-    padding: 0px 4px 1px 4px !important;
+    padding: 0px 4px 0px 4px !important;
     margin: 0px 0px !important;
 }
 #identity-icon,
