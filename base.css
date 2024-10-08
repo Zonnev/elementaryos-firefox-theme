@@ -557,15 +557,8 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :active) 
     border: none !important;
     margin-left: 0px !important;
 }
-#unified-extensions-button{
-    margin-left: 4px !important;
-}
 #nav-bar-overflow-button {
     margin-right: -4px !important;
-}
-#downloads-button,
-#fxa-toolbar-menu-button {
-    margin-right: 4px !important;
 }
 #customization-palette #wrapper-home-button #home-button .toolbarbutton-icon,
 #customization-palette #wrapper-stop-reload-button #stop-reload-button .toolbarbutton-icon {
