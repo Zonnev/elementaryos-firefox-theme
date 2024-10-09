@@ -318,7 +318,7 @@ Normal mode
     width: 100% !important;
 }
 #urlbar[open] {
-    top: 6px !important;
+    top: 7px !important;
     left: 0px !important;
     width: 100% !important;
 }
@@ -335,8 +335,8 @@ Normal mode
 }
 .urlbar-input-container {
     height: 25px !important;
-    border-radius: 4px !important;
-    padding: 0px 0px 1px 0px !important;
+    border-radius: 3px !important;
+    padding: 0px 0px 2px 0px !important;
 }
 #urlbar, #searchbar {
     -moz-window-dragging: no-drag !important;
