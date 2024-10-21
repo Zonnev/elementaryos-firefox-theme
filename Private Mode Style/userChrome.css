@@ -819,12 +819,12 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-content {
-        padding: 0px 10px 1px 0px !important;
+        padding: 0px 10px 3px 0px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-content[pinned] {
-        padding: 0px 0px 0px 0px !important;
+        padding: 0px 0px 3px 0px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
