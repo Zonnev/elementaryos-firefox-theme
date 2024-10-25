@@ -241,6 +241,9 @@ Normal mode
 #PanelUI-menu-button:-moz-window-inactive {
     opacity: 0.5 !important;
 }
+#sidebar-main:-moz-window-inactive {
+    background: #FAFAFA !important;
+}
 
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
@@ -851,12 +854,20 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /*** VERTICAL TABS ***/
-
+#sidebar-main {
+    background: rgba(241,241,241,1) !important;
+}
 #TabsToolbar[collapsed] ~ #nav-bar {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
 }
 #TabsToolbar[collapsed] ~ #nav-bar ~ #PersonalToolbar {
     z-index: -1 !important;
+}
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid #B5B5B5 !important;
+      box-shadow: none !important;
+  }
 }
 
 /* not expanded */
@@ -1222,6 +1233,12 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #sidebar-main:-moz-lwtheme-brighttext:-moz-window-inactive {
 	background: linear-gradient(180deg, rgb(48, 48, 48) 0%, rgb(51, 51, 51) 10%, rgb(51, 51, 51) 100%) !important;
 }
+#tabbrowser-tabbox:-moz-lwtheme-brighttext:-moz-window-inactive {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid #292929 !important;
+      box-shadow: none !important;
+  }
+}
 .tab-label[selected="true"]:-moz-lwtheme-brighttext:-moz-window-inactive {
     color: #FFF !important;
 }
@@ -1326,6 +1343,12 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover, :
 }
 #sidebar-main:-moz-lwtheme-brighttext {
 	background: linear-gradient(180deg, rgb(42, 42, 42) 0%, rgb(45, 45, 45) 10%, rgb(45, 45, 45) 100%) !important;
+}
+#tabbrowser-tabbox:-moz-lwtheme-brighttext {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid #1D1D1D !important;
+      box-shadow: none !important;
+  }
 }
 :root:-moz-lwtheme-brighttext {
     --toolbarbutton-hover-background: #2d5b86 !important;
@@ -1522,6 +1545,12 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :hover, :
 #sidebar-main:-moz-window-inactive {
 	background: linear-gradient(180deg, rgb(48, 48, 48) 0%, rgb(51, 51, 51) 10%, rgb(51, 51, 51) 100%) !important;
 }
+#tabbrowser-tabbox:-moz-window-inactive {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid #292929 !important;
+      box-shadow: none !important;
+  }
+}
 .tab-label[selected="true"]:-moz-window-inactive {
     color: #FFF !important;
 }
@@ -1635,6 +1664,12 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :active) 
 }
 #sidebar-main {
 	background: linear-gradient(180deg, rgb(42, 42, 42) 0%, rgb(45, 45, 45) 10%, rgb(45, 45, 45) 100%) !important;
+}
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid #1D1D1D !important;
+      box-shadow: none !important;
+  }
 }
 :root {
     --toolbarbutton-hover-background: #2d5b86 !important;

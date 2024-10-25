@@ -701,6 +701,27 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #TabsToolbar[collapsed] ~ #nav-bar ~ #PersonalToolbar {
     z-index: -1 !important;
 }
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid rgba(0,0,0,0.2) !important;
+      box-shadow: none !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid rgba(0,0,0,0.2) !important;
+      box-shadow: none !important;
+    }
+  }
+}
+#tabbrowser-tabbox:-moz-lwtheme-brighttext {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: 0.01px solid rgba(0,0,0,0.2) !important;
+      box-shadow: none !important;
+    }
+  }
+}
 
 /* not expanded */
 #tabbrowser-tabs[orient="vertical"] {
