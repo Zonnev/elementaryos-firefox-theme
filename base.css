@@ -317,17 +317,15 @@ Normal mode
 #urlbar[breakout]:not([open]) {
     --urlbar-height: 25px !important;
     --urlbar-toolbar-height: 25px !important;
-    left: 0px !important;
-    width: 100% !important;
 }
 #urlbar[open] {
     top: 7px !important;
-    left: 0px !important;
-    width: 100% !important;
 }
 #urlbar[open] .urlbar-input-container {
     margin-top: 3px !important;
     margin-bottom: 3px !important;
+    margin-left: 5px !important;
+    padding-right: 10px !important;
 }
 .urlbar-input-container label {
     line-height: 15px !important;
