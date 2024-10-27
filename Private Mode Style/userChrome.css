@@ -1013,6 +1013,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 COLOURS
 *******/
 
+/* make main window background dark for tiled windows */
+#main-window {
+    background: black !important;
+}
+
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive{

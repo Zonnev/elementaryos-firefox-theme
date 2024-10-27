@@ -217,6 +217,11 @@ menupopup, panel {
 Normal mode
 ***********/
 
+/* make main window background dark for tiled windows */
+#main-window {
+    background: black !important;
+}
+
 /*** FOCUS FIX ***/
 :root {
     --inactive-titlebar-opacity: 1 !important;
