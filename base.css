@@ -1819,7 +1819,7 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar:-moz-window-inactive {
     background: linear-gradient(90deg, rgba(167,147,255,1), rgba(229,155,216,1) 100%) !important;
 }
-#main-window[privatebrowsingmode="temporary"] #toolbar-menubar:-moz-window-inactive {
+#main-window[privatebrowsingmode="temporary"] #toolbar-menubar[autohide="false"]:-moz-window-inactive {
     background: linear-gradient(to right, rgba(139,121,226,1), rgba(199,128,188,1)) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #sidebar-main:-moz-window-inactive {
@@ -1894,10 +1894,10 @@ private browsing
     border-top: none !important;
     border-bottom: 1px solid rgba(0,0,0,0.2) !important;
 }
-#main-window[privatebrowsingmode="temporary"] #toolbar-menubar {
+#main-window[privatebrowsingmode="temporary"] #toolbar-menubar[autohide="false"] {
     background: linear-gradient(to right, rgba(94,75,197,1), rgba(162,76,141,1)) !important;
     border-top: none !important;
-    border-bottom: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.4) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background-color: rgba(255,255,255,0.3) !important;
