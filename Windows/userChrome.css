@@ -11,7 +11,7 @@
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
-    margin-left: -96px !important;
+    margin-left: -104px !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;

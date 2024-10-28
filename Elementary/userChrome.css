@@ -13,11 +13,11 @@
 .titlebar-buttonbox {
     appearance: none !important;
     flex-direction: row !important;
-    margin-left: 4px !important;
+    margin-left: 3px !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 11px) !important;
+    width: calc(100vw - 6px) !important;
     height: 25px !important;
     justify-content: space-between !important;
 }

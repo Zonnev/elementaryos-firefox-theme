@@ -27,7 +27,7 @@
 
 /* brings close button to the right */
 .titlebar-close {
-    margin-right: calc(11px - 100vw) !important;
+    margin-right: calc(5px - 100vw) !important;
 }
 
 /* dont show window controls in fullscreen */

@@ -21,7 +21,7 @@
 
 /* brings max and min button to the right */
 .titlebar-min {
-    margin-left: calc(100vw - 99px) !important;
+    margin-left: calc(100vw - 104px) !important;
 }
 
 /* dont show window controls in fullscreen */
