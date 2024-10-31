@@ -1113,8 +1113,8 @@ COLOURS
 #urlbar-search-mode-indicator {
     background: rgba(0,0,0,0.2) !important;
 }
-#urlbar-input-container image:not(#userContext-indicator),
-.urlbarView image,
+#urlbar-container image:not(#userContext-indicator),
+.urlbarView-favicon,
 #customization-palette-container image,
 #nav-bar-customization-target > toolbarbutton:not(hbox) > image,
 #nav-bar-customization-target > toolbarpaletteitem image,
@@ -1146,6 +1146,8 @@ COLOURS
 }
 #urlbar-input,
 .urlbarView-title,
+.urlbarView-body-inner label,
+.urlbarView-row[label]::before,
 #urlbar-one-offs-header-label,
 .urlbarView-title-separator,
 #customization-palette-container label,
