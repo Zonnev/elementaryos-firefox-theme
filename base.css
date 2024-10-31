@@ -295,10 +295,10 @@ Normal mode
 .titlebar-min:active image,
 .titlebar-max:active image,
 .titlebar-restore:active image {
-    background-color: rgba(0,0,0,0.03) !important;
+    background-color: rgba(0,0,0,0.05) !important;
     border-radius: 3px !important;
     border: 1px solid rgba(0,0,0,0.2) !important;
-    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.07) !important;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.07), 0 1px 0 0 rgba(255,255,255,0.5) !important;
 }
 
 .titlebar-close,
@@ -397,13 +397,13 @@ Normal mode
     border: 1px solid #B8B8B8 !important;
     border-radius: 3px !important; 
     background: #ffffff !important;
-    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.7) !important;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.5) !important;
 }
 #urlbar:not([focused]) {
     border: 1px solid #B8B8B8 !important;
     border-radius: 3px !important; 
     background: #ffffff !important;
-    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.8) !important;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.3), 0 1px 0 0 rgba(255,255,255,0.5) !important;
 }
 #urlbar-background {
     border: none !important;
@@ -1431,10 +1431,10 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :active) 
 .titlebar-min:active image,
 .titlebar-max:active image,
 .titlebar-restore:active image {
-    background-color: rgba(0,0,0,0.03) !important;
+    background-color: rgba(0,0,0,0.1) !important;
     border-radius: 3px !important;
-    border: 1px solid rgba(0,0,0,0.2) !important;
-    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.07) !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
 #nav-bar #back-button > .toolbarbutton-icon {
     list-style-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' id='svg6' version='1.1' width='16' height='16'%3E%3Cmetadata id='metadata12'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs10' /%3E%3Cpath id='path873-5' style='opacity:1;fill:%23ffffff;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:%23000000' d='m 7.2260666,2.5 c 0.4312184,0 0.7783725,0.3346464 0.7783725,0.7503279 V 6 H 13.221628 C 13.652847,6 14,6.3346463 14,6.7503279 V 8.249672 C 14,8.6653541 13.652847,9.0004099 13.221628,9 H 8.0044391 v 2.749674 C 8.0044391,12.165354 7.657285,12.5 7.2260666,12.5 6.9936571,12.5 6.7861919,12.40264 6.6438073,12.247938 L 2.212837,8.0241533 C 2.081227,7.8897736 2,7.7091601 2,7.5097679 2,7.3103755 2.081225,7.129763 2.212837,6.995383 L 6.6438073,2.7520634 C 6.7861919,2.5973529 6.9936571,2.5 7.2260666,2.5 Z' /%3E%3C/svg%3E") !important;
@@ -1737,10 +1737,10 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] .titlebar-min:active image,
 #main-window[privatebrowsingmode="temporary"] .titlebar-max:active image,
 #main-window[privatebrowsingmode="temporary"] .titlebar-restore:active image {
-    background-color: rgba(0,0,0,0.03) !important;
+    background-color: rgba(255,255,255,0.2) !important;
     border-radius: 3px !important;
-    border: 1px solid rgba(0,0,0,0.2) !important;
-    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.07) !important;
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
 
 /*** BUTTONS for PRIVATE MODE ***/

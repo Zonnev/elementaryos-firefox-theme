@@ -1312,10 +1312,10 @@ menubar > menu[open] {
 .titlebar-min:active image,
 .titlebar-max:active image,
 .titlebar-restore:active image {
-    background-color: rgba(0,0,0,0.03) !important;
+    background-color: rgba(255,255,255,0.2) !important;
     border-radius: 3px !important;
-    border: 1px solid rgba(0,0,0,0.2) !important;
-    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.07) !important;
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.15), 0 1px 0 0 rgba(255,255,255,0.1) !important;
 }
 
 /*** PROTECTIONS ICON for PRIVATE MODE ***/
