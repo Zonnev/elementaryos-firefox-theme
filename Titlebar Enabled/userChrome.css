@@ -388,6 +388,7 @@ Normal mode
 #urlbar-container,
 #search-container {
     -moz-window-dragging: drag !important;
+    padding-block: 10px !important;
 }
 .urlbar-input-container {
     height: 25px !important;
