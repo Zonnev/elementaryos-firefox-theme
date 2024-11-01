@@ -8,19 +8,11 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 For now theme installation is supported for:
 
-1. [🦊 Firefox](https://www.mozilla.org/en-US/firefox/new/) installed with apt package manager.
-   Follow instructions from [ask ubuntu](https://askubuntu.com/a/1404401) to install it.
-2. [🦊 Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)
-   installed with apt package manager.
-3. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
-3. [🦊 Firefox 📦 Snap version](https://snapcraft.io/firefox).
-4. [🐺 Librewolf Appimage version](https://librewolf.net/installation/linux/).
-5. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
-6. [🧅 Tor Browser](https://community.torproject.org/onion-services/setup/install/). *The theme needs to be installed manually for this browser.*
-7. [🧅 Tor Browser 📦 Flatpak version](https://flathub.org/apps/details/com.github.micahflee.torbrowser-launcher). *The theme needs to be installed manually for this browser.*
+1. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
+2. [🦊 Firefox 📦 Snap version](https://snapcraft.io/firefox).
+3. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
 
-❗*For best experience we recommend to use theme with Firefox installed with apt package manager.*
-*Other installations have limited support. [We also welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
+❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
 
 Use this one line install script. Just copy the line to your terminal and press enter. When you want a different window control layout, use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) first to select one, after that this script will automatically install the right userChrome:
