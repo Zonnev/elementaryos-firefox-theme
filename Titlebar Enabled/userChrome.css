@@ -212,7 +212,7 @@ Normal mode
 }
 #nav-bar:-moz-window-inactive {
     background: linear-gradient(to bottom, #EAEAEA, #E9E9E9) !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 #TabsToolbar:-moz-window-inactive {
     background: linear-gradient(180deg, rgba(236,236,236,1) 0%, rgba(250,250,250,1) 10%, rgba(250,250,250,1) 100%) !important;
@@ -239,13 +239,13 @@ Normal mode
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive{
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 :root[sizemode="maximized"] #nav-bar,
 :root[sizemode="maximized"] #nav-bar:-moz-window-inactive,
 :root[inFullscreen="true"] #nav-bar {
     border-radius: 0 0 0 0 !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 :root[inFullscreen="true"] #TabsToolbar {
     min-height: 36px !important;
@@ -307,7 +307,7 @@ Normal mode
     background: linear-gradient(to bottom, #E5E5E5, #DFDFDF) !important;
     height: 45px !important;
     padding: 0px 0px 0px 0px !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2) !important;
 }
 /* fullscreen fixes for the nav bar */
 :root[sizemode="fullscreen"] #nav-bar {
@@ -863,7 +863,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     background: rgba(241,241,241,1) !important;
 }
 #TabsToolbar[collapsed] ~ #nav-bar {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
 }
 #TabsToolbar[collapsed] ~ #nav-bar ~ #PersonalToolbar {
     z-index: -1 !important;
@@ -1167,13 +1167,13 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 :root[gtktiledwindow="true"] #nav-bar,
 :root[gtktiledwindow="true"] #nav-bar:-moz-window-inactive {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 :root[sizemode="maximized"] #nav-bar,
 :root[sizemode="maximized"] #nav-bar:-moz-window-inactive,
 :root[inFullscreen="true"] #nav-bar {
     border-radius: 0 0 0 0 !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 :root[inFullscreen="true"] #TabsToolbar {
     min-height: 36px !important;
@@ -1190,10 +1190,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     appearance: none !important;
     border-bottom: 1px solid #292929 !important;
     background: linear-gradient(to bottom, #3B3B3B, #383838) !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 #TabsToolbar[collapsed] ~ #nav-bar:-moz-window-inactive {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
 }
 #TabsToolbar:-moz-window-inactive {
 	background: linear-gradient(180deg, rgb(48, 48, 48) 0%, rgb(51, 51, 51) 10%, rgb(51, 51, 51) 100%) !important;
@@ -1248,10 +1248,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     appearance: none !important;
     border-bottom: 1px solid #1D1D1D !important;
     background: linear-gradient(to bottom, #343434, #2C2C2C) !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 #TabsToolbar[collapsed] ~ #nav-bar {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.07), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px 0px rgba(0,0,0,0.15) !important;
 }
 #urlbar[focused="true"] {
     border: 1px solid #2B2C2C !important;
@@ -1463,13 +1463,13 @@ private browsing
 /*** TILED/MAXIMIZED/FULLSCREEN WINDOW FIXES ***/
 #main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #nav-bar,
 #main-window[privatebrowsingmode="temporary"][gtktiledwindow="true"] #nav-bar:-moz-window-inactive{
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 #main-window[privatebrowsingmode="temporary"][sizemode="maximized"] #nav-bar,
 #main-window[privatebrowsingmode="temporary"][sizemode="maximized"] #nav-bar:-moz-window-inactive,
 #main-window[privatebrowsingmode="temporary"][inFullscreen="true"] #nav-bar {
     border-radius: 0 0 0 0 !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 #main-window[privatebrowsingmode="temporary"][inFullscreen="true"] #TabsToolbar {
     min-height: 36px !important;
@@ -1516,10 +1516,10 @@ private browsing
     -moz-appearance: none !important;
     border-bottom: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, rgba(94,75,197,1), rgba(162,76,141,1)) !important;
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #TabsToolbar[collapsed] ~ #nav-bar {
-    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), 0px 0px 3px 0px rgba(0,0,0,0.3) !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px 0px rgba(0,0,0,0.3) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #searchbar:not([focused="true"]) {
     border: 1px solid rgba(0,0,0,0.4) !important;
