@@ -346,7 +346,8 @@ LAYOUT
 }
 
 /*** TOOLBAR ***/
-toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon {
+toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon,
+toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack {
     width: 28px !important;
     height: 28px !important;
     padding: 6px !important;
@@ -366,12 +367,14 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
 #reload-button .toolbarbutton-icon,
 #stop-button .toolbarbutton-icon,
 #home-button .toolbarbutton-icon {
-    padding: 2px !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 4px !important;
     clip-path: circle(50%) !important;
 }
 
 /* buttons in normal mode */
-#nav-bar #back-button:active > .toolbarbutton-icon {
+#nav-bar #back-button[checked] > .toolbarbutton-icon {
     background: rgba(51,51,51, 0.15) !important;
     box-shadow: none !important;
 }
@@ -393,7 +396,8 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     padding: 0px !important;
     margin: -4px !important;
 }
-#PanelUI-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
+#PanelUI-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack,
+#fxa-toolbar-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
     background: none !important;
 }
 toolbar .toolbarbutton-1:not(#alltabs-button):not(#PanelUI-menu-button) > .toolbarbutton-badge-stack,
@@ -405,6 +409,10 @@ toolbar .toolbaritem-combined-buttons > .toolbarbutton-1 {
     border-radius: 50% !important;
 }
 toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-icon,
+toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
+    background-color: rgba(255,255,255,0.2) !important;
+    clip-path: circle(50%) !important;
+}
 toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover, :active) > .toolbarbutton-badge-stack {
     background-color: rgba(255,255,255,0.2) !important;
     clip-path: circle(50%) !important;

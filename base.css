@@ -509,7 +509,8 @@ Normal mode
 }
 
 /*** TOOLBAR ***/
-toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon {
+toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon,
+toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack {
     width: 28px !important;
     height: 28px !important;
     padding: 6px !important;
@@ -529,7 +530,9 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
 #reload-button .toolbarbutton-icon,
 #stop-button .toolbarbutton-icon,
 #home-button .toolbarbutton-icon {
-    padding: 2px !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 4px !important;
     clip-path: circle(50%) !important;
 }
 
@@ -541,7 +544,7 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     margin-right: 6px !important;
     margin-left: 6px !important;
 }
-#nav-bar #back-button:active > .toolbarbutton-icon {
+#nav-bar #back-button[checked] > .toolbarbutton-icon {
     background: rgba(51,51,51, 0.15) !important;
     box-shadow: none !important;
 }
@@ -579,10 +582,10 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     padding: 0px !important;
     margin: -4px !important;
 }
-#PanelUI-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
+#PanelUI-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack,
+#fxa-toolbar-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
     background: none !important;
 }
-toolbar .toolbarbutton-1:not(#alltabs-button):not(#PanelUI-menu-button) > .toolbarbutton-badge-stack,
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1 {
     background: none !important;
     box-shadow: none !important;
@@ -591,6 +594,10 @@ toolbar .toolbaritem-combined-buttons > .toolbarbutton-1 {
     border-radius: 50% !important;
 }
 toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-icon,
+toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
+    background: rgba(51,51,51, 0.15) !important;
+    clip-path: circle(50%) !important;
+}
 toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover, :active) > .toolbarbutton-badge-stack {
     background: rgba(51,51,51, 0.15) !important;
     clip-path: circle(50%) !important;
@@ -1369,7 +1376,10 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     background: rgba(255,255,255, 0.3) !important;
 }
 toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-icon,
-toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
+toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
+    background-color: rgba(255,255,255,0.2) !important;
+}
+toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover, :active) > .toolbarbutton-badge-stack {
     background-color: rgba(255,255,255,0.2) !important;
 }
 toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :active),
@@ -1455,7 +1465,7 @@ toolbar .toolbarbutton-1[data-extensionid]:-moz-any([open], [checked], :active) 
 #nav-bar #back-button > .toolbarbutton-icon {
     list-style-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' id='svg6' version='1.1' width='16' height='16'%3E%3Cmetadata id='metadata12'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Cdc:title%3E%3C/dc:title%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs10' /%3E%3Cpath id='path873-5' style='opacity:1;fill:%23ffffff;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:%23000000' d='m 7.2260666,2.5 c 0.4312184,0 0.7783725,0.3346464 0.7783725,0.7503279 V 6 H 13.221628 C 13.652847,6 14,6.3346463 14,6.7503279 V 8.249672 C 14,8.6653541 13.652847,9.0004099 13.221628,9 H 8.0044391 v 2.749674 C 8.0044391,12.165354 7.657285,12.5 7.2260666,12.5 6.9936571,12.5 6.7861919,12.40264 6.6438073,12.247938 L 2.212837,8.0241533 C 2.081227,7.8897736 2,7.7091601 2,7.5097679 2,7.3103755 2.081225,7.129763 2.212837,6.995383 L 6.6438073,2.7520634 C 6.7861919,2.5973529 6.9936571,2.5 7.2260666,2.5 Z' /%3E%3C/svg%3E") !important;
 }
-#nav-bar #back-button:active > .toolbarbutton-icon {
+#nav-bar #back-button[checked] > .toolbarbutton-icon {
     background-color: rgba(255,255,255,0.2) !important;
     box-shadow: none !important;
 }
@@ -1680,8 +1690,15 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #customization-container {
     background: #2d0b44 !important;
 }
+#main-window[privatebrowsingmode="temporary"] #PanelUI-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack,
+#main-window[privatebrowsingmode="temporary"] #fxa-toolbar-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
+    background: none !important;
+}
 #main-window[privatebrowsingmode="temporary"] toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-icon,
-#main-window[privatebrowsingmode="temporary"] toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
+#main-window[privatebrowsingmode="temporary"] toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :active) > .toolbarbutton-badge-stack {
+    background-color: rgba(255,255,255,0.2) !important;
+}
+#main-window[privatebrowsingmode="temporary"] toolbar .toolbarbutton-1:not([disabled="true"]):not([data-extensionid]):-moz-any([open], [checked], :hover, :active) > .toolbarbutton-badge-stack {
     background-color: rgba(255,255,255,0.2) !important;
 }
 #main-window[privatebrowsingmode="temporary"] toolbar .toolbaritem-combined-buttons > .toolbarbutton-1:-moz-any([open], [checked], :active),
