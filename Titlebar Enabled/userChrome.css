@@ -417,10 +417,10 @@ Normal mode
 }
 
 /* delete when stable is version 134 or when these urlbar icons are jumping in Nightly */
-:root[data-title-default="Firefox Nightly"] #urlbar[breakout-extend] #identity-permission-box,
+/* :root[data-title-default="Firefox Nightly"] #urlbar[breakout-extend] #identity-permission-box,
 :root[data-title-default="Firefox Nightly"] #urlbar[breakout-extend] #notification-popup-box {
     margin-top: 0px !important;
-}
+} */
 
 #identity-icon,
 #tracking-protection-icon-box {
