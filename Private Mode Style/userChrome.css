@@ -256,7 +256,7 @@ LAYOUT
 #PopupSearchAutoComplete {
     border-radius: 0 0 7px 7px !important;
 }
-.urlbar-icon:not(.search-go-button):not(.urlbar-go-button) {
+.urlbar-icon:not(.urlbar-revert-button ):not(.search-go-button):not(.urlbar-go-button) {
     margin: -3px 0px 0px 0px !important;
 }
 .urlbar-page-action:not(#translations-button[translationsactive="true"]) {
@@ -293,9 +293,10 @@ LAYOUT
 #tracking-protection-icon-box {
     margin: 0px 0px 1px 0px !important;
 }
-.urlbar-go-button {
+.urlbar-go-button,
+.urlbar-revert-button {
     padding: 6px !important;
-    margin: -4px 0px !important;
+    margin: -5px 0px !important;
 }
 .search-go-button {
     padding: 6px !important;
