@@ -630,6 +630,18 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /*** TAB BAR ***/
+#tabbrowser-tabs {
+  &[orient="horizontal"] {
+    min-height: 36px !important;
+    max-height: 36px !important;
+  }
+}
+#tabbrowser-arrowscrollbox {
+  &[orient="horizontal"] {
+    min-height: 36px !important;
+    max-height: 36px !important;
+  }
+}
 #TabsToolbar {
     -moz-appearance: none !important;
     padding: 0 !important;
