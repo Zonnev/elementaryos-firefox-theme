@@ -40,10 +40,10 @@
 @media (prefers-color-scheme: dark) {
 @-moz-document url-prefix("about:"),  url-prefix("chrome://browser/content") {
 :root {
-    --in-content-page-background: var(--eOS-black-500) !important;
-    --in-content-background-color: var(--eOS-black-500) !important;
+    --in-content-page-background: var(--eOS-black-700) !important;
+    --in-content-background-color: var(--eOS-black-700) !important;
     --in-content-page-color: var(--eOS-silver-100) !important;
-    --in-content-table-background: var(--eOS-black-300) !important;
+    --in-content-table-background: var(--eOS-black-500) !important;
     --in-content-primary-button-text-color: var(--eOS-silver-100) !important;
     --in-content-primary-button-background: var(--eOS-blueberry-500) !important;
     --in-content-primary-button-background-hover: var(--eOS-blueberry-300) !important;
@@ -52,15 +52,15 @@
     --in-content-button-border-color-hover: transparent !important;
     --in-content-button-border-color-active: transparent !important;
 
-    --newtab-background-color: var(--eOS-black-500) !important;
-    --newtab-background-color-secondary: var(--eOS-black-300) !important;
-    --newtab-element-hover-color: var(--eOS-black-300) !important; 
+    --newtab-background-color: var(--eOS-black-700) !important;
+    --newtab-background-color-secondary: var(--eOS-black-500) !important;
+    --newtab-element-hover-color: var(--eOS-black-500) !important; 
     --newtab-overlay-color: rgba(0,0,0,0.8) !important;
     --newtab-primary-action-background: var(--eOS-blueberry-100) !important;
     --newtab-primary-action-background-pocket: var(--eOS-blueberry-100) !important;
 
-    --box-background-color: var(--eOS-black-300) !important;
-    --box-background: var(--eOS-black-500) !important;
+    --box-background-color: var(--eOS-black-500) !important;
+    --box-background: var(--eOS-black-700) !important;
 
     --brand-color-accent: var(--eOS-blueberry-300) !important;
     --brand-color-accent-hover: var(--eOS-blueberry-100) !important;
@@ -74,12 +74,12 @@
     --primary-button-active-background-color: var(--eOS-blueberry-100) !important;
     --primary-button-color: var(--eOS-silver-100) !important;
 
-    --card-background-color:  var(--eOS-black-500) !important; 
+    --card-background-color:  var(--eOS-black-700) !important; 
 
     --button-color: var(--eOS-silver-100) !important;
-    --button-background-color: var(--eOS-black-300) !important;
+    --button-background-color: var(--eOS-black-500) !important;
     --button-hover-background-color: var(--eOS-black-100) !important;
-    --sidebar-background-hover: var(--eOS-black-300) !important;
+    --sidebar-background-hover: var(--eOS-black-500) !important;
 
 /* Reader mode */
     --dark-theme-foreground: var(--eOS-silver-300) !important;
@@ -93,7 +93,7 @@
   
 /* Dialog */
 .dialogBox, dialog {
-    background-color: var(--eOS-black-500) !important;
+    background-color: var(--eOS-black-700) !important;
 }
 
 /* Separator */
@@ -106,26 +106,26 @@ separator {
 checkbox:not(:hover) .checkbox-check:not([checked="true"]), input[type="checkbox"]:not(:hover):not(:checked) {
     appearance: none !important;
     border: 2px solid var(--eOS-silver-300) !important;
-    background: var(--eOS-black-500) !important;
+    background: var(--eOS-black-700) !important;
     border-radius: 2px !important;
 }
 checkbox:hover .checkbox-check:not([checked="true"]), input[type="checkbox"]:hover:not(:checked) {
     appearance: none !important; 
     border: 2px solid var(--eOS-silver-100) !important;
-    background: var(--eOS-black-500) !important;
+    background: var(--eOS-black-700) !important;
     border-radius: 2px !important;
 }
 
 /* Radio */
 radio:not(:hover) .radio-check:not([selected="true"]), input[type="radio"]:not(:hover):not(:checked) {
     appearance: none !important;
-    background: var(--eOS-black-500) !important;
+    background: var(--eOS-black-700) !important;
     border: 0.15em solid var(--eOS-silver-300) !important;
     border-radius: 50% !important;
 }
 radio:hover .radio-check:not([selected="true"]), input[type="radio"]:hover:not(:checked) {
     appearance: none !important;
-    background: var(--eOS-black-500) !important;
+    background: var(--eOS-black-700) !important;
     border: 0.15em solid var(--eOS-silver-100) !important;
     border-radius: 50% !important;
 }}
