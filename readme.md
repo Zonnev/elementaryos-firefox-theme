@@ -61,9 +61,9 @@ This will make purple colors of Private Mode as default style.
 1. In the customization panel in Firefox you can move the new tab button to the left. The default is System theme, you can also use the Dark theme option but Light theme is not supported.
 2. In `about:config` you can make the bottom window corners rounded by setting `widget.gtk.rounded-bottom-corners.enabled` to `true`.
 3. If you installed the **Flatpak** version of Firefox and you want to make use of the elementary OS **accent colors**, you have to copy the `usr/share/themes` folder to `home/.themes`:
-- Type or copy-paste in Terminal `mkdir -p $HOME/.themes` to make the folder.
-- Then type `cp -r /usr/share/themes/* $HOME/.themes/` to copy the folder and place the files in the folder you have made.
-- And after that `flatpak override --user org.mozilla.firefox --filesystem=$HOME/.themes` to make Flatpak version follow the elementary OS style sheets in the folder.
+  - Type or copy-paste in Terminal `mkdir -p $HOME/.themes` to make the folder.
+  - Then type `cp -r /usr/share/themes/* $HOME/.themes/` to copy the folder and place the files in the folder you have made.
+  - And after that `flatpak override --user org.mozilla.firefox --filesystem=$HOME/.themes` to make Flatpak version follow the elementary OS style sheets in the folder.
 
 ## 🔁 Update
 
