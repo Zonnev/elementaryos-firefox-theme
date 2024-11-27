@@ -618,6 +618,9 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #urlbar .searchbar-engine-one-off-item {
     min-height: 26px !important;
 }
+#urlbar[breakout-extend] #userContext-label {
+    margin-bottom: 1px !important;
+}
 
 /* makes new searchmode box same look and height in open urlbar */
 #searchmode-switcher-chicklet {
@@ -892,19 +895,19 @@ toolbarpaletteitem > #stop-reload-button {
 .tab-content[pinned] {
     padding: 0px 10px 1px 10px !important;
 }
-.tabbrowser-tab[selected] {
+.tabbrowser-tab:is([selected], [multiselected]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin-bottom: 4px !important;
 }
-.tabbrowser-tab:not([selected]) {
+.tabbrowser-tab:not([selected], [multiselected]) {
     min-height: 30px !important;
     max-height: 30px !important;
     border-radius: 3.5px !important;
     margin-bottom: 2px !important;
 }
-.tab-background:not([selected]) {
+.tab-background:not([selected], [multiselected]) {
     min-height: 30px !important;
     max-height: 30px !important;
 	border: none !important;
@@ -920,15 +923,15 @@ toolbarpaletteitem > #stop-reload-button {
     margin: 1px 0px 1px 0px !important;
     box-shadow: none !important;
 }
-.tabbrowser-tab:not([selected]):hover .tab-background {
+.tabbrowser-tab:not([selected], [multiselected]):hover .tab-background {
 	background-color: rgba(0,0,0,0.06) !important;
     border-radius: 4px !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected] > .tab-context-line {
-    margin: 0px !important;
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:is([selected], [multiselected]) > .tab-context-line {
+    margin: 0px 0 0 !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected]) > .tab-context-line {
-    margin: 1px 0 0 !important;
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected], [multiselected]) > .tab-context-line {
+    margin: 0px 0 0 !important;
 }
 #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;

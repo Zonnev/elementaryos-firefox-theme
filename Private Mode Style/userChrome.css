@@ -354,6 +354,9 @@ LAYOUT
 #urlbar .searchbar-engine-one-off-item {
     min-height: 26px !important;
 }
+#urlbar[breakout-extend] #userContext-label {
+    margin-bottom: 1px !important;
+}
 
 /* makes new searchmode box same look and height in open urlbar */
 #searchmode-switcher-chicklet {
@@ -602,19 +605,19 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tabbrowser-tab:before {
     display: none !important; /* don't show border between tabs  */
 }
-.tabbrowser-tab[selected] {
+.tabbrowser-tab:is([selected], [multiselected]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
     margin-bottom: 4px !important;
 }
-.tabbrowser-tab:not([selected]) {
+.tabbrowser-tab:not([selected], [multiselected]) {
     min-height: 30px !important;
     max-height: 30px !important;
     border-radius: 3.5px !important;
     margin-bottom: 2px !important;
 }
-.tab-background:not([selected]) {
+.tab-background:not([selected], [multiselected]) {
     min-height: 30px !important;
     max-height: 30px !important;
 	border: none !important;
@@ -638,11 +641,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tabbrowser-tab:not([selected]):hover .tab-background {
 	background-color: rgba(0,0,0,0.1) !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background[selected] > .tab-context-line {
-    margin: 0px !important;
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:is([selected], [multiselected]) > .tab-context-line {
+    margin: 0px 0 0 !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected]) > .tab-context-line {
-    margin: 1px 0 0 !important;
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected], [multiselected]) > .tab-context-line {
+    margin: 0px 0 0 !important;
 }
 #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
