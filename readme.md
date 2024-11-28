@@ -15,20 +15,19 @@ For now theme installation is supported for:
 **You can use Main menu to create a Firefox desktop entry:**
 - Download Firefox from the [website](https://www.mozilla.org/en-US/firefox/new/) and extract in a folder of your choice.
 - Open [Main menu](https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor) (install it in AppCenter), click on the Settings wheel in the app list on the top right and select `New launcher`.
-- Fill in each section starting with Icon. Press the search glass and go to your Firefox folder `browser/chrome/icons/default` and select `default256.png`.
-- Under that section you can fill in `Firefox` as name of the launcher.
-- Under `Execute > Command` you fill in your Firefox folder location like `home/<username>/Apps/firefox/firefox` where the last "firefox" is the run file.
-- You can toggle "show this application in the main menu" `on`.
-- Then under that you can choose in which category the launcher is showing like `Internet`.
-- Then you can toggle animation `on` too.
+- Fill in each section starting with **Appearance**. Press the **folder icon** and go to your Firefox folder and in `browser/chrome/icons/default` select `default256.png`.
+- In **Description** you can fill in `Firefox` as name of the launcher.
+- In **Execution** and **Default command** you fill in your Firefox folder location like `home/<username>/Apps/firefox/firefox` where the last "firefox" is the run file.
+- In **Visibility** you can toggle **Show an animation until the application is visible** and **Show this application in the main menu** `on`.
+- Then under that in **Menu** you can choose in which category the launcher is showing, like `Internet`.
 - Save by clicking the `save` button in the top bar of the window.
 
 **Now you need a dot under the Firefox icon when opened in the dock. Edit the desktop entry file:**
-- In the left list of Main menu, select Firefox icon and click on the Settings wheel and select `Edit document`, this opens Code with the desktop entry file visible.
-- Then open Firefox and Terminal.
-- Type `xprop WM_CLASS` in the Terminal, the result: your mouse cursor changes into a crosshair.
+- In the left list of **Main menu**, select Firefox and scroll down to **Advanced** section and press the icon on the right, this opens **Code** with the desktop entry file visible.
+- Then open **Firefox** and **Terminal**.
+- Type `xprop WM_CLASS` in the **Terminal**, the result: your mouse cursor changes into a crosshair.
 - You can now click your crosshair cursor on the Firefox window and you will see the WM_Class of Firefox in Terminal.
-- Go to Code and type a new line in the `Desktop Entry` section, something like: `StartupWMClass=firefox`. Code will automatically save the file so just close all and move the Firefox icon from Slingshot to the Dock and enjoy the fully working and integrated Firefox.
+- Go to Code and type a new line in the `Desktop Entry` section, something like: `StartupWMClass=firefox`, where **firefox** is the result of `xprop WM_class`. Code will automatically save the file so just close all and move the Firefox icon from Slingshot to the Dock and enjoy the fully working and integrated Firefox.
 
 ❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
