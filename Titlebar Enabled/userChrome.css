@@ -878,7 +878,7 @@ toolbarpaletteitem > #stop-reload-button {
 /* make tab separators: thanks to MrOtherGuy, source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_separator_lines.css */
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
     border-inline-start: 1px solid transparent !important;
-    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 90%, transparent 90%) !important;
+    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 20%, color-mix(in srgb, #D9D9D9 100%, transparent) 80%, transparent 80%) !important;
 }
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:hover,
 #tabbrowser-tabs[orient="horizontal"]:not([movingtab]) .tabbrowser-tab:hover + .tabbrowser-tab:not([first-visible-unpinned-tab]),
@@ -897,29 +897,17 @@ toolbarpaletteitem > #stop-reload-button {
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     flex-direction: row-reverse !important;
-    padding: 0px 10px 1px 6px !important;
+    padding: 0px 10px 3px 6px !important;
 }
 .tab-content[pinned] {
-    padding: 0px 10px 1px 10px !important;
-}
-.tabbrowser-tab:is([selected], [multiselected]) {
-    min-height: 32px !important;
-    max-height: 32px !important;
-    border-radius: 3.5px !important;
-    margin-bottom: 4px !important;
-}
-.tabbrowser-tab:not([selected], [multiselected]) {
-    min-height: 30px !important;
-    max-height: 30px !important;
-    border-radius: 3.5px !important;
-    margin-bottom: 2px !important;
+    padding: 0px 10px 3px 10px !important;
 }
 .tab-background:not([selected], [multiselected]) {
-    min-height: 30px !important;
-    max-height: 30px !important;
-	border: none !important;
-    border-radius: 3.5px !important;
-    margin: 2px 0px 2px 0px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+	border: 1px solid transparent !important;
+    padding: 0px 0px !important;
+    margin: 1px 0px 2px 0px !important; /* tabs not centered same as Epiphany */
 }
 .tab-background:is([selected], [multiselected]) {
     min-height: 32px !important;
@@ -927,7 +915,8 @@ toolbarpaletteitem > #stop-reload-button {
     background: #FFFFFF !important;
     border-radius: 3.5px !important;
 	border: 1px solid #C8C8C8 !important;
-    margin: 1px 0px 1px 0px !important;
+    padding: 0px 0px !important;
+    margin: 1px 0px 2px 0px !important; /* tabs not centered same as Epiphany */
     box-shadow: none !important;
 }
 .tabbrowser-tab:not([selected]):hover .tab-background {
@@ -1134,6 +1123,19 @@ toolbarpaletteitem > #stop-reload-button {
   }
 }
 
+/*** TAB GROUPS ***/
+#tabbrowser-tabs[orient="horizontal"] .tab-group-label {
+    margin-block: auto 0 auto !important;
+}
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+  tab-group {
+    #tabbrowser-tabs[expanded] & {
+      margin-inline-start: 2px !important;
+      margin: 2px !important;
+    }
+  }
+}
+
 /*** VERTICAL TABS ***/
 
 #sidebar-main {
@@ -1148,38 +1150,23 @@ toolbarpaletteitem > #stop-reload-button {
       box-shadow: none !important;
   }
 }
-
-/* not expanded vertical tabs */
+#tabbrowser-arrowscrollbox[orient="vertical"] {
+    padding: 2px 3px !important;
+}
 #tabbrowser-tabs[orient="vertical"] {
-  &:not([expanded]) {
-    & .tabbrowser-tab:is([selected], [multiselected]) {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
-        padding: 0px 0px !important;
-   }
+  & .tabbrowser-tab {
+    align-items: stretch !important;
   }
 }
+
+/* not expanded vertical tabs */
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-background:is([selected], [multiselected]) {
         min-height: 32px !important;
         max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
         padding: 0px 0px !important;
-   }
-  }
-}
-#tabbrowser-tabs[orient="vertical"] {
-  &:not([expanded]) {
-    & .tabbrowser-tab {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
-        padding: 0px 0px !important;
+        margin: 2px auto !important;
    }
   }
 }
@@ -1188,9 +1175,8 @@ toolbarpaletteitem > #stop-reload-button {
     & .tab-background {
         min-height: 32px !important;
         max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
         padding: 0px 0px !important;
+        margin: 2px auto !important;
    }
   }
 }
@@ -1213,8 +1199,8 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-    & .tab-content {
-        padding: 0px 16px 2px 0px !important;
+    & .tab-content:not([pinned]) {
+        padding: 0px 17px !important;
     }
   }
 }
@@ -1229,29 +1215,10 @@ toolbarpaletteitem > #stop-reload-button {
       background: none !important;
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
-    & .tabbrowser-tab:is([selected], [multiselected]) {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
-        padding: 0px 0px !important;
-   }
-}
-#tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-background:is([selected], [multiselected]) {
         min-height: 32px !important;
         max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
-        padding: 0px 0px !important;
-   }
-}
-#tabbrowser-tabs[orient="vertical"][expanded] {
-    & .tabbrowser-tab {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
+        margin: 2px !important;
         padding: 0px 0px !important;
    }
 }
@@ -1259,14 +1226,13 @@ toolbarpaletteitem > #stop-reload-button {
     & .tab-background {
         min-height: 32px !important;
         max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
+        margin: 2px !important;
         padding: 0px 0px !important;
    }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
-    & .tab-content {
-        padding: 0px 10px 3px 0px !important;
+    & .tab-content:not([pinned]) {
+        padding: 0px 10px 1px 0px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
@@ -1580,7 +1546,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 /* tab separators in dark mode */
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
     border-inline-start: 1px solid transparent !important;
-    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.7), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.7), transparent) 90%, transparent 90%) !important;
+    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.7), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.7), transparent) 80%, transparent 80%) !important;
 }
 
 #TabsToolbar {
@@ -1890,7 +1856,7 @@ private browsing
 /* tab separators in private mode */
 #main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
     border-inline-start: 1px solid transparent !important;
-    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 90%, transparent 90%) !important;
+    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 80%, transparent 80%) !important;
 }
 #main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:hover,
 #main-window[privatebrowsingmode="temporary"] #tabbrowser-tabs[orient="horizontal"]:not([movingtab]) .tabbrowser-tab:hover + .tabbrowser-tab:not([first-visible-unpinned-tab]),

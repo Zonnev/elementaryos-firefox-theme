@@ -575,7 +575,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /* make tab separators: thanks to MrOtherGuy, source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_separator_lines.css */
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
     border-inline-start: 1px solid transparent !important;
-    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 90%, transparent 90%) !important;
+    border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 80%, transparent 80%) !important;
 }
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:hover,
 #tabbrowser-tabs[orient="horizontal"]:not([movingtab]) .tabbrowser-tab:hover + .tabbrowser-tab:not([first-visible-unpinned-tab]),
@@ -594,10 +594,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     flex-direction: row-reverse !important;
-    padding: 0px 10px 1px 6px !important;
+    padding: 0px 10px 3px 6px !important;
 }
 .tab-content[pinned] {
-    padding: 0px 10px 1px 10px !important;
+    padding: 0px 10px 3px 10px !important;
 }
 .tabbrowser-tab:after {
     display: none !important; /* don't show border between tabs  */
@@ -605,37 +605,20 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tabbrowser-tab:before {
     display: none !important; /* don't show border between tabs  */
 }
-.tabbrowser-tab:is([selected], [multiselected]) {
+.tab-background:not([selected], [multiselected]) {
     min-height: 32px !important;
     max-height: 32px !important;
+	border: 1px solid transparent !important;
     border-radius: 3.5px !important;
-    margin-bottom: 4px !important;
-}
-.tabbrowser-tab:not([selected], [multiselected]) {
-    min-height: 30px !important;
-    max-height: 30px !important;
-    border-radius: 3.5px !important;
-    margin-bottom: 2px !important;
-}
-.tab-background:not([selected], [multiselected]) {
-    min-height: 30px !important;
-    max-height: 30px !important;
-	border: none !important;
-    border-radius: 3.5px !important;
-    margin: 2px 0px 2px 0px !important;
+    padding: 0px 0px !important;
+    margin: 1px 0px 2px 0px !important; /* tabs not centered same as Epiphany */
 }
 .tab-background:is([selected], [multiselected]) {
     min-height: 32px !important;
     max-height: 32px !important;
     border-radius: 3.5px !important;
-    margin: 1px -1px 1px -1px !important;
-    box-shadow: none !important;
-}
-.tab-background:is([selected], [multiselected]):-moz-lwtheme-brighttext {
-    min-height: 32px !important;
-    max-height: 32px !important;
-    border-radius: 3.5px !important;
-    margin: 1px -2px 1px -2px !important;
+    padding: 0px 0px !important;
+    margin: 1px 0px 2px 0px !important; /* tabs not centered same as Epiphany */
     box-shadow: none !important;
 }
 .tabbrowser-tab:not([selected]):hover .tab-background {
@@ -840,64 +823,50 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   }
 }
 
+/*** TAB GROUPS ***/
+#tabbrowser-tabs[orient="horizontal"] .tab-group-label {
+    margin-block: auto 0 auto !important;
+}
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+  tab-group {
+    #tabbrowser-tabs[expanded] & {
+      margin-inline-start: 2px !important;
+      margin: 2px !important;
+    }
+  }
+}
+
 /*** VERTICAL TABS ***/
 
+#sidebar-main {
+    background: #FAFAFA !important;
+}
 #TabsToolbar[collapsed] ~ #nav-bar ~ #PersonalToolbar {
     z-index: -1 !important;
 }
 #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
-      outline: 0.01px solid rgba(0,0,0,0.2) !important;
+      outline: 0.01px solid #B5B5B5 !important;
       box-shadow: none !important;
   }
 }
-@media (prefers-color-scheme: dark) {
-#tabbrowser-tabbox {
-  @media (-moz-bool-pref: "sidebar.revamp") {
-      outline: 0.01px solid rgba(0,0,0,0.2) !important;
-      box-shadow: none !important;
-    }
-  }
+#tabbrowser-arrowscrollbox[orient="vertical"] {
+    padding: 2px 3px !important;
 }
-#tabbrowser-tabbox:-moz-lwtheme-brighttext {
-  @media (-moz-bool-pref: "sidebar.revamp") {
-      outline: 0.01px solid rgba(0,0,0,0.2) !important;
-      box-shadow: none !important;
-    }
+#tabbrowser-tabs[orient="vertical"] {
+  & .tabbrowser-tab {
+    align-items: stretch !important;
   }
 }
 
 /* not expanded vertical tabs */
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-    & .tabbrowser-tab:is([selected], [multiselected]) {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
-        padding: 0px 0px !important;
-   }
-  }
-}
-#tabbrowser-tabs[orient="vertical"] {
-  &:not([expanded]) {
     & .tab-background:is([selected], [multiselected]) {
         min-height: 32px !important;
         max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
         padding: 0px 0px !important;
-   }
-  }
-}
-#tabbrowser-tabs[orient="vertical"] {
-  &:not([expanded]) {
-    & .tabbrowser-tab {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
-        padding: 0px 0px !important;
+        margin: 2px auto !important;
    }
   }
 }
@@ -906,9 +875,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     & .tab-background {
         min-height: 32px !important;
         max-height: 32px !important;
-        width: 46px !important;
-        margin: 1px 1px 3px 1px !important;
         padding: 0px 0px !important;
+        margin: 2px auto !important;
    }
   }
 }
@@ -931,8 +899,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-    & .tab-content {
-        padding: 0px 16px 2px 0px !important;
+    & .tab-content:not([pinned]) {
+        padding: 0px 17px !important;
     }
   }
 }
@@ -947,29 +915,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
       background: none !important;
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
-    & .tabbrowser-tab:is([selected], [multiselected]) {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
-        padding: 0px 0px !important;
-   }
-}
-#tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-background:is([selected], [multiselected]) {
         min-height: 32px !important;
         max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
-        padding: 0px 0px !important;
-   }
-}
-#tabbrowser-tabs[orient="vertical"][expanded] {
-    & .tabbrowser-tab {
-        min-height: 32px !important;
-        max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
+        margin: 2px !important;
         padding: 0px 0px !important;
    }
 }
@@ -977,14 +926,13 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     & .tab-background {
         min-height: 32px !important;
         max-height: 32px !important;
-        max-width: 250px !important;
-        margin: 1px 2px 3px 0px !important;
+        margin: 2px !important;
         padding: 0px 0px !important;
    }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
-    & .tab-content {
-        padding: 0px 10px 3px 0px !important;
+    & .tab-content:not([pinned]) {
+        padding: 0px 10px 1px 0px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
