@@ -838,16 +838,14 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 
 /*** VERTICAL TABS ***/
 
-#sidebar-main {
-    background: #FAFAFA !important;
-}
 #TabsToolbar[collapsed] ~ #nav-bar ~ #PersonalToolbar {
     z-index: -1 !important;
 }
 #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
-      outline: 0.01px solid #B5B5B5 !important;
-      box-shadow: none !important;
+    outline: 0.01px solid rgba(0,0,0,0.4) !important;
+    box-shadow: none !important;
+    border-start-start-radius: 0px !important;
   }
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] {
@@ -857,6 +855,22 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   & .tabbrowser-tab {
     align-items: stretch !important;
   }
+}
+
+/* make tab-content align to left again for vertical expanded tabs */
+#tabbrowser-tabs[orient="vertical"][expanded] .tab-content:not([pinned]) {
+    -moz-box-direction: normal !important;
+    flex-direction: row !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] .tab-icon-stack:not([pinned]) {
+    margin-inline-start: unset !important;
+    order: 0 !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
+    order: -1 !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] .tab-label-container {
+    margin-inline-end: unset !important;
 }
 
 /* not expanded vertical tabs */
