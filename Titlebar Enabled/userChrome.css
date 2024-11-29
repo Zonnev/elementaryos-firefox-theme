@@ -1149,6 +1149,7 @@ toolbarpaletteitem > #stop-reload-button {
     outline: 0.01px solid #B5B5B5 !important;
     box-shadow: none !important;
     border-start-start-radius: 0px !important;
+    border-start-end-radius: 0px !important;
   }
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] {
