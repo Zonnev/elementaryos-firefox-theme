@@ -903,11 +903,12 @@ toolbarpaletteitem > #stop-reload-button {
     padding: 0px 10px 3px 10px !important;
 }
 .tab-background:not([selected], [multiselected]) {
-    min-height: 32px !important;
-    max-height: 32px !important;
-	border: 1px solid transparent !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    border-radius: 3.5px !important;
+    border: none !important;
     padding: 0px 0px !important;
-    margin: 1px 0px 2px 0px !important; /* tabs not centered same as Epiphany */
+    margin: 2px 1px 3px 1px !important; /* tabs not centered same as Epiphany and compensate no border not selected tabs */
 }
 .tab-background:is([selected], [multiselected]) {
     min-height: 32px !important;
@@ -921,7 +922,6 @@ toolbarpaletteitem > #stop-reload-button {
 }
 .tabbrowser-tab:not([selected]):hover .tab-background {
 	background-color: rgba(0,0,0,0.06) !important;
-    border-radius: 4px !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:is([selected], [multiselected]) > .tab-context-line {
     margin: 0px 0 0 !important;
