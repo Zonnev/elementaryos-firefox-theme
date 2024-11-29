@@ -851,7 +851,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   }
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] {
-    padding: 2px 3px !important;
+    padding: 2px 3px 2px 2px !important;
 }
 #tabbrowser-tabs[orient="vertical"] {
   & .tabbrowser-tab {
@@ -891,7 +891,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     margin-inline-end: unset !important;
 }
 
-/* not expanded vertical tabs */
+/** not expanded vertical tabs **/
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-background:is([selected], [multiselected]) {
@@ -936,12 +936,15 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     }
   }
 }
-#tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {
-      margin: 4px 5px 4px 5px !important;
-      background: none !important;
+
+/* position of new tab button in not expanded vertical tabs */
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) #tabs-newtab-button,
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-tabs-newtab-button {
+    margin: 4px auto !important;
+    background: none !important;
 }
 
-/* expanded vertical tabs */
+/** expanded vertical tabs **/
 #tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button {
       margin: 4px 0px 4px -1px !important;
       background: none !important;
@@ -1009,6 +1012,18 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   #tabbrowser-tabs[expanded] > & {
     padding-inline: 1px !important;
   }
+}
+
+/* position of new tab button in expanded vertical tabs */
+#tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button {
+    margin: 4px 3px !important;
+    padding: 0px 9px !important;
+    background: none !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] #vertical-tabs-newtab-button {
+    margin: 4px 5px !important;
+    padding: 0px 9px !important;
+    background: none !important;
 }
 
 /*** MENUBAR ***/
