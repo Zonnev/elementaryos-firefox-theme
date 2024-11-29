@@ -1140,10 +1140,10 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
-    outline: 0.01px solid #B5B5B5 !important;
-    box-shadow: none !important;
+    outline: none !important;
     border-start-start-radius: 0px !important;
     border-start-end-radius: 0px !important;
+    box-shadow: 1px 0 0 0 #B5B5B5, -1px 0 0 0 #B5B5B5 !important;
   }
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] {
@@ -1156,7 +1156,7 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #sidebar-box {
   @media (-moz-bool-pref: "sidebar.revamp") {
-    margin: 0px 1px !important;
+    margin: 0px !important;
     padding-block-end: 0px !important;
     padding-inline-end: 0px !important;
     padding-block-start: 0px !important;
@@ -1519,8 +1519,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #tabbrowser-tabbox:-moz-window-inactive {
   @media (-moz-bool-pref: "sidebar.revamp") {
-      outline: 0.01px solid #292929 !important;
-      box-shadow: none !important;
+    outline: none !important;
+    box-shadow: 1px 0 0 0 #292929, -1px 0 0 0 #292929 !important;
   }
 }
 .tab-label[selected="true"]:-moz-window-inactive {
@@ -1638,8 +1638,8 @@ toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="
 }
 #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
-      outline: 0.01px solid #1D1D1D !important;
-      box-shadow: none !important;
+    outline: none !important;
+    box-shadow: 1px 0 0 0 #1D1D1D, -1px 0 0 0 #1D1D1D !important;
   }
 }
 :root {
@@ -1931,7 +1931,8 @@ private browsing
 }
 #main-window[privatebrowsingmode="temporary"] #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
-    outline: 0.01px solid rgba(0,0,0,0.4) !important;
+    outline: none !important;
+    box-shadow: 1px 0 0 0 rgba(0,0,0,0.4), -1px 0 0 0 rgba(0,0,0,0.4) !important;
   }
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar {

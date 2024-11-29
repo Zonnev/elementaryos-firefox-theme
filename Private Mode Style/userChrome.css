@@ -844,10 +844,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
-    outline: 0.01px solid rgba(0,0,0,0.4) !important;
-    box-shadow: none !important;
+    outline: none !important;
     border-start-start-radius: 0px !important;
     border-start-end-radius: 0px !important;
+    box-shadow: 1px 0 0 0 rgba(0,0,0,0.4), -1px 0 0 0 rgba(0,0,0,0.4) !important;
   }
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] {
@@ -860,7 +860,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #sidebar-box {
   @media (-moz-bool-pref: "sidebar.revamp") {
-    margin: 0px 1px !important;
+    margin: 0px !important;
     padding-block-end: 0px !important;
     padding-inline-end: 0px !important;
     padding-block-start: 0px !important;
