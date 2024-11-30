@@ -1118,8 +1118,15 @@ toolbarpaletteitem > #stop-reload-button {
 }
 
 /*** TAB GROUPS ***/
+
 #tabbrowser-tabs[orient="horizontal"] .tab-group-label {
-    margin-block: auto 0 auto !important;
+    margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
+}
+sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group .tab-group-label {
+    max-width: none !important; /* this is stretching the group labels in expanded vertical tab bar */
+}
+sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group:not([collapsed]) .tab-group-label {
+    border-radius: 4px 4px 0px 0px !important; /* this border radius only in expanded vertical tab bar and only when the tab group is expanded */
 }
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
   tab-group {
@@ -1128,6 +1135,14 @@ toolbarpaletteitem > #stop-reload-button {
       margin: 2px !important;
     }
   }
+}
+
+/* do not show tab separators between collapsed tab groups */
+#tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] > .tabbrowser-tab,
+#tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] + .tabbrowser-tab,
+#tabbrowser-tabs[orient="horizontal"] tab-group:not([collapsed]) > .tabbrowser-tab:first-of-type,
+#tabbrowser-tabs[orient="horizontal"] tab-group:not([collapsed]):has(> .tabbrowser-tab:last-of-type:is([selected], [multiselected], :hover)) + .tabbrowser-tab {
+  border-image: none !important;
 }
 
 /*** VERTICAL TABS ***/
@@ -1228,9 +1243,13 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        padding: 0px 17px !important;
+        margin: 0px auto !important;
+        padding: 0px 0px !important;
     }
   }
+}
+#tabbrowser-tabs[orient="vertical"] .tab-icon-stack:not([pinned]) {
+    margin-inline-start: 0px !important;
 }
 
 /* position of new tab button in not expanded vertical tabs */
