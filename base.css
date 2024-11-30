@@ -1123,7 +1123,7 @@ toolbarpaletteitem > #stop-reload-button {
     margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
 }
 sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group .tab-group-label {
-    max-width: none !important; /* this is stretching the group labels in expanded vertical tab bar */
+    min-width: calc(100%) !important; /* this is stretching the group labels in expanded vertical tab bar */
 }
 sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group:not([collapsed]) .tab-group-label {
     border-radius: 4px 4px 0px 0px !important; /* this border radius only in expanded vertical tab bar and only when the tab group is expanded */
