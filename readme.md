@@ -10,14 +10,15 @@ For now theme installation is supported for:
 
 1. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
 2. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
-3. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/).
+3. [🦊 Firefox 📦 ESR](https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/).
+4. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/).
 
 **You can use Main menu to create a Firefox desktop entry:**
 - Download Firefox from the [website](https://www.mozilla.org/en-US/firefox/new/) and extract in a folder of your choice.
 - Open [Main menu](https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor) (install it in AppCenter), click on the Settings wheel in the app list on the top right and select `New launcher`.
 - Fill in each section starting with **Appearance**. Press the **folder icon** and go to your Firefox folder and in `/browser/chrome/icons/default` select `default128.png`.
 - In **Description** you can fill in `Firefox` as name of the launcher.
-- In **Execution** and **Default command** you fill in your Firefox folder location like `/home/<username>/Apps/firefox/firefox` where the last "firefox" is the run file.
+- In **Execution** and **Default command** you fill in your Firefox folder location, for example: `/home/<username>/Apps/firefox/firefox` where the last "firefox" is the run file.
 - In **Visibility** you can toggle **Show an animation until the application is visible** and **Show this application in the main menu** `on`.
 - Then under that in **Menu** you can choose in which category the launcher is showing, like `Internet`.
 - Save by clicking the `Save` button in the top bar of the window.
