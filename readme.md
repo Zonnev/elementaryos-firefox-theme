@@ -8,15 +8,15 @@ Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementar
 
 For now theme installation is supported for:
 
-1. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox).
-2. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community).
-3. [🦊 Firefox 📦 ESR](https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/).
-4. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/).
+1. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox) Install in AppCenter.
+2. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community) Install in AppCenter.
+3. [🦊 Firefox ⬇️ ESR](https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/) Install in Terminal read instructions in the link.
+4. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/) Download package and follow instructions below to create a desktop entry.
 
 **You can use Main menu to create a Firefox desktop entry:**
 - Download Firefox from the [website](https://www.mozilla.org/en-US/firefox/new/) and extract in a folder of your choice.
 - Open [Main menu](https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor) (install it in AppCenter), click on the Settings wheel in the app list on the top right and select `New launcher`.
-- Fill in each section starting with **Appearance**. Press the **folder icon** and go to your Firefox folder and in `/browser/chrome/icons/default` select `default128.png`.
+- Fill in each section starting with **Appearance**. Press the folder icon and search your Firefox directory and in `/browser/chrome/icons/default` select `default128.png`.
 - In **Description** you can fill in `Firefox` as name of the launcher.
 - In **Execution** and **Default command** you fill in your Firefox folder location, for example: `/home/<username>/Apps/firefox/firefox` where the last "firefox" is the run file.
 - In **Visibility** you can toggle **Show an animation until the application is visible** and **Show this application in the main menu** `on`.
@@ -56,7 +56,7 @@ bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonne
 
 This will make purple colors of Private Mode as default style.
 
-## ➕ After installation
+## ✅️ After installation
 
 1. In the customization panel in Firefox you can move the new tab button to the left. The default is System theme, you can also use the Dark theme option but Light theme is not supported.
 2. In `about:config` you can make the bottom window corners rounded by setting `widget.gtk.rounded-bottom-corners.enabled` to `true`.
@@ -73,7 +73,7 @@ To update installed theme, use script
 bash <(wget --quiet --output-document - "https://raw.githubusercontent.com/Zonnev/elementaryos-firefox-theme/elementaryos-firefox-theme/install.sh") --update
 ```
 
-## ✖️ Uninstall this theme
+## ❎️ Uninstall this theme
 
 To uninstall this theme, do the following:
 1. Type `about:config` in the address bar of Firefox.
