@@ -37,6 +37,11 @@ BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-trunk" || exit 0'
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
 
+BROWSER="🦊 Firefox ESR";
+BROWSERS+=("${BROWSER}");
+BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-esr" || exit 0'
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox-esr"
+
 FLATPAK_ID="org.mozilla.firefox"
 BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
