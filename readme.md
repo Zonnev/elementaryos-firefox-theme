@@ -2,7 +2,7 @@
 ![Screenshot](eos8_style_update.png)
 ## 🙏 Credits
 
-Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [sempasha](https://github.com/sempasha) and [Ryo Nakano](https://github.com/ryonakano) for the install script and the elementary team for the UI design and icons.
+Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [Pasha Semenov](https://github.com/sempasha), [Ryo Nakano](https://github.com/ryonakano) and [Neville Park](https://github.com/nevillepark) for the install script and the [elementary OS](https://github.com/elementary) team for the UI design and icons.
 
 ## ⬇️ Install
 
