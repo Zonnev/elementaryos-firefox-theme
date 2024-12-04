@@ -1364,6 +1364,7 @@ sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group:not([collap
     background: none !important;
     border-top: none !important;
     border-bottom: none !important;
+    max-height: 35px !important;
 }
 #toolbar-menubar[autohide="true"] {
     order: 0;
