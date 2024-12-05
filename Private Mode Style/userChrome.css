@@ -63,8 +63,7 @@ menupopup menu[disabled="true"] {
     fill: rgba(255,255,255,0.5) !important;
     background: none !important;
 }
-menuseparator::before,
-toolbarseparator {
+menuseparator::before {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.2) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
@@ -1119,6 +1118,11 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #import-button:-moz-any([open], [checked], :hover, :active) {
     background: var(--accentcolor-percentage) !important;
+}
+#PlacesToolbarItems > toolbarseparator {
+  &::before {
+    border-image-source: linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 90%, transparent 90%) !important;
+  }
 }
 
 /*** DROPDOWN MENU CONTENT ***/
