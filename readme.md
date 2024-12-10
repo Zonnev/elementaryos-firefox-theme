@@ -25,10 +25,7 @@ For now theme installation is supported for:
 
 **Now you need a dot under the Firefox icon when opened in the dock. Edit the desktop entry file:**
 - In the left list of **Main menu**, select Firefox and scroll down to **Advanced** section and press the icon on the right, this opens **Code** with the desktop entry file visible.
-- Then open **Firefox** and **Terminal**.
-- Type `xprop WM_CLASS` in the **Terminal**, the result: your mouse cursor changes into a crosshair.
-- You can now click your crosshair cursor on the Firefox window and you will see the WM_Class of Firefox in Terminal.
-- Go to Code and type a new line in the `Desktop Entry` section, something like: `StartupWMClass=firefox`, where **firefox** is the result of `xprop WM_class`. Code will automatically save the file so just close all and move the Firefox icon from Slingshot to the Dock and enjoy the fully working and integrated Firefox.
+- Go to Code and type a new line in the `Desktop Entry` section, for Firefox stable: `StartupWMClass=firefox`, for Firefox Beta: `StartupWMClass=firefox-beta` for Firefox Nightly: `StartupWMClass=firefox-nightly`. Code will automatically save the file so just close all and move the Firefox icon from Slingshot to the Dock and enjoy the fully working and integrated Firefox.
 
 ❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
