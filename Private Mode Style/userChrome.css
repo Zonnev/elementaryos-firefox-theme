@@ -551,9 +551,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .titlebar-spacer[type="post-tabs"] {
     width: 0px !important;
 }
-:root[sizemode="fullscreen"] #TabsToolbar {
-    margin-top: -1px !important;
-}
 #tabbrowser-arrowscrollbox {
     padding-left: 2px !important;
 }
