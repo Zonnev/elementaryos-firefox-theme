@@ -826,12 +826,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="horizontal"] .tab-group-label {
     margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
 }
-sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group .tab-group-label {
-    min-width: calc(100%) !important; /* this is stretching the group labels in expanded vertical tab bar */
-}
-sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group:not([collapsed]) .tab-group-label {
-    border-radius: 4px 4px 0px 0px !important; /* this border radius only in expanded vertical tab bar and only when the tab group is expanded */
-}
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
   tab-group {
     #tabbrowser-tabs[expanded] & {
@@ -944,13 +938,12 @@ sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group:not([collap
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        margin: 0px auto !important;
-        padding: 0px 0px !important;
+        padding: 0px 20px 0px 20px !important;
     }
   }
 }
-#tabbrowser-tabs[orient="vertical"] .tab-icon-stack:not([pinned]) {
-    margin-inline-start: 0px !important;
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-icon-stack:not([pinned]) {
+    margin: auto auto !important;
 }
 
 /* position of new tab button in not expanded vertical tabs */
@@ -964,6 +957,11 @@ sidebar-main[expanded] #tabbrowser-tabs[orient="vertical"] tab-group:not([collap
 #tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button {
       margin: 4px 0px 4px -1px !important;
       background: none !important;
+}
+#tabbrowser-tabs[orient="vertical"][expanded] tab-group {
+    & .tabbrowser-tab {
+        margin-left: 5px !important;
+   }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-background:is([selected], [multiselected]) {
