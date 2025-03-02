@@ -826,7 +826,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="horizontal"] .tab-group-label {
     margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
 }
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
+@media -moz-pref("sidebar.verticalTabs") {
   tab-group {
     #tabbrowser-tabs[expanded] & {
       margin-inline-start: 2px !important;
@@ -849,7 +849,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     z-index: -1 !important;
 }
 #tabbrowser-tabbox {
-  @media (-moz-bool-pref: "sidebar.revamp") {
+  @media -moz-pref("sidebar.revamp") {
     outline: none !important;
     border-start-start-radius: 0px !important;
     border-start-end-radius: 0px !important;
@@ -865,7 +865,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   }
 }
 #sidebar-box {
-  @media (-moz-bool-pref: "sidebar.revamp") {
+  @media -moz-pref("sidebar.revamp") {
     margin: 0px !important;
     padding-block-end: 0px !important;
     padding-inline-end: 0px !important;
@@ -874,7 +874,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   }
 }
 #sidebar {
-  @media (-moz-bool-pref: "sidebar.revamp") {
+  @media -moz-pref("sidebar.revamp") {
       border-radius: 0px !important;
       box-shadow: none !important;
       border: none !important;
@@ -904,7 +904,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
         min-height: 32px !important;
         max-height: 32px !important;
         padding: 0px 0px !important;
-        margin: 2px auto !important;
+        margin: 2px 2px 2px 10px !important;
    }
   }
 }
@@ -914,7 +914,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
         min-height: 32px !important;
         max-height: 32px !important;
         padding: 0px 0px !important;
-        margin: 2px auto !important;
+        margin: 2px 2px 2px 10px !important;
    }
   }
 }
@@ -938,7 +938,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        padding: 0px 20px 0px 20px !important;
+        padding: 0px !important;
     }
   }
 }
@@ -949,7 +949,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /* position of new tab button in not expanded vertical tabs */
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) #tabs-newtab-button,
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-tabs-newtab-button {
-    margin: 4px auto !important;
+    margin: 0px 0px 0px 10px !important;
     background: none !important;
 }
 
@@ -1336,7 +1336,7 @@ menubar > menu[open] {
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background: rgba(0,0,0,0.1) !important;
 }
-#sidebar-main {
+.browser-toolbox-background {
     background: rgba(105,75,188,1) !important;
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
