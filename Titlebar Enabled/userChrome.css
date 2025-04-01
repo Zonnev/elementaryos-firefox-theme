@@ -1122,14 +1122,6 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="horizontal"] .tab-group-label {
     margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
 }
-@media -moz-pref("sidebar.verticalTabs") {
-  tab-group {
-    #tabbrowser-tabs[expanded] & {
-      margin-inline-start: 2px !important;
-      margin: 2px !important;
-    }
-  }
-}
 
 /* do not show tab separators between collapsed tab groups */
 #tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] > .tabbrowser-tab,
@@ -1214,22 +1206,23 @@ toolbarpaletteitem > #stop-reload-button {
         max-height: 32px !important;
         padding: 0px 0px !important;
         margin: 2px 2px 2px 10px !important;
-   }
+    }
   }
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & #vertical-pinned-tabs-container {
-        margin: 1px 2px 1px 2px !important;
-        padding: 0px 0px !important;
+      & .tab-background {
+        margin: 2px 2px 2px 10px !important;
    }
   }
+ }
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
    & #vertical-pinned-tabs-container {
     & .tab-content[pinned] {
-        padding: 0px 0px 3px 0px !important;
+        padding: 0px !important;
     }
   }
  }
@@ -1237,12 +1230,9 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        padding: 0px !important;
+        padding: 0px 12px !important;
     }
   }
-}
-#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-icon-stack:not([pinned]) {
-    margin: auto auto !important;
 }
 
 /* position of new tab button in not expanded vertical tabs */
@@ -1258,9 +1248,14 @@ toolbarpaletteitem > #stop-reload-button {
       background: none !important;
 }
 #tabbrowser-tabs[orient="vertical"][expanded] tab-group {
-    & .tabbrowser-tab {
-        margin-left: 5px !important;
-   }
+    & .tab-background {
+      margin-left: 5px !important;
+  }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] tab-group {
+    & .tab-background:is([selected], [multiselected]) {
+      margin-left: 5px !important;
+  }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-background:is([selected], [multiselected]) {
@@ -1281,6 +1276,11 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-content:not([pinned]) {
         padding: 0px 10px 1px 0px !important;
+    }
+}
+#tabbrowser-tabs[orient="vertical"][expanded] tab-group {
+    & .tab-content:not([pinned]) {
+        padding: 0px 10px 1px 4px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
