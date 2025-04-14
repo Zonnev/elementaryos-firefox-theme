@@ -1039,6 +1039,50 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     padding: 0px 9px !important;
     background: none !important;
 }
+/*** VERTICAL TABS EXPAND ON HOVER ***/
+
+/* removes top margin in 'expanded on hover' sidebar panels */
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+  #sidebar-box {
+    & > #sidebar {
+      margin-block-start: 0px !important;
+    }
+  }
+}
+
+/* move content to center of not expanded tabs in 'expanded on hover' sidebar */
+:root[sidebar-expand-on-hover] {
+ & #tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+   & #vertical-pinned-tabs-container {
+    & .tab-content[pinned] {
+        padding: 0px 0px 0px 18px !important;
+    }
+   }
+  }
+ }
+}
+
+/* make room for tab close button in 'expand on hover' sidebar */
+:root[sidebar-expand-on-hover] {
+  & #tabbrowser-tabs[orient="vertical"][expanded] {
+    & .tabbrowser-tab[pinned]:not(:hover) {
+      & .tab-close-button {
+        display: block !important;
+        opacity: 0 !important;
+      }
+    }
+  }
+}
+
+/* move tab close button to vertical center in 'expand on hover' sidebar */
+:root[sidebar-expand-on-hover] {
+  & #tabbrowser-tabs[orient="vertical"][expanded] {
+      & .tab-close-button {
+        margin-top: 5px !important;
+    }
+  }
+}
 
 /*** MENUBAR ***/
 #menubar-items {
@@ -1338,6 +1382,11 @@ menubar > menu[open] {
 }
 .browser-toolbox-background {
     background: rgba(105,75,188,1) !important;
+}
+:root[sidebar-expand-on-hover] {
+    & #sidebar-main {
+    background: rgba(105,75,188,1) !important;
+  }
 }
 #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
   & > .toolbarbutton-text {
