@@ -588,6 +588,10 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     width: 20px !important;
     height: 20px !important;
     padding: 2px !important;
+    margin: 0px 0px !important;
+}
+#urlbar[open] .urlbar-go-button,
+#urlbar[open] .urlbar-revert-button {
     margin: 2px 0px !important;
 }
 .search-go-button {
