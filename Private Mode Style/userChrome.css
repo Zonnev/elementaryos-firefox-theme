@@ -1391,6 +1391,11 @@ menubar > menu[open] {
     background: rgba(105,75,188,1) !important;
   }
 }
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+  #sidebar-box {
+    --sidebar-border-color: rgba(0,0,0,0.4) !important;
+  }
+}
 #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
   & > .toolbarbutton-text {
     color: white !important;

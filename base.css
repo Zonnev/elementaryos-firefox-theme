@@ -1713,6 +1713,11 @@ toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="
 	background: #333333 !important;
   }
 }
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+  #sidebar-box {
+    --sidebar-border-color: rgba(0,0,0,0.5) !important;
+  }
+}
 #tabbrowser-tabbox {
   @media (-moz-bool-pref: "sidebar.revamp") {
     outline: none !important;
