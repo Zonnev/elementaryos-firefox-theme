@@ -862,7 +862,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #sidebar-box {
   @media -moz-pref("sidebar.revamp") {
-    margin: 0px !important;
     padding-block-end: 0px !important;
     padding-inline-end: 0px !important;
     padding-block-start: 0px !important;
