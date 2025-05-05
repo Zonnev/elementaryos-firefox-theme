@@ -70,28 +70,28 @@ menuseparator::before {
     border-radius: 4px !important;
 }
 
-/* extensions pull down menu */
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-action-button {
+/* extensions pull down menu: will be obsolete in Firefox 140 */
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
     margin-inline-start: 4px !important;
     margin-inline-end: 4px !important;
     border-radius: 4px !important;
     background-color: transparent !important;
     padding: 7px 7px !important;
 }
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-action-button:hover {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button:hover {
     margin-inline-start: 4px !important;
     margin-inline-end: 4px !important;
     border-radius: 4px !important;
     background-color: rgba(0,0,0,0.08) !important;
     padding: 7px 7px !important;
 }
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-menu-button > .toolbarbutton-icon {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button > .toolbarbutton-icon {
     margin-inline-end: 4px !important;
     padding: 20px !important;
     border-radius: 4px !important;
     background-color: transparent !important;
 }
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
     margin-inline-end: 4px !important;
     padding: 20px !important;
     border-radius: 4px !important;
