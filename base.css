@@ -128,16 +128,16 @@ menupopup, panel {
 }
 
 /* extensions pull down menu */
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-action-button {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
     background-color: transparent !important;
 }
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-action-button:hover {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button:hover {
     background-color: rgba(255,255,255,0.10) !important;
 }
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-menu-button > .toolbarbutton-icon {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button > .toolbarbutton-icon {
     background-color: transparent !important;
 }
-#unified-extensions-panel .unified-extensions-item > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
+#unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
     background-color: rgba(255,255,255,0.10) !important;
 }}
 
@@ -241,16 +241,16 @@ menupopup, panel {
 }
 
 /* extensions pull down menu */
-:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item > .unified-extensions-item-action-button {
+:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
     background-color: transparent !important;
 }
-:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item > .unified-extensions-item-action-button:hover {
+:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button:hover {
     background-color: rgba(0,0,0,0.1) !important;
 }
-:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item > .unified-extensions-item-menu-button > .toolbarbutton-icon {
+:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button > .toolbarbutton-icon {
     background-color: transparent !important;
 }
-:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
+:root[privatebrowsingmode="temporary"] #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
     background-color: rgba(0,0,0,0.1) !important;
 }
 
