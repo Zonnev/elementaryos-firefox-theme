@@ -947,15 +947,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 /* position of new tab button in not expanded vertical tabs */
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) #tabs-newtab-button,
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-tabs-newtab-button {
-    margin: 0px 0px 0px 10px !important;
+    margin: 4px 0px 0px 10px !important;
     background: none !important;
 }
 
 /** expanded vertical tabs **/
-#tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button {
-      margin: 4px 0px 4px -1px !important;
-      background: none !important;
-}
 #tabbrowser-tabs[orient="vertical"][expanded] tab-group {
     & .tab-background {
       margin-left: 5px !important;
