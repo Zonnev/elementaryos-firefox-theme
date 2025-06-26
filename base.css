@@ -70,32 +70,37 @@ menuseparator::before {
     border-radius: 4px !important;
 }
 
-/* extensions pull down menu: will be obsolete in Firefox 140 */
+/* extensions pull down menu */
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
     margin-inline-start: 4px !important;
     margin-inline-end: 4px !important;
     border-radius: 4px !important;
     background-color: transparent !important;
-    padding: 7px 7px !important;
+    padding: 8px !important;
 }
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button:hover {
     margin-inline-start: 4px !important;
     margin-inline-end: 4px !important;
     border-radius: 4px !important;
     background-color: rgba(0,0,0,0.08) !important;
-    padding: 7px 7px !important;
+    padding: 8px !important;
 }
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button > .toolbarbutton-icon {
     margin-inline-end: 4px !important;
-    padding: 20px !important;
+    padding: 15px !important;
     border-radius: 4px !important;
     background-color: transparent !important;
 }
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-menu-button:hover > .toolbarbutton-icon {
     margin-inline-end: 4px !important;
-    padding: 20px !important;
+    padding: 15px !important;
     border-radius: 4px !important;
     background-color: rgba(0,0,0,0.08) !important;
+}
+/* make extensions pull down menu more compact, thanks to MrOtherGuy's source file: https://github.com/MrOtherGuy/firefox-csshacks/blob/0cc24d4211bc796dc1f28e81375fb86addd6fe9c/chrome/compact_extensions_panel.css */
+.unified-extensions-item-menu-button.subviewbutton {
+  padding: 0px !important;
+  margin-inline-end: 0 !important;
 }
 
 /*** Dark Mode in Tweaks menu popups ***/
