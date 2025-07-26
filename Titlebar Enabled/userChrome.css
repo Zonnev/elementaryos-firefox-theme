@@ -1219,7 +1219,7 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-    & #vertical-pinned-tabs-container {
+   & #pinned-tabs-container[orient="vertical"] {
       & .tab-background {
         margin: 2px 2px 2px 10px !important;
    }
@@ -1228,7 +1228,7 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-   & #vertical-pinned-tabs-container {
+   & #pinned-tabs-container[orient="vertical"] {
     & .tab-content[pinned] {
         padding: 0px !important;
     }
@@ -1376,7 +1376,7 @@ toolbarpaletteitem > #stop-reload-button {
 :root[sidebar-expand-on-hover] {
  & #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-   & #vertical-pinned-tabs-container {
+   & #pinned-tabs-container[orient="vertical"] {
     & .tab-content[pinned] {
         padding: 0px 0px 0px 18px !important;
     }

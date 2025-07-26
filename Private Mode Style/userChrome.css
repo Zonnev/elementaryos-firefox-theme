@@ -920,7 +920,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-    & #vertical-pinned-tabs-container {
+   & #pinned-tabs-container[orient="vertical"] {
       & .tab-background {
         margin: 2px 2px 2px 10px !important;
    }
@@ -929,7 +929,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-   & #vertical-pinned-tabs-container {
+   & #pinned-tabs-container[orient="vertical"] {
     & .tab-content[pinned] {
         padding: 0px !important;
     }
@@ -1058,7 +1058,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 :root[sidebar-expand-on-hover] {
  & #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
-   & #vertical-pinned-tabs-container {
+   & #pinned-tabs-container[orient="vertical"] {
     & .tab-content[pinned] {
         padding: 0px 0px 0px 18px !important;
     }
