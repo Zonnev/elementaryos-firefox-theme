@@ -54,7 +54,7 @@ menupopup, panel {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px rgba(0,0,0,0.15) !important;
 }
 menuseparator,
-panel toolbarseparator {
+panel toolbarseparator:not(.proton-zap) {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.15) !important;
     border-bottom: 1px solid rgba(255,255,255,1) !important;
@@ -62,7 +62,8 @@ panel toolbarseparator {
     padding-bottom: 0px !important;
     padding-top: 0px !important;
 }
-menuseparator::before {
+menuseparator::before,
+toolbarseparator:not(.proton-zap)::before {
     border-top: none !important;
 }
 .panel-header > .subviewbutton-back:hover,
@@ -522,7 +523,8 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     background: #ffffff !important;
     box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
 }
-#urlbar[focused] > #urlbar-background {
+#urlbar[focused] > #urlbar-background,
+#urlbar[focused] > .urlbar-background {
     box-shadow: none !important;
 }
 #urlbar:not([focused]),
@@ -532,11 +534,13 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     background: #ffffff !important;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(0,0,0,0.05), 0 1px 0 0 rgba(255,255,255,1) !important;
 }
-#urlbar-background {
+#urlbar-background,
+.urlbar-background {
     border: none !important;
     background: none !important;
 }
-#urlbar[focused] > #urlbar-background {
+#urlbar[focused] > #urlbar-background,
+#urlbar[focused] > .urlbar-background {
     outline: none !important;
 }
 #searchbar:focus-within {
@@ -1361,8 +1365,11 @@ toolbarpaletteitem > #stop-reload-button {
 /* change background color or 'expanded on hover' sidebar */
 :root[sidebar-expand-on-hover] {
     & #sidebar-main {
-      background-color: #FAFAFA !important;
+     &[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
+       background-color: #FAFAFA !important;
+       background-image: none !important;
   }
+ }
 }
 
 /* move content to center of not expanded tabs in 'expanded on hover' sidebar */

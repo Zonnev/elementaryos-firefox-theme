@@ -63,12 +63,16 @@ menupopup menu[disabled="true"] {
     fill: rgba(255,255,255,0.5) !important;
     background: none !important;
 }
-menuseparator::before,
-panel toolbarseparator {
+menuseparator,
+panel toolbarseparator:not(.proton-zap) {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.2) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     margin: 3px 0px 3px 0px !important;
+}
+menuseparator::before,
+toolbarseparator:not(.proton-zap)::before {
+    border-top: none !important;
 }
 menupopup, panel {
     --panel-background: #8266C4 !important;
@@ -273,11 +277,13 @@ LAYOUT
 #searchbar:not(:focus-within) {
     border-radius: 3px !important;
 }
-#urlbar-background {
+#urlbar-background,
+.urlbar-background {
     border: none !important;
     background: none !important;
 }
-#urlbar[focused] > #urlbar-background {
+#urlbar[focused] > #urlbar-background,
+#urlbar[focused] > .urlbar-background {
     outline: none !important;
 }
 #searchbar:focus-within {
@@ -1389,8 +1395,11 @@ menubar > menu[open] {
 }
 :root[sidebar-expand-on-hover] {
     & #sidebar-main {
-    background: rgba(105,75,188,1) !important;
+     &[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
+       background: rgba(105,75,188,1) !important;
+       background-image: none !important;
   }
+ }
 }
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
   #sidebar-box {
