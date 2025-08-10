@@ -241,10 +241,12 @@ LAYOUT
     margin-left: 6px !important;
     padding-right: 12px !important;
 }
+#urlbar[open] .urlbar-input {
+    margin-bottom: -3px !important;
+}
 #urlbar-container,
 #search-container {
     -moz-window-dragging: drag !important;
-    padding-top: 3px !important;
 }
 .urlbar-input-container {
     height: 22px !important;
