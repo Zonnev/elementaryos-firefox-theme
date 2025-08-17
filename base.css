@@ -27,6 +27,11 @@ menu:not(#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #too
 #context-back, #context-forward, #context-reload, #context-bookmarkpage {
     margin: 0px 6px !important;
 }
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+  &:not([disabled]):hover {
+    background-color: rgba(0,0,0,0.08) !important;
+  }
+}
 menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
     background-color: rgba(0,0,0,0.08) !important;
 }
@@ -106,6 +111,11 @@ toolbarseparator:not(.proton-zap)::before {
 
 /*** Dark Mode in Tweaks menu popups ***/
 @media (prefers-color-scheme: dark) {
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+  &:not([disabled]):hover {
+    background-color: rgba(255,255,255,0.10) !important;
+  }
+}
 menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
     background-color: rgba(255,255,255,0.10) !important;
 }
@@ -116,7 +126,7 @@ menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
     background: none !important;
 }
 menuseparator,
-panel toolbarseparator {
+panel toolbarseparator:not(.proton-zap) {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.3) !important;
     border-bottom: 1px solid rgba(255,255,255,0.05) !important;
@@ -170,7 +180,7 @@ menupopup, panel {
     fill: rgba(255,255,255,0.5) !important;
 }
 :root[privatebrowsingmode="temporary"] menuseparator,
-:root[privatebrowsingmode="temporary"] panel toolbarseparator {
+:root[privatebrowsingmode="temporary"] panel toolbarseparator:not(.proton-zap) {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.2) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
@@ -201,6 +211,11 @@ menupopup, panel {
     --button-bgcolor: rgba(0,0,0,0.1) !important;
     --button-hover-bgcolor: rgba(0,0,0,0.2) !important;
     --panel-item-hover-bgcolor: rgba(0,0,0,0.1) !important;
+}
+:root[privatebrowsingmode="temporary"] :is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+  &:not([disabled]):hover {
+    background-color: rgba(0,0,0,0.1) !important;
+  }
 }
 :root[privatebrowsingmode="temporary"] menu:hover:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menuitem:hover:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menucaption:hover:not([disabled="true"]) {
     background-color: rgba(0,0,0,0.1) !important;
@@ -1720,8 +1735,10 @@ toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="
 }
 :root[sidebar-expand-on-hover] {
     & #sidebar-main {
+     &[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
 	background: #333333 !important;
   }
+ }
 }
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
   #sidebar-box {
@@ -2063,8 +2080,10 @@ private browsing
 }
 :root[privatebrowsingmode="temporary"][sidebar-expand-on-hover] {
     & #sidebar-main {
+     &[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
     background: rgba(105,75,188,1) !important;
   }
+ }
 }
 :root[privatebrowsingmode="temporary"] {
     --toolbarbutton-hover-background: rgba(255,255,255,0.3) !important;

@@ -30,6 +30,11 @@ menu:not(#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #too
 menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
     background: none !important;
 }
+:is(panelview .toolbarbutton-1, toolbarbutton.subviewbutton, .widget-overflow-list .toolbarbutton-1, .toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]), [overflowedItem="true"]) > toolbarbutton) {
+  &:not([disabled]):hover {
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+}
 menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
     background-color: rgba(0,0,0,0.1) !important;
 }
