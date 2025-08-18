@@ -1745,8 +1745,15 @@ toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="
     --sidebar-border-color: rgba(0,0,0,0.5) !important;
   }
 }
+.sidebar-splitter {
+  @media -moz-pref("sidebar.revamp") {
+    {
+      background-color: rgba(0,0,0,0.5) !important;
+    }
+  }
+}
 #tabbrowser-tabbox {
-  @media (-moz-bool-pref: "sidebar.revamp") {
+  @media -moz-pref("sidebar.revamp") {
     outline: none !important;
     box-shadow: 1px 0 0 0 #1D1D1D, -1px 0 0 0 #1D1D1D !important;
   }

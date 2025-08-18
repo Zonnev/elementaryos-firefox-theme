@@ -1413,6 +1413,13 @@ menubar > menu[open] {
     --sidebar-border-color: rgba(0,0,0,0.4) !important;
   }
 }
+.sidebar-splitter {
+  @media -moz-pref("sidebar.revamp") {
+    {
+      background-color: rgba(0,0,0,0.4) !important;
+    }
+  }
+}
 #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
   & > .toolbarbutton-text {
     color: white !important;
