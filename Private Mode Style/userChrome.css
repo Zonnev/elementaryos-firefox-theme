@@ -1003,7 +1003,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-content[pinned] {
-        padding: 0px 0px 3px 0px !important;
+        padding: 0px 10px 3px 10px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
@@ -1044,6 +1044,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     padding-inline: 1px !important;
   }
 }
+#tabbrowser-tabs[orient="vertical"] {
+  &[expanded] {
+    --tab-icon-end-margin: 0px !important;
+  }
+}
 
 /* position of new tab button in expanded vertical tabs */
 #tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button {
@@ -1075,6 +1080,15 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     & .tab-content[pinned] {
         padding: 0px 0px 0px 18px !important;
     }
+   }
+  }
+ }
+}
+:root[sidebar-expand-on-hover] {
+ & #tabbrowser-tabs[orient="vertical"] {
+   & #pinned-tabs-container[orient="vertical"] {
+    & .tab-content[pinned] {
+        padding: 0px 0px 3px 0px !important;
    }
   }
  }
