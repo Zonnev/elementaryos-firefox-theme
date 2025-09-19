@@ -15,9 +15,16 @@
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: 100vw !important;
     height: 25px !important;
-    justify-content: start !important;
+    justify-content: flex-start !important;
+}
+
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
 }
 
 /* dont show window controls in fullscreen */

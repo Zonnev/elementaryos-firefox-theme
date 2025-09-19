@@ -13,13 +13,19 @@
 .titlebar-buttonbox {
     appearance: none !important;
     flex-direction: row !important;
-    margin-left: 3px !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 6px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: space-between !important;
+}
+
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
 }
 
 /* dont show window controls in fullscreen */

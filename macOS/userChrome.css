@@ -12,12 +12,19 @@
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
     flex-direction: row !important;
-    top: 9px !important; 
+    top: 9px !important;
     position: absolute !important;
     display: flex !important;
     width: calc(100vw - 6px) !important;
     height: 25px !important;
     justify-content: start !important;
+}
+
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
 }
 
 /* dont show window controls in fullscreen */

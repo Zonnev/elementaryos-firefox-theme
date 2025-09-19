@@ -19,6 +19,13 @@
     height: 25px !important;
 }
 
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
+}
+
 /* brings max and min button to the right */
 .titlebar-min {
     margin-left: calc(100vw - 104px) !important;

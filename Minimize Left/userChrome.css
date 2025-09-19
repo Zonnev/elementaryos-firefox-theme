@@ -13,18 +13,23 @@
 .titlebar-buttonbox {
     flex-direction: row !important;
     top: 9px !important;
-    margin-left: 1px !important;
     position: absolute !important;
     display: flex !important;
     width: 100vw !important;
     height: 25px !important;
-    justify-content: start !important;
+    justify-content: flex-start !important;
 }
 
 /* brings max and min button to the right */
 .titlebar-max,
 .titlebar-restore {
-    margin-left: calc(100vw - 104px) !important;
+    margin-left: auto !important;
+}
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
 }
 
 /* dont show window controls in fullscreen */

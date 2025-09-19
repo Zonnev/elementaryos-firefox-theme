@@ -22,6 +22,13 @@
     justify-content: space-between !important;
 }
 
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
+}
+
 /* dont show window controls in fullscreen */
 :root[sizemode="fullscreen"] .titlebar-buttonbox {
     display: none !important;

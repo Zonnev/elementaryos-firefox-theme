@@ -11,23 +11,25 @@
 
 /* brings window controls in the nav bar */
 .titlebar-buttonbox {
-    flex-direction: row-reverse !important;
+    flex-direction: row !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
     width: calc(0px - 100vw) !important;
     height: 25px !important;
+    justify-content: end !important;
 }
 
-/* brings max button to the left */
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
+}
+
 .titlebar-max,
 .titlebar-restore {
-    margin-right: calc(100vw - 35px) !important;
-}
-
-/* brings close button to the right */
-.titlebar-close {
-    margin-right: calc(5px - 100vw) !important;
+    margin-right: calc(100vw - 70px) !important;
 }
 
 /* dont show window controls in fullscreen */
