@@ -544,11 +544,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     --toolbarbutton-hover-background: rgba(0,0,0,0.1) !important;
     --toolbarbutton-active-background: rgba(0,0,0,0.1) !important;
 }
-#TabsToolbar #fxa-toolbar-menu-button > .toolbarbutton-badge-stack {
-    width: 28px !important;
-    height: 28px !important;
-    padding: 6px !important;
-}
 #TabsToolbar .toolbarbutton-1:not([disabled="true"])[data-extensionid] > .toolbarbutton-badge-stack {
     width: 28px !important;
     height: 28px !important;
