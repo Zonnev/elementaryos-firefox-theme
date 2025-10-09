@@ -751,7 +751,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]) {
     margin-inline: 0px !important;
   }
 }
-toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not(#fxa-toolbar-menu-button) > .toolbarbutton-badge-stack {
+toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not(#fxa-toolbar-menu-button[tooltiptext="Sign in to your account"]) > .toolbarbutton-badge-stack {
     border-radius: 50% !important;
 }
 toolbar .toolbarbutton-1 {
@@ -765,7 +765,7 @@ toolbar .toolbarbutton-1 {
 
 /* make circled toolbar icons with accent color + other buttons in other bars with no circle */
 toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon,
-toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack {
+toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not(#fxa-toolbar-menu-button[tooltiptext="Sign in to your account"]) > .toolbarbutton-badge-stack {
     width: 28px !important;
     height: 28px !important;
     padding: 6px !important;
@@ -779,7 +779,7 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 #fxa-toolbar-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
     background: none !important;
 }
-toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"], [data-extensionid], #nav-bar-overflow-button, #fxa-toolbar-menu-button):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
+toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"], [data-extensionid], #nav-bar-overflow-button, #fxa-toolbar-menu-button[tooltiptext="Sign in to your account"]):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
     background: var(--accentcolor-percentage) !important;
     clip-path: circle(50%) !important;
     filter: saturate(150%) !important;
@@ -851,6 +851,11 @@ toolbarpaletteitem > #stop-reload-button {
 :root {
     --toolbarbutton-hover-background: rgba(51,51,51, 0.15) !important;
     --toolbarbutton-active-background: rgba(51,51,51, 0.15) !important;
+}
+#TabsToolbar #fxa-toolbar-menu-button[tooltiptext="Account"] > .toolbarbutton-badge-stack {
+    width: 28px !important;
+    height: 28px !important;
+    padding: 6px !important;
 }
 #TabsToolbar .toolbarbutton-1:not([disabled="true"])[data-extensionid] > .toolbarbutton-badge-stack {
     width: 28px !important;
@@ -1554,7 +1559,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #tab-notification-deck {
     order: 2;
 }
-#fxa-toolbar-menu-button .toolbarbutton-badge-stack {
+#fxa-toolbar-menu-button[tooltiptext="Sign in to your account"] .toolbarbutton-badge-stack {
     padding: 5px !important;
 }
 
