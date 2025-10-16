@@ -1742,14 +1742,6 @@ menubar > menu[open="true"] {
 toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
     background: var(--accentcolor-percentage) !important;
 }
-toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"], [data-extensionid], #nav-bar-overflow-button):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
-    background: var(--accentcolor-percentage) !important;
-    clip-path: circle(50%) !important;
-}
-#TabsToolbar .toolbarbutton-1:not([disabled="true"], #alltabs-button, #new-tab-button, #tabs-newtab-button, #firefox-view-button):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
-    background: var(--accentcolor-percentage) !important;
-    clip-path: none !important;
-}
 #PersonalToolbar .toolbarbutton-1:not([disabled="true"], #PlacesChevron):is([open], [checked], :active),
 #PersonalToolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :active) > .toolbarbutton-badge-stack {
     background: var(--accentcolor-percentage) !important;
@@ -2084,14 +2076,6 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] #PanelUI-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack,
 #main-window[privatebrowsingmode="temporary"] #fxa-toolbar-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
     background: none !important;
-}
-#main-window[privatebrowsingmode="temporary"] toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"], [data-extensionid], #nav-bar-overflow-button):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
-    background: var(--accentcolor-percentage) !important;
-    clip-path: circle(50%) !important;
-}
-#main-window[privatebrowsingmode="temporary"] #TabsToolbar .toolbarbutton-1:not([disabled="true"], #alltabs-button, #new-tab-button, #tabs-newtab-button, #firefox-view-button):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
-    background: var(--accentcolor-percentage) !important;
-    clip-path: none !important;
 }
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar .toolbarbutton-1:not([disabled="true"], #PlacesChevron):is([open], [checked], :active),
 #main-window[privatebrowsingmode="temporary"] #PersonalToolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :active) > .toolbarbutton-badge-stack {
