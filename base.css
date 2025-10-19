@@ -624,6 +624,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     margin-inline: 6px !important;
 }
 :root {
+    --urlbar-inner-border-radius: 2px !important;
     --urlbar-icon-padding: 4px !important;
     --urlbar-icon-border-radius: 2px !important;
     --identity-box-margin-inline: 2px !important;
