@@ -305,7 +305,7 @@ Normal mode
 }
 
 /* make main window background dark for tiled windows */
-#main-window {
+#main-window[gtktiledwindow="true"] {
     background: black !important;
 }
 
