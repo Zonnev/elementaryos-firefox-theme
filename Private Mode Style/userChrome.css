@@ -74,6 +74,8 @@ panel toolbarseparator:not(.proton-zap) {
     border-top: 1px solid rgba(0,0,0,0.2) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     margin: 3px 0px 3px 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
 }
 menuseparator::before,
 toolbarseparator:not(.proton-zap)::before {
@@ -176,13 +178,18 @@ LAYOUT
 .titlebar-buttonbox {
     appearance: none !important;
     flex-direction: row !important;
-    margin-left: 4px !important;
     top: 9px !important;
     position: absolute !important;
     display: flex !important;
-    width: calc(100vw - 11px) !important;
+    width: 100vw !important;
     height: 25px !important;
     justify-content: space-between !important;
+}
+.titlebar-min,
+.titlebar-max,
+.titlebar-restore,
+.titlebar-close {
+    padding: 3px !important;
 }
 
 /* dont show window controls in fullscreen */
@@ -208,11 +215,6 @@ LAYOUT
 /*** URLBAR + MEGABAR ***/
 
 /* make Megabar hovers full width */
-.urlbarView {
-    margin-inline: 0px !important;
-    width: 100% !important;
-    border-inline: none !important;
-}
 .urlbarView-row {
     border-radius: 0px !important;
     border: none !important;
@@ -621,7 +623,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     flex-direction: row-reverse !important;
-    padding: 0px 10px 3px 6px !important;
+    margin: 0px 0px 3px 0px !important;
 }
 .tab-content[pinned] {
     padding: 0px 10px 3px 10px !important;
@@ -856,6 +858,11 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="horizontal"] .tab-group-label {
     margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
 }
+tab-group[collapsed] .tab-group-label-container {
+  #tabbrowser-tabs[orient="vertical"] & {
+    margin-block-end: var(--space-small);
+  }
+}
 
 /* do not show tab separators between collapsed tab groups */
 #tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] > .tabbrowser-tab,
@@ -886,19 +893,14 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
     align-items: stretch !important;
   }
 }
-#sidebar-box {
-  @media -moz-pref("sidebar.revamp") {
-    padding-block-end: 0px !important;
-    padding-inline-end: 0px !important;
-    padding-block-start: 0px !important;
-    padding-inline-start: 0px !important;
-  }
-}
+
+/* sidebar layout */
 #sidebar {
   @media -moz-pref("sidebar.revamp") {
-      border-radius: 0px !important;
+      border-radius: 3px !important;
       box-shadow: none !important;
       border: none !important;
+      margin-block-start: 5px !important;
   }
 }
 
@@ -960,7 +962,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        padding: 0px 12px !important;
+        margin: auto auto !important;
     }
   }
 }
@@ -1002,6 +1004,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-content:not([pinned]) {
         padding: 0px 10px 1px 0px !important;
+        margin: 0px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] tab-group {
@@ -1024,7 +1027,7 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
         background: none !important;
-        margin: 4px !important;
+        margin: 4px 4px 3px 4px !important;
         padding: 4px !important;
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {

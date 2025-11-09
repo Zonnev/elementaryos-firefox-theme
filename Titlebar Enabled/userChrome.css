@@ -470,11 +470,6 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 /*** URLBAR + MEGABAR ***/
 
 /* make open urlbar hovers full width */
-.urlbarView {
-    margin-inline: 0px !important;
-    width: 100% !important;
-    border-inline: none !important;
-}
 .urlbarView-row {
     border-radius: 0px !important;
     border: none !important;
@@ -930,7 +925,7 @@ toolbarpaletteitem > #stop-reload-button {
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
     flex-direction: row-reverse !important;
-    padding: 0px 10px 3px 6px !important;
+    margin: 0px 0px 3px 0px !important;
 }
 .tab-content[pinned] {
     padding: 0px 10px 3px 10px !important;
@@ -1162,6 +1157,11 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="horizontal"] .tab-group-label {
     margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
 }
+tab-group[collapsed] .tab-group-label-container {
+  #tabbrowser-tabs[orient="vertical"] & {
+    margin-block-end: var(--space-small);
+  }
+}
 
 /* do not show tab separators between collapsed tab groups */
 #tabbrowser-tabs[orient="horizontal"] tab-group[collapsed] > .tabbrowser-tab,
@@ -1195,19 +1195,14 @@ toolbarpaletteitem > #stop-reload-button {
     align-items: stretch !important;
   }
 }
-#sidebar-box {
-  @media -moz-pref("sidebar.revamp") {
-    padding-block-end: 0px !important;
-    padding-inline-end: 0px !important;
-    padding-block-start: 0px !important;
-    padding-inline-start: 0px !important;
-  }
-}
+
+/* sidebar layout */
 #sidebar {
   @media -moz-pref("sidebar.revamp") {
-      border-radius: 0px !important;
+      border-radius: 3px !important;
       box-shadow: none !important;
       border: none !important;
+      margin-block-start: 5px !important;
   }
 }
 
@@ -1269,7 +1264,7 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        padding: 0px 12px !important;
+        margin: auto auto !important;
     }
   }
 }
@@ -1311,6 +1306,7 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tab-content:not([pinned]) {
         padding: 0px 10px 1px 0px !important;
+        margin: 0px !important;
     }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] tab-group {
@@ -1334,7 +1330,7 @@ toolbarpaletteitem > #stop-reload-button {
 #tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
         list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' version='1.1' id='svg1' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs1' /%3E%3Cpath id='rect1' style='opacity:1;fill:%23333333;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:0.498039;-inkscape-stroke:none' d='M 0.78168445 6.4081552 C 0.64612209 6.2725928 0.45772309 6.1885654 0.2499733 6.1885654 L -0.2499733 6.1885654 C -0.66547288 6.1885654 -0.99989318 6.5229857 -0.99989318 6.9384853 L -0.99989318 10.313815 L -4.3752232 10.313815 C -4.7907228 10.313815 -5.1251431 10.648236 -5.1251431 11.063735 L -5.1251431 11.563682 C -5.1251431 11.979181 -4.7907228 12.313602 -4.3752232 12.313602 L -0.99989318 12.313602 L -0.99989318 15.688932 C -0.99989318 16.104431 -0.66547288 16.438852 -0.2499733 16.438852 L 0.2499733 16.438852 C 0.66547288 16.438852 0.99989318 16.104431 0.99989318 15.688932 L 0.99989318 12.313602 L 4.3752232 12.313602 C 4.7907228 12.313602 5.1251431 11.979181 5.1251431 11.563682 L 5.1251431 11.063735 C 5.1251431 10.648236 4.7907228 10.313815 4.3752232 10.313815 L 0.99989318 10.313815 L 0.99989318 6.9384853 C 0.99989318 6.7307355 0.91724681 6.5437176 0.78168445 6.4081552 z ' transform='rotate(-45)' /%3E%3C/svg%3E") !important;
         background: none !important;
-        margin: 4px !important;
+        margin: 4px 4px 3px 4px !important;
         padding: 4px !important;
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
