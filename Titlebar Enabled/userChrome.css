@@ -294,6 +294,12 @@ menupopup, panel {
 Normal mode
 ***********/
 
+/* go back to default border-radius */
+:root {
+    --border-radius-medium: 4px !important;
+    --arrowpanel-border-radius: 7px !important;
+}
+
 /* system accent color variables */
 :root {
     --accentcolor-percentage: color-mix(in srgb, LinkText 20%, transparent);

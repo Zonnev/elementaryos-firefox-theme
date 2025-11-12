@@ -151,6 +151,12 @@ menupopup, panel {
 LAYOUT
 ******/
 
+/* go back to default border-radius */
+:root {
+    --border-radius-medium: 4px !important;
+    --arrowpanel-border-radius: 7px !important;
+}
+
 /*** TITLEBAR BUTTONS ***/
 .titlebar-close,
 .titlebar-min,
