@@ -893,6 +893,12 @@ tab-group[collapsed] .tab-group-label-container {
     align-items: stretch !important;
   }
 }
+.browserContainer {
+  @media -moz-pref("sidebar.revamp") and -moz-pref("sidebar.revamp.round-content-area") {
+    border-start-start-radius: 0px !important;
+    border-start-end-radius: 0px !important;
+  }
+}
 
 /* sidebar layout */
 #sidebar {
@@ -1231,6 +1237,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #fxa-toolbar-menu-button[tooltiptext="Sign in to your account"] .toolbarbutton-badge-stack {
     padding: 5px !important;
+    border-radius: 4px !important;
 }
 
 /******
