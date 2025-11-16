@@ -24,13 +24,13 @@ MENU POPUPS + right mouse click menus
 menubar > menu[open] {
     border-bottom-color: transparent !important;
 }
-menu:not(#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #tools-menu, #helpMenu), menuitem:not(#context-back, #context-forward, #context-reload, #context-bookmarkpage), menucaption {
+menu:not(#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #profiles-menu, #tools-menu, #helpMenu), menuitem:not(#context-back, #context-forward, #context-reload, #context-bookmarkpage), menucaption {
     appearance: none !important;
     padding: 7px 12px !important;
     border-radius: 0px !important;
     max-width: 100% !important;
 }
-#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #tools-menu, #helpMenu {
+#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #profiles-menu, #tools-menu, #helpMenu {
     appearance: none !important;
     padding: 5px 10px !important;
     border-radius: 4px !important;
