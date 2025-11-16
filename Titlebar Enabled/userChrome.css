@@ -609,9 +609,6 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     height: 20px !important;
     margin-top: 2px !important;
 }
-#urlbar[breakout-extend] #identity-box:not(.verifiedDomain) #identity-icon-box label {
-    margin-top: -2px !important;
-}
 
 .urlbar-go-button,
 .urlbar-revert-button {
