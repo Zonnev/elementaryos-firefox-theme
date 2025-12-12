@@ -586,11 +586,15 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     height: 17px !important;
     margin: -3px 2px !important;
 }
+#trust-icon-container {
+    height: 20px !important;
+}
 
 /* makes icons same height in open urlbar */
 #urlbar[breakout-extend] #identity-box,
 #urlbar[breakout-extend] #tracking-protection-icon-container,
-#urlbar[breakout-extend] #page-action-buttons {
+#urlbar[breakout-extend] #page-action-buttons,
+#urlbar[breakout-extend] #trust-icon-container {
     height: 20px !important;
     margin-top: 2px !important;
 }
