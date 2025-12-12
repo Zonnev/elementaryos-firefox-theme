@@ -593,6 +593,10 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-arrowscrollbox {
     padding-left: 2px !important;
 }
+#pinned-tabs-container[orient="horizontal"] spacer {
+      background-image: none !important;
+      border: none !important;
+}
 
 /* make horizontal tab bar and tabs same height */
 #tabbrowser-tabs {
