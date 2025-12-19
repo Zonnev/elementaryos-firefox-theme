@@ -1463,6 +1463,23 @@ tab-group[collapsed] .tab-group-label-container {
   }
 }
 
+/** tab split view **/
+#tabbrowser-tabs tab-split-view-wrapper {
+    & .tabbrowser-tab {
+        & .tab-content {
+            padding-inline: 4px !important;
+    }
+  }
+}
+#tabbrowser-tabs tab-split-view-wrapper {
+    &[hasactivetab] {
+    background-color: transparent !important;
+  }
+}
+#tabbrowser-tabs[orient="horizontal"] tab-split-view-wrapper {
+    margin-block: -2px -1px !important;
+}
+
 /*** MENUBAR ***/
 #menubar-items {
     padding-top: 2px !important;
