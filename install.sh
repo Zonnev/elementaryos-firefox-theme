@@ -10,6 +10,7 @@ GITHUB_BRANCH_NAME="master"
 GITHUB_PROJECT_NAME="Zonnev/elementaryos-firefox-theme"
 GITHUB_URL="https://github.com"
 GITHUB_URL_RAW="https://raw.githubusercontent.com"
+DRY_RUN="no"
 
 function getFlatpakProcessIdCommand {
   local FLATPAK_ID="${1}"
@@ -228,6 +229,16 @@ OPTIONS:
   Example: ${APP_EXECUTABLE} --controls-layout 'Elementary Reversed'
   Example: ${APP_EXECUTABLE} --controls-layout 2
 
+--dry-run
+
+  Execute script in dry-run mode. In dry-run mode script will not create,
+  remove or update any files, will not change any browser settings, just print logs.
+  It is possible to combine --dry-run option with other parameters.
+  This options is useful for installation script testing purposes.
+
+  Example: ${APP_EXECUTABLE} --dry-run
+  Example: ${APP_EXECUTABLE} --dry-run --browser-profile /profile
+
 --github-branch-name <branch>
 
   Overrides theme branch name at ${GITHUB_URL}. Instalation script will copy theme
@@ -392,6 +403,11 @@ function parseOptions {
             shift 2
             ;;
         esac
+        ;;
+
+      "--dry-run")
+        DRY_RUN="yes"
+        shift 1
         ;;
 
       "--github-branch-name")
@@ -573,31 +589,33 @@ function installThemeAtBrowserProfile {
 
     info "📝 Changing preference '${PREFERENCE}' to '${TARGET_VALUE}'"
 
-    if [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; then
-      info "❓ Please, close ${BROWSER} windows to proceed ...."
-      while [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; do
-        sleep 1
-      done
+    if [ "${DRY_RUN}" == "no" ]; then
+      if [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; then
+        info "❓ Please, close ${BROWSER} windows to proceed ...."
+        while [ ! -z "$(bash -c "${BROWSERS_PROCESS_ID[${BROWSER}]}")" ]; do
+          sleep 1
+        done
+      fi
+
+      increaseLogPadding
+
+      local LINE_NUMBER=""
+
+      if [ -f "${PREFERENCES_FILE}" ]; then
+        LINE_NUMBER=$(grep -n "user_pref(\"${PREFERENCE}\"," "${PREFERENCES_FILE}" | cut -d':' -f1)
+      fi
+
+      if [ -z "${LINE_NUMBER}" ]; then
+        echo "user_pref(\"${PREFERENCE}\", ${TARGET_VALUE});" >> "${PREFERENCES_FILE}"
+      else
+        sed -i "${LINE_NUMBER}s/.*/user_pref(\"${PREFERENCE}\", "${TARGET_VALUE}");/" "${PREFERENCES_FILE}"
+      fi
+
+      decreaseLogPadding
     fi
-
-    increaseLogPadding
-
-    local LINE_NUMBER=""
-
-    if [ -f "${PREFERENCES_FILE}" ]; then
-      LINE_NUMBER=$(grep -n "user_pref(\"${PREFERENCE}\"," "${PREFERENCES_FILE}" | cut -d':' -f1)
-    fi
-
-    if [ -z "${LINE_NUMBER}" ]; then
-      echo "user_pref(\"${PREFERENCE}\", ${TARGET_VALUE});" >> "${PREFERENCES_FILE}"
-    else
-      sed -i "${LINE_NUMBER}s/.*/user_pref(\"${PREFERENCE}\", "${TARGET_VALUE}");/" "${PREFERENCES_FILE}"
-    fi
-
-    decreaseLogPadding
   }
 
-  function delectControlsLayout {
+  function detectControlsLayout {
     if [ -z "${CONTROLS_LAYOUT}" ]; then
       if ! (which gsettings >/dev/null); then
         error "💥 Unable to detect window controls layout. Util gsettings is not installed."
@@ -763,25 +781,37 @@ function installThemeAtBrowserProfile {
 
     if [ ! -d ${CHROME_DIR} ]; then
       info "✅ Creating 📁 $(replaceHomedir "${CHROME_DIR}")"
-      mkdir -p "${CHROME_DIR}"
+      if [ "${DRY_RUN}" == "no" ]; then
+        mkdir -p "${CHROME_DIR}"
+      fi
     fi
 
     info "⬇️  Downloading ${BASE_CSS} (${BASE_URL})"
-    wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
+    if [ "${DRY_RUN}" == "no" ]; then
+      wget --output-document="${BASE_FILE}" --quiet "${BASE_URL}"
+    fi
 
     if [[ "${BROWSER}" == *"(📦 Flatpak)" ]] || [[ "${BROWSER}" == *"(📦 Snap)" ]]; then
       info "⬇️  Downloading ${FLATPAK_CSS} (${FLATPAK_URL})"
-      wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
+      if [ "${DRY_RUN}" == "no" ]; then
+        wget --output-document="${FLATPAK_FILE}" --quiet "${FLATPAK_URL}"
+      fi
     elif [ -f "${FLATPAK_FILE}" ]; then
       info "🗑️  Removing ${FLATPAK_CSS} (${FLATPAK_FILE})"
-      rm "${FLATPAK_FILE}"
+      if [ "${DRY_RUN}" == "no" ]; then
+        rm "${FLATPAK_FILE}"
+      fi
     fi
 
     info "⬇️  Downloading ${USER_CHROME_CSS} (${USER_CHROME_URL})"
-    wget --output-document="${USER_CHROME_FILE}" --quiet "${USER_CHROME_URL}"
+    if [ "${DRY_RUN}" == "no" ]; then
+      wget --output-document="${USER_CHROME_FILE}" --quiet "${USER_CHROME_URL}"
+    fi
 
     info "⬇️  Downloading ${USER_CONTENT_CSS} (${USER_CONTENT_URL})"
-    wget --output-document="${USER_CONTENT_FILE}" --quiet "${USER_CONTENT_URL}"
+    if [ "${DRY_RUN}" == "no" ]; then
+      wget --output-document="${USER_CONTENT_FILE}" --quiet "${USER_CONTENT_URL}"
+    fi
   }
 
   local BROWSER_PROFILE="${1}"
@@ -802,7 +832,7 @@ function installThemeAtBrowserProfile {
   elif [ $(getBrowserNativeTitlebarEnabled "${BROWSER_PROFILE}") == "yes" ]; then
     installStyleSheets "${BROWSER}" "${BROWSER_PROFILE}" "${TITLEBAR_ENABLED_PATH}"
   else
-    delectControlsLayout
+    detectControlsLayout
     installStyleSheets "${BROWSER}" "${BROWSER_PROFILE}" "${LAYOUTS_PATHS[${CONTROLS_LAYOUT}]}"
   fi
 
