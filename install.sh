@@ -6,11 +6,25 @@
 
 set -e
 
-GITHUB_BRANCH_NAME="master"
-GITHUB_PROJECT_NAME="Zonnev/elementaryos-firefox-theme"
-GITHUB_URL="https://github.com"
-GITHUB_URL_RAW="https://raw.githubusercontent.com"
+# Defines execution mode, to use dry-run or not.
+# Variable is controlled by --dry-run script option.
 DRY_RUN="no"
+
+# Represents git branch, which will be used during theme installation.
+# Variable is controlled by --github-branch-name script option.
+GITHUB_BRANCH_NAME="master"
+
+# Represents github project page (user/project), which will be used during theme installation.
+# Variable is controlled by --github-project-name script option.
+GITHUB_PROJECT_NAME="Zonnev/elementaryos-firefox-theme"
+
+# Represents github base url, which will be used during theme installation.
+# This is constant, there is no script option to change the value.
+GITHUB_URL="https://github.com"
+
+# Represents github base url for obtaining raw files, it will be used during theme installation.
+# This is constant, there is no script option to change the value.
+GITHUB_URL_RAW="https://raw.githubusercontent.com"
 
 function getFlatpakProcessIdCommand {
   local FLATPAK_ID="${1}"
@@ -22,63 +36,102 @@ function getSnapProcessIdCommand {
   echo "for pid in \$(pidof ${PROCESS_NAME}); do ps --no-headers \${pid} | grep '/snap/' | awk '{print \$1}'; done"
 }
 
+# Plain array where each record represents a browser name.
 declare -a BROWSERS
+
+# Associative array where:
+# - Key refers to a browser name (see BROWSERS).
+# - Value represents a command which may be used to obtain running browser processes identifiers (PIDs).
 declare -A BROWSERS_PROCESS_ID
+
+# Associative array where:
+# - Key refers to a browser name (see BROWSERS).
+# - Value represents a directory where user profiles stored.
+#   Several directories may be specified, each line is a directory.
+#   For example:
+#   BROWSERS_PROFILES_ROOTS["${BROWSER}"]="first_directory
+#   second_directory
+#   third_directory"
 declare -A BROWSERS_PROFILES_ROOTS
 
+# Default browser name, which will be used in help message.
 DEFAULT_BROWSER="🦊 Firefox"
 
+# Firefox installed from system package (deb, dnf, aur and so on).
 BROWSER="${DEFAULT_BROWSER}";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox" || exit 0'
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox"
 
+# Firefox Nightly installed from system package (deb, dnf, aur and so on).
 BROWSER="🦊 Firefox Nightly";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-trunk" || exit 0'
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox-trunk"
 
+# Firefox ESR installed from system package (deb, dnf, aur and so on).
 BROWSER="🦊 Firefox ESR";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "firefox-esr" || exit 0'
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.mozilla/firefox-esr"
 
+# Firefox installed from flatpak package.
 FLATPAK_ID="org.mozilla.firefox"
 BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox"
 
+# Firefox installed from snap package.
 BROWSER="🦊 Firefox (📦 Snap)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getSnapProcessIdCommand "firefox")"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/snap/firefox/common/.mozilla/firefox"
 
+# Librewolf installed from system package (deb, dnf, aur and so on).
 BROWSER="🐺 Librewolf";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]='pidof "librewolf" || exit 0'
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.librewolf"
 
+# Librewolf installed from flatpak package.
 FLATPAK_ID="io.gitlab.librewolf-community"
 BROWSER="🐺 Librewolf (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.librewolf"
 
+# Tor Browser installed from system package (deb, dnf, aur and so on).
 BROWSER="🧅 Tor Browser";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="pidof ${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/firefox.real || exit 0"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.local/share/torbrowser/tbb/x86_64/tor-browser_*/Browser/TorBrowser/Data/Browser"
 
+# Tor Browser installed from flatpak package.
 FLATPAK_ID="com.github.micahflee.torbrowser-launcher"
 BROWSER="🧅 Tor Browser (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="pidof ${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_*/Browser/firefox.real || exit 0"
 BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/data/torbrowser/tbb/x86_64/tor-browser_*/Browser/TorBrowser/Data/Browser"
 
+# Plain array where record represents layout name
 declare -a LAYOUTS
+
+# Associative array where:
+# - Key refers to a layout name;
+# - Value represents github directory (url encoded) where layout specific style-sheet is stored.
 declare -A LAYOUTS_PATHS
+
+# Associative array where:
+# - Key refers to a layout name;
+# - Value represents a value of 'button-layout' key of 'org.gnome.desktop.wm.preferences' schema
+#   which corresponds to named layout. For example 'close:maximize' corresponds to an Elementary layout
+#   (single close button on left side and single maximize-minimize button on right side).
 declare -A LAYOUTS_SETTINGS
+
+# Associative array where:
+# - Key refers to a layout name;
+# - Value represents a schematic layout representation which will be used to print script's help message.
 declare -A LAYOUTS_TITLEBARS
 
 LAYOUT="Elementary"
@@ -141,11 +194,19 @@ LAYOUTS_PATHS["${LAYOUT}"]="Replace%20Maximize%20to%20Minimize"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close:minimize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯    —    ⤓]"
 
+# Github directory (url encoded) where private mode layout is stored.
 PRIVATE_MODE_PATH="Private%20Mode%20Style"
+
+# Github directory (url encoded) where titlebar enabled mode layout is stored.
 TITLEBAR_ENABLED_PATH="Titlebar%20Enabled"
 
+# Name of script executable which will be used to print script's help message and error reports.
 APP_EXECUTABLE="install.sh"
+
+# Script name which will be used to print script's help message.
 APP_NAME="🦊 Firefox Elementary Theme installation"
+
+# Script's help message
 APP_HELP_MESSAGE="Installation script is recommended to install 🦊 Firefox Elementary Theme.
 
 Theme is set of stylesheets ('userChrome.css' and 'userContent.css'). To apply
