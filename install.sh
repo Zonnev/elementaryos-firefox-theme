@@ -233,11 +233,14 @@ Window controls layout may be changed with Pantheon Tweaks application
 
 Supported window controls layouts are:
 
+$(printf "%3s  %-30s %-28s %s\n" "#" "Layout" "GSettings value" "Schema")
+ -----------------------------------------------------------------------------
 $(
   for INDEX in "${!LAYOUTS[@]}"; do
     LAYOUT="${LAYOUTS[${INDEX}]}"
     TITLEBAR="${LAYOUTS_TITLEBARS[${LAYOUT}]}"
-    printf "%3s. %-30s %s\n" "$((INDEX+1))" "${LAYOUT}" "${TITLEBAR}"
+    SETTING="${LAYOUTS_SETTINGS[${LAYOUT}]}"
+    printf "%3s. %-30s %-28s %s\n" "$((INDEX+1))" "${LAYOUT}" "${SETTING}" "${TITLEBAR}"
   done
 )
 
@@ -686,12 +689,7 @@ function installThemeAtBrowserProfile {
         exit 1
       fi
 
-      local WM_BUTTON_LAYOUT="$(gsettings get org.gnome.desktop.wm.preferences button-layout)"
-      local BUTTON_LAYOUT=""
-
-      if [ ! -z "${WM_BUTTON_LAYOUT}" ]; then
-        BUTTON_LAYOUT="${WM_BUTTON_LAYOUT}"
-      fi
+      local BUTTON_LAYOUT="$(gsettings get org.gnome.desktop.wm.preferences button-layout)"
 
       if [ ! -z "${BUTTON_LAYOUT}" ]; then
         for LAYOUT in "${!LAYOUTS_SETTINGS[@]}"; do
@@ -700,13 +698,22 @@ function installThemeAtBrowserProfile {
             break
           fi
         done
-      fi
-
-      if [ -z "${CONTROLS_LAYOUT}" ]; then
-        error "💥 Unable to detect window controls layout."
-        error "💥 Please, specify layout with '--controls-layout' option."
-        error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
-        exit 1
+        if [ -z "${CONTROLS_LAYOUT}" ]; then
+          error "💥 Unable to detect window controls layout using gsettings."
+          error "💥 gsettings reports current button layout is ${BUTTON_LAYOUT}, "
+          error "💥 and it doesn't match any known button layout."
+          error "💥 Please, specify layout with '--controls-layout' option."
+          error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
+          exit 1
+        fi
+      else
+        if [ -z "${CONTROLS_LAYOUT}" ]; then
+          error "💥 Unable to detect window controls layout using gsettings."
+          error "💥 gsettings reports current button layout is not specified."
+          error "💥 Please, specify layout with '--controls-layout' option."
+          error "❓ Try '${APP_EXECUTABLE} --help' to see manual."
+          exit 1
+        fi
       fi
     fi
   }
