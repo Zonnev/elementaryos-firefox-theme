@@ -80,7 +80,8 @@ FLATPAK_ID="org.mozilla.firefox"
 BROWSER="🦊 Firefox (📦 Flatpak)";
 BROWSERS+=("${BROWSER}");
 BROWSERS_PROCESS_ID["${BROWSER}"]="$(getFlatpakProcessIdCommand "${FLATPAK_ID}")"
-BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox"
+BROWSERS_PROFILES_ROOTS["${BROWSER}"]="${HOME}/.var/app/${FLATPAK_ID}/.mozilla/firefox
+${HOME}/.var/app/${FLATPAK_ID}/config/mozilla/firefox"
 
 # Firefox installed from snap package.
 BROWSER="🦊 Firefox (📦 Snap)";
