@@ -848,8 +848,8 @@ function installThemeAtBrowserProfile {
     local USER_CHROME_URL="${FILES_URL}/${LAYOUT_PATH}/${USER_CHROME_CSS}"
     local USER_CONTENT_URL="${FILES_URL}/${USER_CONTENT_CSS}"
 
-    if [ ! -d ${CHROME_DIR} ]; then
-      info "✅ Creating 📁 $(replaceHomedir "${CHROME_DIR}")"
+    if [ ! -d "${CHROME_DIR}" ]; then
+      info "✅ Creating 📁 '$(replaceHomedir "${CHROME_DIR}")'"
       if [ "${DRY_RUN}" == "no" ]; then
         mkdir -p "${CHROME_DIR}"
       fi
