@@ -221,6 +221,10 @@ LAYOUT
 /*** URLBAR + MEGABAR ***/
 
 /* make Megabar hovers full width */
+.urlbarView {
+    margin-inline: 0px !important;
+    width: 100% !important;
+}
 .urlbarView-row {
     border-radius: 0px !important;
     border: none !important;

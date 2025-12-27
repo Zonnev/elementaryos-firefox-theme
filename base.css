@@ -469,6 +469,10 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 /*** URLBAR + MEGABAR ***/
 
 /* make open urlbar hovers full width */
+.urlbarView {
+    margin-inline: 0px !important;
+    width: 100% !important;
+}
 .urlbarView-row {
     border-radius: 0px !important;
     border: none !important;
