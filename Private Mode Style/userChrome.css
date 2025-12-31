@@ -391,9 +391,6 @@ LAYOUT
 #urlbar .searchbar-engine-one-off-item {
     min-height: 26px !important;
 }
-#urlbar[breakout-extend] #userContext-label {
-    margin-bottom: 1px !important;
-}
 
 /* makes new searchmode box same look and height in open urlbar */
 .searchmode-switcher-chicklet,
