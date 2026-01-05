@@ -1047,9 +1047,11 @@ tab-group[collapsed] .tab-group-label-container {
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tabbrowser-tab {
       &:not(:hover) .tab-close-button:not([selected]) {
-        display: block !important;
-        opacity: 0 !important;
-      }
+        display: none !important;
+        }
+   }
+    & .tab-content:not(:hover, [pinned], [selected]) {
+        margin-left: 10px !important;
    }
 }
 #tabbrowser-tabs[orient="vertical"][expanded] {
