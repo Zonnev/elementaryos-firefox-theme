@@ -88,6 +88,11 @@ toolbarseparator:not(.proton-zap)::before {
 #appMenu-fxa-label2 {
     border-radius: 4px !important;
 }
+.searchmode-switcher-popup {
+  & > menuitem {
+    margin-inline: 0px !important;
+  }
+}
 
 /* extensions pull down menu */
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {

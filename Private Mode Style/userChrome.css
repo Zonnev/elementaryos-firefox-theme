@@ -104,6 +104,11 @@ menupopup, panel {
 #appMenu-fxa-label2 {
     background-color: rgba(0,0,0,0.1) !important;
 }
+.searchmode-switcher-popup {
+  & > menuitem {
+    margin-inline: 0px !important;
+  }
+}
 
 /* extensions pull down menu */
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
