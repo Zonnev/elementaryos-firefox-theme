@@ -452,6 +452,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 
 /*** NAV BAR ***/
 #navigator-toolbox {
+    z-index: 3 !important;
     background: #F2F2F2 !important;
     border-radius: 6px 6px 0 0 !important;
     border: none !important;
@@ -1179,6 +1180,9 @@ tab-group[collapsed] .tab-group-label-container {
 
 /*** VERTICAL TABS ***/
 
+#browser {
+    background-color: #FAFAFA !important;
+}
 .browser-toolbox-background {
     background-color: #FAFAFA !important;
 }
@@ -1783,6 +1787,9 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
 #PersonalToolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :active) > .toolbarbutton-badge-stack {
     background: var(--accentcolor-percentage) !important;
     clip-path: none !important;
+}
+#browser {
+	background: #333333 !important;
 }
 .browser-toolbox-background {
 	background: #333333 !important;

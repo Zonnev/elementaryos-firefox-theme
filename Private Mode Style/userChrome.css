@@ -210,6 +210,7 @@ LAYOUT
 
 /*** NAV BAR ***/
 #navigator-toolbox {
+    z-index: 3 !important;
     border-bottom: none !important;
 }
 #nav-bar {
@@ -1093,6 +1094,7 @@ tab-group[collapsed] .tab-group-label-container {
     padding: 0px 9px !important;
     background: none !important;
 }
+
 /*** VERTICAL TABS EXPAND ON HOVER ***/
 
 /* removes top margin in 'expanded on hover' sidebar panels */
@@ -1142,7 +1144,7 @@ tab-group[collapsed] .tab-group-label-container {
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabs[orient="vertical"][expanded] {
       & .tab-close-button {
-        margin-top: 5px !important;
+        margin-top: 3px !important;
     }
   }
 }
@@ -1463,6 +1465,9 @@ menubar > menu[open] {
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background: rgba(0,0,0,0.1) !important;
+}
+#browser {
+    background: rgba(105,75,188,1) !important;
 }
 .browser-toolbox-background {
     background: rgba(105,75,188,1) !important;

@@ -460,6 +460,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 
 /*** NAV BAR ***/
 #navigator-toolbox {
+    z-index: 3 !important;
     background: #F2F2F2 !important;
     border: none !important;
     box-shadow: inset 0 -1px 0 0 #C8C8C8 !important; /* this makes the border bottom to avoid double borders in vertical tabs */
@@ -1186,6 +1187,9 @@ tab-group[collapsed] .tab-group-label-container {
 
 /*** VERTICAL TABS ***/
 
+#browser {
+    background-color: #FAFAFA !important;
+}
 .browser-toolbox-background {
     background-color: #FAFAFA !important;
 }
@@ -1466,7 +1470,7 @@ tab-group[collapsed] .tab-group-label-container {
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabs[orient="vertical"][expanded] {
       & .tab-close-button {
-        margin-top: 5px !important;
+        margin-top: 3px !important;
     }
   }
 }
@@ -1788,6 +1792,9 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
 #PersonalToolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :active) > .toolbarbutton-badge-stack {
     background: var(--accentcolor-percentage) !important;
     clip-path: none !important;
+}
+#browser {
+	background: #333333 !important;
 }
 .browser-toolbox-background {
 	background: #333333 !important;
