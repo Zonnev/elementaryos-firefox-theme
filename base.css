@@ -1463,7 +1463,7 @@ tab-group[collapsed] .tab-group-label-container {
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabs[orient="vertical"][expanded] {
       & .tab-close-button {
-        margin-top: 5px !important;
+        margin-top: 3px !important;
     }
   }
 }
