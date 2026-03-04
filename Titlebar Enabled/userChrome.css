@@ -1288,6 +1288,7 @@ tab-group[collapsed] .tab-group-label-container {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
         margin: auto auto !important;
+        padding: 0px 18px !important;
     }
   }
 }
