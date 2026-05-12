@@ -46,6 +46,7 @@ menupopup, panel {
     --arrowpanel-menuitem-border-radius: 0px !important;
     --arrowpanel-menuitem-margin: 0px !important;
     --arrowpanel-background: #fafafa !important;
+    --arrowpanel-color: black !important;
     --panel-separator-margin: 4px 0px 4px 0px !important;
     --panel-padding-block: 7px 0px !important;
     --panel-item-hover-bgcolor: rgba(0,0,0,0.08) !important;
@@ -142,6 +143,7 @@ panel toolbarseparator:not(.proton-zap) {
 }
 menupopup, panel {
     --arrowpanel-background: Field !important;
+    --arrowpanel-color: white !important;
     --panel-item-hover-bgcolor: rgba(255,255,255,0.10) !important;
     --button-hover-bgcolor: rgba(255,255,255,0.10) !important;
     --button-background-color-ghost-hover: rgba(255,255,255,0.10) !important;
