@@ -109,6 +109,11 @@ menupopup, panel {
     margin-inline: 0px !important;
   }
 }
+:is(menupopup, panel):where(:not([type="arrow"])),
+:is(menupopup, panel):where([type="arrow"]) {
+    --panel-background-color: #8266C4 !important;
+    color-scheme: dark !important;
+}
 
 /* extensions pull down menu */
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
@@ -399,11 +404,13 @@ LAYOUT
 }
 
 /* makes new searchmode box same look and height in open urlbar */
+.searchmode-switcher,
 .searchmode-switcher-chicklet,
 #searchmode-switcher-chicklet {
     border-start-end-radius: 2px !important;
     border-end-end-radius: 2px !important;
 }
+#urlbar[breakout-extend] .searchmode-switcher,
 #urlbar[breakout-extend] .searchmode-switcher-chicklet,
 #urlbar[breakout-extend] #searchmode-switcher-chicklet {
     height: 20px !important;
@@ -414,8 +421,11 @@ LAYOUT
     height: 20px !important;
     margin-top: 2px !important;
 }
-#urlbar[breakout-extend] #searchmode-switcher-title,
-#urlbar[breakout-extend] .searchmode-switcher-title {
+#urlbar[breakout-extend] .searchmode-switcher-icon,
+#urlbar[breakout-extend] .searchmode-switcher-dropmarker {
+    margin-top: -2px !important;
+}
+#urlbar[breakout-extend] .searchmode-switcher-content {
     margin-top: 2px !important;
 }
 
@@ -579,6 +589,13 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /*** TAB BAR ***/
+
+/* get rid of vertical border in tab bar */
+:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem), :root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) {
+  & ~ #tabbrowser-tabs[orient="horizontal"]::before {
+    border-inline-start: 0px !important;
+  }
+}
 
 /* tab bar */
 #TabsToolbar {
