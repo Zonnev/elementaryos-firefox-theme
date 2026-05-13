@@ -664,11 +664,13 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }
 
 /* makes new searchmode box same look and height in open urlbar */
+.searchmode-switcher,
 .searchmode-switcher-chicklet,
 #searchmode-switcher-chicklet {
     border-start-end-radius: 2px !important;
     border-end-end-radius: 2px !important;
 }
+#urlbar[breakout-extend] .searchmode-switcher,
 #urlbar[breakout-extend] .searchmode-switcher-chicklet,
 #urlbar[breakout-extend] #searchmode-switcher-chicklet {
     height: 20px !important;
@@ -679,8 +681,11 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     height: 20px !important;
     margin-top: 2px !important;
 }
-#urlbar[breakout-extend] #searchmode-switcher-title,
-#urlbar[breakout-extend] .searchmode-switcher-title {
+#urlbar[breakout-extend] .searchmode-switcher-icon,
+#urlbar[breakout-extend] .searchmode-switcher-dropmarker {
+    margin-top: -2px !important;
+}
+#urlbar[breakout-extend] .searchmode-switcher-content {
     margin-top: 2px !important;
 }
 
@@ -875,6 +880,13 @@ toolbarpaletteitem > #stop-reload-button {
 }
 
 /*** TAB BAR ***/
+
+/* get rid of vertical border in tab bar */
+:root:not([privatebrowsingmode]) :is(toolbarbutton, toolbarpaletteitem), :root[privatebrowsingmode] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) {
+  & ~ #tabbrowser-tabs[orient="horizontal"]::before {
+    border-inline-start: 0px !important;
+  }
+}
 
 /* tab bar */
 #TabsToolbar {
