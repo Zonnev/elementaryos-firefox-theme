@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* This Private Mode Style of the elementary OS Firefox theme will blend Firefox in elementary OS.  Currently tested on Linux on Nightly */
+/* This Private Mode Style of the elementary OS Firefox theme will blend Firefox in elementary OS. Currently tested on Linux on Nightly */
 
 /******************************
 COLOURS & LAYOUT OF MENU POPUPS
@@ -109,11 +109,6 @@ menupopup, panel {
     margin-inline: 0px !important;
   }
 }
-:is(menupopup, panel):where(:not([type="arrow"])),
-:is(menupopup, panel):where([type="arrow"]) {
-    --panel-background-color: #8266C4 !important;
-    color-scheme: dark !important;
-}
 
 /* extensions pull down menu */
 #unified-extensions-panel .unified-extensions-item-row-wrapper > .unified-extensions-item-action-button {
@@ -156,6 +151,47 @@ menupopup, panel {
     --arrowpanel-background: #8266C4 !important;
     --arrowpanel-border-color: rgba(0,0,0,0.3) !important;
 }}
+
+
+/*************************
+Firefox Nova style changes
+**************************/
+:root {
+    --button-background-color-ghost: transparent !important;
+    --button-background-color-ghost-hover: rgba(0,0,0,0.2) !important;
+    --panel-menuitem-padding: 8px 8px 8px 24px !important;
+    --panel-menuitem-margin: 0px !important;
+    --panel-menuitem-margin-inline: 8px !important;
+    --panel-menuitem-border-radius: 0px !important;
+    --border-radius-circle: 3px !important;
+    --button-text-color: white !important;
+    --button-background-color-hover: rgba(0,0,0,0.2) !important;
+    --text-color: white !important;
+    --text-color-deemphasized: rgba(255,255,255,0.5) !important;
+    --background-color-box: #8266C4 !important;
+    --button-background-color-hover: rgba(0,0,0,0.1) !important;
+}
+:root :is(menupopup, panel):where(:not([type="arrow"])),
+:root :is(menupopup, panel):where([type="arrow"]) {
+    --panel-background-color: #8266C4 !important;
+    color-scheme: dark !important;
+}
+/* Firefox Nova seperator for searchmode switcher changes */
+.searchmode-switcher-panel-installed-engine-separator,
+.searchmode-switcher-panel-footer-separator {
+    border-top: 1px solid rgba(0,0,0,0.2) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    margin: 3px 0px 3px 0px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    background-color: transparent !important;
+    height: 0px !important;
+}
+/* A bit more space for the hamburger menu icon in Firefox Nova */
+#PanelUI-menu-button {
+    padding-inline-start: 8px !important;
+}
+
 
 /*****
 LAYOUT
@@ -559,9 +595,6 @@ toolbarpaletteitem > #stop-reload-button {
 }
 toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button):not(#PlacesChevron) {
     margin-right: 0px !important;
-}
-#PanelUI-menu-button {
-    padding-inline-start: var(--toolbar-start-end-padding) !important;
 }
 #scrollbutton-up,
 #scrollbutton-down:-moz-locale-dir(ltr) {
