@@ -997,7 +997,8 @@ tab-group[collapsed] .tab-group-label-container {
         min-height: 32px !important;
         max-height: 32px !important;
         padding: 0px 0px !important;
-        margin: 2px 2px 2px 10px !important;
+        margin: 2px 2px 2px 8px !important;
+        margin-block: 0px !important;
    }
   }
 }
@@ -1006,8 +1007,8 @@ tab-group[collapsed] .tab-group-label-container {
     & .tab-background {
         min-height: 32px !important;
         max-height: 32px !important;
-        padding: 0px 0px !important;
-        margin: 2px 2px 2px 10px !important;
+        margin: 2px 2px 2px 8px !important;
+        margin-block: 0px !important;
     }
   }
 }
@@ -1024,7 +1025,7 @@ tab-group[collapsed] .tab-group-label-container {
   &:not([expanded]) {
    & #pinned-tabs-container[orient="vertical"] {
     & .tab-content[pinned] {
-        padding: 0px !important;
+        padding: 0px 18px !important;
     }
   }
  }
@@ -1032,8 +1033,8 @@ tab-group[collapsed] .tab-group-label-container {
 #tabbrowser-tabs[orient="vertical"] {
   &:not([expanded]) {
     & .tab-content:not([pinned]) {
-        margin: auto auto !important;
-        padding: 0px 18px !important;
+        margin: auto !important;
+        padding: 0px 16px !important;
     }
   }
 }
@@ -1521,6 +1522,9 @@ menubar > menu[open] {
     background: rgba(105,75,188,1) !important;
 }
 .browser-toolbox-background {
+    background: rgba(105,75,188,1) !important;
+}
+#sidebar-main {
     background: rgba(105,75,188,1) !important;
 }
 :root[sidebar-expand-on-hover] {
