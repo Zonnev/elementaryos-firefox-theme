@@ -316,7 +316,6 @@ Firefox Nova style changes
     --panel-border-radius: 6px !important;
     --panel-border-color: #C8C8C8 !important;
     --border-radius-xxlarge: 3px !important;
-    --border-radius-medium: 3px !important;
     --button-background-color-hover: rgba(0,0,0,0.08) !important;
     --toolbarbutton-icon-fill: #333333 !important;
     --button-icon-fill: #333333 !important;
@@ -399,6 +398,11 @@ Firefox Nova style changes
     padding-top: 0px !important;
     background-color: transparent !important;
     height: 0px !important;
+}
+
+/* make radius smaller of search mode switcher in Nova */
+.button-background {
+    border-radius: 3px !important;
 }
 
 /** Firefox Nova seperator for searchmode switcher changes private mode **/

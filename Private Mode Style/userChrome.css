@@ -157,13 +157,18 @@ menupopup, panel {
 Firefox Nova style changes
 **************************/
 :root {
+    --chrome-window-gap: 0px !important;
+    --chrome-content-separator-color: transparent !important;
+    --chrome-block-radius: 0px !important;
+    --toolbox-background-color: #8266C4 !important;
     --button-background-color-ghost: transparent !important;
     --button-background-color-ghost-hover: rgba(0,0,0,0.2) !important;
     --panel-menuitem-padding: 8px 8px 8px 24px !important;
     --panel-menuitem-margin: 0px !important;
     --panel-menuitem-margin-inline: 8px !important;
     --panel-menuitem-border-radius: 0px !important;
-    --border-radius-circle: 3px !important;
+    --panel-border-radius: 6px !important;
+    --border-radius-xxlarge: 3px !important;
     --button-text-color: white !important;
     --button-background-color-hover: rgba(0,0,0,0.2) !important;
     --text-color: white !important;
@@ -186,6 +191,10 @@ Firefox Nova style changes
     padding-top: 0px !important;
     background-color: transparent !important;
     height: 0px !important;
+}
+/* make radius smaller of search mode switcher in Nova */
+.button-background {
+    border-radius: 3px !important;
 }
 /* A bit more space for the hamburger menu icon in Firefox Nova */
 #PanelUI-menu-button {
