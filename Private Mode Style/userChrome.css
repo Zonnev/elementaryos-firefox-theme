@@ -467,9 +467,12 @@ LAYOUT
     margin-top: 2px !important;
 }
 #urlbar[breakout-extend] .searchmode-switcher-icon,
-#urlbar[breakout-extend] .searchmode-switcher-dropmarker {
+#urlbar[breakout-extend] .searchmode-switcher-dropmarker,
+#urlbar[breakout-extend] .searchmode-switcher-title,
+#urlbar[breakout-extend] .searchmode-switcher-close {
     margin-top: -2px !important;
 }
+#urlbar[breakout-extend] #urlbar-searchmode-switcher,
 #urlbar[breakout-extend] .searchmode-switcher-content {
     margin-top: 2px !important;
 }
