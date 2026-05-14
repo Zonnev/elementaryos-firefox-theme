@@ -472,6 +472,9 @@ LAYOUT
 #urlbar[breakout-extend] .searchmode-switcher-close {
     margin-top: -2px !important;
 }
+#urlbar[breakout-extend] #searchmode-switcher-title {
+    margin-top: 2px !important;
+}
 #urlbar[breakout-extend] #urlbar-searchmode-switcher,
 #urlbar[breakout-extend] .searchmode-switcher-content {
     margin-top: 2px !important;
