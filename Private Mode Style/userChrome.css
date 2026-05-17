@@ -1533,6 +1533,12 @@ menubar > menu[open] {
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background: rgba(0,0,0,0.1) !important;
 }
+
+/* vertical sidebar colors */
+:root {
+    --sidebar-background-color: rgba(255,255,255,0.2) !important;
+    --sidebar-box-background: rgba(255,255,255,0.2) !important;
+}
 #browser {
     background: rgba(105,75,188,1) !important;
 }
@@ -1567,6 +1573,7 @@ menubar > menu[open] {
     color: white !important;
   }
 }
+
 .notificationbox-stack {
     background: transparent !important;
 }

@@ -2290,6 +2290,15 @@ private browsing
 #main-window[privatebrowsingmode="temporary"] .browser-toolbox-background {
     background: rgba(105,75,188,1) !important;
 }
+
+/* vertical sidebar colors in private mode */
+:root[privatebrowsingmode="temporary"] {
+    --sidebar-background-color: rgba(255,255,255,0.2) !important;
+    --sidebar-box-background: rgba(255,255,255,0.2) !important;
+}
+:root[privatebrowsingmode="temporary"] #browser {
+    background-color: rgba(105,75,188,1) !important;
+}
 :root[privatebrowsingmode="temporary"] #sidebar-main {
     background: rgba(105,75,188,1) !important;
 }
@@ -2300,6 +2309,7 @@ private browsing
   }
  }
 }
+
 :root[privatebrowsingmode="temporary"] {
     --toolbarbutton-hover-background: rgba(255,255,255,0.3) !important;
     --toolbarbutton-active-background: rgba(255,255,255,0.3) !important;
