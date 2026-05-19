@@ -824,23 +824,33 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }
 
 /* go button for Librewolf */
-#main-window[fxadisabled="true"] #searchbar-new .urlbar-go-button {
+#main-window:is([fxadisabled]) #searchbar-new[open] .urlbar-go-button {
     width: 19px !important;
     height: 19px !important;
 }
-#main-window[fxadisabled="true"] #urlbar .urlbar-go-button {
+#main-window:is([fxadisabled]) #urlbar[open] .urlbar-go-button {
     width: 22px !important;
     height: 22px !important;
 }
-/* go button for other browsers */
+/* go button for ESR */
 #searchbar-new[open] .urlbar-go-button {
-    width: 12px !important;
-    height: 12px !important;
+    width: 19px !important;
+    height: 19px !important;
     margin-top: 1px !important;
 }
 #urlbar[open] .urlbar-go-button {
+    width: 22px !important;
+    height: 22px !important;
+}
+/* go button for stable and beta browsers */
+#main-window:is([hide-ai-sidebar]):not([fxadisabled]) #urlbar[open] .urlbar-go-button {
     width: 15px !important;
     height: 15px !important;
+}
+#main-window:is([hide-ai-sidebar]):not([fxadisabled]) #searchbar-new[open] .urlbar-go-button {
+    width: 12px !important;
+    height: 12px !important;
+    margin-top: 1px !important;
 }
 
 #PopupSearchAutoComplete .search-setting-button {
