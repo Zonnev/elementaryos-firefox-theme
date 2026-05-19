@@ -201,6 +201,49 @@ Firefox Nova style changes
     padding-inline-start: 8px !important;
 }
 
+/****** Changes ONLY for Firefox Nova enabled browser ******/
+@media -moz-pref("browser.nova.enabled") {
+.urlbar:not(moz-smartbar)[breakout] {
+    & > .urlbar-input-container {
+      border: 1px solid transparent !important;
+      border-radius: 3px !important;
+      background-color: transparent !important;
+      margin-block-start: 1px !important;
+      padding-top: 0px !important;
+    }
+}
+#urlbar[focused]:not([open]) #identity-box,
+#urlbar[focused]:not([open]) #identity-box:not(.verifiedDomain),
+#urlbar[focused]:not([open]) #tracking-protection-icon-container,
+#urlbar[focused]:not([open]) #page-action-buttons,
+#urlbar[focused]:not([open]) #trust-icon-container,
+#urlbar[focused]:not([open]) .searchmode-switcher {
+    margin-top: 0px !important;
+}
+#urlbar:not([focused][open]) #identity-box,
+#urlbar:not([focused][open]) #identity-box:not(.verifiedDomain),
+#urlbar:not([focused][open]) #tracking-protection-icon-container,
+#urlbar:not([focused][open]) #page-action-buttons,
+#urlbar:not([focused][open]) #trust-icon-container,
+#urlbar:not([focused][open]) .searchmode-switcher {
+    margin-top: 0px !important;
+}
+#urlbar,
+#searchbar-new {
+    top: 9px !important;
+}
+#urlbar[open],
+#searchbar-new[open] {
+    margin-left: -5px !important;
+    width: calc(var(--urlbar-width) + 10px) !important;
+}
+.urlbar-background {
+    box-shadow: none !important;
+}
+.button-background {
+    border: none !important;
+}}
+
 
 /*****
 LAYOUT
@@ -304,19 +347,29 @@ LAYOUT
     --urlbar-height: 26px !important;
     --urlbar-toolbar-height: 26px !important;
 }
-#urlbar[open] {
+#urlbar[open],
+.urlbar[open],
+#searchbar-new[open] {
     --urlbar-min-height: 22px !important; /* takes care of password key icon not jumping in open urlbar */
     top: 5px !important; /* adjust when all urlbar icons and input text are jumping */
 }
-#urlbar[open] .urlbar-input-container {
+#urlbar[open] .urlbar-input-container,
+.urlbar[open] .urlbar-input-container {
     height: 24px !important;
     margin-top: 3px !important;
     margin-bottom: 3px !important;
     margin-left: 6px !important;
     padding-right: 12px !important;
 }
-#urlbar[open] .urlbar-input {
+#searchbar-new[open] .urlbar-input-container {
+    margin-top: 4px !important;
+}
+#urlbar[open] .urlbar-input,
+.urlbar[open] .urlbar-input {
     margin-bottom: -3px !important;
+}
+#searchbar-new[open] .urlbar-input {
+    margin-bottom: 0px !important;
 }
 #urlbar-container,
 #search-container {
@@ -328,13 +381,15 @@ LAYOUT
     padding: 0px 2px 0px 0px !important;
     margin: 1px !important;
 }
-#urlbar, #searchbar {
+#urlbar, #searchbar, #searchbar-new {
     -moz-window-dragging: no-drag !important;
 }
-#urlbar {
+#urlbar,
+.urlbar {
     min-height: 26px !important;
 }
-#searchbar {
+#searchbar,
+#searchbar-new:not([open]) {
     min-height: 26px !important;
     max-height: 26px !important;
 }
@@ -342,15 +397,28 @@ LAYOUT
     border-top: none !important;
 }
 #urlbar[focused]:not([open]),
-#searchbar:focus-within {
+.urlbar[focused]:not([open]),
+#searchbar:focus-within,
+#searchbar-new[focused]:not([open]) {
     border-radius: 3px !important;
 }
 #urlbar[focused][open],
-#urlbar[open]:not([focused]) {
+#urlbar[open]:not([focused]),
+.urlbar[focused][open],
+.urlbar[open]:not([focused]),
+#searchbar-new[focused][open],
+#searchbar-new[open]:not([focused]) {
     border-radius: 6px !important;
 }
+#urlbar[focused] > #urlbar-background,
+#urlbar[focused] > .urlbar-background,
+.urlbar[focused] > .urlbar-background,
+#searchbar-new[focused] > .urlbar-background {
+    box-shadow: none !important;
+}
 #urlbar:not([focused]),
-#searchbar:not(:focus-within) {
+#searchbar:not(:focus-within),
+#searchbar-new:not([focused]) {
     border-radius: 3px !important;
 }
 #urlbar-background,
@@ -362,7 +430,8 @@ LAYOUT
 #urlbar[focused] > .urlbar-background {
     outline: none !important;
 }
-#searchbar:focus-within {
+#searchbar:focus-within,
+#searchbar-new[focused] {
     outline: none !important;
 }
 #PopupSearchAutoComplete {
@@ -406,14 +475,16 @@ LAYOUT
 
 .urlbar-go-button,
 .urlbar-revert-button {
-    width: 20px !important;
-    height: 20px !important;
+    width: 16px !important;
+    height: 16px !important;
     padding: 2px !important;
     margin: 0px 0px !important;
 }
 #urlbar[open] .urlbar-go-button,
-#urlbar[open] .urlbar-revert-button {
-    margin: 2px 0px !important;
+#urlbar[open] .urlbar-revert-button,
+#searchbar-new[open] .urlbar-go-button,
+#searchbar-new[open] .urlbar-revert-button {
+    margin: 1px 0px !important;
 }
 .search-go-button {
     padding: 2px !important;
@@ -1452,33 +1523,41 @@ textarea::selection {
     background: SelectedItem !important;
     color-scheme: dark !important;
 }
-#urlbar[focused]:not([open]) {
+#urlbar[focused]:not([open]),
+.urlbar[focused]:not([open]),
+#searchbar:focus-within,
+#searchbar-new[focused]:not([open]) {
     border: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(0,0,0,0.05), 0 0 0 2px var(--accentcolor-percentage) !important;
 }
-#searchbar:focus-within {
+#searchbar:focus-within,
+#searchbar-new[focused] {
     border: 1px solid rgba(0,0,0,0.4) !important;
     background: #A267A9 !important;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(0,0,0,0.05), 0 0 0 2px var(--accentcolor-percentage) !important;
 }
 #urlbar[focused][open],
-#urlbar[open]:not([focused]) {
+#urlbar[open]:not([focused]),
+.urlbar[focused][open],
+.urlbar[open]:not([focused]),
+#searchbar-new[focused][open],
+#searchbar-new[open]:not([focused]) {
     border: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
     box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
 }
-#urlbar[focused] > #urlbar-background {
+#urlbar[focused] > #urlbar-background,
+#urlbar[focused] > .urlbar-background,
+.urlbar[focused] > .urlbar-background,
+#searchbar-new[focused] > .urlbar-background {
     box-shadow: none !important;
 }
-#urlbar:not([focused]){
+#urlbar:not([focused]),
+#searchbar:not(:focus-within),
+#searchbar-new:not([focused]) {
     border: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
-    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(0,0,0,0.05), 0 1px 0 0 rgba(255,255,255,0.05) !important;
-}
-#searchbar:not(:focus-within) {
-    border: 1px solid rgba(0,0,0,0.4) !important;
-    background: #A267A9 !important;
     box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(0,0,0,0.05), 0 1px 0 0 rgba(255,255,255,0.05) !important;
 }
 .urlbarView-url,
