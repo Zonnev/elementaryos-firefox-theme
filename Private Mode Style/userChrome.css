@@ -473,23 +473,26 @@ LAYOUT
     margin-top: 2px !important;
 }
 
-.urlbar-go-button,
-.urlbar-revert-button {
-    width: 16px !important;
-    height: 16px !important;
-    padding: 2px !important;
-    margin: 0px 0px !important;
+/* go button for Librewolf */
+#main-window[fxadisabled="true"] #searchbar-new .urlbar-go-button {
+    width: 19px !important;
+    height: 19px !important;
 }
-#urlbar[open] .urlbar-go-button,
-#urlbar[open] .urlbar-revert-button,
-#searchbar-new[open] .urlbar-go-button,
-#searchbar-new[open] .urlbar-revert-button {
-    margin: 1px 0px !important;
+#main-window[fxadisabled="true"] #urlbar .urlbar-go-button {
+    width: 22px !important;
+    height: 22px !important;
 }
-.search-go-button {
-    padding: 2px !important;
-    margin: 0px 2px !important;
+/* go button for other browsers */
+#searchbar-new[open] .urlbar-go-button {
+    width: 12px !important;
+    height: 12px !important;
+    margin-top: 1px !important;
 }
+#urlbar[open] .urlbar-go-button {
+    width: 15px !important;
+    height: 15px !important;
+}
+
 #PopupSearchAutoComplete .search-setting-button {
     margin-inline: 6px !important;
 }
