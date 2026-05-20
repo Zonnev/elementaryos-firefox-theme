@@ -475,8 +475,8 @@ LAYOUT
 
 /* go button for Librewolf */
 #main-window:is([fxadisabled]) #searchbar-new[open] .urlbar-go-button {
-    width: 19px !important;
-    height: 19px !important;
+    width: 20px !important;
+    height: 20px !important;
 }
 #main-window:is([fxadisabled]) #urlbar[open] .urlbar-go-button {
     width: 22px !important;
