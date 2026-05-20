@@ -475,12 +475,12 @@ LAYOUT
 
 /* go button for Librewolf */
 #main-window:is([fxadisabled]) #searchbar-new[open] .urlbar-go-button {
-    width: 20px !important;
-    height: 20px !important;
+    width: 12px !important;
+    height: 12px !important;
 }
 #main-window:is([fxadisabled]) #urlbar[open] .urlbar-go-button {
-    width: 22px !important;
-    height: 22px !important;
+    width: 15px !important;
+    height: 15px !important;
 }
 /* go button for ESR */
 #searchbar-new[open] .urlbar-go-button {
