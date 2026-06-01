@@ -74,7 +74,8 @@
     --primary-button-active-background-color: var(--eOS-blueberry-100) !important;
     --primary-button-color: var(--eOS-silver-100) !important;
 
-    --card-background-color:  var(--eOS-black-700) !important; 
+    --card-background-color:  var(--eOS-black-700) !important;
+    --newtab-background-card: var(--eOS-black-500) !important;
 
     --button-color: var(--eOS-silver-100) !important;
     --button-background-color: var(--eOS-black-500) !important;
