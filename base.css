@@ -435,6 +435,7 @@ Firefox Nova style changes
       background-color: transparent !important;
       margin-block-start: 1px !important;
       padding-top: 0px !important;
+      outline: none !important;
     }
 }
 #urlbar[focused]:not([open]) #identity-box,
@@ -468,6 +469,9 @@ Firefox Nova style changes
 }
 .button-background {
     border: none !important;
+}
+:root {
+    --urlbar-basic-component-size: 22px !important;
 }}
 
 
