@@ -475,7 +475,18 @@ Firefox Nova style changes
 }
 #toolbar-menubar {
   border-top: 1px solid #C8C8C8 !important;
+}
+:root[privatebrowsingmode="temporary"] #contentAreaContextMenu {
+    color-scheme: dark !important;
+}
+@media (prefers-color-scheme: dark) {
+#toolbar-menubar {
+  border-top: 1px solid rgba(0,0,0,0.3) !important;
+}
+#toolbar-menubar:-moz-window-inactive {
+  border-top: 1px solid rgba(0,0,0,0.3) !important;
 }}
+}
 
 
 /**********
@@ -1915,8 +1926,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #toolbar-menubar:-moz-window-inactive {
     background: none !important;
-    border-top: none !important;
-	border-bottom: none !important;
+/*    border-top: none !important;
+	border-bottom: none !important; */
 }
 #PersonalToolbar:-moz-window-inactive {
     background: none !important;
