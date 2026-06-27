@@ -645,7 +645,7 @@ toolbar .toolbarbutton-1 {
 }
 
 /* make circled toolbar icons with accent color + other buttons in other bars with no circle */
-toolbar:not(.customization-target) .toolbarbutton-1 > .toolbarbutton-icon,
+toolbar:not(.customization-target) .toolbarbutton-1:not(#ipprotection-button, #home-button, #reload-button, #stop-button, #forward-button, #back-button) > .toolbarbutton-icon,
 toolbar:not(.customization-target):not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not(#PanelUI-menu-button):not(#fxa-toolbar-menu-button[tooltiptext="Sign in to your account"]) > .toolbarbutton-badge-stack {
     width: 28px !important;
     height: 28px !important;
@@ -660,13 +660,14 @@ toolbar .toolbarbutton-1:hover > .toolbarbutton-badge-stack {
 #fxa-toolbar-menu-button:hover:not([open]):not([checked]):not(:active) > .toolbarbutton-badge-stack {
     background: none !important;
 }
-toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"], [data-extensionid], #nav-bar-overflow-button, #fxa-toolbar-menu-button[tooltiptext="Sign in to your account"]):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
+toolbar:not(#PersonalToolbar):not(#TabsToolbar) .toolbarbutton-1:not([disabled="true"], [data-extensionid], #nav-bar-overflow-button, #fxa-toolbar-menu-button[tooltiptext="Sign in to your account"], #ipprotection-button):is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
     background: var(--accentcolor-percentage) !important;
     clip-path: circle(50%) !important;
 }
 toolbar[customizing] #nav-bar-overflow-button > .toolbarbutton-icon {
     background: none !important;
 }
+#ipprotection-button:is([open], [checked], :active) > .toolbarbutton-icon,
 #nav-bar-overflow-button:is([open], [checked], :active) > .toolbarbutton-icon {
     background: var(--accentcolor-percentage) !important;
     clip-path: none !important;
