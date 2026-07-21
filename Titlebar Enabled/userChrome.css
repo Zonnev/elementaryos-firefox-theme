@@ -865,9 +865,9 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     height: 15px !important;
 }
 #main-window:not([fxadisabled], [data-title-default]) #searchbar-new[open] .urlbar-go-button {
-    width: 12px !important;
-    height: 12px !important;
-    margin-top: 1px !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 0px !important;
 }
 
 #PopupSearchAutoComplete .search-setting-button {
