@@ -836,9 +836,9 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 
 /* go button for Librewolf */
 #main-window:is([fxadisabled]):not([data-title-default]) #searchbar-new[open] .urlbar-go-button {
-    width: 12px !important;
-    height: 12px !important;
-    margin-top: 1px !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 0px !important;
 }
 #main-window:is([fxadisabled]):not([data-title-default]) #urlbar[open] .urlbar-go-button {
     width: 15px !important;
