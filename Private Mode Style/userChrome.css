@@ -395,8 +395,8 @@ LAYOUT
 #urlbar, #searchbar, #searchbar-new {
     -moz-window-dragging: no-drag !important;
 }
-#urlbar,
-.urlbar {
+#urlbar:not([open]),
+.urlbar:not([open]) {
     min-height: 26px !important;
 }
 #searchbar,
@@ -564,7 +564,6 @@ LAYOUT
 }
 #urlbar[breakout-extend] .searchmode-switcher-icon,
 #urlbar[breakout-extend] .searchmode-switcher-dropmarker,
-#urlbar[breakout-extend] .searchmode-switcher-title,
 #urlbar[breakout-extend] .searchmode-switcher-close {
     margin-top: -2px !important;
 }
@@ -882,9 +881,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #nav-bar #firefox-view-button .toolbarbutton-icon {
     margin: 0px 0px 0px 0px !important;
-}
-#firefox-view-button[open] {
-    padding: 4px 2px 4px 2px !important;
 }
 #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon {
     box-shadow: none !important;
