@@ -880,13 +880,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
   margin-inline: 0px !important;
   border-radius: 0px !important;
 }
-#firefox-view-button .toolbarbutton-icon {
-    width: 28px !important;
-    height: 28px !important;
-    padding: 6px !important;
-    border-radius: 3px !important;
-    margin: -2px 0px 0px 0px !important;
-}
 #nav-bar #firefox-view-button .toolbarbutton-icon {
     margin: 0px 0px 0px 0px !important;
 }
@@ -900,11 +893,6 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 #tabbrowser-tabs {
     border-inline-start: none !important;
-}
-#alltabs-button stack {
-    margin: -2px 2px 0px 2px !important;
-    border-radius: 3px !important;
-    padding: 6px !important;
 }
 #alltabs-button[open] stack {
     background: var(--accentcolor-percentage) !important;

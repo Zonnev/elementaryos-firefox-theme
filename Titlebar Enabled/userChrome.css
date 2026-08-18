@@ -1259,13 +1259,6 @@ toolbarpaletteitem > #stop-reload-button {
 }
 
 /* misc tab bar buttons styles */
-#firefox-view-button .toolbarbutton-icon {
-    width: 28px !important;
-    height: 28px !important;
-    padding: 6px !important;
-    border-radius: 3px !important;
-    margin: -2px 0px 0px 0px !important;
-}
 #nav-bar #firefox-view-button .toolbarbutton-icon {
     margin: 0px 0px 0px 0px !important;
 }
@@ -1278,11 +1271,6 @@ toolbarpaletteitem > #stop-reload-button {
 }
 #tabbrowser-tabs {
     border-inline-start: none !important;
-}
-#alltabs-button stack {
-    margin: -2px 2px 0px 2px !important;
-    border-radius: 3px !important;
-    padding: 6px !important;
 }
 #alltabs-button[open] stack {
     background: var(--accentcolor-percentage) !important;
