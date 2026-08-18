@@ -875,6 +875,18 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /* misc tab bar buttons styles */
+#TabsToolbar #firefox-view-button .toolbarbutton-icon {
+    width: 28px !important;
+    height: 28px !important;
+    padding: 6px !important;
+    border-radius: 3px !important;
+    margin: -2px 0px 0px 0px !important;
+}
+#TabsToolbar #alltabs-button stack {
+    margin: -2px 2px 0px 2px !important;
+    border-radius: 3px !important;
+    padding: 6px !important;
+}
 .all-tabs-item {
   margin-inline: 0px !important;
   border-radius: 0px !important;
