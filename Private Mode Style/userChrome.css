@@ -253,6 +253,9 @@ Firefox Nova style changes
 }
 .chrome-block {
     overflow: visible !important;
+}
+.button-background:is([type="muted"], [open], :hover, :active) {
+    background-color: rgba(235, 235, 235, 1) !important;
 }}
 
 
