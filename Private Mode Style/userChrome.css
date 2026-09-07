@@ -229,13 +229,14 @@ Firefox Nova style changes
 #urlbar:not([focused][open]) .searchmode-switcher {
     margin-top: 0px !important;
 }
-#urlbar,
+/* #urlbar,
 #searchbar-new {
     top: 9px !important;
     margin: auto !important;
-}
+}*/
 #urlbar[open],
 #searchbar-new[open] {
+    margin-block-start: 0px !important;
     width: calc(100% + 10px) !important;
 }
 .urlbar-background {
