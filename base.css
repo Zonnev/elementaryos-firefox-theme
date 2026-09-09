@@ -921,7 +921,6 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #searchbar:focus-within,
 #searchbar-new[focused] {
     outline: var(--accentcolor-percentage) !important;
-    filter: saturate(150%) !important;
 }
 #PopupSearchAutoComplete {
     margin-top: -1px !important;
