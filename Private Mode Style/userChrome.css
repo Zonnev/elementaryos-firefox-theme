@@ -288,8 +288,17 @@ Firefox Nova style changes
       margin-block-start: 0px !important;
   }
 }
+/* New URL bar styling for Nova redesign */
+.urlbarView-background {
+    border-radius: 6px !important;
 }
-
+#urlbar[open] .urlbar-background,
+#searchbar-new[open] .urlbar-background {
+    inset-inline: -4px !important;
+    inset-block: -2px -25px !important;
+    border-radius: 6px !important;
+}
+}
 
 /*****
 LAYOUT
@@ -365,13 +374,26 @@ LAYOUT
 
 /*** URLBAR + MEGABAR ***/
 
+/* New URL bar styling for normal theme */
+@media not -moz-pref("browser.nova.enabled") {
+.urlbarView-background {
+    inset-inline: -5px !important;
+    border-radius: 6px !important;
+}
+#urlbar[open] .urlbar-background,
+#searchbar-new[open] .urlbar-background {
+    inset-inline: -4px !important;
+    inset-block: -2px -18px !important;
+    border-radius: 6px !important;
+}}
+
 /* make Megabar hovers full width */
 .urlbarView {
     margin-inline: 0px !important;
     width: 100% !important;
 }
 .urlbarView-row {
-    border-radius: 0px !important;
+    border-radius: 6px !important;
     border: none !important;
     padding-inline-start: 6px !important;
     padding-inline-end: 6px !important;
@@ -402,34 +424,55 @@ LAYOUT
     --urlbar-height: 26px !important;
     --urlbar-toolbar-height: 26px !important;
 }
-#urlbar[open],
-.urlbar[open],
-#searchbar-new[open] {
+
+/* New URL bar styling */
+#main-window:is([chromehidden]) #urlbar[open],
+#main-window:is([chromehidden]) .urlbar[open],
+#main-window:is([chromehidden]) #searchbar-new[open] {
     --urlbar-min-height: 22px !important; /* takes care of password key icon not jumping in open urlbar */
-    top: 5px !important; /* adjust when all urlbar icons and input text are jumping */
+    top: 5px !important;
 }
-#urlbar[open] .urlbar-input-container,
-.urlbar[open] .urlbar-input-container {
+#main-window:is([chromehidden]) #urlbar[open] .urlbar-input-container,
+#main-window:is([chromehidden]) .urlbar[open] .urlbar-input-container {
     height: 24px !important;
     margin-top: 3px !important;
     margin-bottom: 3px !important;
     margin-left: 6px !important;
     padding-right: 12px !important;
 }
-#searchbar-new[open] .urlbar-input-container {
+#main-window:is([chromehidden]) #searchbar-new[open] .urlbar-input-container {
     margin-top: 4px !important;
+}
+#main-window:is([chromehidden]) #urlbar[open] .urlbar-input,
+#main-window:is([chromehidden]) .urlbar[open] .urlbar-input {
+    margin-bottom: -3px !important;
+}
+#main-window:is([chromehidden]) #searchbar-new[open] .urlbar-input {
+    margin-bottom: 0px !important;
 }
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
-    margin-bottom: -3px !important;
+    margin-bottom: 0px !important;
 }
 #searchbar-new[open] .urlbar-input {
     margin-bottom: 0px !important;
 }
-#urlbar-container,
-#search-container {
-    -moz-window-dragging: drag !important;
+#urlbar[open] .urlbar-input-container,
+.urlbar[open] .urlbar-input-container {
+    height: 24px !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+    padding-right: 12px !important;
+    outline: none !important;
 }
+#searchbar-new[open] .urlbar-input-container {
+    outline: none !important;
+}
+#urlbar[open] .urlbar-input,
+.urlbar[open] .urlbar-input {
+    margin-bottom: 0px !important;
+}
+
 .urlbar-input-container {
     height: 22px !important;
     border-radius: 2px !important;
@@ -465,10 +508,20 @@ LAYOUT
 #searchbar-new[open]:not([focused]) {
     border-radius: 6px !important;
 }
-#urlbar[focused] > #urlbar-background,
-#urlbar[focused] > .urlbar-background,
-.urlbar[focused] > .urlbar-background,
-#searchbar-new[focused] > .urlbar-background {
+
+/* New URL bar styling where the background gets the colors */
+#urlbar[focused]:not([open]) > #urlbar-background,
+#urlbar[focused]:not([open]) > .urlbar-background,
+.urlbar[focused]:not([open]) > .urlbar-background,
+#searchbar-new[focused]:not([open]) > .urlbar-background {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 3px !important;
+}
+#urlbar:not([focused]):not([open]) > #urlbar-background,
+#urlbar:not([focused]):not([open]) > .urlbar-background,
+.urlbar:not([focused]):not([open]) > .urlbar-background,
+#searchbar-new[focused]:not([open]) > .urlbar-background {
     box-shadow: none !important;
 }
 #urlbar:not([focused]),
@@ -476,15 +529,19 @@ LAYOUT
 #searchbar-new:not([focused]) {
     border-radius: 3px !important;
 }
-#urlbar-background,
-.urlbar-background {
+#urlbar[open] #urlbar-background,
+.urlbar[open] .urlbar-background {
     border: none !important;
-    background: none !important;
 }
-#urlbar[focused] > #urlbar-background,
-#urlbar[focused] > .urlbar-background {
+#main-window:is([chromehidden]) #urlbar[open] #urlbar-background,
+#main-window:is([chromehidden]) .urlbar[open] .urlbar-background {
+    border-radius: 6px !important;
+}
+#urlbar:is([focused], [open]) > #urlbar-background,
+#urlbar:is([focused], [open]) > .urlbar-background {
     outline: none !important;
 }
+
 #searchbar:focus-within,
 #searchbar-new[focused] {
     outline: none !important;
@@ -1573,6 +1630,48 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     border-bottom: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, rgba(105,75,188,1) 0%, rgba(105,75,188,1) 20%, rgba(162,76,141,1) 100%) !important;
 }
+
+/* New URL bar styling private mode colors */
+.urlbarView-background {
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    background: linear-gradient(to right, #8266C4, #A267A9) !important;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
+}
+#urlbar[open] .urlbar-background,
+#searchbar-new[open] .urlbar-background {
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    background: linear-gradient(to right, #8266C4, #A267A9) !important;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
+}
+#urlbar[focused]:not([open]) > #urlbar-background,
+#urlbar[focused]:not([open]) > .urlbar-background,
+.urlbar[focused]:not([open]) > .urlbar-background,
+#searchbar-new[focused]:not([open]) > .urlbar-background {
+    background: linear-gradient(to right, #8266C4, #A267A9) !important;
+}
+#urlbar:not([focused]):not([open]) > #urlbar-background,
+#urlbar:not([focused]):not([open]) > .urlbar-background,
+.urlbar:not([focused]):not([open]) > .urlbar-background,
+#searchbar-new[focused]:not([open]) > .urlbar-background {
+    background: linear-gradient(to right, #8266C4, #A267A9) !important;
+    border: none !important;
+    border-radius: 3px !important;
+}
+#main-window:is([chromehidden]) #urlbar[open] #urlbar-background,
+#main-window:is([chromehidden]) .urlbar[open] .urlbar-background {
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    background: linear-gradient(to right, #8266C4, #A267A9) !important;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
+}
+@media (prefers-color-scheme: dark) {
+#main-window:is([chromehidden]) #urlbar[open] #urlbar-background,
+#main-window:is([chromehidden]) .urlbar[open] .urlbar-background {
+    border: 1px solid rgba(0,0,0,0.4) !important;
+    background: linear-gradient(to right, #8266C4, #A267A9) !important;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
+  }
+}
+
 input:not(#urlbar-input, .searchbar-textbox)::selection,
 textarea::selection {
     color: #000 !important;
@@ -1614,9 +1713,7 @@ textarea::selection {
 .urlbar[open]:not([focused]),
 #searchbar-new[focused][open],
 #searchbar-new[open]:not([focused]) {
-    border: 1px solid rgba(0,0,0,0.4) !important;
-    background: linear-gradient(to right, #8266C4, #A267A9) !important;
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
+    border: 1px solid transparent !important;
 }
 #urlbar[focused] > #urlbar-background,
 #urlbar[focused] > .urlbar-background,
