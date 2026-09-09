@@ -522,7 +522,8 @@ LAYOUT
 #urlbar:not([focused]):not([open]) > .urlbar-background,
 .urlbar:not([focused]):not([open]) > .urlbar-background,
 #searchbar-new[focused]:not([open]) > .urlbar-background {
-    box-shadow: none !important;
+    border-radius: 3px !important;
+    margin: -1px !important;
 }
 #urlbar:not([focused]),
 #searchbar:not(:focus-within),
@@ -1653,9 +1654,9 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #urlbar:not([focused]):not([open]) > .urlbar-background,
 .urlbar:not([focused]):not([open]) > .urlbar-background,
 #searchbar-new[focused]:not([open]) > .urlbar-background {
+    border: 1px solid rgba(0,0,0,0.4) !important;
     background: linear-gradient(to right, #8266C4, #A267A9) !important;
-    border: none !important;
-    border-radius: 3px !important;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.15), inset 0 1px 0 0 rgba(0,0,0,0.05), 0 1px 0 0 rgba(255,255,255,0.05) !important;
 }
 #main-window:is([chromehidden]) #urlbar[open] #urlbar-background,
 #main-window:is([chromehidden]) .urlbar[open] .urlbar-background {
