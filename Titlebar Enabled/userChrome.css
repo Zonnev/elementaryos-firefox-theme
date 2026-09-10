@@ -748,15 +748,9 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }}
 
 /* make open urlbar hovers full width */
-.urlbarView {
-    margin-inline: 0px !important;
-    width: 100% !important;
-}
 .urlbarView-row {
     border-radius: 6px !important;
-    border: none !important;
-    padding-inline-start: 6px !important;
-    padding-inline-end: 6px !important;
+    background-clip: border-box !important;
 }
 .urlbarView-row:hover {
     background-color: rgba(0,0,0,0.08) !important;
