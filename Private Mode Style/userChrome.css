@@ -36,7 +36,7 @@ menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menuca
 menu[_moz-menuactive="true"]:not([disabled="true"]), menuitem[_moz-menuactive="true"]:not([disabled="true"]), menucaption[_moz-menuactive="true"]:not([disabled="true"]) {
     background-color: rgba(0,0,0,0.1) !important;
 }
-menupopup, panelview {
+menupopup, panel {
     --arrowpanel-menuitem-padding: 7px 12px 7px 27px !important;
     --arrowpanel-menuitem-border-radius: 0px !important;
     --arrowpanel-menuitem-margin: 0px !important;
@@ -64,7 +64,7 @@ menupopup menu[disabled="true"] {
     background: none !important;
 }
 menuseparator,
-panelview toolbarseparator:not(.proton-zap) {
+panel toolbarseparator:not(.proton-zap) {
     appearance: none !important;
     border-top: 1px solid rgba(0,0,0,0.2) !important;
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
@@ -76,12 +76,12 @@ menuseparator::before,
 toolbarseparator:not(.proton-zap)::before {
     border-top: none !important;
 }
-menupopup, panelview {
+menupopup, panel {
     --panel-background: #8266C4 !important;
     --panel-color: #fff !important;
     --panel-border-color: rgba(0,0,0,0.6) !important;
 }
-menupopup, panelview {
+menupopup, panel {
     --arrowpanel-background: #8266C4 !important;
     --arrowpanel-color: #fff !important;
     --panel-separator-color: rgba(255,255,255,0.1) !important;
@@ -140,7 +140,7 @@ menupopup, panelview {
 
 /* dark mode */
 @media (prefers-color-scheme: dark ) {
-menupopup, panelview {
+menupopup, panel {
     --panel-background: #8266C4 !important;
     --panel-color: #fff !important;
     --arrowpanel-background: #8266C4 !important;
