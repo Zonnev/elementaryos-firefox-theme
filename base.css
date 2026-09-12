@@ -461,11 +461,12 @@ Firefox Nova style changes
     margin: 0px !important;
 }
 .button-background {
+  &.labelled {
     border: none !important;
     min-height: 90% !important;
     height: 90% !important;
     margin-left: 1px !important;
-}
+}}
 :root {
     --urlbar-basic-component-size: 22px !important;
 }
