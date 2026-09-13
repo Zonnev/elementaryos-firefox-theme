@@ -409,6 +409,12 @@ Firefox Nova style changes
 /** Firefox Nova browser border to none **/
 #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer {
     border: none !important;
+    border-start-start-radius: 0px !important;
+}
+
+/** Firefox Nova browser border-radius of split-view-wrapper to 3px **/
+#tabbrowser-tabs tab-split-view-wrapper {
+    border-radius: 3px !important;
 }
 
 /** A bit more space for the hamburger menu icon in Firefox Nova **/
