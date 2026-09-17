@@ -424,30 +424,33 @@ LAYOUT
 }
 
 /* New URL bar styling */
-#main-window:is([chromehidden]) #urlbar[open],
-#main-window:is([chromehidden]) .urlbar[open],
-#main-window:is([chromehidden]) #searchbar-new[open] {
+@media not -moz-pref("browser.nova.enabled") {
+#urlbar[open],
+.urlbar[open],
+#searchbar-new[open] {
     --urlbar-min-height: 22px !important; /* takes care of password key icon not jumping in open urlbar */
     top: 5px !important;
 }
-#main-window:is([chromehidden]) #urlbar[open] .urlbar-input-container,
-#main-window:is([chromehidden]) .urlbar[open] .urlbar-input-container {
+#urlbar[open] .urlbar-input-container,
+.urlbar[open] .urlbar-input-container {
     height: 24px !important;
     margin-top: 3px !important;
     margin-bottom: 3px !important;
     margin-left: 6px !important;
     padding-right: 12px !important;
 }
-#main-window:is([chromehidden]) #searchbar-new[open] .urlbar-input-container {
+#searchbar-new[open] .urlbar-input-container {
     margin-top: 4px !important;
 }
-#main-window:is([chromehidden]) #urlbar[open] .urlbar-input,
-#main-window:is([chromehidden]) .urlbar[open] .urlbar-input {
+#urlbar[open] .urlbar-input,
+.urlbar[open] .urlbar-input {
     margin-bottom: -3px !important;
 }
-#main-window:is([chromehidden]) #searchbar-new[open] .urlbar-input {
+#searchbar-new[open] .urlbar-input {
     margin-bottom: 0px !important;
-}
+}}
+
+@media -moz-pref("browser.nova.enabled") {
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
     margin-bottom: 0px !important;
@@ -469,7 +472,7 @@ LAYOUT
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
     margin-bottom: 0px !important;
-}
+}}
 
 .urlbar-input-container {
     height: 22px !important;

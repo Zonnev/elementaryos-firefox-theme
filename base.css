@@ -775,30 +775,33 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }
 
 /* New URL bar styling */
-#main-window([chromehidden]) #urlbar[open],
-#main-window([chromehidden]) .urlbar[open],
-#main-window([chromehidden]) #searchbar-new[open] {
+@media not -moz-pref("browser.nova.enabled") {
+#urlbar[open],
+.urlbar[open],
+#searchbar-new[open] {
     --urlbar-min-height: 22px !important; /* takes care of password key icon not jumping in open urlbar */
     top: 5px !important;
 }
-#main-window([chromehidden]) #urlbar[open] .urlbar-input-container,
-#main-window([chromehidden]) .urlbar[open] .urlbar-input-container {
+#urlbar[open] .urlbar-input-container,
+.urlbar[open] .urlbar-input-container {
     height: 24px !important;
     margin-top: 3px !important;
     margin-bottom: 3px !important;
     margin-left: 6px !important;
     padding-right: 12px !important;
 }
-#main-window([chromehidden]) #searchbar-new[open] .urlbar-input-container {
+#searchbar-new[open] .urlbar-input-container {
     margin-top: 4px !important;
 }
-#main-window([chromehidden]) #urlbar[open] .urlbar-input,
-#main-window([chromehidden]) .urlbar[open] .urlbar-input {
+#urlbar[open] .urlbar-input,
+.urlbar[open] .urlbar-input {
     margin-bottom: -3px !important;
 }
-#main-window([chromehidden]) #searchbar-new[open] .urlbar-input {
+#searchbar-new[open] .urlbar-input {
     margin-bottom: 0px !important;
-}
+}}
+
+@media -moz-pref("browser.nova.enabled") {
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
     margin-bottom: 0px !important;
@@ -820,7 +823,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
     margin-bottom: 0px !important;
-}
+}}
 
 #urlbar-container,
 #search-container {
