@@ -525,6 +525,13 @@ Firefox Nova style changes
     background: #ffffff !important;
     box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
 }
+/* Container tabs buttons in URL bar for Nova redesign */
+#userContext-icons {
+    border-radius: 3px !important;
+}
+#userContext-icons:is(:hover, :active) {
+    border-radius: 3px !important;
+}
 }
 
 /**********
@@ -1324,9 +1331,11 @@ toolbarpaletteitem > #stop-reload-button {
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:is([selected], [multiselected]) > .tab-context-line {
     margin: 0px 0 0 !important;
+    width: 100% !important;
 }
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected], [multiselected]) > .tab-context-line {
     margin: 0px 0 0 !important;
+    width: 100% !important;
 }
 #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
