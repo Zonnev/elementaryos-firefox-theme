@@ -195,13 +195,12 @@ Firefox Nova style changes
 }}
 /* make greys one color search mode switcher in Nova */
 .button-background:is([type="muted"], [open], :hover, :active) {
-    background-color: rgba(235,235,235,1) !important;
+    background-color: rgba(255,255,255,0.15) !important;
 }
 @media (prefers-color-scheme: dark) {
 .button-background:is([type="muted"], [open], :hover, :active) {
     background-color: rgba(255,255,255,0.15) !important;
-  }
-}
+}}
 /** Firefox Nova browser border to none **/
 #tabbrowser-tabpanels > :not(.split-view-panel) .browserContainer {
     border: none !important;
