@@ -13,7 +13,10 @@ For now theme installation is supported for:
 3. [🦊 Firefox ⬇️ ESR](https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/) Install in Terminal read instructions in the link.
 4. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/) Download package and follow instructions below to create a desktop entry.
 
-**You can use Main menu to create a Firefox desktop entry:**
+#### Use Main Menu app to create a desktop entry
+
+<details><summary>**Click to read the how-to:**</summary>
+<br/>
 - Download Firefox from the [website](https://www.mozilla.org/en-US/firefox/new/) and extract in a folder of your choice.
 - Open [Main menu](https://flathub.org/apps/page.codeberg.libre_menu_editor.LibreMenuEditor) (install it in AppCenter), click on the Settings wheel in the app list on the top right and select `New launcher`.
 - Fill in each section starting with **Appearance**. Press the folder icon and search your Firefox directory and in `/browser/chrome/icons/default` select `default128.png`.
@@ -26,6 +29,8 @@ For now theme installation is supported for:
 **Now you need a dot under the Firefox icon when opened in the dock. Edit the desktop entry file:**
 - In the left list of **Main menu**, select Firefox and scroll down to **Advanced** section and press the icon on the right, this opens **Code** with the desktop entry file visible.
 - Go to Code and type a new line in the `Desktop Entry` section, for Firefox stable: `StartupWMClass=firefox`, for Firefox Beta: `StartupWMClass=firefox-beta` for Firefox Nightly: `StartupWMClass=firefox-nightly`. Code will automatically save the file so just close all and move the Firefox icon from Slingshot to the Dock and enjoy the fully working and integrated Firefox.
+<br/>
+</details>
 
 ❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
