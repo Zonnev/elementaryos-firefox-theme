@@ -13,8 +13,10 @@ For now theme installation is supported for:
 3. [🦊 Firefox ⬇️ ESR](https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/) Install in Terminal read instructions in the link.
 4. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/) Download package and follow instructions below to create a desktop entry.
 
-#### Use Main Menu app to create a desktop entry
+❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
+*for example to make a fully supported other version possible. Thanks in advance.*
 
+#### Create a desktop entry
 <details><summary>Click to read the how-to:</summary>
 
 - Download Firefox from the [website](https://www.mozilla.org/en-US/firefox/new/) and extract in a folder of your choice.
@@ -32,8 +34,7 @@ For now theme installation is supported for:
 
 </details>
 
-❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
-*for example to make a fully supported other version possible. Thanks in advance.*
+#### Install scripts
 
 Use this one line install script. Just copy the line to your terminal and press enter. When you want a different window control layout, use [Pantheon Tweaks](https://github.com/pantheon-tweaks/pantheon-tweaks/) first to select one, after that this script will automatically install the right userChrome:
 
