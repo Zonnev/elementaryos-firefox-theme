@@ -532,6 +532,7 @@ Firefox Nova style changes
 }
 /* New URL bar styling for Nova redesign */
 .urlbarView-background {
+    inset-inline: -5px !important;
     border: 1px solid #C8C8C8 !important;
     border-radius: 6px !important;
     background: #ffffff !important;
@@ -807,6 +808,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     margin-bottom: 3px !important;
     margin-left: 6px !important;
     padding-right: 12px !important;
+    overflow: visible !important;
 }
 #searchbar-new[open] .urlbar-input-container {
     margin-top: 4px !important;
@@ -834,6 +836,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     margin-bottom: 3px !important;
     padding-right: 12px !important;
     outline: none !important;
+    overflow: visible !important;
 }
 #searchbar-new[open] .urlbar-input-container {
     outline: none !important;
@@ -1064,6 +1067,12 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #urlbar[breakout-extend] .searchmode-switcher-content {
     margin-top: 2px !important;
 }
+@media not -moz-pref("browser.nova.enabled") {
+.button-background {
+  &.labelled {
+    min-height: 80% !important;
+    height: 80% !important;
+}}}
 
 /* selected text in system accent color */
 ::selection {
