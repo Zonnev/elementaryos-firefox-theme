@@ -1034,7 +1034,10 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
     border-end-end-radius: 2px !important;
 }
 #urlbar[breakout-extend] .searchmode-switcher,
-#urlbar[breakout-extend] .searchmode-switcher-chicklet,
+#urlbar[breakout-extend] .searchmode-switcher-chicklet {
+    margin-top: 2px !important;
+    padding-bottom: 1px !important;
+}
 #urlbar[breakout-extend] #searchmode-switcher-chicklet {
     height: 20px !important;
     margin-top: 2px !important;
