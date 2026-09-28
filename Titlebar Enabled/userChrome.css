@@ -1060,38 +1060,32 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }
 
 /* makes new searchmode box same look and height in open urlbar */
-.searchmode-switcher,
-.searchmode-switcher-chicklet,
-#searchmode-switcher-chicklet {
+.searchmode-switcher {
     border-start-end-radius: 2px !important;
     border-end-end-radius: 2px !important;
 }
-#urlbar[breakout-extend] .searchmode-switcher,
-#urlbar[breakout-extend] .searchmode-switcher-chicklet {
+#urlbar[breakout-extend] .searchmode-switcher {
     margin-top: 2px !important;
     padding-bottom: 1px !important;
 }
-#urlbar[breakout-extend] #searchmode-switcher-chicklet {
+/* searchmode box only for ESR */
+#main-window:is([data-title-default]) #searchmode-switcher-chicklet {
+    border-start-end-radius: 2px !important;
+    border-end-end-radius: 2px !important;
+}
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #searchmode-switcher-chicklet {
     height: 20px !important;
     margin-top: 2px !important;
     padding-bottom: 1px !important;
 }
-#urlbar[breakout-extend] #urlbar-searchmode-switcher {
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #urlbar-searchmode-switcher {
     height: 20px !important;
     margin-top: 2px !important;
 }
-#urlbar[breakout-extend] .searchmode-switcher-icon,
-#urlbar[breakout-extend] .searchmode-switcher-dropmarker,
-#urlbar[breakout-extend] .searchmode-switcher-close {
-    margin-top: -2px !important;
-}
-#urlbar[breakout-extend] #searchmode-switcher-title {
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #searchmode-switcher-title {
     margin-top: 2px !important;
 }
-#urlbar[breakout-extend] #urlbar-searchmode-switcher,
-#urlbar[breakout-extend] .searchmode-switcher-content {
-    margin-top: 2px !important;
-}
+
 @media not -moz-pref("browser.nova.enabled") {
 .button-background {
   &.labelled {
