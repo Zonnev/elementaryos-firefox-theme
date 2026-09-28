@@ -471,6 +471,9 @@ Firefox Nova style changes
 #urlbar:not([focused][open]) .searchmode-switcher {
     margin-top: 0px !important;
 }
+#urlbar[open] #page-action-buttons {
+    margin-right: -10px !important;
+}
 #urlbar[open],
 #searchbar-new[open] {
     margin-block-start: 0px !important;
@@ -822,10 +825,10 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
-    margin-bottom: -2px !important;
+    margin-top: 1px !important;
 }
 #searchbar-new[open] .urlbar-input {
-    margin-bottom: 0px !important;
+    margin-top: 0px !important;
 }}
 
 @media -moz-pref("browser.nova.enabled") {
@@ -970,7 +973,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #urlbar[breakout-extend] #page-action-buttons,
 #urlbar[breakout-extend] #trust-icon-container {
     height: 20px !important;
-    margin-top: 2px !important;
+    margin-top: 1px !important;
 }
 #urlbar[breakout-extend] #notification-popup-box {
     height: 20px !important;
@@ -978,7 +981,7 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 }
 #urlbar[breakout-extend] #identity-box:not(.verifiedDomain) {
     height: 20px !important;
-    margin-top: 2px !important;
+    margin-top: 1px !important;
 }
 
 /* go button for Librewolf */
