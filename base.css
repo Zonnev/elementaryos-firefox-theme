@@ -792,11 +792,26 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 
 /* New URL bar styling */
 
-/* distance of open urlbar for ESR */
+/* Open urlbar for ESR */
 #main-window:is([data-title-default]) #urlbar[open],
 #main-window:is([data-title-default]) .urlbar[open],
 #main-window:is([data-title-default]) #searchbar-new[open] {
     top: 5px !important;
+}
+#main-window:is([data-title-default]) #urlbar[open] .urlbar-input,
+#main-window:is([data-title-default]) .urlbar[open] .urlbar-input {
+    margin-top: 2px !important;
+}
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #identity-box,
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #tracking-protection-icon-container,
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #page-action-buttons,
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #trust-icon-container {
+    height: 20px !important;
+    margin-top: 2px !important;
+}
+#main-window:is([data-title-default]) #urlbar[breakout-extend] #identity-box:not(.verifiedDomain) {
+    height: 20px !important;
+    margin-top: 2px !important;
 }
 
 @media not -moz-pref("browser.nova.enabled") {
