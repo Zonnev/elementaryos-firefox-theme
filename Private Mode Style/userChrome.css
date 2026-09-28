@@ -308,8 +308,8 @@ Firefox Nova style changes
 }
 #urlbar[open] .urlbar-background,
 #searchbar-new[open] .urlbar-background {
+    top: 0px !important;
     inset-inline: -4px !important;
-    inset-block: -2px -25px !important;
     border-radius: 6px !important;
 }
 /* Container tabs buttons in URL bar for Nova redesign */
@@ -441,16 +441,24 @@ LAYOUT
 }
 
 /* New URL bar styling */
+
+/* distance of open urlbar for ESR */
+#main-window:is([data-title-default]) #urlbar[open],
+#main-window:is([data-title-default]) .urlbar[open],
+#main-window:is([data-title-default]) #searchbar-new[open] {
+    top: 5px !important;
+}
+
 @media not -moz-pref("browser.nova.enabled") {
 #urlbar[open],
 .urlbar[open],
 #searchbar-new[open] {
     --urlbar-min-height: 22px !important; /* takes care of password key icon not jumping in open urlbar */
-    top: 5px !important;
+    top: 1px !important;
 }
 #urlbar[open] .urlbar-input-container,
 .urlbar[open] .urlbar-input-container {
-    height: 24px !important;
+    height: 100% !important;
     margin-top: 3px !important;
     margin-bottom: 3px !important;
     margin-left: 6px !important;
@@ -478,7 +486,7 @@ LAYOUT
 }
 #urlbar[open] .urlbar-input-container,
 .urlbar[open] .urlbar-input-container {
-    height: 24px !important;
+    height: 100% !important;
     margin-top: 3px !important;
     margin-bottom: 3px !important;
     padding-right: 12px !important;
