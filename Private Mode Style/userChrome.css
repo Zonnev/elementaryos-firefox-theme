@@ -404,7 +404,6 @@ LAYOUT
 #urlbar[open] .urlbar-background,
 #searchbar-new[open] .urlbar-background {
     inset-inline: -4px !important;
-    inset-block: -2px -18px !important;
     border-radius: 6px !important;
 }}
 
@@ -470,7 +469,7 @@ LAYOUT
 }
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
-    margin-bottom: -3px !important;
+    margin-bottom: -2px !important;
 }
 #searchbar-new[open] .urlbar-input {
     margin-bottom: 0px !important;
