@@ -1527,6 +1527,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #PlacesToolbar {
     min-height: 33px !important;
 }
+#PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
+    border-radius: 3px !important;
+}
 #PlacesToolbarItems {
     padding: 0px 0px 4px 0px !important;
 }
@@ -1557,6 +1560,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #import-button:-moz-any([open], [checked], :hover, :active) {
     background: var(--accentcolor-percentage) !important;
+    border-radius: 3px !important;
 }
 #PlacesToolbarItems > toolbarseparator {
   &::before {

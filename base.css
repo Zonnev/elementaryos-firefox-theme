@@ -1954,6 +1954,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #PlacesToolbarItems .bookmark-item:not(menuitem):not(menu):-moz-any([open], [checked], :hover, :active) {
     background: rgba(0,0,0,0.08) !important;
+    border-radius: 3px !important;
 }
 #personal-toolbar-empty-description {
     margin: 3px !important;
@@ -1981,6 +1982,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 #import-button:-moz-any([open], [checked], :hover, :active) {
     background: var(--accentcolor-percentage) !important;
+    border-radius: 3px !important;
 }
 #PlacesToolbarItems > toolbarseparator {
   &::before {
