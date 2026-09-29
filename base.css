@@ -472,9 +472,6 @@ Firefox Nova style changes
 .urlbar-background {
     box-shadow: none !important;
 }
-.urlbarView {
-    margin: 0px !important;
-}
 .button-background {
   &.labelled {
     border: none !important;
@@ -525,7 +522,6 @@ Firefox Nova style changes
 }
 /* New URL bar styling for Nova redesign */
 .urlbarView-background {
-    inset-inline: -5px !important;
     border: 1px solid #C8C8C8 !important;
     border-radius: 6px !important;
     background: #ffffff !important;
@@ -534,7 +530,8 @@ Firefox Nova style changes
 #urlbar[open] .urlbar-background,
 #searchbar-new[open] .urlbar-background {
     top: 0px !important;
-    inset-inline: -4px !important;
+    inset-inline: -7px !important;
+    inset-block: 0px -22px !important;
     border: 1px solid #C8C8C8 !important;
     border-radius: 6px !important;
     background: #ffffff !important;
@@ -864,6 +861,11 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
     margin-bottom: 0px !important;
+}
+.urlbar-input-container {
+    height: 24px !important;
+    border-radius: 3px !important;
+    padding: 0px 1px 0px 1px !important;
 }}
 
 #urlbar-container,
