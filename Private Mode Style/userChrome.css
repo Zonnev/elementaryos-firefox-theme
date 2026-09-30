@@ -163,7 +163,13 @@ Firefox Nova style changes
     --panel-menuitem-margin-inline: 8px !important;
     --panel-menuitem-border-radius: 0px !important;
     --panel-border-radius: 6px !important;
+    --border-radius-xsmall: 3px !important;
+    --border-radius-small: 3px !important;
+    --border-radius-medium: 3px !important;
+    --border-radius-large: 6px !important;
+    --border-radius-xlarge: 3px !important;
     --border-radius-xxlarge: 3px !important;
+    --border-radius-circle: 3px !important;
     --button-text-color: white !important;
     --button-background-color-hover: rgba(0,0,0,0.2) !important;
     --text-color: white !important;
