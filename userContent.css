@@ -8,11 +8,11 @@
     --color-accent-primary-hover: var(--accentcolor-percentage) !important;
     --lists-button-background: var(--accentcolor-main) !important;
     --lists-button-background-hover: var(--accentcolor-percentage) !important;
-    --button-background-color-hover: var(--accentcolor-percentage) !important;
-    --button-background-color-focus: var(--accentcolor-percentage) !important;
+/*    --button-background-color-hover: var(--accentcolor-percentage) !important;
+    --button-background-color-focus: var(--accentcolor-percentage) !important; */
     --button-background-color-primary: var(--accentcolor-main) !important;
     --button-background-color-primary-hover: var(--accentcolor-main) !important;
-    --button-background-color-selected: var(--accentcolor-main) !important;
+/*    --button-background-color-selected: var(--accentcolor-main) !important; */
 
     --button-border-radius: 3px !important;
     --card-border-radius: 3px !important;
@@ -23,7 +23,53 @@
     --border-radius-xlarge: 3px !important;
     --border-radius-xxlarge: 3px !important;
     --border-radius-circle: 3px !important;
+
+/* change purple colors of Nova normal mode to greys */
+    --color-violet-desaturated-0: rgba(255,255,255,1) !important;
+    --color-violet-desaturated-10: rgba(0,0,0,0.08) !important;
+    --color-violet-desaturated-20: rgba(0,0,0,0.1) !important;
+    --color-violet-desaturated-30: rgba(0,0,0,0.1) !important;
+    --color-violet-desaturated-40: rgba(0,0,0,0.1) !important;
+    --color-violet-desaturated-50: rgba(0,0,0,0.1) !important;
+    --color-violet-desaturated-60: rgba(0,0,0,0.1) !important;
+    --color-violet-desaturated-70: rgba(0,0,0,0.1) !important;
+    --color-violet-desaturated-80: rgba(0,0,0,0.8) !important;
+    --color-violet-desaturated-90: rgba(0,0,0,0.9) !important;
+    --color-violet-0: rgba(255,255,255,1) !important;
+    --color-violet-10: rgba(0,0,0,0.08) !important;
+    --color-violet-20: rgba(0,0,0,0.1) !important;
+    --color-violet-30: rgba(0,0,0,0.1) !important;
+    --color-violet-40: rgba(0,0,0,0.1) !important;
+    --color-violet-50: rgba(0,0,0,0.1) !important;
+    --color-violet-60: rgba(0,0,0,0.1) !important;
+    --color-violet-70: rgba(0,0,0,0.1) !important;
+    --color-violet-80: rgba(0,0,0,0.8) !important;
+    --color-violet-90: rgba(0,0,0,0.9) !important;
 }
+@media (prefers-color-scheme: dark) {
+:root {
+/* change purple colors of Nova dark mode to whites */
+    --color-violet-desaturated-0: rgba(255,255,255,1) !important;
+    --color-violet-desaturated-10: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-20: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-30: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-40: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-50: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-60: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-70: rgba(255,255,255,0.10) !important;
+    --color-violet-desaturated-80: rgba(255,255,255,0.2) !important;
+    --color-violet-desaturated-90: rgba(255,255,255,0.1) !important;
+    --color-violet-0: rgba(255,255,255,1) !important;
+    --color-violet-10: rgba(255,255,255,0.10) !important;
+    --color-violet-20: rgba(255,255,255,0.10) !important;
+    --color-violet-30: rgba(255,255,255,0.10) !important;
+    --color-violet-40: rgba(255,255,255,0.10) !important;
+    --color-violet-50: rgba(255,255,255,0.10) !important;
+    --color-violet-60: rgba(255,255,255,0.10) !important;
+    --color-violet-70: rgba(255,255,255,0.10) !important;
+    --color-violet-80: rgba(255,255,255,0.2) !important;
+    --color-violet-90: rgba(255,255,255,0.1) !important;
+}}
 .toggle-button {
     border-radius: 9999px !important;
 }
@@ -41,5 +87,4 @@ button:active, .button:active {
 }
 button[aria-expanded="true"] {
     background-color: var(--accentcolor-main) !important;
-}
-}
+}}
