@@ -1,9 +1,13 @@
-/* Change most pill-shaped buttons and input fields to square-rounded and most purple colors into the eOS accent color */
+/* Change most pill-shaped buttons and input fields to square-rounded and most purple colors into the eOS accent color in about pages */
 @-moz-document url-prefix(about:) {
+
+/**** Normal mode variables ****/
 :root, .lists {
+/* Set accent color */
     --accentcolor-main: color-mix(in hsl, AccentColor 70%, white);
     --accentcolor-percentage: color-mix(in hsl, AccentColor 50%, white);
 
+/* Draw accent colors to elements */
     --color-accent-primary: var(--accentcolor-main) !important;
     --color-accent-primary-hover: var(--accentcolor-percentage) !important;
     --lists-button-background: var(--accentcolor-main) !important;
@@ -11,6 +15,7 @@
     --button-background-color-primary: var(--accentcolor-main) !important;
     --button-background-color-primary-hover: var(--accentcolor-main) !important;
 
+/* Border radius variables */
     --button-border-radius: 3px !important;
     --card-border-radius: 3px !important;
     --popup-border-radius: 6px !important;
@@ -23,11 +28,12 @@
     --border-radius-xxlarge: 3px !important;
     --border-radius-circle: 3px !important;
 
+/* Pull down menus variables */
     --panel-menuitem-margin-inline: 0px !important;
     --panel-separator-padding: 0px !important;
-    --panel-border-color: rgba(0,0,0,0.2) !important;
+    --panel-border-color: light-dark(rgba(0,0,0,0.2), rgba(0,0,0,1)) !important;
 
-/* change purple colors of Nova normal mode to greys */
+/* Change purple colors of Nova normal mode to greys */
     --color-violet-desaturated-0: rgba(255,255,255,1) !important;
     --color-violet-desaturated-10: rgba(0,0,0,0.1) !important;
     --color-violet-desaturated-20: rgba(0,0,0,0.1) !important;
@@ -49,9 +55,10 @@
     --color-violet-80: rgba(0,0,0,0.8) !important;
     --color-violet-90: rgba(0,0,0,0.9) !important;
 }
+
+/**** Dark mode variables ****/
 @media (prefers-color-scheme: dark) {
 :root {
-/* change purple colors of Nova dark mode to whites */
     --color-violet-desaturated-0: rgba(255,255,255,1) !important;
     --color-violet-desaturated-10: rgba(255,255,255,0.10) !important;
     --color-violet-desaturated-20: rgba(255,255,255,0.10) !important;
@@ -73,24 +80,54 @@
     --color-violet-80: rgba(255,255,255,0.2) !important;
     --color-violet-90: rgba(255,255,255,0.1) !important;
 }}
+
+/* Normal mode seperator color and background color of pull down menus */
+hr {
+    border-top: 1px solid rgba(0,0,0,0.15) !important;
+    border-bottom: 1px solid rgba(255,255,255,1) !important;
+}
+panel-list {
+    background-color: #FAFAFA !important;
+}
+/* Dark mode seperator color and background color of pulldown menus */
+@media (prefers-color-scheme: dark) {
+hr {
+    border-top: 1px solid rgba(0,0,0,0.3) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+panel-list {
+    background-color: #36363A !important;
+}}
+
+/* Make toggle on-off buttons round again */
 .toggle-button {
     border-radius: 9999px !important;
 }
 .toggle-button::before {
     border-radius: 9999px !important;
 }
+
+/* Make border radius in url bar in about pages smaller */
 .urlbar[in-page] {
     --urlbar-border-radius: 3px !important;
 }
+
+/* Make outlined element border radius larger than its buttons */
 moz-segmented-control {
     border-radius: 6px !important;
 }
+
+/* Make buttons active state disappear */
 button:active, .button:active {
     background-color: transparent !important;
 }
+
+/* Make buttons of pull down menus accent color */
 button[aria-expanded="true"] {
     background-color: var(--accentcolor-main) !important;
 }
+
+/* Make the circle of timer widget round again */
 .progress-circle-wrapper .progress-circle-background, .progress-circle-wrapper .progress-circle-background-break, .progress-circle-wrapper .progress-circle, .progress-circle-wrapper .progress-circle-complete {
     border-radius: 9999px !important;
 }}
