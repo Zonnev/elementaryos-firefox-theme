@@ -87,4 +87,7 @@ button:active, .button:active {
 }
 button[aria-expanded="true"] {
     background-color: var(--accentcolor-main) !important;
+}
+.progress-circle-wrapper .progress-circle-background, .progress-circle-wrapper .progress-circle-background-break, .progress-circle-wrapper .progress-circle, .progress-circle-wrapper .progress-circle-complete {
+    border-radius: 9999px !important;
 }}
