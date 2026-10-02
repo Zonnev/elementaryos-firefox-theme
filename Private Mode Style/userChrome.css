@@ -183,6 +183,13 @@ Firefox Nova style changes
     --panel-background-color: #8266C4 !important;
     color-scheme: dark !important;
 }
+/* border-radius adjustment for only the toggle on-off buttons */
+.toggle-button {
+    border-radius: 9999px !important;
+}
+.toggle-button::before {
+    border-radius: 9999px !important;
+}
 /* Firefox Nova seperator for searchmode switcher changes */
 .searchmode-switcher-panel-installed-engine-separator,
 .searchmode-switcher-panel-footer-separator {
@@ -197,14 +204,16 @@ Firefox Nova style changes
 /* make radius smaller of search mode switcher in Nova */
 .button-background {
   &.labelled {
-    border-radius: 3px !important;
+    border-radius: 2px !important;
 }}
 /* make greys one color search mode switcher in Nova */
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(255,255,255,0.15) !important;
 }
 @media (prefers-color-scheme: dark) {
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(255,255,255,0.15) !important;
 }}
 /** Firefox Nova browser border to none **/
@@ -233,22 +242,6 @@ Firefox Nova style changes
       outline: none !important;
     }
 }
-#urlbar[focused]:not([open]) #identity-box,
-#urlbar[focused]:not([open]) #identity-box:not(.verifiedDomain),
-#urlbar[focused]:not([open]) #tracking-protection-icon-container,
-#urlbar[focused]:not([open]) #page-action-buttons,
-#urlbar[focused]:not([open]) #trust-icon-container,
-#urlbar[focused]:not([open]) .searchmode-switcher {
-    margin-top: 0px !important;
-}
-#urlbar:not([focused][open]) #identity-box,
-#urlbar:not([focused][open]) #identity-box:not(.verifiedDomain),
-#urlbar:not([focused][open]) #tracking-protection-icon-container,
-#urlbar:not([focused][open]) #page-action-buttons,
-#urlbar:not([focused][open]) #trust-icon-container,
-#urlbar:not([focused][open]) .searchmode-switcher {
-    margin-top: 0px !important;
-}
 #urlbar[open] #page-action-buttons {
     margin-right: -10px !important;
 }
@@ -267,6 +260,14 @@ Firefox Nova style changes
     height: 90% !important;
     margin-left: 1px !important;
 }}
+.identity-box-button {
+    background-color: rgba(255,255,255,0.15) !important;
+    border: none !important;
+    min-height: 90% !important;
+    height: 90% !important;
+    margin-left: 1px !important;
+    margin-top: 1px !important;
+}
 :root {
     --urlbar-basic-component-size: 22px !important;
 }
@@ -276,11 +277,16 @@ Firefox Nova style changes
 .chrome-block {
     overflow: visible !important;
 }
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(255,255,255,0.15) !important;
 }
 @media (prefers-color-scheme: dark) {
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
+    background-color: rgba(255,255,255,0.15) !important;
+}
+.identity-box-button {
     background-color: rgba(255,255,255,0.15) !important;
 }}
 #tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {

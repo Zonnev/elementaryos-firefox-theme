@@ -338,6 +338,14 @@ Firefox Nova style changes
     --color-violet-90: rgba(0,0,0,0.9) !important;
 }
 
+/* border-radius adjustment for only the toggle on-off buttons */
+.toggle-button {
+    border-radius: 9999px !important;
+}
+.toggle-button::before {
+    border-radius: 9999px !important;
+}
+
 /** Firefox Nova variable styles dark mode **/
 @media (prefers-color-scheme: dark) {
 :root {
@@ -399,15 +407,17 @@ Firefox Nova style changes
 /* make radius smaller of search mode switcher in Nova */
 .button-background {
   &.labelled {
-    border-radius: 3px !important;
+    border-radius: 2px !important;
 }}
 
 /* make greys one color search mode switcher in Nova */
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(235,235,235,1) !important;
 }
 @media (prefers-color-scheme: dark) {
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(255,255,255,0.15) !important;
   }
 }
@@ -461,22 +471,6 @@ Firefox Nova style changes
       outline: none !important;
     }
 }
-#urlbar[focused]:not([open]) #identity-box,
-#urlbar[focused]:not([open]) #identity-box:not(.verifiedDomain),
-#urlbar[focused]:not([open]) #tracking-protection-icon-container,
-#urlbar[focused]:not([open]) #page-action-buttons,
-#urlbar[focused]:not([open]) #trust-icon-container,
-#urlbar[focused]:not([open]) .searchmode-switcher {
-    margin-top: 0px !important;
-}
-#urlbar:not([focused][open]) #identity-box,
-#urlbar:not([focused][open]) #identity-box:not(.verifiedDomain),
-#urlbar:not([focused][open]) #tracking-protection-icon-container,
-#urlbar:not([focused][open]) #page-action-buttons,
-#urlbar:not([focused][open]) #trust-icon-container,
-#urlbar:not([focused][open]) .searchmode-switcher {
-    margin-top: 0px !important;
-}
 #urlbar[open] #page-action-buttons {
     margin-right: -10px !important;
 }
@@ -495,6 +489,14 @@ Firefox Nova style changes
     height: 90% !important;
     margin-left: 1px !important;
 }}
+.identity-box-button {
+    background-color: rgba(235,235,235,1) !important;
+    border: none !important;
+    min-height: 90% !important;
+    height: 90% !important;
+    margin-left: 1px !important;
+    margin-top: 1px !important;
+}
 :root {
     --urlbar-basic-component-size: 22px !important;
 }
@@ -504,14 +506,18 @@ Firefox Nova style changes
 .chrome-block {
     overflow: visible !important;
 }
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(235,235,235,1) !important;
 }
 @media (prefers-color-scheme: dark) {
-.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]),
+.identity-box-button:is(:hover, :active) {
     background-color: rgba(255,255,255,0.15) !important;
-  }
 }
+.identity-box-button {
+    background-color: rgba(255,255,255,0.15) !important;
+}}
 #tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
         list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' version='1.1' id='svg1' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs1' /%3E%3Cpath id='rect1' style='opacity:1;fill:%23333333;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:0.498039;-inkscape-stroke:none' d='M 0.78168445 6.4081552 C 0.64612209 6.2725928 0.45772309 6.1885654 0.2499733 6.1885654 L -0.2499733 6.1885654 C -0.66547288 6.1885654 -0.99989318 6.5229857 -0.99989318 6.9384853 L -0.99989318 10.313815 L -4.3752232 10.313815 C -4.7907228 10.313815 -5.1251431 10.648236 -5.1251431 11.063735 L -5.1251431 11.563682 C -5.1251431 11.979181 -4.7907228 12.313602 -4.3752232 12.313602 L -0.99989318 12.313602 L -0.99989318 15.688932 C -0.99989318 16.104431 -0.66547288 16.438852 -0.2499733 16.438852 L 0.2499733 16.438852 C 0.66547288 16.438852 0.99989318 16.104431 0.99989318 15.688932 L 0.99989318 12.313602 L 4.3752232 12.313602 C 4.7907228 12.313602 5.1251431 11.979181 5.1251431 11.563682 L 5.1251431 11.063735 C 5.1251431 10.648236 4.7907228 10.313815 4.3752232 10.313815 L 0.99989318 10.313815 L 0.99989318 6.9384853 C 0.99989318 6.7307355 0.91724681 6.5437176 0.78168445 6.4081552 z ' transform='rotate(-45)' /%3E%3C/svg%3E") !important;
     background: none !important;
