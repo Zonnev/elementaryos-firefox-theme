@@ -38,4 +38,8 @@ moz-segmented-control {
 }
 button:active, .button:active {
     background-color: var(--accentcolor-main) !important;
-}}
+}
+button[aria-expanded="true"] {
+    background-color: var(--accentcolor-main) !important;
+}
+}
