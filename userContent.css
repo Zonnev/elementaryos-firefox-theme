@@ -127,6 +127,7 @@ button:active, .button:active {
 /* Make buttons of pull down menus accent color */
 button[aria-expanded="true"] {
     background-color: var(--accentcolor-main) !important;
+    border-radius: 3px !important;
 }
 
 /* Make the circle of timer widget round again */
