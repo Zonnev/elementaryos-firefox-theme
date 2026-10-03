@@ -87,6 +87,7 @@ hr {
     border-bottom: 1px solid rgba(255,255,255,1) !important;
 }
 panel-list {
+    color-scheme: light !important;
     background-color: #FAFAFA !important;
 }
 /* Dark mode seperator color and background color of pulldown menus */
@@ -96,6 +97,7 @@ hr {
     border-bottom: 1px solid rgba(255,255,255,0.05) !important;
 }
 panel-list {
+    color-scheme: dark !important;
     background-color: #36363A !important;
 }}
 
