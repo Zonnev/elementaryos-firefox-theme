@@ -4,19 +4,23 @@
 /**** Normal mode variables ****/
 :root, .lists {
 /* Set accent color */
-    --accentcolor-main: color-mix(in hsl, AccentColor 70%, white);
-    --accentcolor-percentage: color-mix(in hsl, AccentColor 50%, white);
+    --accentcolor-70: color-mix(in hsl, AccentColor 70%, white);
+    --accentcolor-100: color-mix(in hsl, AccentColor 100%, white);
+    --accentcolor-50: color-mix(in hsl, AccentColor 50%, white);
+    --accentcolor-40: color-mix(in hsl, AccentColor 30%, white);
+    --accentcolor-30: color-mix(in hsl, AccentColor 30%, white);
+    --accentcolor-txt-100: color-mix(in hsl, AccentColor 100%, black 50%);
 
 /* Draw accent colors to elements */
-    --color-accent-primary: var(--accentcolor-main) !important;
-    --color-accent-primary-hover: var(--accentcolor-percentage) !important;
-    --lists-button-background: var(--accentcolor-main) !important;
-    --lists-button-background-hover: var(--accentcolor-percentage) !important;
-    --button-background-color-primary: var(--accentcolor-main) !important;
-    --button-background-color-primary-hover: var(--accentcolor-main) !important;
+    --color-accent-primary: var(--accentcolor-70) !important;
+    --color-accent-primary-hover: var(--accentcolor-50) !important;
+    --lists-button-background: var(--accentcolor-70) !important;
+    --lists-button-background-hover: var(--accentcolor-50) !important;
+    --button-background-color-primary: var(--accentcolor-70) !important;
+    --button-background-color-primary-hover: var(--accentcolor-50) !important;
 
 /* Border radius variables */
-    --button-border-radius: 3px !important;
+    --button-border-radius: 4px !important;
     --card-border-radius: 3px !important;
     --popup-border-radius: 6px !important;
     --panel-menuitem-border-radius: 0px !important;
@@ -24,9 +28,9 @@
     --border-radius-small: 3px !important;
     --border-radius-medium: 6px !important;
     --border-radius-large: 6px !important;
-    --border-radius-xlarge: 3px !important;
-    --border-radius-xxlarge: 3px !important;
-    --border-radius-circle: 3px !important;
+    --border-radius-xlarge: 4px !important;
+    --border-radius-xxlarge: 4px !important;
+    --border-radius-circle: 4px !important;
 
 /* Pull down menus variables */
     --panel-menuitem-margin-inline: 0px !important;
@@ -81,6 +85,48 @@
     --color-violet-90: rgba(255,255,255,0.1) !important;
 }}
 
+/* Draw buttons in eOS style normal mode */
+.button-background[type="primary"],
+.lists-add-button {
+    color: var(--accentcolor-txt-100) !important;
+    fill: var(--accentcolor-txt-100) !important;
+    border: 1px solid var(--accentcolor-70) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), 0 2px 2px 0px rgba(0,0,0,0.1) !important;
+    background-color: var(--accentcolor-50) !important;
+    filter: brightness(120%) !important;
+}
+.button-background[type="primary"]:active,
+.lists-add-button:active {
+    color: var(--accentcolor-txt-100) !important;
+    fill: var(--accentcolor-txt-100) !important;
+    border: 1px solid var(--accentcolor-70) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1) !important;
+    background-color: var(--accentcolor-50) !important;
+    filter: brightness(120%) !important;
+}
+/* Draw buttons in eOS style dark mode */
+@media (prefers-color-scheme: dark) {
+.button-background[type="primary"],
+.lists-add-button {
+    color: var(--accentcolor-txt-100) !important;
+    fill: var(--accentcolor-txt-100) !important;
+    border: 1px solid var(--accentcolor-70) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), 0 2px 2px 0px rgba(0,0,0,0.8) !important;
+    background-color: var(--accentcolor-50) !important;
+}
+.button-background[type="primary"]:active,
+.lists-add-button:active {
+    color: var(--accentcolor-txt-100) !important;
+    fill: var(--accentcolor-txt-100) !important;
+    border: 1px solid var(--accentcolor-70) !important;
+    border-radius: 4px !important;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.25) !important;
+    background-color: var(--accentcolor-50) !important;
+}}
+
 /* Normal mode seperator color and background color of pull down menus */
 hr {
     border-top: 1px solid rgba(0,0,0,0.15) !important;
@@ -126,7 +172,7 @@ button:active, .button:active {
 
 /* Make buttons of pull down menus accent color */
 button[aria-expanded="true"] {
-    background-color: var(--accentcolor-main) !important;
+    background-color: var(--accentcolor-70) !important;
     border-radius: 3px !important;
 }
 
