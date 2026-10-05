@@ -199,7 +199,8 @@ button[role="tab"]:hover,
     margin-inline-start: -40px !important;
     padding-left: 51px !important;
 }
-#nav-separator, hr {
+.nav-separator,
+nav hr {
     margin-inline-start: -40px !important;
     padding-left: 40px !important;
     height: 0px !important;
