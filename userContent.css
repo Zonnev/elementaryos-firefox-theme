@@ -92,11 +92,11 @@
 }}
 
 /* -------- Background color of about pages --------- */
-.main-content, #search-container, .nova-outer-wrapper, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #FAFAFA !important;
 }
 @media (prefers-color-scheme: dark) {
-.main-content, #search-container, .nova-outer-wrapper, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #333333 !important;
 }}
 
