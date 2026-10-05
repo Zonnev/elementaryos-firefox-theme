@@ -1,7 +1,10 @@
 /* Change most pill-shaped buttons and input fields to square-rounded and most purple colors into the eOS accent color in about pages */
-@-moz-document url-prefix(about:) {
+/* Some dialog windows can not be themed and are still pill-shaped and purple */
 
-/**** Normal mode variables ****/
+@-moz-document url-prefix("about:") {
+
+/* -------- Variables --------- */
+
 :root, .lists {
 /* Set accent color */
     --accentcolor-70: color-mix(in hsl, AccentColor 70%, white);
@@ -18,6 +21,7 @@
     --lists-button-background-hover: var(--accentcolor-50) !important;
     --button-background-color-primary: var(--accentcolor-70) !important;
     --button-background-color-primary-hover: var(--accentcolor-50) !important;
+    --background-color-box: light-dark(var(--color-white), #3A3A3A) !important;
 
 /* Border radius variables */
     --button-border-radius: 4px !important;
@@ -59,8 +63,7 @@
     --color-violet-80: rgba(0,0,0,0.8) !important;
     --color-violet-90: rgba(0,0,0,0.9) !important;
 }
-
-/**** Dark mode variables ****/
+/* Dark mode variables */
 @media (prefers-color-scheme: dark) {
 :root {
     --color-violet-desaturated-0: rgba(255,255,255,1) !important;
@@ -85,9 +88,37 @@
     --color-violet-90: rgba(255,255,255,0.1) !important;
 }}
 
-/* Draw buttons in eOS style normal mode */
+/* -------- Background color of about pages --------- */
+.main-content, #search-container, .nova-outer-wrapper, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+    background-color: #FAFAFA !important;
+}
+@media (prefers-color-scheme: dark) {
+.main-content, #search-container, .nova-outer-wrapper, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+    background-color: #333333 !important;
+}}
+
+/* -------- Background color of cards in about pages --------- */
+moz-card[type="default"] {
+    border: 1px solid #D6D5DA !important;
+    border-radius: 0px !important;
+    background-color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+@media (prefers-color-scheme: dark) {
+moz-card[type="default"] {
+    border: 1px solid black !important;
+    border-radius: 0px !important;
+    background-color: #3A3A3A !important;
+    box-shadow: none !important;
+}}
+
+/* -------- Draw buttons in eOS style --------- */
+
 .button-background[type="primary"],
-.lists-add-button {
+.lists-add-button,
+button.primary,
+.button-background[type="default"],
+.disco-cta-button {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -97,7 +128,10 @@
     filter: brightness(120%) !important;
 }
 .button-background[type="primary"]:active,
-.lists-add-button:active {
+.lists-add-button:active,
+button.primary:active,
+.button-background[type="default"]:active,
+.disco-cta-button:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -109,7 +143,10 @@
 /* Draw buttons in eOS style dark mode */
 @media (prefers-color-scheme: dark) {
 .button-background[type="primary"],
-.lists-add-button {
+.lists-add-button,
+button.primary,
+.button-background[type="default"],
+.disco-cta-button {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-100) !important;
@@ -118,7 +155,10 @@
     background-color: var(--accentcolor-70) !important;
 }
 .button-background[type="primary"]:active,
-.lists-add-button:active {
+.lists-add-button:active,
+button.primary:active,
+.button-background[type="default"]:active,
+.disco-cta-button:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-100) !important;
@@ -127,7 +167,59 @@
     background-color: var(--accentcolor-70) !important;
 }}
 
-/* Normal mode seperator color and background color of pull down menus */
+/* -------- Style the navigation bar in the about pages to eOS style -------- */
+
+nav,
+.page-nav-heading-wrapper {
+    padding: 0px 0px 0px 30px !important;
+}
+moz-page-nav {
+    background-color: #F1F1F1 !important;
+    margin-inline-start: -40px !important;
+    padding-inline-start: 40px !important;
+    padding-inline-end: 0px !important;
+    border-inline-end: 0px !important;
+    border-right: 1px solid #D6D5DA !important;
+}
+button[selected][role="tab"],
+.moz-page-nav-link[selected] {
+    color: #242324 !important;
+    border-radius: 0px !important;
+    background-color: #DFDFDF !important;
+    margin-inline-start: -40px !important;
+    padding-left: 51px !important;
+}
+button[role="tab"]:hover,
+.moz-page-nav-link:hover {
+    border-radius: 0px !important;
+    background-color: white !important;
+    margin-inline-start: -40px !important;
+    padding-left: 51px !important;
+}
+#nav-separator, hr {
+    margin-inline-start: -40px !important;
+    padding-left: 40px !important;
+    height: 0px !important;
+    background-color: transparent !important;
+}
+/* Style the navigation bar in the about pages to eOS style dark mode */
+@media (prefers-color-scheme: dark) {
+moz-page-nav {
+    background-color: #313131 !important;
+    border-right: 1px solid #000 !important;
+}
+button[selected][role="tab"],
+.moz-page-nav-link[selected] {
+    color: white !important;
+    background-color: #252525 !important;
+}
+button[role="tab"]:hover,
+.moz-page-nav-link:hover {
+    background-color: #3A3A3A !important;
+}}
+
+/* -------- Seperator color and background color of pull down menus --------- */
+
 hr {
     border-top: 1px solid rgba(0,0,0,0.15) !important;
     border-bottom: 1px solid rgba(255,255,255,1) !important;
@@ -147,7 +239,8 @@ panel-list {
     background-color: #36363A !important;
 }}
 
-/* Make toggle on-off buttons round again */
+/* -------- Make toggle on-off buttons round again --------- */
+
 .toggle-button {
     border-radius: 9999px !important;
 }
@@ -155,28 +248,34 @@ panel-list {
     border-radius: 9999px !important;
 }
 
-/* Make border radius in url bar in about pages smaller */
+/* -------- Make border radius in url bar in about pages smaller --------- */
+
 .urlbar[in-page] {
     --urlbar-border-radius: 3px !important;
 }
 
-/* Make outlined element border radius larger than its buttons */
+/* -------- Make outlined element border radius larger than its buttons --------- */
+
 moz-segmented-control {
     border-radius: 6px !important;
 }
 
-/* Make buttons active state disappear */
+/* -------- Make buttons active state disappear --------- */
+
 button:active, .button:active {
     background-color: transparent !important;
 }
 
-/* Make buttons of pull down menus accent color */
+/* -------- Make buttons of pull down menus accent color --------- */
+
 button[aria-expanded="true"] {
     background-color: var(--accentcolor-70) !important;
     border-radius: 3px !important;
 }
 
-/* Make the circle of timer widget round again */
+/* -------- Make the circle of timer widget round again --------- */
+
 .progress-circle-wrapper .progress-circle-background, .progress-circle-wrapper .progress-circle-background-break, .progress-circle-wrapper .progress-circle, .progress-circle-wrapper .progress-circle-complete {
     border-radius: 9999px !important;
-}}
+}
+}
