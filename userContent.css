@@ -117,7 +117,7 @@ moz-card[type="default"] {
 .button-background[type="primary"],
 .lists-add-button,
 button.primary,
-.button-background[type="default"],
+#main-button:not([title="Minimize widgets"]) .button-background[type="default"],
 .disco-cta-button {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
@@ -125,12 +125,12 @@ button.primary,
     border-radius: 4px !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3), 0 2px 2px 0px rgba(0,0,0,0.1) !important;
     background-color: var(--accentcolor-50) !important;
-    filter: brightness(120%) !important;
+    filter: brightness(135%) !important;
 }
 .button-background[type="primary"]:active,
 .lists-add-button:active,
 button.primary:active,
-.button-background[type="default"]:active,
+#main-button:not([title="Minimize widgets"]) .button-background[type="default"]:active,
 .disco-cta-button:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
@@ -138,14 +138,14 @@ button.primary:active,
     border-radius: 4px !important;
     box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1) !important;
     background-color: var(--accentcolor-50) !important;
-    filter: brightness(120%) !important;
+    filter: brightness(135%) !important;
 }
 /* Draw buttons in eOS style dark mode */
 @media (prefers-color-scheme: dark) {
 .button-background[type="primary"],
 .lists-add-button,
 button.primary,
-.button-background[type="default"],
+#main-button:not([title="Minimize widgets"]) .button-background[type="default"],
 .disco-cta-button {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
@@ -157,7 +157,7 @@ button.primary,
 .button-background[type="primary"]:active,
 .lists-add-button:active,
 button.primary:active,
-.button-background[type="default"]:active,
+#main-button:not([title="Minimize widgets"]) .button-background[type="default"]:active,
 .disco-cta-button:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
