@@ -92,15 +92,8 @@
 }}
 
 /* -------- Background color of about pages --------- */
-<<<<<<< HEAD
 html:not(.private, [lwt-sidebar="dark"]) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
-=======
-html:not(.private, [lwt-newtab-brighttext]) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
->>>>>>> d4318f0 (Changed white background color to dark when going back to home page in private mode, seen in LibreWolf and ESR)
     background-color: #FAFAFA !important;
-}
-html[lwt-newtab-brighttext] body {
-    background-color: #333333 !important;
 }
 @media (prefers-color-scheme: dark) {
 html:not(.private) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
