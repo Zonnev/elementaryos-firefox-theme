@@ -92,8 +92,11 @@
 }}
 
 /* -------- Background color of about pages --------- */
-html:not(.private) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+html:not(.private, [lwt-newtab-brighttext]) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #FAFAFA !important;
+}
+html[lwt-newtab-brighttext] body {
+    background-color: #333333 !important;
 }
 @media (prefers-color-scheme: dark) {
 html:not(.private) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
