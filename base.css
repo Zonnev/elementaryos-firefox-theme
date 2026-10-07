@@ -536,12 +536,12 @@ Firefox Nova style changes
     height: 24px !important;
     padding: 4px !important;
 }
-#sidebar {
+#sidebar-box {
   @media -moz-pref("sidebar.revamp") {
-      border-radius: 3px !important;
+      border-radius: 0px !important;
       box-shadow: none !important;
       border: none !important;
-      margin-block-start: 0px !important;
+      margin-block: 0px !important;
   }
 }
 /* New URL bar styling for Nova redesign */
