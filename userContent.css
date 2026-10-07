@@ -92,7 +92,7 @@
 }}
 
 /* -------- Background color of about pages --------- */
-html:not(.private) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+html:not(.private, [lwt-sidebar="dark"]) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #FAFAFA !important;
 }
 @media (prefers-color-scheme: dark) {
