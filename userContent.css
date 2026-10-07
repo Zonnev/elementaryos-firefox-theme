@@ -92,13 +92,16 @@
 }}
 
 /* -------- Background color of about pages --------- */
-body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+html:not(.private) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #FAFAFA !important;
 }
 @media (prefers-color-scheme: dark) {
-body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
+html:not(.private) body, .main-content, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #333333 !important;
 }}
+.private body {
+    background-color: #2D1F51 !important;
+}
 
 /* -------- Background color of cards in about pages --------- */
 moz-card[type="default"] {
@@ -147,7 +150,7 @@ moz-card[type="default"] {
 #main-button:not([title="Minimize widgets"]) .button-background[type="default"]:active {
     color: white !important;
     fill: white !important;
-    border: 1px solid var(--accentcolor-70) !important;
+    border: 1px solid rgba(0,0,0,0.7) !important;
     border-radius: 4px !important;
     box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.2) !important;
     background-color: #2E2E2E !important;
