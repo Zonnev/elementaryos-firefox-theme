@@ -227,9 +227,16 @@ moz-page-nav {
     border-inline-end: 0px !important;
     border-right: 1px solid #D6D5DA !important;
 }
+button[role="tab"]:not(.category),
+.moz-page-nav-link {
+    background-color: transparent !important;
+    margin-inline-start: -40px !important; /* This sets the default button margin, so we don't see the margin jumping */
+    padding-left: 51px !important;
+}
 button[selected][role="tab"]:not(.category),
 .moz-page-nav-link[selected] {
     color: #242324 !important;
+    font-weight: 600 !important;
     border-radius: 0px !important;
     background-color: #DFDFDF !important;
     margin-inline-start: -40px !important;
