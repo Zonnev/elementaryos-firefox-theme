@@ -1,7 +1,8 @@
 /* Change most pill-shaped buttons and input fields to square-rounded and most purple colors into the eOS accent color in about pages */
 /* Some dialog windows can not be themed and are still pill-shaped and purple */
 
-@-moz-document url-prefix("about:") {
+@-moz-document url-prefix("about:"),
+url-prefix("chrome://") {
 
 /* -------- Variables --------- */
 
@@ -125,7 +126,8 @@ moz-card[type="default"] {
 
 /* grey button */
 #main-button:not([title="Minimize widgets"]) .button-background[type="default"],
-.cancel-close {
+.cancel-close,
+button[dlgtype="cancel"] {
     color: black !important;
     fill: black !important;
     border: 1px solid #C8C8C8 !important;
@@ -134,7 +136,8 @@ moz-card[type="default"] {
     background-color: transparent !important;
 }
 #main-button:not([title="Minimize widgets"]) .button-background[type="default"]:active,
-.cancel-close:active {
+.cancel-close:active,
+button[dlgtype="cancel"]:active {
     color: black !important;
     fill: black !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -145,7 +148,8 @@ moz-card[type="default"] {
 /* grey button dark mode */
 @media (prefers-color-scheme: dark) {
 #main-button:not([title="Minimize widgets"]) .button-background[type="default"],
-.cancel-close {
+.cancel-close,
+button[dlgtype="cancel"] {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -154,7 +158,8 @@ moz-card[type="default"] {
     background-color: #474747 !important;
 }
 #main-button:not([title="Minimize widgets"]) .button-background[type="default"]:active,
-.cancel-close:active {
+.cancel-close:active,
+button[dlgtype="cancel"]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -167,7 +172,8 @@ moz-card[type="default"] {
 .button-background[type="primary"],
 .lists-add-button,
 button.primary,
-.disco-cta-button {
+.disco-cta-button,
+button[default="true"] {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -179,7 +185,8 @@ button.primary,
 .button-background[type="primary"]:active,
 .lists-add-button:active,
 button.primary:active,
-.disco-cta-button:active {
+.disco-cta-button:active,
+button[default="true"]:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -193,7 +200,8 @@ button.primary:active,
 .button-background[type="primary"],
 .lists-add-button,
 button.primary,
-.disco-cta-button {
+.disco-cta-button,
+button[default="true"] {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -204,7 +212,8 @@ button.primary,
 .button-background[type="primary"]:active,
 .lists-add-button:active,
 button.primary:active,
-.disco-cta-button:active {
+.disco-cta-button:active,
+button[default="true"]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
