@@ -173,7 +173,7 @@ button[dlgtype="cancel"]:active {
 .lists-add-button,
 button.primary,
 .disco-cta-button,
-button[default="true"] {
+button[dlgtype="accept"] {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -186,7 +186,7 @@ button[default="true"] {
 .lists-add-button:active,
 button.primary:active,
 .disco-cta-button:active,
-button[default="true"]:active {
+button[dlgtype="accept"]:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -201,7 +201,7 @@ button[default="true"]:active {
 .lists-add-button,
 button.primary,
 .disco-cta-button,
-button[default="true"] {
+button[dlgtype="accept"] {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -213,7 +213,7 @@ button[default="true"] {
 .lists-add-button:active,
 button.primary:active,
 .disco-cta-button:active,
-button[default="true"]:active {
+button[dlgtype="accept"]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -323,16 +323,21 @@ moz-segmented-control {
     border-radius: 6px !important;
 }
 
-/* -------- Make buttons of pull down menus accent color --------- */
-
-button[aria-expanded="true"] {
-    background-color: var(--accentcolor-70) !important;
-    border-radius: 3px !important;
-}
-
 /* -------- Make the circle of timer widget round again --------- */
 
 .progress-circle-wrapper .progress-circle-background, .progress-circle-wrapper .progress-circle-background-break, .progress-circle-wrapper .progress-circle, .progress-circle-wrapper .progress-circle-complete {
     border-radius: 9999px !important;
 }
+
+/* -------- Style the search switcher in the url bar on the home page --------- */
+
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+    background-color: rgba(235,235,235,1) !important;
+    border-radius: 3px !important;
+}
+@media (prefers-color-scheme: dark) {
+.button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
+    background-color: rgba(255,255,255,0.15) !important;
+    border-radius: 3px !important;
+}}
 }
