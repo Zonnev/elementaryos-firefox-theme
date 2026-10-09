@@ -323,12 +323,6 @@ moz-segmented-control {
     border-radius: 6px !important;
 }
 
-/* -------- Make buttons active state disappear --------- */
-
-button:active, .button:active {
-    background-color: transparent !important;
-}
-
 /* -------- Make buttons of pull down menus accent color --------- */
 
 button[aria-expanded="true"] {
