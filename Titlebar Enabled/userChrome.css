@@ -783,7 +783,7 @@ button[part="dialog-button"]:active {
 /* accent color button */
 .footer-button[default="true"],
 .button-background[type="primary"],
-button[part="dialog-button"][default="true"] {
+button[part="dialog-button"][default] {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -794,7 +794,7 @@ button[part="dialog-button"][default="true"] {
 }
 .footer-button[default="true"]:active,
 .button-background[type="primary"]:active,
-button[part="dialog-button"][default="true"]:active {
+button[part="dialog-button"][default]:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -807,7 +807,7 @@ button[part="dialog-button"][default="true"]:active {
 @media (prefers-color-scheme: dark) {
 .footer-button[default="true"],
 .button-background[type="primary"],
-button[part="dialog-button"][default="true"] {
+button[part="dialog-button"][default] {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -817,7 +817,7 @@ button[part="dialog-button"][default="true"] {
 }
 .footer-button[default="true"]:active,
 .button-background[type="primary"]:active,
-button[part="dialog-button"][default="true"]:active {
+button[part="dialog-button"][default]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
