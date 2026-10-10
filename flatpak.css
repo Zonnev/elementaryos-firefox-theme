@@ -11,16 +11,16 @@ MENU POPUPS + right mouse click menus
 *************************************/
 
 /* Default theme */
-menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton),
-menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton) {
+menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled], [selected]):not(.subviewbutton),
+menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled], [selected]):not(.subviewbutton) {
     appearance: none !important;
     background-color: rgba(0,0,0,0.08) !important;
     color: #000 !important;
 }
-#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"],
-#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"] {
+#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled][selected],
+#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled][selected] {
     appearance: none !important;
-    background-color: rgba(0,0,0,0) !important;
+    background-color: transparent !important;
 }
 menubar > menu[_moz-menuactive="true"][open="true"] {
     background: rgba(0,0,0,0.08) !important;
@@ -39,16 +39,16 @@ menupopup, panel {
     --button-hover-bgcolor: rgba(255,255,255,0.10) !important;
     --panel-item-hover-bgcolor: rgba(255,255,255,0.10) !important;
 }
-menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton),
-menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton) {
+menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled], [selected]):not(.subviewbutton),
+menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled], [selected]):not(.subviewbutton) {
     appearance: none !important;
     color: #FFF !important;
     background-color: rgba(255,255,255,0.10) !important;
 }
-#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled="true"],
-#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled="true"] {
+#BMB_unsortedBookmarksPopup menu[_moz-menuactive="true"][disabled][selected],
+#BMB_unsortedBookmarksPopup menuitem[_moz-menuactive="true"][disabled][selected] {
     appearance: none !important;
-    background-color: #303030 !important;
+    background-color: transparent !important;
 }
 menubar > menu[_moz-menuactive="true"][open="true"] {
 	color: #fff !important;

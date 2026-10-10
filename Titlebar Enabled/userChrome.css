@@ -52,14 +52,14 @@ menu:not(#file-menu, #edit-menu, #view-menu, #history-menu, #bookmarksMenu, #pro
 #context-back, #context-forward, #context-reload, #context-bookmarkpage {
     margin: 0px 6px !important;
 }
-menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
+menu:hover:not([disabled], [selected]), menuitem:hover:not([disabled], [selected]), menucaption:hover:not([disabled], [selected]) {
     background-color: rgba(0,0,0,0.08) !important;
 }
-menu[_moz-menuactive="true"]:not([disabled="true"]), menuitem[_moz-menuactive="true"]:not([disabled="true"]), menucaption[_moz-menuactive="true"]:not([disabled="true"]) {
+menu[_moz-menuactive="true"]:not([disabled], [selected]), menuitem[_moz-menuactive="true"]:not([disabled], [selected]), menucaption[_moz-menuactive="true"]:not([disabled], [selected]) {
     background-color: rgba(0,0,0,0.08) !important;
 }
-menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
-    background: none !important;
+menu[disabled][selected], menuitem[disabled][selected], menucaption[disabled][selected] {
+    background-color: transparent !important;
 }
 menupopup, panel {
     --arrowpanel-menuitem-padding: 7px 12px 7px 27px !important;
@@ -137,14 +137,14 @@ toolbarseparator:not(.proton-zap)::before {
 
 /*** Dark Mode in Tweaks menu popups ***/
 @media (prefers-color-scheme: dark) {
-menu:hover:not([disabled="true"]), menuitem:hover:not([disabled="true"]), menucaption:hover:not([disabled="true"]) {
+menu:hover:not([disabled], [selected]), menuitem:hover:not([disabled], [selected]), menucaption:hover:not([disabled], [selected]) {
     background-color: rgba(255,255,255,0.10) !important;
 }
-menu[_moz-menuactive="true"]:not([disabled="true"]), menuitem[_moz-menuactive="true"]:not([disabled="true"]), menucaption[_moz-menuactive="true"]:not([disabled="true"]) {
+menu[_moz-menuactive="true"]:not([disabled], [selected]), menuitem[_moz-menuactive="true"]:not([disabled], [selected]), menucaption[_moz-menuactive="true"]:not([disabled], [selected]) {
     background-color: rgba(255,255,255,0.10) !important;
 }
-menu[disabled="true"], menuitem[disabled="true"], menucaption[disabled="true"] {
-    background: none !important;
+menu[disabled][selected], menuitem[disabled][selected], menucaption[disabled][selected] {
+    background-color: transparent !important;
 }
 menuseparator,
 panel toolbarseparator:not(.proton-zap) {
@@ -180,24 +180,24 @@ menupopup, panel {
 }}
 
 /*** Private Mode menu popups ***/
-:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton),
-:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled="true"]):not(.subviewbutton) {
+:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) menu[_moz-menuactive="true"]:not([disabled], [selected]):not(.subviewbutton),
+:root[privatebrowsingmode="temporary"] menupopup:not(#BMB_bookmarksPopup) menuitem[_moz-menuactive="true"]:not([disabled], [selected]):not(.subviewbutton) {
     appearance: none !important;
     color: #FFF !important;
     background-color: rgba(0,0,0,0.1) !important;
 }
-:root[privatebrowsingmode="temporary"] menu[disabled="true"], :root[privatebrowsingmode="temporary"] menuitem[disabled="true"], :root[privatebrowsingmode="temporary"] menucaption[disabled="true"] {
-    background-color: none !important;
+:root[privatebrowsingmode="temporary"] menu[disabled][selected], :root[privatebrowsingmode="temporary"] menuitem[disabled][selected], :root[privatebrowsingmode="temporary"] menucaption[disabled][selected] {
+    background-color: transparent !important;
 }
 :root[privatebrowsingmode="temporary"] .menupopup-arrowscrollbox {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1), inset 0 0 0 1px rgba(255,255,255,0.05), 0px 0px 3px rgba(0,0,0,0.15) !important;
 }
-:root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled="true"]),
-:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled="true"]) {
+:root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled], [selected]),
+:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled], [selected]) {
     color: #fff !important;
 }
-:root[privatebrowsingmode="temporary"] menuitem[disabled="true"],
-:root[privatebrowsingmode="temporary"] menu[disabled="true"] {
+:root[privatebrowsingmode="temporary"] menuitem[disabled][selected],
+:root[privatebrowsingmode="temporary"] menu[disabled][selected] {
     color: rgba(255,255,255,0.5) !important;
     fill: rgba(255,255,255,0.5) !important;
 }
@@ -235,10 +235,10 @@ menupopup, panel {
     --panel-item-hover-bgcolor: rgba(0,0,0,0.1) !important;
     --button-background-color-ghost-hover: rgba(0,0,0,0.1) !important;
 }
-:root[privatebrowsingmode="temporary"] menu:hover:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menuitem:hover:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menucaption:hover:not([disabled="true"]) {
+:root[privatebrowsingmode="temporary"] menu:hover:not([disabled], [selected]), :root[privatebrowsingmode="temporary"] menuitem:hover:not([disabled], [selected]), :root[privatebrowsingmode="temporary"] menucaption:hover:not([disabled], [selected]) {
     background-color: rgba(0,0,0,0.1) !important;
 }
-:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled="true"]), :root[privatebrowsingmode="temporary"] menucaption[_moz-menuactive="true"]:not([disabled="true"]) {
+:root[privatebrowsingmode="temporary"] menu[_moz-menuactive="true"]:not([disabled], [selected]), :root[privatebrowsingmode="temporary"] menuitem[_moz-menuactive="true"]:not([disabled], [selected]), :root[privatebrowsingmode="temporary"] menucaption[_moz-menuactive="true"]:not([disabled], [selected]) {
     background-color: rgba(0,0,0,0.1) !important;
 }
 :root[privatebrowsingmode="temporary"] menupopup:-moz-lwtheme-brighttext,
