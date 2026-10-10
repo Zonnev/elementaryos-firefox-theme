@@ -440,7 +440,7 @@ button[part="dialog-button"]:active,
 .button-background[type="default"]:active {
     color: white !important;
     fill: white !important;
-    border: 1px solid var(--accentcolor-70) !important;
+    border: 1px solid rgba(0,0,0,0.7) !important;
     border-radius: 4px !important;
     box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.2) !important;
     background-color: #2E2E2E !important;
