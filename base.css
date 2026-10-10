@@ -2120,6 +2120,34 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
     border-radius: 7px !important;
 }
 
+/*** INFOBAR - ALL COLORS ***/
+.infobar {
+    border: none !important;
+    background-color: #F2F2F2 !important;
+}
+.infobar:-moz-window-inactive {
+    border: none !important;
+    background-color: #FAFAFA !important;
+}
+@media (prefers-color-scheme: dark) {
+.infobar:-moz-window-inactive {
+    border: none !important;
+    background-color: #333333 !important;
+}
+.infobar {
+    border: none !important;
+    background-color: #2C2C2C !important;
+}}
+#main-window[privatebrowsingmode="temporary"] .infobar:-moz-window-inactive {
+    border: none !important;
+    background: linear-gradient(to right, rgba(105,75,188,1) 0%, rgba(105,75,188,1) 20%, rgba(162,76,141,1) 100%) !important;
+}
+#main-window[privatebrowsingmode="temporary"] .infobar {
+    border: none !important;
+    background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 100%), 
+                linear-gradient(to right, rgba(105,75,188,1) 0%, rgba(105,75,188,1) 20%, rgba(162,76,141,1) 100%) !important;
+}}
+
 /*** MISC. ***/
 .button-menu-dropmarker {
     margin-left: 3px !important;
