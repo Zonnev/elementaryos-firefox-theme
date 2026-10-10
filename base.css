@@ -737,7 +737,8 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 /*** Default buttons in DIALOGS ***/
 /* grey button */
 .footer-button,
-button[part="dialog-button"] {
+button[part="dialog-button"],
+.button-background[type="default"] {
     color: black !important;
     fill: black !important;
     border: 1px solid #C8C8C8 !important;
@@ -746,7 +747,8 @@ button[part="dialog-button"] {
     background-color: transparent !important;
 }
 .footer-button:active,
-button[part="dialog-button"]:active {
+button[part="dialog-button"]:active,
+.button-background[type="default"]:active {
     color: black !important;
     fill: black !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -757,7 +759,8 @@ button[part="dialog-button"]:active {
 /* grey button dark mode */
 @media (prefers-color-scheme: dark) {
 .footer-button,
-button[part="dialog-button"] {
+button[part="dialog-button"],
+.button-background[type="default"] {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -766,7 +769,8 @@ button[part="dialog-button"] {
     background-color: #474747 !important;
 }
 .footer-button:active,
-button[part="dialog-button"]:active {
+button[part="dialog-button"]:active,
+.button-background[type="default"]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -775,7 +779,7 @@ button[part="dialog-button"]:active {
     background-color: #2E2E2E !important;
 }}
 /* accent color button */
-.footer-button[default="true"],
+.footer-button[default],
 .button-background[type="primary"],
 button[part="dialog-button"][default] {
     color: var(--accentcolor-txt-100) !important;
@@ -786,7 +790,7 @@ button[part="dialog-button"][default] {
     background-color: var(--accentcolor-30) !important;
     filter: brightness(105%) !important;
 }
-.footer-button[default="true"]:active,
+.footer-button[default]:active,
 .button-background[type="primary"]:active,
 button[part="dialog-button"][default]:active {
     color: var(--accentcolor-txt-100) !important;
@@ -799,7 +803,7 @@ button[part="dialog-button"][default]:active {
 }
 /* accent color button cark mode */
 @media (prefers-color-scheme: dark) {
-.footer-button[default="true"],
+.footer-button[default],
 .button-background[type="primary"],
 button[part="dialog-button"][default] {
     color: white !important;
@@ -809,7 +813,7 @@ button[part="dialog-button"][default] {
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.15), 0 2px 2px 0px rgba(0,0,0,0.2) !important;
     background-color: var(--accentcolor-txt-100-10) !important;
 }
-.footer-button[default="true"]:active,
+.footer-button[default]:active,
 .button-background[type="primary"]:active,
 button[part="dialog-button"][default]:active {
     color: white !important;
