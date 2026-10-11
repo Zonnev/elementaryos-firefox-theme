@@ -1347,6 +1347,9 @@ toolbar[customizing] #nav-bar-overflow-button > .toolbarbutton-icon {
 }
 
 /* buttons styles in toolbar */
+#downloads-indicator-progress-inner {
+    border-radius: 9999px !important;
+}
 #TabsToolbar .toolbarbutton-1:not(#alltabs-button, #new-tab-button, #tabs-newtab-button, #firefox-view-button) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack) {
     margin-bottom: 2px !important;
 }
