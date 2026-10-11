@@ -2,7 +2,11 @@
 /* Some dialog windows can not be themed and are still pill-shaped and purple */
 
 @-moz-document url-prefix("about:"),
-url-prefix("chrome://") {
+url-prefix("chrome://formautofill/content/"),
+url-prefix("chrome://browser/content/"),
+url-prefix("chrome://mozapps/content/"),
+url-prefix("chrome://pippki/content/"),
+url-prefix("chrome://global/content/") {
 
 /* -------- Variables --------- */
 
