@@ -336,6 +336,11 @@ Firefox Nova style changes
     inset-block: 0px -22px !important;
     border-radius: 6px !important;
 }
+#main-window[uidensity="compact"] #urlbar[open] .urlbarView-background,
+#main-window[uidensity="compact"] #searchbar-new[open] .urlbarView-background {
+    inset-inline: -5px !important;
+}
+
 /* Container tabs buttons in URL bar for Nova redesign */
 #userContext-icons {
     border-radius: 3px !important;
