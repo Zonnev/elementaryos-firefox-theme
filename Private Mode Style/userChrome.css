@@ -678,6 +678,7 @@ button[part="dialog-button"][default]:active {
     box-shadow: none !important;
     border: none !important;
     border-radius: 3px !important;
+    outline: none !important;
 }
 #urlbar:not([focused]):not([open]) > #urlbar-background,
 #urlbar:not([focused]):not([open]) > .urlbar-background,
