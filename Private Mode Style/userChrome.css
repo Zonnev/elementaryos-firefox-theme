@@ -623,6 +623,7 @@ button[part="dialog-button"][default]:active {
 }
 #searchbar-new[open] .urlbar-input-container {
     outline: none !important;
+    padding-right: 2px !important;
 }
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
