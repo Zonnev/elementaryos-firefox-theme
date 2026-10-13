@@ -49,6 +49,9 @@ url-prefix("chrome://global/content/") {
     --panel-separator-padding: 0px !important;
     --panel-border-color: light-dark(rgba(0,0,0,0.2), rgba(0,0,0,1)) !important;
 
+/* Make narrow sidebar more narrow */
+    --size-sidebar-narrow: 74px !important;
+
 /* Change purple colors of Nova normal mode to greys */
     --color-violet-desaturated-0: rgba(255,255,255,1) !important;
     --color-violet-desaturated-10: rgba(0,0,0,0.1) !important;
