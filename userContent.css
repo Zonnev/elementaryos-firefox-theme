@@ -12,9 +12,12 @@ url-prefix("chrome://global/content/") {
 
 :root, .lists {
 /* Set accent color */
-    --eOS-accentcolor: hsl(from AccentColor h s 55%);
+    --eOS-accentcolor: hsl(from AccentColor h 50% 55%);
+    --eOS-accentcolor-brighter: hsl(from AccentColor h 65% 62%);
+    --accentcolor-80-brighter: color-mix(in srgb, var(--eOS-accentcolor-brighter) 80%, white);
     --accentcolor-70: color-mix(in srgb, var(--eOS-accentcolor) 70%, white);
     --accentcolor-100: color-mix(in srgb, var(--eOS-accentcolor) 100%, white);
+    --accentcolor-100-brighter: color-mix(in srgb, var(--eOS-accentcolor-brighter) 100%, white);
     --accentcolor-60: color-mix(in srgb, var(--eOS-accentcolor) 60%, white);
     --accentcolor-50: color-mix(in srgb, var(--eOS-accentcolor) 50%, white);
     --accentcolor-40: color-mix(in srgb, var(--eOS-accentcolor) 40%, white);
@@ -322,15 +325,6 @@ menuitem[selected] {
     color: white !important;
 }}
 
-/* -------- Make toggle on-off buttons round again --------- */
-
-.toggle-button {
-    border-radius: 9999px !important;
-}
-.toggle-button::before {
-    border-radius: 9999px !important;
-}
-
 /* -------- Make border radius in url bar in about pages smaller --------- */
 
 .urlbar[in-page] {
@@ -359,5 +353,108 @@ moz-segmented-control {
 .button-background:is([type="muted"], [open], :hover, :active):not([type="primary"]) {
     background-color: rgba(255,255,255,0.15) !important;
     border-radius: 3px !important;
+}}
+
+/* -------- Style the checkbox buttons --------- */
+
+#input[type="checkbox"] {
+    appearance: none !important;
+    position: relative !important;
+    min-width: 18px !important;
+    height: 18px !important;
+    background-color: transparent !important;
+    border: 1px solid #C8C8C8 !important;
+    border-radius: 3px !important;
+    cursor: pointer !important;
+    bottom: 2px !important;
+}
+#input[type="checkbox"]:checked {
+    background-color: var(--accentcolor-80-brighter) !important;
+    border: 1px solid var(--accentcolor-100) !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
+}
+/* Draw borders and tilt them to make an eOS style checkmark */
+#input[type="checkbox"]:checked::before {
+    content: "" !important;
+    position: absolute !important;
+    width: 5px !important;
+    height: 10px !important;
+    border-bottom: 4px solid white !important;
+    border-right: 4px solid white !important;
+    transform: translate(-50%, -50%) rotate(36deg) !important;
+    top: 44% !important;
+    left: 50% !important;
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
+}
+#input[type="checkbox"][disabled]:checked {
+    filter: grayscale(1) contrast(80%) brightness(135%) !important;
+}
+#input[type="checkbox"][disabled]:checked::before {
+    filter: grayscale(1) contrast(80%) !important;
+}
+/* Dark mode checkbox buttons */
+@media (prefers-color-scheme: dark) {
+#input[type="checkbox"] {
+    border: 1px solid rgba(0,0,0,0.5) !important;
+}
+#input[type="checkbox"]:checked {
+    border: 1px solid black !important;
+}
+#input[type="checkbox"][disabled]:checked {
+    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+}
+#input[type="checkbox"][disabled]:checked::before {
+    filter: grayscale(1) contrast(80%) !important;
+}}
+
+/* -------- Style the toggle buttons --------- */
+
+.toggle-button {
+    display: inline flex !important;
+    align-items: center !important;
+    border-radius: 9999px !important;
+    border: 1px solid var(--accentcolor-100) !important;
+    background-color: var(--accentcolor-100-brighter) !important;
+}
+.toggle-button::before {
+    position: relative !important;
+    border-radius: 9999px !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: white !important;
+    height: 100% !important;
+    width: 50% !important;
+    right: 1px !important;
+}
+.toggle-button[aria-pressed="false"] {
+    display: inline flex !important;
+    align-items: center !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(0,0,0,0.2) !important;
+    background-color: rgba(0,0,0,0.05) !important;
+}
+.toggle-button[aria-pressed="false"]::before {
+    position: relative !important;
+    border-radius: 9999px !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: white !important;
+    height: 100% !important;
+    width: 50% !important;
+    right: 1px !important;
+}
+/* Dark mode toggle buttons */
+@media (prefers-color-scheme: dark) {
+.toggle-button {
+    border: 1px solid rgba(0,0,0,0.7) !important;
+}
+.toggle-button::before {
+    border: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: #4C4C4C !important;
+}
+.toggle-button[aria-pressed="false"] {
+    border: 1px solid rgba(0,0,0,0.3) !important;
+}
+.toggle-button[aria-pressed="false"]::before {
+    border: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: #4C4C4C !important;
 }}
 }
