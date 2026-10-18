@@ -752,7 +752,8 @@ toolbar .toolbarbutton-1:not(#PanelUI-menu-button) > .toolbarbutton-badge-stack:
 /* grey button */
 .footer-button,
 button[part="dialog-button"],
-.button-background[type="default"] {
+.button-background[type="default"],
+#cancel-button {
     color: black !important;
     fill: black !important;
     border: 1px solid #C8C8C8 !important;
@@ -762,7 +763,8 @@ button[part="dialog-button"],
 }
 .footer-button:active,
 button[part="dialog-button"]:active,
-.button-background[type="default"]:active {
+.button-background[type="default"]:active,
+#cancel-button:active {
     color: black !important;
     fill: black !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -774,7 +776,8 @@ button[part="dialog-button"]:active,
 @media (prefers-color-scheme: dark) {
 .footer-button,
 button[part="dialog-button"],
-.button-background[type="default"] {
+.button-background[type="default"],
+#cancel-button {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -784,7 +787,8 @@ button[part="dialog-button"],
 }
 .footer-button:active,
 button[part="dialog-button"]:active,
-.button-background[type="default"]:active {
+.button-background[type="default"]:active,
+#cancel-button:active {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -795,7 +799,8 @@ button[part="dialog-button"]:active,
 /* accent color button */
 .footer-button[default],
 .button-background[type="primary"],
-button[part="dialog-button"][default] {
+button[part="dialog-button"][default],
+#print-button {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -806,7 +811,8 @@ button[part="dialog-button"][default] {
 }
 .footer-button[default]:active,
 .button-background[type="primary"]:active,
-button[part="dialog-button"][default]:active {
+button[part="dialog-button"][default]:active,
+#print-button:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -819,7 +825,8 @@ button[part="dialog-button"][default]:active {
 @media (prefers-color-scheme: dark) {
 .footer-button[default],
 .button-background[type="primary"],
-button[part="dialog-button"][default] {
+button[part="dialog-button"][default],
+#print-button {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -829,7 +836,8 @@ button[part="dialog-button"][default] {
 }
 .footer-button[default]:active,
 .button-background[type="primary"]:active,
-button[part="dialog-button"][default]:active {
+button[part="dialog-button"][default]:active,
+#print-button:active {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
