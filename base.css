@@ -890,7 +890,7 @@ menuitem[type="checkbox"] .menu-icon {
 checkbox[checked] .checkbox-check,
 menuitem[checked][type="checkbox"] .menu-icon {
     border: 1px solid black !important;
-    background-color: var(--accentcolor-txt-100-10) !important;
+    background-color: var(--accentcolor-100-brighter) !important;
 }
 checkbox[checked][disabled] .checkbox-check,
 menuitem[checked][type="checkbox"][disabled] .menu-icon {
@@ -942,7 +942,7 @@ menuitem[type="radio"] .menu-icon {
 }
 menuitem[checked][type="radio"] .menu-icon {
     border: 1px solid black !important;
-    background-color: var(--accentcolor-txt-100-10) !important;
+    background-color: var(--accentcolor-100-brighter) !important;
 }
 menuitem[checked][type="radio"][disabled] .menu-icon {
     filter: grayscale(1) contrast(80%) brightness(50%) !important;

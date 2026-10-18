@@ -400,7 +400,7 @@ moz-segmented-control {
 }
 #input[type="checkbox"]:checked {
     border: 1px solid black !important;
-    background-color: var(--accentcolor-txt-100-10) !important;
+    background-color: var(--accentcolor-100-brighter) !important;
 }
 #input[type="checkbox"][disabled]:checked {
     filter: grayscale(1) contrast(80%) brightness(50%) !important;
@@ -453,7 +453,7 @@ moz-segmented-control {
 }
 #input[type="radio"]:checked {
     border: 1px solid black !important;
-    background-color: var(--accentcolor-txt-100-10) !important;
+    background-color: var(--accentcolor-100-brighter) !important;
 }
 #input[type="radio"][disabled]:checked {
     filter: grayscale(1) contrast(80%) brightness(50%) !important;
