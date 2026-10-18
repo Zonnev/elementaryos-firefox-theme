@@ -396,15 +396,70 @@ moz-segmented-control {
 @media (prefers-color-scheme: dark) {
 #input[type="checkbox"] {
     border: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: rgba(255,255,255,0.1) !important;
 }
 #input[type="checkbox"]:checked {
     border: 1px solid black !important;
+    background-color: var(--accentcolor-txt-100-10) !important;
 }
 #input[type="checkbox"][disabled]:checked {
     filter: grayscale(1) contrast(80%) brightness(50%) !important;
 }
 #input[type="checkbox"][disabled]:checked::before {
+    filter: grayscale(1) contrast(80%) brightness(70%) !important;
+}}
+
+/* Radio round checkboxes */
+#input[type="radio"] {
+    appearance: none !important;
+    position: relative !important;
+    min-width: 18px !important;
+    height: 18px !important;
+    background-color: transparent !important;
+    border: 1px solid #C8C8C8 !important;
+    border-radius: 9999px !important;
+    cursor: pointer !important;
+    bottom: 2px !important;
+}
+#input[type="radio"]:checked {
+    background-color: var(--accentcolor-80-brighter) !important;
+    border: 1px solid var(--accentcolor-100) !important;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
+}
+/* Draw borders and tilt them to make an eOS style checkmark */
+#input[type="radio"]:checked::before {
+    content: "" !important;
+    position: absolute !important;
+    width: 5px !important;
+    height: 10px !important;
+    border-bottom: 4px solid white !important;
+    border-right: 4px solid white !important;
+    transform: translate(-50%, -50%) rotate(36deg) !important;
+    top: 43.5% !important;
+    left: 50% !important;
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
+}
+#input[type="radio"][disabled]:checked {
+    filter: grayscale(1) contrast(80%) brightness(135%) !important;
+}
+#input[type="radio"][disabled]:checked::before {
     filter: grayscale(1) contrast(80%) !important;
+}
+/* Dark mode radio round check buttons */
+@media (prefers-color-scheme: dark) {
+#input[type="radio"] {
+    border: 1px solid rgba(0,0,0,0.5) !important;
+    background-color: rgba(255,255,255,0.1) !important;
+}
+#input[type="radio"]:checked {
+    border: 1px solid black !important;
+    background-color: var(--accentcolor-txt-100-10) !important;
+}
+#input[type="radio"][disabled]:checked {
+    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+}
+#input[type="radio"][disabled]:checked::before {
+    filter: grayscale(1) contrast(80%) brightness(70%) !important;
 }}
 
 /* -------- Style the toggle buttons --------- */
