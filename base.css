@@ -11,6 +11,7 @@
     --accentcolor-80-brighter: color-mix(in srgb, var(--eOS-accentcolor-brighter) 80%, white);
     --accentcolor-70: color-mix(in srgb, var(--eOS-accentcolor) 70%, white);
     --accentcolor-100: color-mix(in srgb, var(--eOS-accentcolor) 100%, white);
+    --accentcolor-100-50: color-mix(in srgb, var(--eOS-accentcolor) 100%, black 50%);
     --accentcolor-100-brighter: color-mix(in srgb, var(--eOS-accentcolor-brighter) 100%, white);
     --accentcolor-60: color-mix(in srgb, var(--eOS-accentcolor) 60%, white);
     --accentcolor-50: color-mix(in srgb, var(--eOS-accentcolor) 50%, white);
