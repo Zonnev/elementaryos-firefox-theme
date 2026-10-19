@@ -414,7 +414,7 @@ LAYOUT
 .footer-button,
 button[part="dialog-button"],
 .button-background[type="default"],
-#cancel-button {
+#print-footer button[is="cancel-button"] {
     color: black !important;
     fill: black !important;
     border: 1px solid #C8C8C8 !important;
@@ -425,7 +425,7 @@ button[part="dialog-button"],
 .footer-button:active,
 button[part="dialog-button"]:active,
 .button-background[type="default"]:active,
-#cancel-button:active {
+#print-footer button[is="cancel-button"]:active {
     color: black !important;
     fill: black !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -438,7 +438,7 @@ button[part="dialog-button"]:active,
 .footer-button,
 button[part="dialog-button"],
 .button-background[type="default"],
-#cancel-button {
+#print-footer button[is="cancel-button"] {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -449,7 +449,7 @@ button[part="dialog-button"],
 .footer-button:active,
 button[part="dialog-button"]:active,
 .button-background[type="default"]:active,
-#cancel-button:active {
+#print-footer button[is="cancel-button"]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid rgba(0,0,0,0.7) !important;
@@ -461,7 +461,7 @@ button[part="dialog-button"]:active,
 .footer-button[default],
 .button-background[type="primary"],
 button[part="dialog-button"][default],
-#print-button {
+#print-footer button[is="print-button"] {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -473,7 +473,7 @@ button[part="dialog-button"][default],
 .footer-button[default]:active,
 .button-background[type="primary"]:active,
 button[part="dialog-button"][default]:active,
-#print-button:active {
+#print-footer button[is="print-button"]:active {
     color: var(--accentcolor-txt-100) !important;
     fill: var(--accentcolor-txt-100) !important;
     border: 1px solid var(--accentcolor-70) !important;
@@ -487,7 +487,7 @@ button[part="dialog-button"][default]:active,
 .footer-button[default],
 .button-background[type="primary"],
 button[part="dialog-button"][default],
-#print-button {
+#print-footer button[is="print-button"] {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -498,7 +498,7 @@ button[part="dialog-button"][default],
 .footer-button[default]:active,
 .button-background[type="primary"]:active,
 button[part="dialog-button"][default]:active,
-#print-button:active {
+#print-footer button[is="print-button"]:active {
     color: white !important;
     fill: white !important;
     border: 1px solid black !important;
@@ -1888,6 +1888,20 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
     border: none !important;
     background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 100%), 
                 linear-gradient(to right, rgba(105,75,188,1) 0%, rgba(105,75,188,1) 20%, rgba(162,76,141,1) 100%) !important;
+}
+
+/*** FIND BAR FOCUS GLOW ***/
+.findbar-textbox:focus {
+    outline: 1px solid var(--accentcolor-100) !important;
+    border-radius: 3px !important;
+    box-shadow: 0 0 0 2px var(--accentcolor-30) !important;
+    filter: saturate(138%) brightness(102%) !important;
+}
+@media (prefers-color-scheme: dark) {
+.findbar-textbox:focus {
+    outline: 2px solid var(--accentcolor-100-50) !important;
+    box-shadow: none !important;
+    filter: none !important;
 }}
 
 /*** MISC. ***/
