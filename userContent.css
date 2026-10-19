@@ -24,6 +24,7 @@ url-prefix("chrome://global/content/") {
     --accentcolor-30: color-mix(in srgb, var(--eOS-accentcolor) 30%, white);
     --accentcolor-txt-100-10: color-mix(in srgb, AccentColor 100%, black 10%);
     --accentcolor-txt-100: color-mix(in srgb, AccentColor 100%, black 30%);
+    --accentcolor-percentage: color-mix(in srgb, SelectedItem 95%, transparent);
 
 /* Draw accent colors to elements */
     --color-accent-primary: var(--accentcolor-100) !important;
@@ -33,6 +34,9 @@ url-prefix("chrome://global/content/") {
     --button-background-color-primary: var(--accentcolor-100) !important;
     --button-background-color-primary-hover: var(--accentcolor-70) !important;
     --background-color-box: light-dark(var(--color-white), #3A3A3A) !important;
+
+/* Url bar hand off glow on home page color */
+    --newtab-primary-action-background: var(--accentcolor-100-brighter) !important;
 
 /* Border radius variables */
     --button-border-radius: 4px !important;
@@ -112,6 +116,7 @@ html[lwt-newtab-brighttext] body {
 @media (prefers-color-scheme: dark) {
 html:not(.private) body, .main-content, .sticky-container, #search-container, #content:not([aria-describedby="content"]), .main-search, .main-heading {
     background-color: #333333 !important;
+    background: linear-gradient(to bottom, #333333 0%, #333333 95%, #333333) !important;
 }}
 .private body {
     background-color: #2D1F51 !important;
@@ -511,5 +516,48 @@ moz-segmented-control {
 .toggle-button[aria-pressed="false"]::before {
     border: 1px solid rgba(0,0,0,0.5) !important;
     background-color: #4C4C4C !important;
+}}
+
+/* -------- Style url bars glow --------- */
+
+/* First make room for the glow around url bar hand off on home page in Nightly */
+.urlbar[popover-open] .urlbarView {
+    inset-block: 6px !important;
+}
+.urlbar[popover-open] .urlbar-background {
+    inset-block-end: -30px !important;
+}
+/* Nightly url bar hand off on home page glow */
+.urlbar[popover-open] .urlbar-input-container {
+    outline: 1px solid var(--accentcolor-100-brighter) !important;
+    outline-offset: -1px !important;
+    box-shadow: 0 0 0 2px var(--accentcolor-30) !important;
+    filter: saturate(150%) !important;
+}
+/* Nightly url bar hand off on home page glow dark mode */
+@media (prefers-color-scheme: dark) {
+.urlbar[popover-open] .urlbar-input-container {
+    outline: 2px solid var(--accentcolor-percentage) !important;
+    box-shadow: none !important;
+    filter: none !important;
+}}
+/* Make url bar hand off glow on home page more bright */
+.search-handoff-button {
+    filter: saturate(150%) !important;
+}
+/* Draw glow 'Find in Settings' bar */
+#input:focus-visible {
+    border: 1px solid transparent !important;
+    outline: 1px solid var(--accentcolor-100-brighter) !important;
+    box-shadow: 0 0 0 3px var(--accentcolor-30) !important;
+    filter: saturate(150%) !important;
+}
+/* Draw glow 'Find in Settings' bar dark mode */
+@media (prefers-color-scheme: dark) {
+#input:focus-visible {
+    border: 1px solid transparent !important;
+    outline: 2px solid var(--accentcolor-percentage) !important;
+    box-shadow: none !important;
+    filter: none !important;
 }}
 }
