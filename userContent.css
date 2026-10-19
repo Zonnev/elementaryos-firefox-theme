@@ -532,7 +532,7 @@ moz-segmented-control {
     outline: 1px solid var(--accentcolor-100) !important;
     outline-offset: -1px !important;
     box-shadow: 0 0 0 2px var(--accentcolor-30) !important;
-    filter: saturate(135%) !important;
+    filter: saturate(138%) brightness(102%) !important;
 }
 /* Nightly url bar hand off on home page glow dark mode */
 @media (prefers-color-scheme: dark) {
@@ -543,14 +543,14 @@ moz-segmented-control {
 }}
 /* Make url bar hand off glow on home page more bright */
 .search-handoff-button {
-    filter: saturate(135%) !important;
+    filter: saturate(138%) brightness(102%) !important;
 }
 /* Draw glow 'Find in Settings' bar */
 #input:focus-visible {
     border: 1px solid transparent !important;
     outline: 1px solid var(--accentcolor-100) !important;
     box-shadow: 0 0 0 3px var(--accentcolor-30) !important;
-    filter: saturate(135%) !important;
+    filter: saturate(138%) brightness(102%) !important;
 }
 /* Draw glow 'Find in Settings' bar dark mode */
 @media (prefers-color-scheme: dark) {
