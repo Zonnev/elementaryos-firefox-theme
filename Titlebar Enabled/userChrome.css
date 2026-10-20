@@ -997,7 +997,7 @@ menuitem[checked][type="radio"][disabled]::after {
     background-color: white !important;
     height: 100% !important;
     width: 50% !important;
-    right: 1px !important;
+    right: 2px !important;
 }
 /* Dark mode toggle buttons */
 @media (prefers-color-scheme: dark) {
