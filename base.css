@@ -2333,6 +2333,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 /*** FIND BAR FOCUS GLOW ***/
 .findbar-textbox:focus {
+    outline-offset: -1px !important;
     outline: 1px solid var(--accentcolor-100) !important;
     border-radius: 3px !important;
     box-shadow: 0 0 0 2px var(--accentcolor-30) !important;
