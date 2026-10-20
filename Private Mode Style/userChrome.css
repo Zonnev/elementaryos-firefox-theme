@@ -541,12 +541,14 @@ menuitem[checked][type="checkbox"]::after {
     box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
 }
 checkbox[checked][disabled] .checkbox-check,
-menuitem[checked][type="checkbox"][disabled]) .menu-icon {
-    filter: grayscale(1) contrast(80%) brightness(135%) !important;
+menuitem[checked][type="checkbox"][disabled] .menu-icon {
+    background-color: rgba(0,0,0,0.05) !important;
+    border: 1px solid #C8C8C8 !important;
 }
 checkbox[checked][disabled]::after,
-menuitem[checked][type="checkbox"][disabled])::after {
-    filter: grayscale(1) contrast(80%) !important;
+menuitem[checked][type="checkbox"][disabled]::after {
+    border-bottom: 3px solid rgba(255,255,255,0.8) !important;
+    border-right: 3px solid rgba(255,255,255,0.8) !important;
 }
 /* Dark mode checkbox buttons */
 @media (prefers-color-scheme: dark) {
@@ -562,11 +564,13 @@ menuitem[checked][type="checkbox"] .menu-icon {
 }
 checkbox[checked][disabled] .checkbox-check,
 menuitem[checked][type="checkbox"][disabled] .menu-icon {
-    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+    background-color: #4C4C4C !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
 }
 checkbox[checked][disabled]::after,
 menuitem[checked][type="checkbox"][disabled]::after {
-    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+    border-bottom: 3px solid rgba(255,255,255,0.2) !important;
+    border-right: 3px solid rgba(255,255,255,0.2) !important;
 }}
 
 /* Radio round checkboxes */
@@ -596,11 +600,13 @@ menuitem[checked][type="radio"]::after {
     transform: translate(4px, -1px) rotate(36deg) !important;
     box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
 }
-menuitem[checked][type="radio"][disabled]) .menu-icon {
-    filter: grayscale(1) contrast(80%) brightness(135%) !important;
+menuitem[checked][type="radio"][disabled] .menu-icon {
+    background-color: rgba(0,0,0,0.05) !important;
+    border: 1px solid #C8C8C8 !important;
 }
-menuitem[checked][type="radio"][disabled])::after {
-    filter: grayscale(1) contrast(80%) !important;
+menuitem[checked][type="radio"][disabled]::after {
+    border-bottom: 3px solid rgba(255,255,255,0.8) !important;
+    border-right: 3px solid rgba(255,255,255,0.8) !important;
 }
 /* Dark mode radio round check buttons */
 @media (prefers-color-scheme: dark) {
@@ -613,10 +619,12 @@ menuitem[checked][type="radio"] .menu-icon {
     background-color: var(--accentcolor-100-brighter) !important;
 }
 menuitem[checked][type="radio"][disabled] .menu-icon {
-    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+    background-color: #4C4C4C !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
 }
 menuitem[checked][type="radio"][disabled]::after {
-    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+    border-bottom: 3px solid rgba(255,255,255,0.2) !important;
+    border-right: 3px solid rgba(255,255,255,0.2) !important;
 }}
 
 /* Toggle buttons */

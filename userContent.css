@@ -392,10 +392,12 @@ moz-segmented-control {
     box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
 }
 #input[type="checkbox"][disabled]:checked {
-    filter: grayscale(1) contrast(80%) brightness(135%) !important;
+    background-color: rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.2) !important;
 }
 #input[type="checkbox"][disabled]:checked::before {
-    filter: grayscale(1) contrast(80%) !important;
+    border-bottom: 4px solid rgba(255,255,255,0.8) !important;
+    border-right: 4px solid rgba(255,255,255,0.8) !important;
 }
 /* Dark mode checkbox buttons */
 @media (prefers-color-scheme: dark) {
@@ -408,10 +410,12 @@ moz-segmented-control {
     background-color: var(--accentcolor-100-brighter) !important;
 }
 #input[type="checkbox"][disabled]:checked {
-    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+    background-color: #4C4C4C !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
 }
 #input[type="checkbox"][disabled]:checked::before {
-    filter: grayscale(1) contrast(80%) brightness(70%) !important;
+    border-bottom: 4px solid rgba(255,255,255,0.2) !important;
+    border-right: 4px solid rgba(255,255,255,0.2) !important;
 }}
 
 /* Radio round checkboxes */
@@ -445,10 +449,12 @@ moz-segmented-control {
     box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
 }
 #input[type="radio"][disabled]:checked {
-    filter: grayscale(1) contrast(80%) brightness(135%) !important;
+    background-color: rgba(0,0,0,0.05) !important;
+    border: 1px solid rgba(0,0,0,0.2) !important;
 }
 #input[type="radio"][disabled]:checked::before {
-    filter: grayscale(1) contrast(80%) !important;
+    border-bottom: 4px solid rgba(255,255,255,0.8) !important;
+    border-right: 4px solid rgba(255,255,255,0.8) !important;
 }
 /* Dark mode radio round check buttons */
 @media (prefers-color-scheme: dark) {
@@ -461,22 +467,24 @@ moz-segmented-control {
     background-color: var(--accentcolor-100-brighter) !important;
 }
 #input[type="radio"][disabled]:checked {
-    filter: grayscale(1) contrast(80%) brightness(50%) !important;
+    background-color: #4C4C4C !important;
+    border: 1px solid rgba(0,0,0,0.5) !important;
 }
 #input[type="radio"][disabled]:checked::before {
-    filter: grayscale(1) contrast(80%) brightness(70%) !important;
+    border-bottom: 4px solid rgba(255,255,255,0.2) !important;
+    border-right: 4px solid rgba(255,255,255,0.2) !important;
 }}
 
 /* -------- Style the toggle buttons --------- */
 
-.toggle-button {
+.toggle-button[aria-pressed="true"] {
     display: inline flex !important;
     align-items: center !important;
     border-radius: 9999px !important;
     border: 1px solid var(--accentcolor-100) !important;
     background-color: var(--accentcolor-100-brighter) !important;
 }
-.toggle-button::before {
+.toggle-button[aria-pressed="true"]::before {
     position: relative !important;
     border-radius: 9999px !important;
     border: 1px solid rgba(0,0,0,0.5) !important;
@@ -485,14 +493,14 @@ moz-segmented-control {
     width: 50% !important;
     right: 1px !important;
 }
-.toggle-button[aria-pressed="false"] {
+.toggle-button {
     display: inline flex !important;
     align-items: center !important;
     border-radius: 14px !important;
     border: 1px solid rgba(0,0,0,0.2) !important;
     background-color: rgba(0,0,0,0.05) !important;
 }
-.toggle-button[aria-pressed="false"]::before {
+.toggle-button::before {
     position: relative !important;
     border-radius: 9999px !important;
     border: 1px solid rgba(0,0,0,0.5) !important;
@@ -503,17 +511,17 @@ moz-segmented-control {
 }
 /* Dark mode toggle buttons */
 @media (prefers-color-scheme: dark) {
-.toggle-button {
+.toggle-button[aria-pressed="true"] {
     border: 1px solid rgba(0,0,0,0.7) !important;
 }
-.toggle-button::before {
+.toggle-button[aria-pressed="true"]::before {
     border: 1px solid rgba(0,0,0,0.5) !important;
     background-color: #4C4C4C !important;
 }
-.toggle-button[aria-pressed="false"] {
+.toggle-button {
     border: 1px solid rgba(0,0,0,0.3) !important;
 }
-.toggle-button[aria-pressed="false"]::before {
+.toggle-button::before {
     border: 1px solid rgba(0,0,0,0.5) !important;
     background-color: #4C4C4C !important;
 }}
