@@ -1,5 +1,5 @@
 # An elementary OS theme for Firefox
-![Screenshot](new_presentation_image_1.png)
+![Screenshot](new_presentation_image_2.png)
 ## 🙏 Credits
 
 Credits to [Harvey Cabaguio](https://github.com/harveycabaguio/firefox-elementary-theme) for setting the theme up, [Pasha Semenov](https://github.com/sempasha), [Ryo Nakano](https://github.com/ryonakano) and [Neville Park](https://github.com/nevillepark) for the install script and the [elementary OS](https://github.com/elementary) team for the UI design and icons.
