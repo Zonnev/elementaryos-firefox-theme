@@ -1040,22 +1040,6 @@ menuitem[checked][type="radio"][disabled]::after {
 /*** URLBAR + MEGABAR ***/
 
 /* New URL bar styling for normal theme */
-@media not -moz-pref("browser.nova.enabled") {
-.urlbarView-background {
-    inset-inline: -5px !important;
-    border: 1px solid #C8C8C8 !important;
-    border-radius: 6px !important;
-    background: #ffffff !important;
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
-}
-#urlbar[open] .urlbar-background,
-#searchbar-new[open] .urlbar-background {
-    inset-inline: -4px !important;
-    border: 1px solid #C8C8C8 !important;
-    border-radius: 6px !important;
-    background: #ffffff !important;
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
-}}
 
 /* make open urlbar hovers full width */
 .urlbarView-row {
@@ -1093,56 +1077,6 @@ menuitem[checked][type="radio"][disabled]::after {
 }
 
 /* New URL bar styling */
-
-/* Open urlbar for ESR */
-#main-window:is([data-title-default]) #urlbar[open],
-#main-window:is([data-title-default]) .urlbar[open],
-#main-window:is([data-title-default]) #searchbar-new[open] {
-    top: 5px !important;
-}
-#main-window:is([data-title-default]) #urlbar[open] .urlbar-input,
-#main-window:is([data-title-default]) .urlbar[open] .urlbar-input {
-    margin-top: 2px !important;
-}
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #identity-box,
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #tracking-protection-icon-container,
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #page-action-buttons,
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #trust-icon-container {
-    height: 20px !important;
-    margin-top: 2px !important;
-}
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #identity-box:not(.verifiedDomain) {
-    height: 20px !important;
-    margin-top: 2px !important;
-}
-
-@media not -moz-pref("browser.nova.enabled") {
-#urlbar[open],
-.urlbar[open],
-#searchbar-new[open] {
-    --urlbar-min-height: 22px !important; /* takes care of password key icon not jumping in open urlbar */
-    top: 1px !important;
-}
-#urlbar[open] .urlbar-input-container,
-.urlbar[open] .urlbar-input-container {
-    height: 100% !important;
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
-    margin-left: 6px !important;
-    padding-right: 12px !important;
-    overflow: visible !important;
-}
-#searchbar-new[open] .urlbar-input-container {
-    margin-top: 4px !important;
-}
-#urlbar[open] .urlbar-input,
-.urlbar[open] .urlbar-input {
-    margin-top: 1px !important;
-}
-#searchbar-new[open] .urlbar-input {
-    margin-top: 0px !important;
-}}
-
 @media -moz-pref("browser.nova.enabled") {
 #urlbar[open] .urlbar-input,
 .urlbar[open] .urlbar-input {
@@ -1313,16 +1247,6 @@ menuitem[checked][type="radio"][disabled]::after {
     width: 15px !important;
     height: 15px !important;
 }
-/* go button for ESR */
-#main-window:is([data-title-default]) #searchbar-new[open] .urlbar-go-button {
-    width: 19px !important;
-    height: 19px !important;
-    margin-top: 1px !important;
-}
-#main-window:is([data-title-default]) #urlbar[open] .urlbar-go-button {
-    width: 22px !important;
-    height: 22px !important;
-}
 /* go button for stable and beta browsers */
 #main-window:not([fxadisabled], [data-title-default]) #urlbar[open] .urlbar-go-button {
     width: 15px !important;
@@ -1372,30 +1296,6 @@ menuitem[checked][type="radio"][disabled]::after {
     margin-top: 2px !important;
     padding-bottom: 1px !important;
 }
-/* searchmode box only for ESR */
-#main-window:is([data-title-default]) #searchmode-switcher-chicklet {
-    border-start-end-radius: 2px !important;
-    border-end-end-radius: 2px !important;
-}
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #searchmode-switcher-chicklet {
-    height: 20px !important;
-    margin-top: 2px !important;
-    padding-bottom: 1px !important;
-}
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #urlbar-searchmode-switcher {
-    height: 20px !important;
-    margin-top: 2px !important;
-}
-#main-window:is([data-title-default]) #urlbar[breakout-extend] #searchmode-switcher-title {
-    margin-top: 2px !important;
-}
-
-@media not -moz-pref("browser.nova.enabled") {
-.button-background {
-  &.labelled {
-    min-height: 80% !important;
-    height: 80% !important;
-}}}
 
 /* selected text in system accent color */
 ::selection {
@@ -1775,15 +1675,6 @@ toolbarpaletteitem > #stop-reload-button {
 }
 
 /* hide and show close tab button */
-@media not -moz-pref("browser.nova.enabled") {
-#TabsToolbar .tab-close-button {
-    list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' version='1.1' id='svg1' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs1' /%3E%3Cpath id='rect1' style='opacity:1;fill:%23333333;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:0.498039;-inkscape-stroke:none' d='M 0.78168445 6.4081552 C 0.64612209 6.2725928 0.45772309 6.1885654 0.2499733 6.1885654 L -0.2499733 6.1885654 C -0.66547288 6.1885654 -0.99989318 6.5229857 -0.99989318 6.9384853 L -0.99989318 10.313815 L -4.3752232 10.313815 C -4.7907228 10.313815 -5.1251431 10.648236 -5.1251431 11.063735 L -5.1251431 11.563682 C -5.1251431 11.979181 -4.7907228 12.313602 -4.3752232 12.313602 L -0.99989318 12.313602 L -0.99989318 15.688932 C -0.99989318 16.104431 -0.66547288 16.438852 -0.2499733 16.438852 L 0.2499733 16.438852 C 0.66547288 16.438852 0.99989318 16.104431 0.99989318 15.688932 L 0.99989318 12.313602 L 4.3752232 12.313602 C 4.7907228 12.313602 5.1251431 11.979181 5.1251431 11.563682 L 5.1251431 11.063735 C 5.1251431 10.648236 4.7907228 10.313815 4.3752232 10.313815 L 0.99989318 10.313815 L 0.99989318 6.9384853 C 0.99989318 6.7307355 0.91724681 6.5437176 0.78168445 6.4081552 z ' transform='rotate(-45)' /%3E%3C/svg%3E") !important;
-    margin-left: 0px !important;
-    margin-right: 3px !important;
-    width: 24px !important;
-    height: 24px !important;
-    padding: 4px !important;
-}}
 #TabsToolbar tab:not([selected]):not(:hover) .tab-close-button {
     opacity: 0 !important;
 }
@@ -1939,17 +1830,6 @@ tab-group[collapsed] .tab-group-label-container {
   }
 }
 
-/* sidebar layout */
-@media not -moz-pref("browser.nova.enabled") {
-#sidebar {
-  @media -moz-pref("sidebar.revamp") {
-      border-radius: 3px !important;
-      box-shadow: none !important;
-      border: none !important;
-      margin-block-start: 5px !important;
-  }
-}}
-
 /* make tab-content align to left again for vertical expanded tabs */
 #tabbrowser-tabs[orient="vertical"][expanded] .tab-content:not([pinned]) {
     -moz-box-direction: normal !important;
@@ -2073,13 +1953,6 @@ tab-group[collapsed] .tab-group-label-container {
             padding: 0px 0px 0px 0px !important;
     }
 }
-@media not -moz-pref("browser.nova.enabled") {
-#tabbrowser-tabs[orient="vertical"][expanded] .tab-close-button {
-        list-style-image: url("data:image/svg+xml,%3Csvg height='16' width='16' version='1.1' id='svg1' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs1' /%3E%3Cpath id='rect1' style='opacity:1;fill:%23333333;fill-opacity:1;stroke:none;stroke-width:1;stroke-opacity:0.498039;-inkscape-stroke:none' d='M 0.78168445 6.4081552 C 0.64612209 6.2725928 0.45772309 6.1885654 0.2499733 6.1885654 L -0.2499733 6.1885654 C -0.66547288 6.1885654 -0.99989318 6.5229857 -0.99989318 6.9384853 L -0.99989318 10.313815 L -4.3752232 10.313815 C -4.7907228 10.313815 -5.1251431 10.648236 -5.1251431 11.063735 L -5.1251431 11.563682 C -5.1251431 11.979181 -4.7907228 12.313602 -4.3752232 12.313602 L -0.99989318 12.313602 L -0.99989318 15.688932 C -0.99989318 16.104431 -0.66547288 16.438852 -0.2499733 16.438852 L 0.2499733 16.438852 C 0.66547288 16.438852 0.99989318 16.104431 0.99989318 15.688932 L 0.99989318 12.313602 L 4.3752232 12.313602 C 4.7907228 12.313602 5.1251431 11.979181 5.1251431 11.563682 L 5.1251431 11.063735 C 5.1251431 10.648236 4.7907228 10.313815 4.3752232 10.313815 L 0.99989318 10.313815 L 0.99989318 6.9384853 C 0.99989318 6.7307355 0.91724681 6.5437176 0.78168445 6.4081552 z ' transform='rotate(-45)' /%3E%3C/svg%3E") !important;
-        background: none !important;
-        margin: 4px 4px 3px 4px !important;
-        padding: 4px !important;
-}}
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tabbrowser-tab {
       &:not(:hover) .tab-close-button:not([selected]) {
@@ -2491,18 +2364,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 /* New URL bar styling dark mode colors */
-@media not -moz-pref("browser.nova.enabled") {
-.urlbarView-background {
-    border: 1px solid #222222 !important;
-	background: #3A3A3A !important; 
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
-}
-#urlbar[open] .urlbar-background,
-#searchbar-new[open] .urlbar-background {
-    border: 1px solid #222222 !important;
-	background: #3A3A3A !important; 
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1) !important;
-}}
 #urlbar[focused]:not([open]),
 .urlbar[focused]:not([open]),
 #searchbar:focus-within,
