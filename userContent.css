@@ -362,7 +362,8 @@ moz-segmented-control {
 
 /* -------- Style the checkbox buttons --------- */
 
-#input[type="checkbox"] {
+#input[type="checkbox"],
+checkbox .checkbox-check {
     appearance: none !important;
     position: relative !important;
     min-width: 18px !important;
@@ -373,7 +374,8 @@ moz-segmented-control {
     cursor: pointer !important;
     bottom: 2px !important;
 }
-#input[type="checkbox"]:checked {
+#input[type="checkbox"]:checked,
+checkbox[checked] .checkbox-check {
     background-color: var(--accentcolor-80-brighter) !important;
     border: 1px solid var(--accentcolor-100) !important;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.3) !important;
@@ -391,29 +393,45 @@ moz-segmented-control {
     left: 50% !important;
     box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
 }
-#input[type="checkbox"][disabled]:checked {
+checkbox[checked]::after {
+    content: "" !important;
+    position: absolute !important;
+    width: 5px !important;
+    height: 10px !important;
+    border-bottom: 4px solid white !important;
+    border-right: 4px solid white !important;
+    transform: translate(4px, -3px) rotate(36deg) !important;
+    box-shadow: 1px 1px 0 0 rgba(0,0,0,0.3) !important;
+}
+#input[type="checkbox"][disabled]:checked,
+checkbox[checked][disabled] .checkbox-check {
     background-color: rgba(0,0,0,0.05) !important;
     border: 1px solid rgba(0,0,0,0.2) !important;
 }
-#input[type="checkbox"][disabled]:checked::before {
+#input[type="checkbox"][disabled]:checked::before,
+checkbox[checked][disabled]::after {
     border-bottom: 4px solid rgba(255,255,255,0.8) !important;
     border-right: 4px solid rgba(255,255,255,0.8) !important;
 }
 /* Dark mode checkbox buttons */
 @media (prefers-color-scheme: dark) {
-#input[type="checkbox"] {
+#input[type="checkbox"],
+checkbox .checkbox-check {
     border: 1px solid rgba(0,0,0,0.5) !important;
     background-color: rgba(255,255,255,0.1) !important;
 }
-#input[type="checkbox"]:checked {
+#input[type="checkbox"]:checked,
+checkbox[checked] .checkbox-check {
     border: 1px solid black !important;
     background-color: var(--accentcolor-100-brighter) !important;
 }
-#input[type="checkbox"][disabled]:checked {
+#input[type="checkbox"][disabled]:checked,
+checkbox[checked][disabled] .checkbox-check {
     background-color: #4C4C4C !important;
     border: 1px solid rgba(0,0,0,0.5) !important;
 }
-#input[type="checkbox"][disabled]:checked::before {
+#input[type="checkbox"][disabled]:checked::before,
+checkbox[checked][disabled]::after {
     border-bottom: 4px solid rgba(255,255,255,0.2) !important;
     border-right: 4px solid rgba(255,255,255,0.2) !important;
 }}
@@ -554,18 +572,26 @@ moz-segmented-control {
     filter: saturate(138%) brightness(102%) !important;
 }
 /* Draw glow 'Find in Settings' bar */
-#input:focus-visible {
+#input:focus-visible,
+input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), textarea {
+  &:where(:focus, :focus-visible) {
     border: 1px solid transparent !important;
     outline: 1px solid var(--accentcolor-100) !important;
-    box-shadow: 0 0 0 3px var(--accentcolor-30) !important;
+    outline-offset: -1px !important;
+    box-shadow: 0 0 0 2px var(--accentcolor-30) !important;
     filter: saturate(138%) brightness(102%) !important;
+ }
 }
 /* Draw glow 'Find in Settings' bar dark mode */
 @media (prefers-color-scheme: dark) {
-#input:focus-visible {
+#input:focus-visible,
+input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), textarea {
+  &:where(:focus, :focus-visible) {
     border: 1px solid transparent !important;
     outline: 2px solid var(--accentcolor-percentage) !important;
     box-shadow: none !important;
     filter: none !important;
-}}
+  }
+ }
+}
 }
