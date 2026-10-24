@@ -10,10 +10,9 @@ For now theme installation is supported for:
 
 1. [🦊 Firefox 📦 Flatpak version](https://flathub.org/apps/details/org.mozilla.firefox) Install in AppCenter.
 2. [🐺 Librewolf 📦 Flatpak version](https://flathub.org/apps/details/io.gitlab.librewolf-community) Install in AppCenter.
-3. [🦊 Firefox ⬇️ ESR](https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/) Install in Terminal read instructions in the link.
-4. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/) Download package and follow instructions below to create a desktop entry.
+3. [🦊 Firefox 📦 download package](https://www.mozilla.org/en-US/firefox/new/) Download package and follow instructions below to create a desktop entry.
 
-❗*For other versions of Firefox, like Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
+❗*For other versions of Firefox, like ESR or Tor Browser for example, the theme needs to be installed manually. [We welcome contributions](https://github.com/Zonnev/elementaryos-firefox-theme/blob/elementaryos-firefox-theme/CONTRIBUTING.md) like editing a userChrome,*
 *for example to make a fully supported other version possible. Thanks in advance.*
 
 #### Create a desktop entry
