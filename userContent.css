@@ -573,7 +573,7 @@ checkbox[checked][disabled]::after {
 }
 /* Draw glow 'Find in Settings' bar */
 #input:focus-visible,
-input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), textarea {
+input:where(:not(.urlbar-input, [type="radio" i], [type="checkbox" i], [type="range" i])), textarea {
   &:where(:focus, :focus-visible) {
     border: 1px solid transparent !important;
     outline: 1px solid var(--accentcolor-100) !important;
@@ -585,7 +585,7 @@ input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), text
 /* Draw glow 'Find in Settings' bar dark mode */
 @media (prefers-color-scheme: dark) {
 #input:focus-visible,
-input:where(:not([type="radio" i], [type="checkbox" i], [type="range" i])), textarea {
+input:where(:not(.urlbar-input, [type="radio" i], [type="checkbox" i], [type="range" i])), textarea {
   &:where(:focus, :focus-visible) {
     border: 1px solid transparent !important;
     outline: 2px solid var(--accentcolor-percentage) !important;
