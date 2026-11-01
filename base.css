@@ -19,6 +19,7 @@
     --accentcolor-30: color-mix(in srgb, var(--eOS-accentcolor) 30%, white);
     --accentcolor-txt-100-10: color-mix(in srgb, AccentColor 100%, black 10%);
     --accentcolor-txt-100: color-mix(in srgb, AccentColor 100%, black 30%);
+    --accentcolor-percentage: color-mix(in srgb, SelectedItem 95%, transparent);
 }
 
 /************************************
@@ -1031,7 +1032,23 @@ menuitem[checked][type="radio"][disabled]::after {
     padding: 0px 6px 0px 6px !important;
 }
 
-/*** URLBAR + MEGABAR ***/
+/*** URLBAR + MEGABAR + input box glow ***/
+
+/* make glow around input boxes */
+#input[type="search"] {
+  &:focus-visible {
+    outline: 2px solid var(--accentcolor-30) !important;
+    border: 1px solid var(--accentcolor-100) !important;
+    filter: saturate(138%) brightness(102%) !important;
+  }
+}
+/* make glow around input boxes in dark mode */
+@media (prefers-color-scheme: dark) {
+#input[type="search"] {
+  &:focus-visible {
+    outline: 2px solid var(--accentcolor-percentage)!important;
+    border: 1px solid transparent !important;
+}}}
 
 /* make open urlbar hovers full width */
 .urlbarView-row {
@@ -1772,13 +1789,38 @@ toolbarpaletteitem > #stop-reload-button {
 
 /*** TAB GROUPS ***/
 
-#tabbrowser-tabs[orient="horizontal"] .tab-group-label {
-    margin-block: auto 0 auto !important; /* aligns group label in vertical center of horizontal tab bar */
+/* restyling tab groups */
+tab-group .tab-group-label {
+    border-radius: 3px 3px 0px 0px !important;
+    border-end-start-radius: 0px !important;
 }
-tab-group[collapsed] .tab-group-label-container {
-  #tabbrowser-tabs[orient="vertical"] & {
-    margin-block-end: var(--space-small);
-  }
+tab-group[collapsed] .tab-group-label {
+    border-radius: 3px 3px 3px 3px !important;
+    border-end-start-radius: 3px !important;
+}
+.tab-group-label-hover-highlight {
+      border-radius: 3px !important;
+}
+/* restyling tab groups icon in the tab group menu */
+.tab-group-row-icon {
+      border: 2px solid var(--tab-group-background-color) !important;
+      border-radius: 3px !important;
+      background-color: var(--tab-group-background-color) !important;
+      fill: none !important;
+      stroke: none !important;
+      width: 22px;
+      height: 22px;
+      content: url("") !important;
+}
+.tab-group-icon-closed {
+      border: 2px solid var(--tab-group-background-color) !important;
+      border-radius: 3px !important;
+      background-color: transparent !important;
+      fill: none !important;
+      stroke: none !important;
+      width: 22px;
+      height: 22px;
+      content: url("") !important;
 }
 
 /* do not show tab separators between collapsed tab groups */
