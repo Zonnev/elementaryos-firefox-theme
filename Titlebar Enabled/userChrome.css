@@ -771,7 +771,7 @@ button[part="dialog-button"]:active,
     border: 1px solid var(--accentcolor-70) !important;
     border-radius: 4px !important;
     box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1) !important;
-    background-color: #EDEDED !important;
+    background-color: rgba(0,0,0,0.05) !important;
 }
 /* grey button dark mode */
 @media (prefers-color-scheme: dark) {
