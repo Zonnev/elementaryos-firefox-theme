@@ -1157,7 +1157,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 }
 
 /* make tab separators: thanks to MrOtherGuy, source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_separator_lines.css */
-#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab,
+#tabbrowser-tabs[orient="horizontal"] tab-split-view-wrapper {
     border-inline-start: 1px solid transparent !important;
     border-image: 0 1 linear-gradient(transparent 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 20%, color-mix(in srgb, rgba(0,0,0,0.5), transparent) 80%, transparent 80%) !important;
 }
@@ -1169,7 +1170,8 @@ toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-butt
 #tabbrowser-tabs[orient="horizontal"] #tabbrowser-arrowscrollbox[overflowing] > .tabbrowser-tab[first-visible-unpinned-tab],
 #tabbrowser-tabs[orient="horizontal"]:not([movingtab]) .tabbrowser-tab[multiselected] + .tabbrowser-tab,
 #tabbrowser-tabs[orient="horizontal"]:not([movingtab]) .tabbrowser-tab[selected] + .tabbrowser-tab,
-#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:is([selected],[multiselected]) + .tabbrowser-tab[hidden] + .tabbrowser-tab {
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:is([selected],[multiselected]) + .tabbrowser-tab[hidden] + .tabbrowser-tab,
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab:is([selected],[multiselected]) + tab-split-view-wrapper {
     border-inline-start: 1px solid transparent !important;
     border-image: none !important;
 }
