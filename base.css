@@ -1563,6 +1563,13 @@ toolbarpaletteitem > #stop-reload-button {
     border-image: none !important;
 }
 
+/* get rid of extra separator between split view tabs */
+#tabbrowser-tabs tab-split-view-wrapper {
+  & .tabbrowser-tab:last-child > .tab-stack {
+    border-inline-start: none !important;
+  }
+}
+
 /* tabs */
 .tab-content:not([pinned]) {
     -moz-box-direction: reverse !important;
