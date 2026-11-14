@@ -180,7 +180,7 @@ LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤓⤢  —     ]"
 LAYOUT="Windows Reversed"
 LAYOUTS+=("${LAYOUT}")
 LAYOUTS_PATHS["${LAYOUT}"]="Windows%20Reversed"
-LAYOUTS_SETTINGS["${LAYOUT}"]="'close,maximize,minimize'"
+LAYOUTS_SETTINGS["${LAYOUT}"]="'close,maximize,minimize:'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤢⤓  —     ]"
 
 LAYOUT="Windows"
