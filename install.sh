@@ -177,9 +177,9 @@ LAYOUTS_PATHS["${LAYOUT}"]="macOS"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close,minimize,maximize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤓⤢  —     ]"
 
-LAYOUT="Ubuntu"
+LAYOUT="Windows Reversed"
 LAYOUTS+=("${LAYOUT}")
-LAYOUTS_PATHS["${LAYOUT}"]="Ubuntu"
+LAYOUTS_PATHS["${LAYOUT}"]="Windows%20Reversed"
 LAYOUTS_SETTINGS["${LAYOUT}"]="'close,maximize,minimize'"
 LAYOUTS_TITLEBARS["${LAYOUT}"]="[⨯⤢⤓  —     ]"
 
