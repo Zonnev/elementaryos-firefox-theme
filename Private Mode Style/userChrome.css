@@ -1111,7 +1111,7 @@ toolbar[customizing] #nav-bar-overflow-button > .toolbarbutton-icon {
 toolbarpaletteitem > #stop-reload-button {
     -moz-box-pack: center !important;
 }
-toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button):not(#PlacesChevron) {
+toolbar .toolbarbutton-1:not(#back-button):not(#forward-button):not(#reload-button):not(#stop-button):not(#home-button):not(.webextension-browser-action):not(#fxa-toolbar-menu-button):not(#downloads-button):not(#import-button):not(#new-tab-button):not(#tabs-newtab-button):not(#alltabs-button):not(#firefox-view-button):not(#PlacesChevron):not(#mini-window-close-button) {
     margin-right: 0px !important;
 }
 #scrollbutton-up,
