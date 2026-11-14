@@ -34,6 +34,18 @@
     --accentcolor-percentage: color-mix(in srgb, SelectedItem 95%, transparent);
 }
 
+/**********
+Mini Window
+***********/
+
+/* Mini Window close button */
+#main-window[mini-window="true"] #nav-bar {
+    padding: 0px 0px 0px 0px !important;
+}
+#mini-window-close-button {
+    display: none !important;
+}
+
 /************************************
 MENU POPUPS + right mouse click menus
 *************************************/
