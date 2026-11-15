@@ -1836,18 +1836,39 @@ tab-group[collapsed] .tab-group-label {
       background-color: var(--tab-group-background-color) !important;
       fill: none !important;
       stroke: none !important;
-      width: 22px;
-      height: 22px;
+      width: 22px !important;
+      height: 22px !important;
       content: url("") !important;
 }
-.tab-group-icon-closed {
+.tab-group-icon-closed:not(.all-tabs-button) {
       border: 2px solid var(--tab-group-background-color) !important;
       border-radius: 3px !important;
       background-color: transparent !important;
       fill: none !important;
       stroke: none !important;
-      width: 22px;
-      height: 22px;
+      width: 22px !important;
+      height: 22px !important;
+      content: url("") !important;
+}
+/* restyling tab groups icon in the all tabs menu */
+.all-tabs-group-item > .tab-group-icon image {
+      border: 2px solid var(--tab-group-background-color) !important;
+      border-radius: 3px !important;
+      background-color: var(--tab-group-background-color) !important;
+      fill: none !important;
+      stroke: none !important;
+      width: 16px !important;
+      height: 16px !important;
+      content: url("") !important;
+}
+.all-tabs-group-item > .tab-group-icon-closed image {
+      border: 2px solid var(--tab-group-background-color) !important;
+      border-radius: 3px !important;
+      background-color: transparent !important;
+      fill: none !important;
+      stroke: none !important;
+      width: 16px !important;
+      height: 16px !important;
       content: url("") !important;
 }
 
