@@ -1850,8 +1850,9 @@ tab-group[collapsed] .tab-group-label {
       height: 22px !important;
       content: url("") !important;
 }
-/* restyling tab groups icon in the all tabs menu */
-.all-tabs-group-item > .tab-group-icon image {
+/* restyling tab groups icon in 'all tabs' menu and 'add tab to new group' menu */
+.all-tabs-group-item > .tab-group-icon image,
+.tab-group-icon.tab-group-icon > .menu-icon {
       border: 2px solid var(--tab-group-background-color) !important;
       border-radius: 3px !important;
       background-color: var(--tab-group-background-color) !important;
@@ -1861,7 +1862,8 @@ tab-group[collapsed] .tab-group-label {
       height: 16px !important;
       content: url("") !important;
 }
-.all-tabs-group-item > .tab-group-icon-closed image {
+.all-tabs-group-item > .tab-group-icon-closed image,
+#context_ungroupTab > .menu-icon {
       border: 2px solid var(--tab-group-background-color) !important;
       border-radius: 3px !important;
       background-color: transparent !important;
