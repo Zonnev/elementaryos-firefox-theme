@@ -1821,7 +1821,7 @@ tab-group[collapsed] .tab-group-label {
       height: 22px !important;
       content: url("") !important;
 }
-.tab-group-icon-closed:not(.all-tabs-button) {
+.tab-group-icon-closed:not(.all-tabs-button, .tab-group-icon) {
       border: 2px solid var(--tab-group-background-color) !important;
       border-radius: 3px !important;
       background-color: transparent !important;
@@ -1833,7 +1833,7 @@ tab-group[collapsed] .tab-group-label {
 }
 /* restyling tab groups icon in 'all tabs' menu and 'add tab to new group' menu */
 .all-tabs-group-item > .tab-group-icon image,
-.tab-group-icon.tab-group-icon > .menu-icon {
+.tab-group-icon.tab-group-icon:not(.tab-group-icon-closed) > .menu-icon {
       border: 2px solid var(--tab-group-background-color) !important;
       border-radius: 3px !important;
       background-color: var(--tab-group-background-color) !important;
@@ -1844,7 +1844,7 @@ tab-group[collapsed] .tab-group-label {
       content: url("") !important;
 }
 .all-tabs-group-item > .tab-group-icon-closed image,
-#context_ungroupTab > .menu-icon {
+.tab-group-icon-closed > .menu-icon {
       border: 2px solid var(--tab-group-background-color) !important;
       border-radius: 3px !important;
       background-color: transparent !important;
