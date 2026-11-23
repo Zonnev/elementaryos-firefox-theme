@@ -1984,7 +1984,7 @@ tab-group[collapsed] .tab-group-label {
 /* position of new tab button in not expanded vertical tabs */
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) #tabs-newtab-button,
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-tabs-newtab-button {
-    margin: 4px 0px 0px 10px !important;
+    margin: 4px 0px 0px 8px !important;
     background: none !important;
 }
 
@@ -2117,43 +2117,34 @@ tab-group[collapsed] .tab-group-label {
 
 /* move content to center of not expanded tabs in 'expanded on hover' sidebar */
 :root[sidebar-expand-on-hover] {
- & #tabbrowser-tabs[orient="vertical"] {
-  &:not([expanded]) {
+ & #tabbrowser-tabs[orient="vertical"]:not([expanded]) {
    & #pinned-tabs-container[orient="vertical"] {
     & .tab-content[pinned] {
         padding: 0px 0px 0px 18px !important;
-    }
-   }
-  }
- }
-}
-:root[sidebar-expand-on-hover] {
- & #tabbrowser-tabs[orient="vertical"] {
-   & #pinned-tabs-container[orient="vertical"] {
-    & .tab-content[pinned] {
-        padding: 0px 0px 3px 0px !important;
    }
   }
  }
 }
 
-/* make room for tab close button in 'expand on hover' sidebar */
+/* move content to center of expanded tabs in 'expanded on hover' sidebar */
+:root[sidebar-expand-on-hover] {
+ & #tabbrowser-tabs[orient="vertical"][expanded] {
+   & #pinned-tabs-container[orient="vertical"] {
+    & .tab-content[pinned] {
+        padding: 0px 0px 3px 0px !important;
+        justify-content: center !important;
+   }
+  }
+ }
+}
+
+/* remove close button on pinned tabs in 'expand on hover' sidebar */
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabs[orient="vertical"][expanded] {
     & .tabbrowser-tab[pinned]:not(:hover) {
       & .tab-close-button {
-        display: block !important;
-        opacity: 0 !important;
+        display: none !important;
       }
-    }
-  }
-}
-
-/* move tab close button to vertical center in 'expand on hover' sidebar */
-:root[sidebar-expand-on-hover] {
-  & #tabbrowser-tabs[orient="vertical"][expanded] {
-      & .tab-close-button {
-        margin-top: 3px !important;
     }
   }
 }
