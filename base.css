@@ -2077,6 +2077,13 @@ tab-group[collapsed] .tab-group-label {
 
 /*** VERTICAL TABS EXPAND ON HOVER ***/
 
+/* make splitter a color in 'expanded on hover' sidebar */
+:root[sidebar-expand-on-hover] {
+  & #sidebar-container {
+    --sidebar-launcher-border: 1px solid rgba(0,0,0,0.3) !important;
+  }
+}
+
 /* removes top margin in 'expanded on hover' sidebar panels */
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
   #sidebar-box {
@@ -2539,9 +2546,9 @@ toolbar[customizing] > .overflow-button:hover > .toolbarbutton-icon {
   }
  }
 }
-@media -moz-pref("sidebar.visibility", "expand-on-hover") {
-  #sidebar-box {
-    --sidebar-border-color: rgba(0,0,0,0.5) !important;
+:root[sidebar-expand-on-hover] {
+  & #sidebar-container {
+    --sidebar-launcher-border: 1px solid rgba(0,0,0,0.5) !important;
   }
 }
 .sidebar-splitter {
@@ -2913,7 +2920,7 @@ private browsing
     background: rgba(105,75,188,1) !important;
 }
 :root[privatebrowsingmode="temporary"][sidebar-expand-on-hover] {
-    & #sidebar-main {
+    & #sidebar-container {
      &[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
     background: rgba(105,75,188,1) !important;
   }
