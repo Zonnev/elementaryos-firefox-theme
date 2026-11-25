@@ -1525,6 +1525,7 @@ tab-group[collapsed] .tab-group-label {
 #tabbrowser-tabs[orient="vertical"] {
   & .tabbrowser-tab {
     align-items: stretch !important;
+    margin-right: 4px !important;
   }
 }
 .browserContainer {
