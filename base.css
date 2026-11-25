@@ -1604,19 +1604,20 @@ toolbarpaletteitem > #stop-reload-button {
 .tabbrowser-tab:not([selected], [multiselected]):hover .tab-background {
 	background-color: rgba(0,0,0,0.06) !important;
 }
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:is([selected], [multiselected]) > .tab-context-line {
-    margin: 0px 0 0 !important;
-    width: 100% !important;
-}
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected], [multiselected]) > .tab-context-line {
-    margin: 0px 0 0 !important;
-    width: 100% !important;
-}
 #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected], [multiselected]) > .tab-stack > .tab-background {
     box-shadow: none !important;
 }
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 0px !important;
+}
+/* container tab line */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:is([selected], [multiselected]) > .tab-context-line {
+    margin-left: -7px !important;
+    margin-right: -7px !important;
+}
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background:not([selected], [multiselected]) > .tab-context-line {
+    margin-left: -7px !important;
+    margin-right: -7px !important;
 }
 
 /* write elementary OS style icon for new tab button */
